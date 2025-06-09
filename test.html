@@ -1,0 +1,491 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+                <link href="lib/tom-select/tom-select.css" rel="stylesheet">
+                <script src="lib/tom-select/tom-select.complete.min.js"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 1900;
+                 height: 1000;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+             #loadingBar {
+                 position:absolute;
+                 top:0px;
+                 left:0px;
+                 width: 1900;
+                 height: 1000;
+                 background-color:rgba(200,200,200,0.8);
+                 -webkit-transition: all 0.5s ease;
+                 -moz-transition: all 0.5s ease;
+                 -ms-transition: all 0.5s ease;
+                 -o-transition: all 0.5s ease;
+                 transition: all 0.5s ease;
+                 opacity:1;
+             }
+
+             #bar {
+                 position:absolute;
+                 top:0px;
+                 left:0px;
+                 width:20px;
+                 height:20px;
+                 margin:auto auto auto auto;
+                 border-radius:11px;
+                 border:2px solid rgba(30,30,30,0.05);
+                 background: rgb(0, 173, 246); /* Old browsers */
+                 box-shadow: 2px 0px 4px rgba(0,0,0,0.4);
+             }
+
+             #border {
+                 position:absolute;
+                 top:10px;
+                 left:10px;
+                 width:500px;
+                 height:23px;
+                 margin:auto auto auto auto;
+                 box-shadow: 0px 0px 4px rgba(0,0,0,0.2);
+                 border-radius:10px;
+             }
+
+             #text {
+                 position:absolute;
+                 top:8px;
+                 left:530px;
+                 width:30px;
+                 height:50px;
+                 margin:auto auto auto auto;
+                 font-size:22px;
+                 color: #000000;
+             }
+
+             div.outerBorder {
+                 position:relative;
+                 top:400px;
+                 width:600px;
+                 height:44px;
+                 margin:auto auto auto auto;
+                 border:8px solid rgba(0,0,0,0.1);
+                 background: rgb(252,252,252); /* Old browsers */
+                 background: -moz-linear-gradient(top,  rgba(252,252,252,1) 0%, rgba(237,237,237,1) 100%); /* FF3.6+ */
+                 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,252,252,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
+                 background: -webkit-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
+                 background: -o-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Opera 11.10+ */
+                 background: -ms-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* IE10+ */
+                 background: linear-gradient(to bottom,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* W3C */
+                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+                 border-radius:72px;
+                 box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+             }
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+                <div id="select-menu" class="card-header">
+                    <div class="row no-gutters">
+                        <div class="col-10 pb-2">
+                            <select
+                            class="form-select"
+                            aria-label="Default select example"
+                            onchange="selectNode([value]);"
+                            id="select-node"
+                            placeholder="Select node..."
+                            >
+                                <option selected>Select a Node by ID</option>
+                                
+                                    <option value="stonecutting-mcwpaths:mud_brick_dumble_paving">stonecutting-mcwpaths:mud_brick_dumble_paving</option>
+                                
+                                    <option value="mcwpaths:mud_brick_dumble_paving">mcwpaths:mud_brick_dumble_paving</option>
+                                
+                                    <option value="stonecutting-mcwpaths:mud_brick_flagstone">stonecutting-mcwpaths:mud_brick_flagstone</option>
+                                
+                                    <option value="mcwpaths:mud_brick_flagstone">mcwpaths:mud_brick_flagstone</option>
+                                
+                                    <option value="stonecutting-minecraft:cracked_mud_brick_stairs_from_cracked_mud_bricks_stonecutting">stonecutting-minecraft:cracked_mud_brick_stairs_from_cracked_mud_bricks_stonecutting</option>
+                                
+                                    <option value="betterarcheology:cracked_mud_brick_stairs">betterarcheology:cracked_mud_brick_stairs</option>
+                                
+                                    <option value="crafting-supplementaries:sconce_soul">crafting-supplementaries:sconce_soul</option>
+                                
+                                    <option value="supplementaries:sconce_soul">supplementaries:sconce_soul</option>
+                                
+                                    <option value="crafting-minecraft:mud_brick_slab">crafting-minecraft:mud_brick_slab</option>
+                                
+                                    <option value="minecraft:mud_brick_slab">minecraft:mud_brick_slab</option>
+                                
+                                    <option value="stonecutting-mcwpaths:mud_brick_basket_weave_paving">stonecutting-mcwpaths:mud_brick_basket_weave_paving</option>
+                                
+                                    <option value="mcwpaths:mud_brick_basket_weave_paving">mcwpaths:mud_brick_basket_weave_paving</option>
+                                
+                                    <option value="create:haunting-create:haunting/soul_soil">create:haunting-create:haunting/soul_soil</option>
+                                
+                                    <option value="minecraft:soul_soil">minecraft:soul_soil</option>
+                                
+                                    <option value="minecraft:mud">minecraft:mud</option>
+                                
+                                    <option value="Ingredient@d4b07ca8">Ingredient@d4b07ca8</option>
+                                
+                                    <option value="Ingredient@9a09fa37">Ingredient@9a09fa37</option>
+                                
+                                    <option value="Ingredient@e09d257b">Ingredient@e09d257b</option>
+                                
+                                    <option value="create:mixing-create:mixing/mud_by_mixing">create:mixing-create:mixing/mud_by_mixing</option>
+                                
+                                    <option value="smelting-betterarcheology:cracked_mud_bricks">smelting-betterarcheology:cracked_mud_bricks</option>
+                                
+                                    <option value="betterarcheology:cracked_mud_bricks">betterarcheology:cracked_mud_bricks</option>
+                                
+                                    <option value="crafting-minecraft:coarse_dirt">crafting-minecraft:coarse_dirt</option>
+                                
+                                    <option value="minecraft:coarse_dirt">minecraft:coarse_dirt</option>
+                                
+                                    <option value="Ingredient@7d992174">Ingredient@7d992174</option>
+                                
+                                    <option value="stonecutting-mcwpaths:mud_brick_flagstone_path">stonecutting-mcwpaths:mud_brick_flagstone_path</option>
+                                
+                                    <option value="stonecutting-minecraft:mud_brick_slab_from_mud_bricks_stonecutting">stonecutting-minecraft:mud_brick_slab_from_mud_bricks_stonecutting</option>
+                                
+                                    <option value="stonecutting-mcwpaths:mud_brick_windmill_weave">stonecutting-mcwpaths:mud_brick_windmill_weave</option>
+                                
+                                    <option value="stonecutting-minecraft:mud_brick_stairs_from_mud_bricks_stonecutting">stonecutting-minecraft:mud_brick_stairs_from_mud_bricks_stonecutting</option>
+                                
+                                    <option value="stonecutting-mcwpaths:mud_brick_running_bond">stonecutting-mcwpaths:mud_brick_running_bond</option>
+                                
+                                    <option value="stonecutting-mcwpaths:mud_brick_crystal_floor">stonecutting-mcwpaths:mud_brick_crystal_floor</option>
+                                
+                                    <option value="stonecutting-mcwpaths:mud_brick_square_paving">stonecutting-mcwpaths:mud_brick_square_paving</option>
+                                
+                                    <option value="stonecutting-mcwpaths:mud_brick_crystal_floor_slab">stonecutting-mcwpaths:mud_brick_crystal_floor_slab</option>
+                                
+                                    <option value="stonecutting-mcwpaths:mud_brick_windmill_weave_stairs">stonecutting-mcwpaths:mud_brick_windmill_weave_stairs</option>
+                                
+                                    <option value="crafting-minecraft:mud_brick_stairs">crafting-minecraft:mud_brick_stairs</option>
+                                
+                                    <option value="crafting-minecraft:mud_brick_wall">crafting-minecraft:mud_brick_wall</option>
+                                
+                                    <option value="stonecutting-mcwpaths:mud_brick_honeycomb_paving">stonecutting-mcwpaths:mud_brick_honeycomb_paving</option>
+                                
+                                    <option value="stonecutting-mcwpaths:mud_brick_running_bond_stairs">stonecutting-mcwpaths:mud_brick_running_bond_stairs</option>
+                                
+                                    <option value="stonecutting-mcwpaths:mud_brick_crystal_floor_path">stonecutting-mcwpaths:mud_brick_crystal_floor_path</option>
+                                
+                                    <option value="stonecutting-mcwpaths:mud_brick_flagstone_stairs">stonecutting-mcwpaths:mud_brick_flagstone_stairs</option>
+                                
+                                    <option value="stonecutting-mcwpaths:mud_brick_clover_paving">stonecutting-mcwpaths:mud_brick_clover_paving</option>
+                                
+                                    <option value="stonecutting-mcwpaths:mud_brick_strewn_rocky_path">stonecutting-mcwpaths:mud_brick_strewn_rocky_path</option>
+                                
+                                    <option value="stonecutting-mcwpaths:mud_brick_crystal_floor_stairs">stonecutting-mcwpaths:mud_brick_crystal_floor_stairs</option>
+                                
+                                    <option value="stonecutting-mcwpaths:mud_brick_running_bond_slab">stonecutting-mcwpaths:mud_brick_running_bond_slab</option>
+                                
+                                    <option value="stonecutting-mcwpaths:mud_brick_windmill_weave_slab">stonecutting-mcwpaths:mud_brick_windmill_weave_slab</option>
+                                
+                                    <option value="stonecutting-minecraft:mud_brick_wall_from_mud_bricks_stonecutting">stonecutting-minecraft:mud_brick_wall_from_mud_bricks_stonecutting</option>
+                                
+                                    <option value="stonecutting-mcwpaths:mud_brick_running_bond_path">stonecutting-mcwpaths:mud_brick_running_bond_path</option>
+                                
+                                    <option value="stonecutting-mcwpaths:mud_brick_windmill_weave_path">stonecutting-mcwpaths:mud_brick_windmill_weave_path</option>
+                                
+                                    <option value="stonecutting-mcwpaths:mud_brick_diamond_paving">stonecutting-mcwpaths:mud_brick_diamond_paving</option>
+                                
+                                    <option value="stonecutting-mcwpaths:mud_brick_flagstone_slab">stonecutting-mcwpaths:mud_brick_flagstone_slab</option>
+                                
+                                    <option value="crafting-minecraft:muddy_mangrove_roots">crafting-minecraft:muddy_mangrove_roots</option>
+                                
+                                    <option value="minecraft:muddy_mangrove_roots">minecraft:muddy_mangrove_roots</option>
+                                
+                                    <option value="mcwpaths:mud_brick_running_bond_slab">mcwpaths:mud_brick_running_bond_slab</option>
+                                
+                                    <option value="Ingredient@e4b5a810">Ingredient@e4b5a810</option>
+                                
+                                    <option value="crafting-minecraft:mud_bricks">crafting-minecraft:mud_bricks</option>
+                                
+                                    <option value="mcwpaths:mud_brick_clover_paving">mcwpaths:mud_brick_clover_paving</option>
+                                
+                                    <option value="mcwpaths:mud_brick_strewn_rocky_path">mcwpaths:mud_brick_strewn_rocky_path</option>
+                                
+                                    <option value="mcwpaths:mud_brick_windmill_weave_slab">mcwpaths:mud_brick_windmill_weave_slab</option>
+                                
+                                    <option value="create:filling-create:filling/grass_block">create:filling-create:filling/grass_block</option>
+                                
+                                    <option value="minecraft:grass_block">minecraft:grass_block</option>
+                                
+                                    <option value="Ingredient@811b7a18">Ingredient@811b7a18</option>
+                                
+                                    <option value="crafting-minecraft:soul_campfire">crafting-minecraft:soul_campfire</option>
+                                
+                                    <option value="minecraft:soul_campfire">minecraft:soul_campfire</option>
+                                
+                                    <option value="Ingredient@5d13bee7">Ingredient@5d13bee7</option>
+                                
+                                    <option value="minecraft:mud_brick_stairs">minecraft:mud_brick_stairs</option>
+                                
+                                    <option value="mcwpaths:mud_brick_crystal_floor_slab">mcwpaths:mud_brick_crystal_floor_slab</option>
+                                
+                                    <option value="mcwpaths:mud_brick_honeycomb_paving">mcwpaths:mud_brick_honeycomb_paving</option>
+                                
+                                    <option value="Ingredient@5e14425e">Ingredient@5e14425e</option>
+                                
+                                    <option value="stonecutting-minecraft:cracked_mud_brick_slab_from_cracked_mud_bricks_stonecutting">stonecutting-minecraft:cracked_mud_brick_slab_from_cracked_mud_bricks_stonecutting</option>
+                                
+                                    <option value="crafting-betterarcheology:cracked_mud_brick_slab">crafting-betterarcheology:cracked_mud_brick_slab</option>
+                                
+                                    <option value="crafting-betterarcheology:cracked_mud_brick_stairs">crafting-betterarcheology:cracked_mud_brick_stairs</option>
+                                
+                                    <option value="minecraft:dirt">minecraft:dirt</option>
+                                
+                                    <option value="Ingredient@9fb2f38c">Ingredient@9fb2f38c</option>
+                                
+                                    <option value="mcwpaths:mud_brick_crystal_floor_stairs">mcwpaths:mud_brick_crystal_floor_stairs</option>
+                                
+                                    <option value="create:pressing-create:pressing/path">create:pressing-create:pressing/path</option>
+                                
+                                    <option value="minecraft:dirt_path">minecraft:dirt_path</option>
+                                
+                                    <option value="minecraft:mud_brick_wall">minecraft:mud_brick_wall</option>
+                                
+                                    <option value="crafting-minecraft:soul_lantern">crafting-minecraft:soul_lantern</option>
+                                
+                                    <option value="minecraft:soul_lantern">minecraft:soul_lantern</option>
+                                
+                                    <option value="betterarcheology:cracked_mud_brick_slab">betterarcheology:cracked_mud_brick_slab</option>
+                                
+                                    <option value="mcwpaths:mud_brick_flagstone_stairs">mcwpaths:mud_brick_flagstone_stairs</option>
+                                
+                                    <option value="minecraft:mud_bricks">minecraft:mud_bricks</option>
+                                
+                                    <option value="mcwpaths:mud_brick_crystal_floor">mcwpaths:mud_brick_crystal_floor</option>
+                                
+                                    <option value="crafting-supplementaries:flower_box">crafting-supplementaries:flower_box</option>
+                                
+                                    <option value="crafting-supplementaries:planter">crafting-supplementaries:planter</option>
+                                
+                                    <option value="stonecutting-mcwpaths:dirt_path_block">stonecutting-mcwpaths:dirt_path_block</option>
+                                
+                                    <option value="mcwpaths:mud_brick_windmill_weave_stairs">mcwpaths:mud_brick_windmill_weave_stairs</option>
+                                
+                                    <option value="crafting-minecraft:packed_mud">crafting-minecraft:packed_mud</option>
+                                
+                                    <option value="minecraft:packed_mud">minecraft:packed_mud</option>
+                                
+                                    <option value="crafting-minecraft:soul_torch">crafting-minecraft:soul_torch</option>
+                                
+                                    <option value="minecraft:soul_torch">minecraft:soul_torch</option>
+                                
+                                    <option value="Ingredient@d3816e0">Ingredient@d3816e0</option>
+                                
+                                    <option value="mcwpaths:mud_brick_running_bond_stairs">mcwpaths:mud_brick_running_bond_stairs</option>
+                                
+                                    <option value="mcwpaths:mud_brick_square_paving">mcwpaths:mud_brick_square_paving</option>
+                                
+                                    <option value="mcwpaths:dirt_path_block">mcwpaths:dirt_path_block</option>
+                                
+                                    <option value="mcwpaths:mud_brick_windmill_weave_path">mcwpaths:mud_brick_windmill_weave_path</option>
+                                
+                                    <option value="mcwpaths:mud_brick_running_bond_path">mcwpaths:mud_brick_running_bond_path</option>
+                                
+                                    <option value="supplementaries:planter">supplementaries:planter</option>
+                                
+                                    <option value="mcwpaths:mud_brick_running_bond">mcwpaths:mud_brick_running_bond</option>
+                                
+                                    <option value="mcwpaths:mud_brick_diamond_paving">mcwpaths:mud_brick_diamond_paving</option>
+                                
+                                    <option value="supplementaries:flower_box">supplementaries:flower_box</option>
+                                
+                                    <option value="mcwpaths:mud_brick_flagstone_slab">mcwpaths:mud_brick_flagstone_slab</option>
+                                
+                                    <option value="mcwpaths:mud_brick_flagstone_path">mcwpaths:mud_brick_flagstone_path</option>
+                                
+                                    <option value="mcwpaths:mud_brick_windmill_weave">mcwpaths:mud_brick_windmill_weave</option>
+                                
+                                    <option value="mcwpaths:mud_brick_crystal_floor_path">mcwpaths:mud_brick_crystal_floor_path</option>
+                                
+                            </select>
+                        </div>
+                        <div class="col-2 pb-2">
+                            <button type="button" class="btn btn-primary btn-block" onclick="neighbourhoodHighlight({nodes: []});">Reset Selection</button>
+                        </div>
+                    </div>
+                </div>
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+            <div id="loadingBar">
+              <div class="outerBorder">
+                <div id="text">0%</div>
+                <div id="border">
+                  <div id="bar"></div>
+                </div>
+              </div>
+            </div>
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+                  new TomSelect("#select-node",{
+                      create: false,
+                      sortField: {
+                          field: "text",
+                          direction: "asc"
+                      }
+                  });
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "green", "id": "stonecutting-mcwpaths:mud_brick_dumble_paving", "label": "stonecutting-mcwpaths:mud_brick_dumble_paving", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "#8ceef5", "id": "mcwpaths:mud_brick_dumble_paving", "label": "mcwpaths:mud_brick_dumble_paving", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "green", "id": "stonecutting-mcwpaths:mud_brick_flagstone", "label": "stonecutting-mcwpaths:mud_brick_flagstone", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "#8ceef5", "id": "mcwpaths:mud_brick_flagstone", "label": "mcwpaths:mud_brick_flagstone", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "green", "id": "stonecutting-minecraft:cracked_mud_brick_stairs_from_cracked_mud_bricks_stonecutting", "label": "stonecutting-minecraft:cracked_mud_brick_stairs_from_cracked_mud_bricks_stonecutting", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "#8ceef5", "id": "betterarcheology:cracked_mud_brick_stairs", "label": "betterarcheology:cracked_mud_brick_stairs", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "green", "id": "crafting-supplementaries:sconce_soul", "label": "crafting-supplementaries:sconce_soul", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "#8ceef5", "id": "supplementaries:sconce_soul", "label": "supplementaries:sconce_soul", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "green", "id": "crafting-minecraft:mud_brick_slab", "label": "crafting-minecraft:mud_brick_slab", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "#8ceef5", "id": "minecraft:mud_brick_slab", "label": "minecraft:mud_brick_slab", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "green", "id": "stonecutting-mcwpaths:mud_brick_basket_weave_paving", "label": "stonecutting-mcwpaths:mud_brick_basket_weave_paving", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "#8ceef5", "id": "mcwpaths:mud_brick_basket_weave_paving", "label": "mcwpaths:mud_brick_basket_weave_paving", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "green", "id": "create:haunting-create:haunting/soul_soil", "label": "create:haunting-create:haunting/soul_soil", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "#8ceef5", "id": "minecraft:soul_soil", "label": "minecraft:soul_soil", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "#8ceef5", "id": "minecraft:mud", "label": "minecraft:mud", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "yellow", "id": "Ingredient@d4b07ca8", "label": "Ingredient@d4b07ca8", "shape": "square", "size": 60, "type": "ingredient", "value": NaN}, {"color": "yellow", "id": "Ingredient@9a09fa37", "label": "Ingredient@9a09fa37", "shape": "square", "size": 60, "type": "ingredient", "value": NaN}, {"color": "yellow", "id": "Ingredient@e09d257b", "label": "Ingredient@e09d257b", "shape": "square", "size": 60, "type": "ingredient", "value": NaN}, {"color": "green", "id": "create:mixing-create:mixing/mud_by_mixing", "label": "create:mixing-create:mixing/mud_by_mixing", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "green", "id": "smelting-betterarcheology:cracked_mud_bricks", "label": "smelting-betterarcheology:cracked_mud_bricks", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "#8ceef5", "id": "betterarcheology:cracked_mud_bricks", "label": "betterarcheology:cracked_mud_bricks", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "green", "id": "crafting-minecraft:coarse_dirt", "label": "crafting-minecraft:coarse_dirt", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "#8ceef5", "id": "minecraft:coarse_dirt", "label": "minecraft:coarse_dirt", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "yellow", "id": "Ingredient@7d992174", "label": "Ingredient@7d992174", "shape": "square", "size": 60, "type": "ingredient", "value": NaN}, {"color": "green", "id": "stonecutting-mcwpaths:mud_brick_flagstone_path", "label": "stonecutting-mcwpaths:mud_brick_flagstone_path", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "green", "id": "stonecutting-minecraft:mud_brick_slab_from_mud_bricks_stonecutting", "label": "stonecutting-minecraft:mud_brick_slab_from_mud_bricks_stonecutting", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "green", "id": "stonecutting-mcwpaths:mud_brick_windmill_weave", "label": "stonecutting-mcwpaths:mud_brick_windmill_weave", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "green", "id": "stonecutting-minecraft:mud_brick_stairs_from_mud_bricks_stonecutting", "label": "stonecutting-minecraft:mud_brick_stairs_from_mud_bricks_stonecutting", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "green", "id": "stonecutting-mcwpaths:mud_brick_running_bond", "label": "stonecutting-mcwpaths:mud_brick_running_bond", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "green", "id": "stonecutting-mcwpaths:mud_brick_crystal_floor", "label": "stonecutting-mcwpaths:mud_brick_crystal_floor", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "green", "id": "stonecutting-mcwpaths:mud_brick_square_paving", "label": "stonecutting-mcwpaths:mud_brick_square_paving", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "green", "id": "stonecutting-mcwpaths:mud_brick_crystal_floor_slab", "label": "stonecutting-mcwpaths:mud_brick_crystal_floor_slab", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "green", "id": "stonecutting-mcwpaths:mud_brick_windmill_weave_stairs", "label": "stonecutting-mcwpaths:mud_brick_windmill_weave_stairs", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "green", "id": "crafting-minecraft:mud_brick_stairs", "label": "crafting-minecraft:mud_brick_stairs", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "green", "id": "crafting-minecraft:mud_brick_wall", "label": "crafting-minecraft:mud_brick_wall", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "green", "id": "stonecutting-mcwpaths:mud_brick_honeycomb_paving", "label": "stonecutting-mcwpaths:mud_brick_honeycomb_paving", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "green", "id": "stonecutting-mcwpaths:mud_brick_running_bond_stairs", "label": "stonecutting-mcwpaths:mud_brick_running_bond_stairs", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "green", "id": "stonecutting-mcwpaths:mud_brick_crystal_floor_path", "label": "stonecutting-mcwpaths:mud_brick_crystal_floor_path", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "green", "id": "stonecutting-mcwpaths:mud_brick_flagstone_stairs", "label": "stonecutting-mcwpaths:mud_brick_flagstone_stairs", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "green", "id": "stonecutting-mcwpaths:mud_brick_clover_paving", "label": "stonecutting-mcwpaths:mud_brick_clover_paving", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "green", "id": "stonecutting-mcwpaths:mud_brick_strewn_rocky_path", "label": "stonecutting-mcwpaths:mud_brick_strewn_rocky_path", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "green", "id": "stonecutting-mcwpaths:mud_brick_crystal_floor_stairs", "label": "stonecutting-mcwpaths:mud_brick_crystal_floor_stairs", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "green", "id": "stonecutting-mcwpaths:mud_brick_running_bond_slab", "label": "stonecutting-mcwpaths:mud_brick_running_bond_slab", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "green", "id": "stonecutting-mcwpaths:mud_brick_windmill_weave_slab", "label": "stonecutting-mcwpaths:mud_brick_windmill_weave_slab", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "green", "id": "stonecutting-minecraft:mud_brick_wall_from_mud_bricks_stonecutting", "label": "stonecutting-minecraft:mud_brick_wall_from_mud_bricks_stonecutting", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "green", "id": "stonecutting-mcwpaths:mud_brick_running_bond_path", "label": "stonecutting-mcwpaths:mud_brick_running_bond_path", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "green", "id": "stonecutting-mcwpaths:mud_brick_windmill_weave_path", "label": "stonecutting-mcwpaths:mud_brick_windmill_weave_path", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "green", "id": "stonecutting-mcwpaths:mud_brick_diamond_paving", "label": "stonecutting-mcwpaths:mud_brick_diamond_paving", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "green", "id": "stonecutting-mcwpaths:mud_brick_flagstone_slab", "label": "stonecutting-mcwpaths:mud_brick_flagstone_slab", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "green", "id": "crafting-minecraft:muddy_mangrove_roots", "label": "crafting-minecraft:muddy_mangrove_roots", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "#8ceef5", "id": "minecraft:muddy_mangrove_roots", "label": "minecraft:muddy_mangrove_roots", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "#8ceef5", "id": "mcwpaths:mud_brick_running_bond_slab", "label": "mcwpaths:mud_brick_running_bond_slab", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "yellow", "id": "Ingredient@e4b5a810", "label": "Ingredient@e4b5a810", "shape": "square", "size": 60, "type": "ingredient", "value": NaN}, {"color": "green", "id": "crafting-minecraft:mud_bricks", "label": "crafting-minecraft:mud_bricks", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "#8ceef5", "id": "mcwpaths:mud_brick_clover_paving", "label": "mcwpaths:mud_brick_clover_paving", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "#8ceef5", "id": "mcwpaths:mud_brick_strewn_rocky_path", "label": "mcwpaths:mud_brick_strewn_rocky_path", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "#8ceef5", "id": "mcwpaths:mud_brick_windmill_weave_slab", "label": "mcwpaths:mud_brick_windmill_weave_slab", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "green", "id": "create:filling-create:filling/grass_block", "label": "create:filling-create:filling/grass_block", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "#8ceef5", "id": "minecraft:grass_block", "label": "minecraft:grass_block", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "yellow", "id": "Ingredient@811b7a18", "label": "Ingredient@811b7a18", "shape": "square", "size": 60, "type": "ingredient", "value": NaN}, {"color": "green", "id": "crafting-minecraft:soul_campfire", "label": "crafting-minecraft:soul_campfire", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "#8ceef5", "id": "minecraft:soul_campfire", "label": "minecraft:soul_campfire", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "yellow", "id": "Ingredient@5d13bee7", "label": "Ingredient@5d13bee7", "shape": "square", "size": 60, "type": "ingredient", "value": NaN}, {"color": "#8ceef5", "id": "minecraft:mud_brick_stairs", "label": "minecraft:mud_brick_stairs", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "#8ceef5", "id": "mcwpaths:mud_brick_crystal_floor_slab", "label": "mcwpaths:mud_brick_crystal_floor_slab", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "#8ceef5", "id": "mcwpaths:mud_brick_honeycomb_paving", "label": "mcwpaths:mud_brick_honeycomb_paving", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "yellow", "id": "Ingredient@5e14425e", "label": "Ingredient@5e14425e", "shape": "square", "size": 60, "type": "ingredient", "value": NaN}, {"color": "green", "id": "stonecutting-minecraft:cracked_mud_brick_slab_from_cracked_mud_bricks_stonecutting", "label": "stonecutting-minecraft:cracked_mud_brick_slab_from_cracked_mud_bricks_stonecutting", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "green", "id": "crafting-betterarcheology:cracked_mud_brick_slab", "label": "crafting-betterarcheology:cracked_mud_brick_slab", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "green", "id": "crafting-betterarcheology:cracked_mud_brick_stairs", "label": "crafting-betterarcheology:cracked_mud_brick_stairs", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "#8ceef5", "id": "minecraft:dirt", "label": "minecraft:dirt", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "yellow", "id": "Ingredient@9fb2f38c", "label": "Ingredient@9fb2f38c", "shape": "square", "size": 60, "type": "ingredient", "value": NaN}, {"color": "#8ceef5", "id": "mcwpaths:mud_brick_crystal_floor_stairs", "label": "mcwpaths:mud_brick_crystal_floor_stairs", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "green", "id": "create:pressing-create:pressing/path", "label": "create:pressing-create:pressing/path", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "#8ceef5", "id": "minecraft:dirt_path", "label": "minecraft:dirt_path", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "#8ceef5", "id": "minecraft:mud_brick_wall", "label": "minecraft:mud_brick_wall", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "green", "id": "crafting-minecraft:soul_lantern", "label": "crafting-minecraft:soul_lantern", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "#8ceef5", "id": "minecraft:soul_lantern", "label": "minecraft:soul_lantern", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "#8ceef5", "id": "betterarcheology:cracked_mud_brick_slab", "label": "betterarcheology:cracked_mud_brick_slab", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "#8ceef5", "id": "mcwpaths:mud_brick_flagstone_stairs", "label": "mcwpaths:mud_brick_flagstone_stairs", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "#8ceef5", "id": "minecraft:mud_bricks", "label": "minecraft:mud_bricks", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "#8ceef5", "id": "mcwpaths:mud_brick_crystal_floor", "label": "mcwpaths:mud_brick_crystal_floor", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "green", "id": "crafting-supplementaries:flower_box", "label": "crafting-supplementaries:flower_box", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "green", "id": "crafting-supplementaries:planter", "label": "crafting-supplementaries:planter", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "green", "id": "stonecutting-mcwpaths:dirt_path_block", "label": "stonecutting-mcwpaths:dirt_path_block", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "#8ceef5", "id": "mcwpaths:mud_brick_windmill_weave_stairs", "label": "mcwpaths:mud_brick_windmill_weave_stairs", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "green", "id": "crafting-minecraft:packed_mud", "label": "crafting-minecraft:packed_mud", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "#8ceef5", "id": "minecraft:packed_mud", "label": "minecraft:packed_mud", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "green", "id": "crafting-minecraft:soul_torch", "label": "crafting-minecraft:soul_torch", "shape": "diamond", "size": 70, "type": "craft", "value": NaN}, {"color": "#8ceef5", "id": "minecraft:soul_torch", "label": "minecraft:soul_torch", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "yellow", "id": "Ingredient@d3816e0", "label": "Ingredient@d3816e0", "shape": "square", "size": 60, "type": "ingredient", "value": NaN}, {"color": "#8ceef5", "id": "mcwpaths:mud_brick_running_bond_stairs", "label": "mcwpaths:mud_brick_running_bond_stairs", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "#8ceef5", "id": "mcwpaths:mud_brick_square_paving", "label": "mcwpaths:mud_brick_square_paving", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "#8ceef5", "id": "mcwpaths:dirt_path_block", "label": "mcwpaths:dirt_path_block", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "#8ceef5", "id": "mcwpaths:mud_brick_windmill_weave_path", "label": "mcwpaths:mud_brick_windmill_weave_path", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "#8ceef5", "id": "mcwpaths:mud_brick_running_bond_path", "label": "mcwpaths:mud_brick_running_bond_path", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "#8ceef5", "id": "supplementaries:planter", "label": "supplementaries:planter", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "#8ceef5", "id": "mcwpaths:mud_brick_running_bond", "label": "mcwpaths:mud_brick_running_bond", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "#8ceef5", "id": "mcwpaths:mud_brick_diamond_paving", "label": "mcwpaths:mud_brick_diamond_paving", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "#8ceef5", "id": "supplementaries:flower_box", "label": "supplementaries:flower_box", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "#8ceef5", "id": "mcwpaths:mud_brick_flagstone_slab", "label": "mcwpaths:mud_brick_flagstone_slab", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "#8ceef5", "id": "mcwpaths:mud_brick_flagstone_path", "label": "mcwpaths:mud_brick_flagstone_path", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "#8ceef5", "id": "mcwpaths:mud_brick_windmill_weave", "label": "mcwpaths:mud_brick_windmill_weave", "shape": "circle", "size": 100, "type": "item", "value": NaN}, {"color": "#8ceef5", "id": "mcwpaths:mud_brick_crystal_floor_path", "label": "mcwpaths:mud_brick_crystal_floor_path", "shape": "circle", "size": 100, "type": "item", "value": NaN}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "stonecutting-mcwpaths:mud_brick_dumble_paving", "to": "mcwpaths:mud_brick_dumble_paving", "width": 4}, {"arrows": "to", "from": "stonecutting-mcwpaths:mud_brick_flagstone", "to": "mcwpaths:mud_brick_flagstone", "width": 1}, {"arrows": "to", "from": "stonecutting-minecraft:cracked_mud_brick_stairs_from_cracked_mud_bricks_stonecutting", "to": "betterarcheology:cracked_mud_brick_stairs", "width": 1}, {"arrows": "to", "from": "crafting-supplementaries:sconce_soul", "to": "supplementaries:sconce_soul", "width": 1}, {"arrows": "to", "from": "crafting-minecraft:mud_brick_slab", "to": "minecraft:mud_brick_slab", "width": 6}, {"arrows": "to", "from": "stonecutting-mcwpaths:mud_brick_basket_weave_paving", "to": "mcwpaths:mud_brick_basket_weave_paving", "width": 4}, {"arrows": "to", "from": "create:haunting-create:haunting/soul_soil", "to": "minecraft:soul_soil", "width": 1}, {"arrows": "to", "from": "minecraft:mud", "to": "Ingredient@d4b07ca8", "width": 1}, {"arrows": "to", "from": "minecraft:mud", "to": "Ingredient@9a09fa37", "width": 1}, {"arrows": "to", "from": "Ingredient@e09d257b", "to": "create:mixing-create:mixing/mud_by_mixing", "width": 1}, {"arrows": "to", "from": "smelting-betterarcheology:cracked_mud_bricks", "to": "betterarcheology:cracked_mud_bricks", "width": 1}, {"arrows": "to", "from": "crafting-minecraft:coarse_dirt", "to": "minecraft:coarse_dirt", "width": 4}, {"arrows": "to", "from": "Ingredient@7d992174", "to": "stonecutting-mcwpaths:mud_brick_flagstone_path", "width": 1}, {"arrows": "to", "from": "Ingredient@7d992174", "to": "stonecutting-mcwpaths:mud_brick_basket_weave_paving", "width": 1}, {"arrows": "to", "from": "Ingredient@7d992174", "to": "stonecutting-minecraft:mud_brick_slab_from_mud_bricks_stonecutting", "width": 1}, {"arrows": "to", "from": "Ingredient@7d992174", "to": "stonecutting-mcwpaths:mud_brick_windmill_weave", "width": 1}, {"arrows": "to", "from": "Ingredient@7d992174", "to": "crafting-minecraft:mud_brick_slab", "width": 3}, {"arrows": "to", "from": "Ingredient@7d992174", "to": "stonecutting-mcwpaths:mud_brick_flagstone", "width": 1}, {"arrows": "to", "from": "Ingredient@7d992174", "to": "stonecutting-minecraft:mud_brick_stairs_from_mud_bricks_stonecutting", "width": 1}, {"arrows": "to", "from": "Ingredient@7d992174", "to": "stonecutting-mcwpaths:mud_brick_running_bond", "width": 1}, {"arrows": "to", "from": "Ingredient@7d992174", "to": "stonecutting-mcwpaths:mud_brick_crystal_floor", "width": 1}, {"arrows": "to", "from": "Ingredient@7d992174", "to": "stonecutting-mcwpaths:mud_brick_square_paving", "width": 1}, {"arrows": "to", "from": "Ingredient@7d992174", "to": "stonecutting-mcwpaths:mud_brick_crystal_floor_slab", "width": 1}, {"arrows": "to", "from": "Ingredient@7d992174", "to": "stonecutting-mcwpaths:mud_brick_windmill_weave_stairs", "width": 1}, {"arrows": "to", "from": "Ingredient@7d992174", "to": "crafting-minecraft:mud_brick_stairs", "width": 6}, {"arrows": "to", "from": "Ingredient@7d992174", "to": "crafting-minecraft:mud_brick_wall", "width": 6}, {"arrows": "to", "from": "Ingredient@7d992174", "to": "stonecutting-mcwpaths:mud_brick_honeycomb_paving", "width": 1}, {"arrows": "to", "from": "Ingredient@7d992174", "to": "stonecutting-mcwpaths:mud_brick_running_bond_stairs", "width": 1}, {"arrows": "to", "from": "Ingredient@7d992174", "to": "stonecutting-mcwpaths:mud_brick_crystal_floor_path", "width": 1}, {"arrows": "to", "from": "Ingredient@7d992174", "to": "stonecutting-mcwpaths:mud_brick_flagstone_stairs", "width": 1}, {"arrows": "to", "from": "Ingredient@7d992174", "to": "stonecutting-mcwpaths:mud_brick_clover_paving", "width": 1}, {"arrows": "to", "from": "Ingredient@7d992174", "to": "stonecutting-mcwpaths:mud_brick_dumble_paving", "width": 1}, {"arrows": "to", "from": "Ingredient@7d992174", "to": "stonecutting-mcwpaths:mud_brick_strewn_rocky_path", "width": 1}, {"arrows": "to", "from": "Ingredient@7d992174", "to": "stonecutting-mcwpaths:mud_brick_crystal_floor_stairs", "width": 1}, {"arrows": "to", "from": "Ingredient@7d992174", "to": "stonecutting-mcwpaths:mud_brick_running_bond_slab", "width": 1}, {"arrows": "to", "from": "Ingredient@7d992174", "to": "stonecutting-mcwpaths:mud_brick_windmill_weave_slab", "width": 1}, {"arrows": "to", "from": "Ingredient@7d992174", "to": "stonecutting-minecraft:mud_brick_wall_from_mud_bricks_stonecutting", "width": 1}, {"arrows": "to", "from": "Ingredient@7d992174", "to": "smelting-betterarcheology:cracked_mud_bricks", "width": 1}, {"arrows": "to", "from": "Ingredient@7d992174", "to": "stonecutting-mcwpaths:mud_brick_running_bond_path", "width": 1}, {"arrows": "to", "from": "Ingredient@7d992174", "to": "stonecutting-mcwpaths:mud_brick_windmill_weave_path", "width": 1}, {"arrows": "to", "from": "Ingredient@7d992174", "to": "stonecutting-mcwpaths:mud_brick_diamond_paving", "width": 1}, {"arrows": "to", "from": "Ingredient@7d992174", "to": "stonecutting-mcwpaths:mud_brick_flagstone_slab", "width": 1}, {"arrows": "to", "from": "crafting-minecraft:muddy_mangrove_roots", "to": "minecraft:muddy_mangrove_roots", "width": 1}, {"arrows": "to", "from": "stonecutting-mcwpaths:mud_brick_running_bond_slab", "to": "mcwpaths:mud_brick_running_bond_slab", "width": 2}, {"arrows": "to", "from": "Ingredient@d4b07ca8", "to": "create:haunting-create:haunting/soul_soil", "width": 1}, {"arrows": "to", "from": "Ingredient@e4b5a810", "to": "crafting-minecraft:mud_bricks", "width": 4}, {"arrows": "to", "from": "stonecutting-mcwpaths:mud_brick_clover_paving", "to": "mcwpaths:mud_brick_clover_paving", "width": 4}, {"arrows": "to", "from": "stonecutting-mcwpaths:mud_brick_strewn_rocky_path", "to": "mcwpaths:mud_brick_strewn_rocky_path", "width": 4}, {"arrows": "to", "from": "stonecutting-mcwpaths:mud_brick_windmill_weave_slab", "to": "mcwpaths:mud_brick_windmill_weave_slab", "width": 2}, {"arrows": "to", "from": "create:filling-create:filling/grass_block", "to": "minecraft:grass_block", "width": 1}, {"arrows": "to", "from": "minecraft:soul_soil", "to": "Ingredient@811b7a18", "width": 1}, {"arrows": "to", "from": "crafting-minecraft:soul_campfire", "to": "minecraft:soul_campfire", "width": 1}, {"arrows": "to", "from": "minecraft:grass_block", "to": "Ingredient@d4b07ca8", "width": 1}, {"arrows": "to", "from": "minecraft:grass_block", "to": "Ingredient@5d13bee7", "width": 1}, {"arrows": "to", "from": "stonecutting-minecraft:mud_brick_stairs_from_mud_bricks_stonecutting", "to": "minecraft:mud_brick_stairs", "width": 1}, {"arrows": "to", "from": "stonecutting-mcwpaths:mud_brick_crystal_floor_slab", "to": "mcwpaths:mud_brick_crystal_floor_slab", "width": 2}, {"arrows": "to", "from": "stonecutting-mcwpaths:mud_brick_honeycomb_paving", "to": "mcwpaths:mud_brick_honeycomb_paving", "width": 4}, {"arrows": "to", "from": "crafting-minecraft:mud_brick_stairs", "to": "minecraft:mud_brick_stairs", "width": 4}, {"arrows": "to", "from": "Ingredient@5e14425e", "to": "stonecutting-minecraft:cracked_mud_brick_slab_from_cracked_mud_bricks_stonecutting", "width": 1}, {"arrows": "to", "from": "Ingredient@5e14425e", "to": "crafting-betterarcheology:cracked_mud_brick_slab", "width": 3}, {"arrows": "to", "from": "Ingredient@5e14425e", "to": "stonecutting-minecraft:cracked_mud_brick_stairs_from_cracked_mud_bricks_stonecutting", "width": 1}, {"arrows": "to", "from": "Ingredient@5e14425e", "to": "crafting-betterarcheology:cracked_mud_brick_stairs", "width": 6}, {"arrows": "to", "from": "minecraft:coarse_dirt", "to": "Ingredient@d4b07ca8", "width": 1}, {"arrows": "to", "from": "minecraft:coarse_dirt", "to": "Ingredient@5d13bee7", "width": 1}, {"arrows": "to", "from": "minecraft:coarse_dirt", "to": "Ingredient@e09d257b", "width": 1}, {"arrows": "to", "from": "betterarcheology:cracked_mud_bricks", "to": "Ingredient@5e14425e", "width": 1}, {"arrows": "to", "from": "minecraft:dirt", "to": "Ingredient@d4b07ca8", "width": 1}, {"arrows": "to", "from": "minecraft:dirt", "to": "Ingredient@9fb2f38c", "width": 1}, {"arrows": "to", "from": "minecraft:dirt", "to": "Ingredient@5d13bee7", "width": 1}, {"arrows": "to", "from": "minecraft:dirt", "to": "Ingredient@e09d257b", "width": 1}, {"arrows": "to", "from": "crafting-betterarcheology:cracked_mud_brick_stairs", "to": "betterarcheology:cracked_mud_brick_stairs", "width": 4}, {"arrows": "to", "from": "stonecutting-mcwpaths:mud_brick_crystal_floor_stairs", "to": "mcwpaths:mud_brick_crystal_floor_stairs", "width": 1}, {"arrows": "to", "from": "create:pressing-create:pressing/path", "to": "minecraft:dirt_path", "width": 1}, {"arrows": "to", "from": "stonecutting-minecraft:mud_brick_wall_from_mud_bricks_stonecutting", "to": "minecraft:mud_brick_wall", "width": 1}, {"arrows": "to", "from": "crafting-minecraft:soul_lantern", "to": "minecraft:soul_lantern", "width": 1}, {"arrows": "to", "from": "crafting-betterarcheology:cracked_mud_brick_slab", "to": "betterarcheology:cracked_mud_brick_slab", "width": 6}, {"arrows": "to", "from": "crafting-minecraft:mud_brick_wall", "to": "minecraft:mud_brick_wall", "width": 6}, {"arrows": "to", "from": "stonecutting-mcwpaths:mud_brick_flagstone_stairs", "to": "mcwpaths:mud_brick_flagstone_stairs", "width": 1}, {"arrows": "to", "from": "minecraft:mud_bricks", "to": "Ingredient@7d992174", "width": 1}, {"arrows": "to", "from": "stonecutting-mcwpaths:mud_brick_crystal_floor", "to": "mcwpaths:mud_brick_crystal_floor", "width": 1}, {"arrows": "to", "from": "Ingredient@9fb2f38c", "to": "crafting-supplementaries:flower_box", "width": 1}, {"arrows": "to", "from": "Ingredient@9fb2f38c", "to": "crafting-supplementaries:planter", "width": 1}, {"arrows": "to", "from": "Ingredient@9fb2f38c", "to": "create:filling-create:filling/grass_block", "width": 1}, {"arrows": "to", "from": "Ingredient@9fb2f38c", "to": "crafting-minecraft:coarse_dirt", "width": 2}, {"arrows": "to", "from": "Ingredient@9fb2f38c", "to": "stonecutting-mcwpaths:dirt_path_block", "width": 1}, {"arrows": "to", "from": "stonecutting-mcwpaths:mud_brick_windmill_weave_stairs", "to": "mcwpaths:mud_brick_windmill_weave_stairs", "width": 1}, {"arrows": "to", "from": "stonecutting-minecraft:cracked_mud_brick_slab_from_cracked_mud_bricks_stonecutting", "to": "betterarcheology:cracked_mud_brick_slab", "width": 2}, {"arrows": "to", "from": "Ingredient@9a09fa37", "to": "crafting-minecraft:packed_mud", "width": 1}, {"arrows": "to", "from": "Ingredient@9a09fa37", "to": "crafting-minecraft:muddy_mangrove_roots", "width": 1}, {"arrows": "to", "from": "crafting-minecraft:packed_mud", "to": "minecraft:packed_mud", "width": 1}, {"arrows": "to", "from": "Ingredient@5d13bee7", "to": "create:pressing-create:pressing/path", "width": 1}, {"arrows": "to", "from": "crafting-minecraft:soul_torch", "to": "minecraft:soul_torch", "width": 4}, {"arrows": "to", "from": "minecraft:soul_torch", "to": "Ingredient@d3816e0", "width": 1}, {"arrows": "to", "from": "stonecutting-mcwpaths:mud_brick_running_bond_stairs", "to": "mcwpaths:mud_brick_running_bond_stairs", "width": 1}, {"arrows": "to", "from": "stonecutting-mcwpaths:mud_brick_square_paving", "to": "mcwpaths:mud_brick_square_paving", "width": 4}, {"arrows": "to", "from": "stonecutting-mcwpaths:dirt_path_block", "to": "mcwpaths:dirt_path_block", "width": 1}, {"arrows": "to", "from": "Ingredient@811b7a18", "to": "crafting-minecraft:soul_torch", "width": 1}, {"arrows": "to", "from": "Ingredient@811b7a18", "to": "crafting-minecraft:soul_campfire", "width": 1}, {"arrows": "to", "from": "minecraft:packed_mud", "to": "Ingredient@e4b5a810", "width": 1}, {"arrows": "to", "from": "Ingredient@d3816e0", "to": "crafting-supplementaries:sconce_soul", "width": 1}, {"arrows": "to", "from": "Ingredient@d3816e0", "to": "crafting-minecraft:soul_lantern", "width": 1}, {"arrows": "to", "from": "stonecutting-mcwpaths:mud_brick_windmill_weave_path", "to": "mcwpaths:mud_brick_windmill_weave_path", "width": 4}, {"arrows": "to", "from": "minecraft:muddy_mangrove_roots", "to": "Ingredient@d4b07ca8", "width": 1}, {"arrows": "to", "from": "crafting-minecraft:mud_bricks", "to": "minecraft:mud_bricks", "width": 4}, {"arrows": "to", "from": "stonecutting-mcwpaths:mud_brick_running_bond_path", "to": "mcwpaths:mud_brick_running_bond_path", "width": 4}, {"arrows": "to", "from": "crafting-supplementaries:planter", "to": "supplementaries:planter", "width": 1}, {"arrows": "to", "from": "stonecutting-mcwpaths:mud_brick_running_bond", "to": "mcwpaths:mud_brick_running_bond", "width": 1}, {"arrows": "to", "from": "stonecutting-mcwpaths:mud_brick_diamond_paving", "to": "mcwpaths:mud_brick_diamond_paving", "width": 4}, {"arrows": "to", "from": "crafting-supplementaries:flower_box", "to": "supplementaries:flower_box", "width": 2}, {"arrows": "to", "from": "stonecutting-mcwpaths:mud_brick_flagstone_slab", "to": "mcwpaths:mud_brick_flagstone_slab", "width": 2}, {"arrows": "to", "from": "stonecutting-mcwpaths:mud_brick_flagstone_path", "to": "mcwpaths:mud_brick_flagstone_path", "width": 4}, {"arrows": "to", "from": "stonecutting-mcwpaths:mud_brick_windmill_weave", "to": "mcwpaths:mud_brick_windmill_weave", "width": 1}, {"arrows": "to", "from": "stonecutting-minecraft:mud_brick_slab_from_mud_bricks_stonecutting", "to": "minecraft:mud_brick_slab", "width": 2}, {"arrows": "to", "from": "create:mixing-create:mixing/mud_by_mixing", "to": "minecraft:mud", "width": 1}, {"arrows": "to", "from": "stonecutting-mcwpaths:mud_brick_crystal_floor_path", "to": "mcwpaths:mud_brick_crystal_floor_path", "width": 4}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": false,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+                    network.on("selectNode", neighbourhoodHighlight);
+                  
+
+                  
+
+
+                  
+                      network.on("stabilizationProgress", function(params) {
+                          document.getElementById('loadingBar').removeAttribute("style");
+                          var maxWidth = 496;
+                          var minWidth = 20;
+                          var widthFactor = params.iterations/params.total;
+                          var width = Math.max(minWidth,maxWidth * widthFactor);
+                          document.getElementById('bar').style.width = width + 'px';
+                          document.getElementById('text').innerHTML = Math.round(widthFactor*100) + '%';
+                      });
+                      network.once("stabilizationIterationsDone", function() {
+                          document.getElementById('text').innerHTML = '100%';
+                          document.getElementById('bar').style.width = '496px';
+                          document.getElementById('loadingBar').style.opacity = 0;
+                          // really clean the dom element
+                          setTimeout(function () {document.getElementById('loadingBar').style.display = 'none';}, 500);
+                      });
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>
