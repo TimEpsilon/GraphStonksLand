@@ -1,11 +1,6 @@
-from collections import defaultdict
-from typing import Hashable
-
 import numpy as np
 import json
 import networkx as nx
-
-from Core.PropagationAlgorithm import GraphSolver
 
 
 class GraphCreator:
@@ -34,10 +29,9 @@ class GraphCreator:
 
         # Graph
         # We keep a copy of the original graph just in case
-        self.Originalgraph = self._generateGraph()
-        self.G = self.Originalgraph.copy()
-
-
+        self.originalGraph = self._generateGraph()
+        self.G = self.originalGraph.copy()
+        self._collapseCycles()
 
     def _getItems(self) -> tuple[list, list]:
         items = open(self.itemPath).readlines()
@@ -93,7 +87,7 @@ class GraphCreator:
         return graph
 
     def _getCycles(self) -> dict[str, set]:
-        cycles = [c for c in nx.strongly_connected_components(self.Originalgraph) if len(c) > 1]
+        cycles = [c for c in nx.strongly_connected_components(self.originalGraph) if len(c) > 1]
         return {f"cycle-{i}":c for i,c in enumerate(cycles)}
 
     def _collapseCycles(self):
@@ -101,61 +95,27 @@ class GraphCreator:
             # We set the corresponding cycle subgraph as a node attribute
             self.G.add_node(cycleid, type="cycle", SCT=None, hasComputed=False, shape="triangleDown", color="black", size=50, subgraph=self.G.subgraph(cycle).copy())
 
-            # List of incoming edges, represented as a tuple (incoming outside node, cycleid, attributes dict)
-            # The attributes are : the ones already in the edge + to_subnode,
-            # encoding the original node to which this edge pointed to
-            in_edges = []
+            cycleIn = set()
+            cycleOut = set()
+            inEdges = set()
+            outEdges = set()
             for n in cycle:
-                for p in self.G.predecessors(n):
+                for p in self.originalGraph.predecessors(n):
                     if p not in cycle:
-                        in_edges.append((p, cycleid, {**self.G[p][n], "to_subnode":n}))
-
-            # List of outgoing edges, represented as a tuple (cycleid, outside node, attributes dict)
-            # The attributes are : the ones already in the edge + from_subnode,
-            # encoding the original node to which this edge pointed from
-            out_edges = []
-            for n in cycle:
-                for s in self.G.successors(n):
+                        inEdges.add((p, n, self.originalGraph[p][n]))
+                        cycleIn.add((p, cycleid))
+                for s in self.originalGraph.successors(n):
                     if s not in cycle:
-                        out_edges.append((cycleid, s, {**self.G[n][s], "from_subnode":n}))
+                        outEdges.add((s, n, self.originalGraph[n][s]))
+                        cycleOut.add((cycleid, s))
 
-            in_edges = GraphCreator._combineEdges(in_edges)
-            out_edges = GraphCreator._combineEdges(out_edges)
+            self.G.nodes[cycleid]["inEdges"] = inEdges
+            self.G.nodes[cycleid]["outEdges"] = outEdges
 
-            self.G.add_edges_from(in_edges)
-            self.G.add_edges_from(out_edges)
+            self.G.add_edges_from(cycleIn)
+            self.G.add_edges_from(cycleOut)
 
             self.G.remove_nodes_from(cycle)
-
-    @staticmethod
-    def _combineEdges(edge_list : list[tuple[str,str,dict]]) -> list[tuple[str,str,dict]]:
-        """
-        Combines identical edges into one but every attribute is appended to a list.
-        This means that if 2 edges go to the cycle node but used to point to 2 different subnodes,
-        their attributes values are stored in a list on the same key,
-        the first edge being accessed by an index 0 and the 2nd edge by an index 1
-        :param edge_list: list of 3 tuples representing the edges
-        :return: The same list but every identical edge is combined
-        """
-        grouped = defaultdict(list)
-
-        # Group property dicts by (from, to)
-        for from_node, to_node, props in edge_list:
-            grouped[(from_node, to_node)].append(props)
-
-        # Compress the properties into lists
-        compressed = []
-        for (from_node, to_node), props_list in grouped.items():
-            merged_props = defaultdict(list)
-            for prop in props_list:
-                for key, value in prop.items():
-                    if isinstance(value, list):
-                        merged_props[key] = merged_props[key] + value
-                    else:
-                        merged_props[key].append(value)
-            compressed.append((from_node, to_node, dict(merged_props)))
-
-        return compressed
 
 
     # --------------------------------------------------------------------
@@ -196,4 +156,3 @@ class GraphCreator:
                 deadend.append(n)
 
         return set(deadend)
-

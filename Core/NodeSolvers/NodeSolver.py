@@ -9,18 +9,13 @@ class NodeSolver(ABC):
     Abstract class onto which each node specific solver is built.
     """
     graph : nx.DiGraph
+    originalGraph : nx.DiGraph
     thisNode : str
     predecessors : set
 
     @abstractmethod
     def solver(self):
         pass
-
-    @staticmethod
-    def cutTooLow(candidates, threshold=0.001):
-        candidates = np.array(candidates)
-        candidates = np.round(candidates / threshold) * threshold
-        return set(candidates[candidates >= threshold])
 
     def arePredecessorsSolved(self) -> bool:
         """
@@ -45,13 +40,17 @@ class NodeSolver(ABC):
         for p in predecessors:
             if p["type"] != "cycle":
                 predecessors.add(p)
-                edgeWeight[p] = self.graph.edges()[p][self.thisNode].get("weight",np.nan)
-                nodeValue[p] = self.graph[p]["SCT"]
+                edgeWeight[p] = self.graph.edges[p][self.thisNode].get("weight",np.nan)
+                nodeValue[p] = self.graph.nodes[p]["SCT"]
             else:
-                edge = self.graph[p][self.thisNode]
-                for e,w in zip(edge["from_subnode"], edge["weight"]):
-                    predecessors.add(e)
-                    edgeWeight[e] = w
-                    nodeValue[e] = self.graph[p]["subgraph"][e]["SCT"]
+                subNodes = self.graph.nodes[p]["subgraph"].nodes()
+                #for n in subNodes:
+
 
         return predecessors, edgeWeight, nodeValue
+
+    @staticmethod
+    def cutTooLow(candidates, threshold=0.001):
+        candidates = np.array(candidates)
+        candidates = np.round(candidates / threshold) * threshold
+        return set(candidates[candidates >= threshold])

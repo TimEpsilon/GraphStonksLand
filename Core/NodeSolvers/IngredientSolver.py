@@ -1,7 +1,4 @@
-import itertools
-
 import networkx as nx
-import numpy as np
 
 from Core.NodeSolvers.NodeSolver import NodeSolver
 
