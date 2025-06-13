@@ -9,7 +9,7 @@ class NodeSolver(ABC):
     Abstract class onto which each node specific solver is built.
     """
     graph : nx.DiGraph
-    originalGraph : nx.DiGraph
+    #originalGraph : nx.DiGraph
     thisNode : str
     predecessors : set
 
@@ -37,15 +37,17 @@ class NodeSolver(ABC):
         predecessors = set()
         edgeWeight = {}
         nodeValue = {}
-        for p in predecessors:
-            if p["type"] != "cycle":
+        for p in self.predecessors:
+            if self.graph.nodes[p]["type"] != "cycle":
                 predecessors.add(p)
-                edgeWeight[p] = self.graph.edges[p][self.thisNode].get("weight",np.nan)
+                edgeWeight[p] = self.graph[p][self.thisNode].get("weight",np.nan)
                 nodeValue[p] = self.graph.nodes[p]["SCT"]
             else:
-                subNodes = self.graph.nodes[p]["subgraph"].nodes()
-                #for n in subNodes:
-
+                for e in self.graph.nodes[p]["outEdges"]:
+                    if e[1] == self.thisNode:
+                        predecessors.add(e[0])
+                        edgeWeight[e[0]] = e[2]["weight"]
+                        nodeValue[e[0]] = self.graph.nodes[p]["subgraph"].nodes[e[0]]["SCT"]
 
         return predecessors, edgeWeight, nodeValue
 
