@@ -1,7 +1,10 @@
 from abc import ABC, abstractmethod
+from typing import Optional
 
 import networkx as nx
 import numpy as np
+
+from core.utils.Logger import Logger
 
 
 class NodeSolver(ABC):
@@ -11,6 +14,7 @@ class NodeSolver(ABC):
     graph : nx.DiGraph
     thisNode : str
     predecessors : set
+    logger: Optional[Logger] = None
 
     @abstractmethod
     def solver(self):
@@ -49,6 +53,13 @@ class NodeSolver(ABC):
                         nodeValue[e[0]] = self.graph.nodes[p]["subgraph"].nodes[e[0]]["SCT"]
 
         return predecessors, edgeWeight, nodeValue
+
+    def log(self, message):
+        self.logger.log(message)
+
+    def initLogger(self):
+        self.logger = Logger(self.__class__, self)
+
 
     @staticmethod
     def cutTooLow(candidates, threshold=0.001):

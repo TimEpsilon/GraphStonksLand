@@ -3,7 +3,7 @@ import itertools
 import networkx as nx
 import numpy as np
 
-from Core.NodeSolvers.NodeSolver import NodeSolver
+from core.solver.NodeSolver import NodeSolver
 
 
 class CycleSolver(NodeSolver):
@@ -19,6 +19,7 @@ class CycleSolver(NodeSolver):
         self.graph = graph
         self.predecessors = set(self.graph.predecessors(thisNode))
         self.subgraph : nx.DiGraph = self.graph.nodes[self.thisNode]["subgraph"]
+        self.initLogger()
 
         self.fullPredecessors, self.subTargets, self.predecessorsWeight, self.predecessorsValue = self.getTruePredecessors()
 

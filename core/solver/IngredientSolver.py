@@ -1,6 +1,6 @@
 import networkx as nx
 
-from Core.NodeSolvers.NodeSolver import NodeSolver
+from core.solver.NodeSolver import NodeSolver
 
 
 class IngredientSolver(NodeSolver):
@@ -15,6 +15,7 @@ class IngredientSolver(NodeSolver):
         self.thisNode = thisNode
         self.graph = graph
         self.predecessors = set(self.graph.predecessors(thisNode))
+        self.initLogger()
 
         # Since cycles are involved, we need to unambiguously get the weights and values of each incoming node and subnodes
         # We go from predecessors being a set of Item and Cycle nodes to Item only

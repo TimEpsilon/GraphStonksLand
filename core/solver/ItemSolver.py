@@ -1,7 +1,7 @@
 import networkx as nx
 import numpy as np
 
-from Core.NodeSolvers.NodeSolver import NodeSolver
+from core.solver.NodeSolver import NodeSolver
 
 
 class ItemSolver(NodeSolver):
@@ -16,6 +16,7 @@ class ItemSolver(NodeSolver):
         self.thisNode = thisNode
         self.graph = graph
         self.predecessors = set(self.graph.predecessors(thisNode))
+        self.initLogger()
 
     def solver(self):
         """
