@@ -74,14 +74,21 @@ class CycleSolver(NodeSolver):
                     if nodeType == "item":
                         # The logic is x = rk / ck
                         candidates = [np.array(self.subgraph[p]["SCT"]) / self.subgraph[p][node].get("weight", np.nan) for p in predecessors]
-                        candidates = np.concatenate(candidates)
-                        candidates = self.cutTooLow(candidates)
+                        candidates = set(np.concatenate(candidates))
 
+                        if "originalSCT" in self.subgraph.nodes[node]:
+                            candidates.update(self.subgraph.nodes[node]["originalSCT"])
+
+                        candidates = self.cutTooLow(candidates)
                         updatedSCT[node] = candidates
 
                     elif nodeType == "ingredient":
                         # The logic is Xi = {xi}
                         candidates = set.union(*[self.subgraph[p]["SCT"] for p in predecessors])
+
+                        if "originalSCT" in self.subgraph.nodes[node]:
+                            candidates.update(self.subgraph.nodes[node]["originalSCT"])
+
                         candidates = self.cutTooLow(candidates)
                         updatedSCT[node] = candidates
 
