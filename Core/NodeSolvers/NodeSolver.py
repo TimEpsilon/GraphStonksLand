@@ -9,7 +9,6 @@ class NodeSolver(ABC):
     Abstract class onto which each node specific solver is built.
     """
     graph : nx.DiGraph
-    #originalGraph : nx.DiGraph
     thisNode : str
     predecessors : set
 

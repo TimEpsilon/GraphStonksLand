@@ -1,3 +1,5 @@
+import itertools
+
 import networkx as nx
 import numpy as np
 
@@ -16,7 +18,7 @@ class CycleSolver(NodeSolver):
         self.thisNode = thisNode
         self.graph = graph
         self.predecessors = set(self.graph.predecessors(thisNode))
-        self.subgraph = self.graph[self.thisNode]["subgraph"]
+        self.subgraph : nx.DiGraph = self.graph.nodes[self.thisNode]["subgraph"]
 
         self.fullPredecessors, self.subTargets, self.predecessorsWeight, self.predecessorsValue = self.getTruePredecessors()
 
@@ -27,11 +29,97 @@ class CycleSolver(NodeSolver):
         - Do this N times or until convergence.
         """
         if self.arePredecessorsSolved():
-            # The logic is Xi = {xi}
-            candidates = set.union(*self.predecessorsValue.values())
-            candidates = self.cutTooLow(candidates)
-            self.graph.nodes[self.thisNode]["SCT"] = candidates
+            # 1 - Init the cycle nodes
+            for target in self.subTargets:
+                targetType = self.subgraph[target]["type"]
+                weights, values = self.predecessorsWeight[target], self.predecessorsValue[target]
+
+                if targetType == "item":
+                    # The logic is x = rk / ck
+                    candidates = [np.array(values[p]) / weights[p] for p in values.keys()]
+                    candidates = set(np.concatenate(candidates))
+                elif targetType == "ingredient":
+                    # The logic is Xi = {xi}
+                    candidates = set.union(*values.values())
+                elif targetType == "recipe":
+                    # The logic is r = sum(Xi * ci)
+                    keys = list(values.keys())
+                    valuesCartesian = [np.array(list(values[k]), dtype=np.float64) for k in keys]
+                    weightsCartesian = np.array([weights[k] for k in keys], dtype=np.float64)
+
+                    # Cartesian product via itertools, results in list of tuples
+                    combos = np.array(list(itertools.product(*valuesCartesian)), dtype=np.float64)  # shape: (n_combos, n_keys)
+
+                    # Weighted sum along axis 1 (dot product with weights)
+                    candidates = set(combos @ weightsCartesian)
+                else :
+                    candidates = set()
+                candidates = self.cutTooLow(candidates)
+                self.subgraph.nodes[target]["SCT"] = candidates
+                self.subgraph.nodes[target]["originalSCT"] = candidates # This serves for recipe nodes
+
+            # 2 - Propagate to the other nodes in the cycle
+            converged = False
+            Niter = 0
+            while not converged or Niter < 100:
+                converged = True
+                updatedSCT = {}
+
+                for node in self.subgraph.nodes():
+                    nodeType = self.subgraph.nodes[node]["type"]
+                    predecessors = list(self.subgraph.predecessors(node))
+                    candidates = set()
+
+                    if nodeType == "item":
+                        # The logic is x = rk / ck
+                        candidates = [np.array(self.subgraph[p]["SCT"]) / self.subgraph[p][node].get("weight", np.nan) for p in predecessors]
+                        candidates = np.concatenate(candidates)
+                        candidates = self.cutTooLow(candidates)
+
+                        updatedSCT[node] = candidates
+
+                    elif nodeType == "ingredient":
+                        # The logic is Xi = {xi}
+                        candidates = set.union(*[self.subgraph[p]["SCT"] for p in predecessors])
+                        candidates = self.cutTooLow(candidates)
+                        updatedSCT[node] = candidates
+
+                    elif nodeType == "recipe":
+                        # The logic is r = sum(Xi * ci)
+                        keys = list(self.predecessorsValue.keys())
+                        values = [np.array(list(self.subgraph.nodes[p]["SCT"]), dtype=np.float64) for p in predecessors]
+                        weights = np.array([self.subgraph[p][node].get("weight", np.nan) for p in predecessors], dtype=np.float64)
+
+                        # Cartesian product via itertools, results in list of tuples
+                        combos = np.array(list(itertools.product(*values)),
+                                          dtype=np.float64)  # shape: (n_combos, n_keys)
+
+                        # Weighted sum along axis 1 (dot product with weights)
+                        candidates = np.unique(combos @ weights)
+
+                        # This only takes into account the incoming sub edges, and not the incoming main graph edges
+                        if "originalSCT" in self.subgraph.nodes[node]:
+                            X,Y = np.meshgrid(candidates, self.subgraph.nodes[node]["originalSCT"])
+                            candidates = X+Y
+                            candidates = candidates.flatten()
+
+                        candidates = self.cutTooLow(candidates)
+                        updatedSCT[node] = candidates
+
+                    # Check if the values are stable (convergence criteria)
+                    converged = converged & candidates.issubset(self.subgraph[node]["SCT"])
+
+                # 2nd loop to update every value at once
+                # We don't keep the previous values as they are only used for the convergence to the fixed point
+                for node in self.subgraph.nodes():
+                    self.subgraph.nodes[node]["SCT"] = updatedSCT[node]
+
+                Niter += 1
+
             self.graph.nodes[self.thisNode]["hasComputed"] = True
+
+
+
 
     def getTruePredecessors(self) -> tuple[set[str], set[str], dict[str, dict[str, float]], dict[str, dict[str, set[float]]]]:
         """
@@ -58,7 +146,7 @@ class CycleSolver(NodeSolver):
             if e[1] not in edgeWeight:
                 edgeWeight[e[1]] = {}
                 nodeValue[e[1]] = {}
-            edgeWeight[e[1]] = {**edgeWeight[e[1]], **{e[0] : e[2]["weight"]}}
+            edgeWeight[e[1]] = {**edgeWeight[e[1]], **{e[0] : e[2].get("weight", np.nan)}}
             nodeValue[e[1]] = {**nodeValue[e[1]], **{e[0]: self._getSCTofNode(e[0])}}
 
         return predecessors, targets, edgeWeight, nodeValue

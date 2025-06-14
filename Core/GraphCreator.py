@@ -55,17 +55,19 @@ class GraphCreator:
         graph = nx.DiGraph()
 
         # Item Node
-        graph.add_nodes_from(self.itemList, type="item", SCT=set(), hasComputed=False, color='#8ceef5', size=30, shape="dot",)
+        graph.add_nodes_from(self.itemList, type="item", SCT=set(), hasComputed=False,
+                             color='#8ceef5', size=30, shape="dot",)
 
         for r in self.recipeDict.keys():
             # Recipe Node
-            graph.add_node(f"{self.recipeDict[r]['type']}-{r}", type="recipe", SCT=set(), hasComputed=False, color='green', size=15,
-                           shape="diamond")
+            graph.add_node(f"{self.recipeDict[r]['type']}-{r}", type="recipe", SCT=set(), hasComputed=False,
+                           color='green', size=15,shape="diamond")
 
             for ingr in self.recipeDict[r]["input"].keys():
 
                 # Ingredient Node
-                graph.add_node(ingr, type="ingredient", SCT=set(), hasComputed=False, color='orange', size=5, shape="square")
+                graph.add_node(ingr, type="ingredient", SCT=set(), hasComputed=False,
+                               color='orange', size=5, shape="square")
 
                 inputs = list(self.recipeDict[r]["input"][ingr].keys())
                 output = list(self.recipeDict[r]["output"])
@@ -93,7 +95,8 @@ class GraphCreator:
     def _collapseCycles(self):
         for cycleid,cycle in self._getCycles().items():
             # We set the corresponding cycle subgraph as a node attribute
-            self.G.add_node(cycleid, type="cycle", SCT=None, hasComputed=False, shape="triangleDown", color="black", size=50, subgraph=self.G.subgraph(cycle).copy())
+            self.G.add_node(cycleid, type="cycle", SCT=None, hasComputed=False, subgraph=self.G.subgraph(cycle).copy(),
+                            shape="triangleDown", color="black", size=50)
 
             cycleIn = set()
             cycleOut = set()
