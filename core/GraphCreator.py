@@ -55,19 +55,37 @@ class GraphCreator:
         graph = nx.DiGraph()
 
         # Item Node
-        graph.add_nodes_from(self.itemList, type="item", SCT=set(), hasComputed=False,
-                             color='#8ceef5', size=30, shape="dot",)
+        graph.add_nodes_from(
+            self.itemList,
+            type="item",
+            SCT=set(),
+            hasComputed=False,
+            color='#8ceef5',
+            size=30,
+            shape="dot",)
 
         for r in self.recipeDict.keys():
             # Recipe Node
-            graph.add_node(f"{self.recipeDict[r]['type']}-{r}", type="recipe", SCT=set(), hasComputed=False,
-                           color='green', size=15,shape="diamond")
+            graph.add_node(
+                f"{self.recipeDict[r]['type']}-{r}",
+                type="recipe",
+                SCT=set(),
+                hasComputed=False,
+                color='green',
+                size=15,
+                shape="diamond")
 
             for ingr in self.recipeDict[r]["input"].keys():
 
                 # Ingredient Node
-                graph.add_node(ingr, type="ingredient", SCT=set(), hasComputed=False,
-                               color='orange', size=5, shape="square")
+                graph.add_node(
+                    ingr,
+                    type="ingredient",
+                    SCT=set(),
+                    hasComputed=False,
+                    color='orange',
+                    size=5,
+                    shape="square")
 
                 inputs = list(self.recipeDict[r]["input"][ingr].keys())
                 output = list(self.recipeDict[r]["output"])
@@ -90,35 +108,54 @@ class GraphCreator:
 
     def _getCycles(self) -> dict[str, set]:
         cycles = [c for c in nx.strongly_connected_components(self.originalGraph) if len(c) > 1]
-        return {f"cycle-{i}":c for i,c in enumerate(cycles)}
+        results = {}
+        self.nodeToCycle = {}
+        for i, c in enumerate(cycles):
+            results[f"cycle-{i}"] = c
+            for n in c:
+                self.nodeToCycle[n] = f"cycle-{i}"
+        return results
 
     def _collapseCycles(self):
+        toRemove = set()
+        cycleIn = set()
+        cycleOut = set()
         for cycleid,cycle in self._getCycles().items():
             # We set the corresponding cycle subgraph as a node attribute
-            self.G.add_node(cycleid, type="cycle", SCT=None, hasComputed=False, subgraph=self.G.subgraph(cycle).copy(),
-                            shape="triangleDown", color="black", size=50)
+            self.G.add_node(
+                cycleid,
+                type="cycle",
+                SCT=None,
+                hasComputed=False,
+                subgraph=self.G.subgraph(cycle).copy(),
+                shape="triangleDown", color="black", size=50)
 
-            cycleIn = set()
-            cycleOut = set()
-            inEdges = set()
-            outEdges = set()
+            inEdges = list()
+            outEdges = list()
+
             for n in cycle:
                 for p in self.originalGraph.predecessors(n):
                     if p not in cycle:
-                        inEdges.add((p, n, self.originalGraph[p][n]))
+                        inEdges.append((p, n, self.originalGraph[p][n]))
                         cycleIn.add((p, cycleid))
+                        if p in self.nodeToCycle.keys():
+                            cycleIn.add((self.nodeToCycle[p], cycleid))
                 for s in self.originalGraph.successors(n):
                     if s not in cycle:
-                        outEdges.add((s, n, self.originalGraph[n][s]))
+                        outEdges.append((s, n, self.originalGraph[n][s]))
                         cycleOut.add((cycleid, s))
+                        if s in self.nodeToCycle.keys():
+                            cycleOut.add((cycleid, self.nodeToCycle[s]))
 
             self.G.nodes[cycleid]["inEdges"] = inEdges
             self.G.nodes[cycleid]["outEdges"] = outEdges
 
-            self.G.add_edges_from(cycleIn)
-            self.G.add_edges_from(cycleOut)
 
-            self.G.remove_nodes_from(cycle)
+            toRemove.update(cycle)
+
+        self.G.add_edges_from(cycleIn)
+        self.G.add_edges_from(cycleOut)
+        self.G.remove_nodes_from(toRemove)
 
 
     # --------------------------------------------------------------------
