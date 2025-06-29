@@ -1,3 +1,5 @@
+import logging
+
 import networkx as nx
 
 from core.solver.NodeSolver import NodeSolver
@@ -15,20 +17,30 @@ class IngredientSolver(NodeSolver):
         self.thisNode = thisNode
         self.graph = graph
         self.predecessors = set(self.graph.predecessors(thisNode))
-        self.initLogger()
+        self.logger = self._logInit()
 
         # Since cycles are involved, we need to unambiguously get the weights and values of each incoming node and subnodes
         # We go from predecessors being a set of Item and Cycle nodes to Item only
         # Item to Ingredient edges holding no weight, self.predecessorsWeight is absent as the weight dict is undefined
         self.fullPredecessors, _, self.predecessorsValue = self.getTruePredecessors()
 
-    def solver(self):
+    def solve(self):
         """
         # Only Item and Cycle nodes connect to an Ingredient node
         """
+        self.fullPredecessors, _, self.predecessorsValue = self.getTruePredecessors()
+
+        if self.graph.nodes[self.thisNode]["hasComputed"]:
+            self.log(f"{self.thisNode} already has a value. Skipping.")
+            return
         if self.arePredecessorsSolved():
+            self.log(f"Solving {self.thisNode}")
             # The logic is Xi = {xi}
             candidates = set.union(*self.predecessorsValue.values())
             candidates = self.cutTooLow(candidates)
+            candidates = self.selectionMethod(candidates)
             self.graph.nodes[self.thisNode]["SCT"] = candidates
             self.graph.nodes[self.thisNode]["hasComputed"] = True
+            self.log(f"{self.thisNode} has values {candidates}")
+        else:
+            self.log(f"{self.thisNode} predecessors aren't all Computed", level=logging.WARNING)

@@ -1,4 +1,5 @@
 import itertools
+import logging
 
 import networkx as nx
 import numpy as np
@@ -19,29 +20,33 @@ class CycleSolver(NodeSolver):
         self.graph = graph
         self.predecessors = set(self.graph.predecessors(thisNode))
         self.subgraph : nx.DiGraph = self.graph.nodes[self.thisNode]["subgraph"]
-        self.initLogger()
+        self.logger = self._logInit()
 
         self.fullPredecessors, self.subTargets, self.predecessorsWeight, self.predecessorsValue = self.getTruePredecessors()
 
-    def solver(self):
+    def solve(self):
         """
         - Init the cycle nodes with only the incoming values
         - Propagate those init values to the whole cycle
         - Do this N times or until convergence.
         """
+        self.fullPredecessors, self.subTargets, self.predecessorsWeight, self.predecessorsValue = self.getTruePredecessors()
+
         if self.arePredecessorsSolved():
+            self.log(f"Solving {self.thisNode}")
             # 1 - Init the cycle nodes
             for target in self.subTargets:
-                targetType = self.subgraph[target]["type"]
+                targetType = self.subgraph.nodes[target]["type"]
                 weights, values = self.predecessorsWeight[target], self.predecessorsValue[target]
 
                 if targetType == "item":
                     # The logic is x = rk / ck
-                    candidates = [np.array(values[p]) / weights[p] for p in values.keys()]
+                    candidates = [np.array(list(values[p])) / weights[p] for p in values.keys()]
                     candidates = set(np.concatenate(candidates))
                 elif targetType == "ingredient":
                     # The logic is Xi = {xi}
                     candidates = set.union(*values.values())
+                    candidates = self.selectionMethod(candidates)
                 elif targetType == "recipe":
                     # The logic is r = sum(Xi * ci)
                     keys = list(values.keys())
@@ -58,22 +63,30 @@ class CycleSolver(NodeSolver):
                 candidates = self.cutTooLow(candidates)
                 self.subgraph.nodes[target]["SCT"] = candidates
                 self.subgraph.nodes[target]["originalSCT"] = candidates # This serves for recipe nodes
+                self.log(f"Init subnode {target} with values {candidates}", level=logging.DEBUG)
+                self.log(f"{target} has incoming nodes {self.fullPredecessors[target]}", level=logging.DEBUG)
+
+            self.log(f"{self.thisNode} subnodes have been initialized")
 
             # 2 - Propagate to the other nodes in the cycle
             converged = False
             Niter = 0
-            while not converged or Niter < 100:
+            maxIter = len(self.subgraph.nodes) + 10
+            while not converged and Niter < maxIter:
+                self.log(f"Starting cycle iteration {Niter}", level=logging.DEBUG)
                 converged = True
                 updatedSCT = {}
 
                 for node in self.subgraph.nodes():
+                    self.log(f"Subnode is {node}", level=logging.DEBUG)
                     nodeType = self.subgraph.nodes[node]["type"]
                     predecessors = list(self.subgraph.predecessors(node))
                     candidates = set()
 
                     if nodeType == "item":
                         # The logic is x = rk / ck
-                        candidates = [np.array(self.subgraph[p]["SCT"]) / self.subgraph[p][node].get("weight", np.nan) for p in predecessors]
+                        candidates = [np.array(list(self.subgraph.nodes[p]["SCT"]))
+                                      / self.subgraph[p][node].get("weight", np.nan) for p in predecessors]
                         candidates = set(np.concatenate(candidates))
 
                         if "originalSCT" in self.subgraph.nodes[node]:
@@ -84,19 +97,24 @@ class CycleSolver(NodeSolver):
 
                     elif nodeType == "ingredient":
                         # The logic is Xi = {xi}
-                        candidates = set.union(*[self.subgraph[p]["SCT"] for p in predecessors])
+                        candidates = set.union(*[self.subgraph.nodes[p]["SCT"] for p in predecessors])
 
                         if "originalSCT" in self.subgraph.nodes[node]:
                             candidates.update(self.subgraph.nodes[node]["originalSCT"])
 
-                        candidates = self.cutTooLow(candidates)
+                        if candidates:
+                            candidates = self.selectionMethod(candidates)
+                            candidates = self.cutTooLow(candidates)
                         updatedSCT[node] = candidates
 
                     elif nodeType == "recipe":
                         # The logic is r = sum(Xi * ci)
-                        keys = list(self.predecessorsValue.keys())
-                        values = [np.array(list(self.subgraph.nodes[p]["SCT"]), dtype=np.float64) for p in predecessors]
-                        weights = np.array([self.subgraph[p][node].get("weight", np.nan) for p in predecessors], dtype=np.float64)
+                        values = [np.array(list(self.subgraph.nodes[p]["SCT"]), dtype=np.float64)
+                                  for p in predecessors
+                                  if self.subgraph.nodes[p]["SCT"]]
+                        weights = np.array([self.subgraph[p][node].get("weight", np.nan)
+                                            for p in predecessors
+                                            if self.subgraph.nodes[p]["SCT"]], dtype=np.float64)
 
                         # Cartesian product via itertools, results in list of tuples
                         combos = np.array(list(itertools.product(*values)),
@@ -104,10 +122,12 @@ class CycleSolver(NodeSolver):
 
                         # Weighted sum along axis 1 (dot product with weights)
                         candidates = np.unique(combos @ weights)
+                        # Filters for 0 (case of [] @ [] which for some reason returns 0)
+                        candidates = candidates[candidates != 0]
 
                         # This only takes into account the incoming sub edges, and not the incoming main graph edges
                         if "originalSCT" in self.subgraph.nodes[node]:
-                            X,Y = np.meshgrid(candidates, self.subgraph.nodes[node]["originalSCT"])
+                            X,Y = np.meshgrid(candidates, np.array(list(self.subgraph.nodes[node]["originalSCT"])))
                             candidates = X+Y
                             candidates = candidates.flatten()
 
@@ -115,21 +135,27 @@ class CycleSolver(NodeSolver):
                         updatedSCT[node] = candidates
 
                     # Check if the values are stable (convergence criteria)
-                    converged = converged & candidates.issubset(self.subgraph[node]["SCT"])
+                    converged = converged & candidates.issubset(self.subgraph.nodes[node]["SCT"])
 
                 # 2nd loop to update every value at once
                 # We don't keep the previous values as they are only used for the convergence to the fixed point
+                self.log(f"New values : {updatedSCT}", level=logging.DEBUG)
                 for node in self.subgraph.nodes():
                     self.subgraph.nodes[node]["SCT"] = updatedSCT[node]
 
                 Niter += 1
+            if Niter == maxIter:
+                self.log(f"{self.thisNode} has not converged after {Niter} iterations.", level=logging.WARNING)
 
             self.graph.nodes[self.thisNode]["hasComputed"] = True
+            self.log(f"{self.thisNode} values Computed in {Niter} iterations.")
+        else:
+            self.log(f"{self.thisNode} predecessors aren't all Computed", level=logging.WARNING)
 
 
 
 
-    def getTruePredecessors(self) -> tuple[set[str], set[str], dict[str, dict[str, float]], dict[str, dict[str, set[float]]]]:
+    def getTruePredecessors(self) -> tuple[dict[str, set[str]], set[str], dict[str, dict[str, float]], dict[str, dict[str, set[float]]]]:
         """
         Since this node is a cycle node, but a SCT value is assigned to either a Recipe, an Item or an Ingredient,
         this method gets the SCT and weight values of the "true" predecessors,
@@ -139,18 +165,20 @@ class CycleSolver(NodeSolver):
         The value is then a dict of the incoming nodes as keys and their weights / SCT values as values.
 
         :returns:
-        (**predecessors** - the set of incoming nodes
+        (**predecessors** - dict of incoming nodes with targets as keys
         ; **targets** - the set of targets
         ; **edgeWeight** - the dictionary of weight values for those nodes (1 per node)
         ; **nodeValue** - the dictionary of SCT values for those nodes (multiple per node))
         """
-        predecessors = set()
+        predecessors = {}
         targets = set()
         edgeWeight = {}
         nodeValue = {}
         for e in self.graph.nodes[self.thisNode]["inEdges"]:
             targets.add(e[1])
-            predecessors.add(e[0])
+            if e[1] not in predecessors:
+                predecessors[e[1]] = set()
+            predecessors[e[1]].add(e[0])
             if e[1] not in edgeWeight:
                 edgeWeight[e[1]] = {}
                 nodeValue[e[1]] = {}

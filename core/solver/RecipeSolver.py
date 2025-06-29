@@ -1,4 +1,5 @@
 import itertools
+import logging
 
 import networkx as nx
 import numpy as np
@@ -18,17 +19,23 @@ class RecipeSolver(NodeSolver):
         self.thisNode = thisNode
         self.graph = graph
         self.predecessors = set(self.graph.predecessors(thisNode))
-        self.initLogger()
+        self.logger = self._logInit()
 
         # Since cycles are involved, we need to unambiguously get the weights and values of each incoming node and subnodes
         # We go from predecessors being a set of Ingredient and Cycle nodes to Ingredient only
         self.fullPredecessors, self.predecessorsWeight, self.predecessorsValue = self.getTruePredecessors()
 
-    def solver(self):
+    def solve(self):
         """
         # Only Ingredient and Cycle nodes connect to a Recipe node
         """
+        self.fullPredecessors, self.predecessorsWeight, self.predecessorsValue = self.getTruePredecessors()
+
+        if self.graph.nodes[self.thisNode]["hasComputed"]:
+            self.log(f"{self.thisNode} already has a value. Skipping.")
+            return
         if self.arePredecessorsSolved():
+            self.log(f"Solving {self.thisNode}")
             # The logic is r = sum(Xi * ci)
             # For a given node i, there is only one ci but multiple Xi
             # Since there are multiple Xi for each i, we must compute every configuration of Xi
@@ -43,4 +50,7 @@ class RecipeSolver(NodeSolver):
             candidates = self.cutTooLow(combos @ weights)
             self.graph.nodes[self.thisNode]["SCT"] = candidates
             self.graph.nodes[self.thisNode]["hasComputed"] = True
+            self.log(f"{self.thisNode} has values {candidates}")
+        else:
+            self.log(f"{self.thisNode} predecessors aren't all Computed", level=logging.WARNING)
 

@@ -1,11 +1,9 @@
+import logging
 from abc import ABC, abstractmethod
-from typing import Optional
+from logging import Logger
 
 import networkx as nx
 import numpy as np
-
-from core.utils.Logger import Logger
-
 
 class NodeSolver(ABC):
     """
@@ -14,10 +12,10 @@ class NodeSolver(ABC):
     graph : nx.DiGraph
     thisNode : str
     predecessors : set
-    logger: Optional[Logger] = None
+    logger : Logger
 
     @abstractmethod
-    def solver(self):
+    def solve(self):
         pass
 
     def arePredecessorsSolved(self) -> bool:
@@ -25,7 +23,7 @@ class NodeSolver(ABC):
         Checks if every incoming node has been solved.
         :return: bool
         """
-        return all([p["hasComputed"] for p in self.predecessors])
+        return all([self.graph.nodes[p]["hasComputed"] for p in self.predecessors])
 
     def getTruePredecessors(self) -> tuple[set[str], dict[str, float], dict[str, set[float]]]:
         """
@@ -54,15 +52,26 @@ class NodeSolver(ABC):
 
         return predecessors, edgeWeight, nodeValue
 
-    def log(self, message):
-        self.logger.log(message)
+    def _logInit(self):
+        logger = logging.getLogger(self.__class__.__name__)
+        if not logger.handlers:
+            handler = logging.StreamHandler()
+            handler.setFormatter(logging.Formatter(f'%(levelname)s - %(name)s - %(funcName)s - %(message)s'))
+            logger.addHandler(handler)
+            logger.setLevel(logging.DEBUG)
+        return logger
 
-    def initLogger(self):
-        self.logger = Logger(self.__class__, self)
+    def log(self, message, level=logging.INFO):
+        self.logger.log(level, f'{message}', stacklevel=2)
 
 
     @staticmethod
     def cutTooLow(candidates, threshold=0.001):
-        candidates = np.array(candidates)
+        candidates = np.array(list(candidates))
         candidates = np.round(candidates / threshold) * threshold
-        return set(candidates[candidates >= threshold])
+        return set(candidates[candidates >= threshold].astype(float).tolist())
+
+    def selectionMethod(self, values : set):
+        result = min(values)
+        self.log(f"Candidates {values} have been reduced to {result}")
+        return {result}

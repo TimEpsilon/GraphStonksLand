@@ -80,10 +80,12 @@ def plotGraph(G, name, ylim=1000, fixedInOut=True):
     """)
 
 
-    g.show(f"../{name}.html", notebook=False)
+    g.show(f"{name}.html", notebook=False)
 
 def cleanupGraph(G):
     G = G.copy()
     for n,data in G.nodes.data():
         if data["type"] == "cycle":
             del G.nodes[n]["subgraph"]
+        del G.nodes[n]["SCT"]
+    return G

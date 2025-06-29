@@ -1,3 +1,5 @@
+import logging
+
 import numpy as np
 import json
 import networkx as nx
@@ -18,6 +20,8 @@ class GraphCreator:
         :param itemPath: path to the item list txt
         :param recipePath: path to the recipe json file
         """
+        self.logger = self._logInit()
+
         self.itemPath = itemPath
         self.recipePath = recipePath
 
@@ -30,8 +34,10 @@ class GraphCreator:
         # Graph
         # We keep a copy of the original graph just in case
         self.originalGraph = self._generateGraph()
+        self.log(f"Full graph with following info : {self.originalGraph}")
         self.G = self.originalGraph.copy()
         self._collapseCycles()
+        self.log(f"Directed Acyclical Graph with following info : {self.G}")
 
     def _getItems(self) -> tuple[list, list]:
         items = open(self.itemPath).readlines()
@@ -52,6 +58,7 @@ class GraphCreator:
         return recipes
 
     def _generateGraph(self) -> nx.DiGraph:
+        self.log("Generating Graph")
         graph = nx.DiGraph()
 
         # Item Node
@@ -63,6 +70,7 @@ class GraphCreator:
             color='#8ceef5',
             size=30,
             shape="dot",)
+        self.log(f"Added {len(self.itemList)} item nodes")
 
         for r in self.recipeDict.keys():
             # Recipe Node
@@ -90,7 +98,7 @@ class GraphCreator:
                 inputs = list(self.recipeDict[r]["input"][ingr].keys())
                 output = list(self.recipeDict[r]["output"])
                 if len(output) == 0:
-                    print(f"No output for {r}")
+                    self.log(f"No output for {r}", level=logging.ERROR)
                     continue
 
                 inAmount = list(self.recipeDict[r]["input"][ingr].values())
@@ -104,6 +112,8 @@ class GraphCreator:
 
                 # Recipe -> Item
                 graph.add_edge(f"{self.recipeDict[r]['type']}-{r}", output[0], weight=outAmount)
+        self.log(f"Added {len([x for x,y in graph.nodes.data() if y['type'] == 'ingredient'])} ingredient nodes")
+        self.log(f"Added {len([x for x, y in graph.nodes.data() if y['type'] == 'recipe'])} recipe nodes")
         return graph
 
     def _getCycles(self) -> dict[str, set]:
@@ -114,12 +124,14 @@ class GraphCreator:
             results[f"cycle-{i}"] = c
             for n in c:
                 self.nodeToCycle[n] = f"cycle-{i}"
+        self.log(f"Found {len(cycles)} cycles")
         return results
 
     def _collapseCycles(self):
         toRemove = set()
         cycleIn = set()
         cycleOut = set()
+        self.log("Condensing cycles")
         for cycleid,cycle in self._getCycles().items():
             # We set the corresponding cycle subgraph as a node attribute
             self.G.add_node(
@@ -135,13 +147,13 @@ class GraphCreator:
 
             for n in cycle:
                 for p in self.originalGraph.predecessors(n):
-                    if p not in cycle:
+                    if p not in cycle and self.originalGraph.nodes[p]["type"] != "cycle":
                         inEdges.append((p, n, self.originalGraph[p][n]))
                         cycleIn.add((p, cycleid))
                         if p in self.nodeToCycle.keys():
                             cycleIn.add((self.nodeToCycle[p], cycleid))
                 for s in self.originalGraph.successors(n):
-                    if s not in cycle:
+                    if s not in cycle and self.originalGraph.nodes[s]["type"] != "cycle":
                         outEdges.append((s, n, self.originalGraph[n][s]))
                         cycleOut.add((cycleid, s))
                         if s in self.nodeToCycle.keys():
@@ -150,12 +162,27 @@ class GraphCreator:
             self.G.nodes[cycleid]["inEdges"] = inEdges
             self.G.nodes[cycleid]["outEdges"] = outEdges
 
-
             toRemove.update(cycle)
 
+        self.log(f"Found {len(toRemove)} nodes within cycles")
         self.G.add_edges_from(cycleIn)
         self.G.add_edges_from(cycleOut)
         self.G.remove_nodes_from(toRemove)
+
+        # Give the graph the map node -> cycle for easier retrieval
+        self.G.graph["nodeToCycle"] = self.nodeToCycle
+
+    def _logInit(self):
+        logger = logging.getLogger(self.__class__.__name__)
+        if not logger.handlers:
+            handler = logging.StreamHandler()
+            handler.setFormatter(logging.Formatter(f'%(levelname)s - %(name)s - %(funcName)s - %(message)s'))
+            logger.addHandler(handler)
+            logger.setLevel(logging.DEBUG)
+        return logger
+
+    def log(self, message, level=logging.INFO):
+        self.logger.log(level, f'{message}', stacklevel=2)
 
 
     # --------------------------------------------------------------------
