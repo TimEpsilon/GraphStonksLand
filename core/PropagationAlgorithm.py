@@ -1,6 +1,9 @@
+import fnmatch
 import logging
 import os
 import pathlib
+from concurrent.futures import ThreadPoolExecutor, as_completed
+
 
 import networkx as nx
 import pandas as pd
@@ -45,12 +48,6 @@ class Propagation:
                 self.graph.nodes[row["node"]]["subgraph"].nodes[row["hasComputed"]] = True
         self.log("Starting values initialized")
 
-    def solve(self):
-        self.log("Starting node computing")
-
-        # Topological Ordering
-        orderedNodes = list(nx.topological_sort(self.graph))
-
         # Init solvers
         def assignSolver(node):
             solvers = {
@@ -61,11 +58,40 @@ class Propagation:
             }
             return solvers[self.graph.nodes[node]["type"]]
 
-        daskGraph = {}
-        for node in orderedNodes:
+        self.taskDict = {}
+        for node in self.graph.nodes:
             Solver = assignSolver(node)
             solver = Solver(node, self.graph)
-            solver.solve()
+            self.taskDict[node] = solver.solve
+
+        self.log("Task Graph initialized")
+
+
+    def solve(self):
+        self.log("Starting node computing")
+
+        for layer in nx.topological_generations(self.graph):
+            layerTask = [self.taskDict[n] for n in layer]
+            self.log(f"Current layer is {layer}")
+
+            N = min(os.cpu_count()-1, len(layerTask))
+            with ThreadPoolExecutor(max_workers=N) as executor:
+                futures = [executor.submit(task) for task in layerTask]
+                for future in as_completed(futures):
+                    future.result()
+
+    def getOutputs(self):
+        self.log("Getting outputs")
+        outputs = pd.DataFrame(columns=("node","SCT"))
+        for node,data in self.graph.nodes.data():
+            if data["type"] == "item":
+                outputs.loc[len(outputs)] = [node, data["SCT"]]
+            if data["type"] == "cycle":
+                for subnode, subdata in data["subgraph"].nodes.data():
+                    if subdata["type"] == "item":
+                        outputs.loc[len(outputs)] = [subnode, subdata["SCT"]]
+        return outputs
+
 
     def generateAtomicInputs(self):
         """
@@ -74,7 +100,7 @@ class Propagation:
         Only one value will be tolerated per entry.
         If the atomic node is a cycle, returns the subnode with the most outgoing outside edges.
         """
-        inputs = pd.DataFrame(columns=["node", "cycle", "representative", "partition", "value"])
+        inputs = pd.DataFrame(columns=["node", "value", "cycle", "representative", "partition"])
         self.log("Getting atomic inputs")
         for node,data in self.graph.nodes.data():
             if self.graph.in_degree(node) == 0 and data["type"] in ["cycle","item"]:
@@ -87,9 +113,9 @@ class Propagation:
                         if self.graph.nodes[node]["subgraph"].nodes[subnode]["type"] != "item":
                             continue
                         tokeep.add(subnode)
-                    inputs.loc[len(inputs)] = [node, tokeep, None, self.partitionMap[node], 0]
+                    inputs.loc[len(inputs)] = [node, 0, tokeep, None, self.partitionMap[node]]
                 else:
-                    inputs.loc[len(inputs)] = [node, None, None, self.partitionMap[node], 0]
+                    inputs.loc[len(inputs)] = [node, 0, None, None, self.partitionMap[node]]
         self.inputs = inputs
         self._filterAtomicInputs()
         self.log(f"Full input table size is {len(self.inputs)}")
@@ -105,18 +131,43 @@ class Propagation:
         else:
             self.log("No input file found")
 
+    def matchInputValue(self, pattern, value, overwrite=False):
+        toSet = set(fnmatch.filter(self.inputs["node"], pattern))
+        if not overwrite:
+            toSet = toSet.difference(set(self.inputs[self.inputs["value"] != 0]["node"]))
+        self.log(f"{pattern} matches up with {toSet}")
+        self.inputs.loc[self.inputs["node"].isin(toSet), "value"] = value
+
     def _filterAtomicInputs(self):
         BANNED_KEYWORDS = {
-            "spawn_egg",
-            "command_block",
-            "creative",
-            "bedrock"
+            "*spawn_egg",
+            "*command_block*",
+            "*creative*",
+            "minecraft:bedrock",
+            "minecraft:jigsaw",
+            "minecraft:barrier",
+            "minecraft:light",
+            "minecraft:structure*",
+            "minecraft:petrified_oak_slab",
+            "*debug_*",
+            "minecraft:knowledge_book",
+            "minecraft:reinforced_deepslate",
+            "minecraft:budding_amethyst",
+            "minecraft:chorus_plant",
+            "minecraft:dirt_path",
+            "minecraft:end_portal_frame",
+            "minecraft:farmland",
+            "*:infested_*",
+            "minecraft:*spawner",
+            "create:minecart_contraption"
         }
         self.log(f"Banned keywords are : {BANNED_KEYWORDS}")
         toDrop = []
         for ban in BANNED_KEYWORDS:
+            toBan = fnmatch.filter(self.inputs["node"], ban)
+            self.log(f"Keyword {ban} matches with {toBan}", level=logging.DEBUG)
             for i,row in self.inputs.iterrows():
-                if ban in row["node"]:
+                if row["node"] in toBan:
                     toDrop.append(i)
         self.inputs.drop(toDrop, inplace=True)
         self.log(f"Dropped {len(toDrop)} nodes")

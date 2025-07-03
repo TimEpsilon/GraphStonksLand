@@ -73,5 +73,5 @@ class NodeSolver(ABC):
 
     def selectionMethod(self, values : set):
         result = min(values)
-        self.log(f"Candidates {values} have been reduced to {result}")
+        self.log(f"Candidates {values} have been reduced to {result}", level=logging.DEBUG)
         return {result}
