@@ -1,4 +1,6 @@
 import logging
+import os
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import numpy as np
 import json
@@ -7,7 +9,11 @@ import networkx as nx
 
 class GraphCreator:
 
-    def __init__(self, itemPath : str, recipePath : str):
+    BLACKLIST_RECIPES = {
+        "minecraft:smithing"
+    }
+
+    def __init__(self, itemPath : str, recipePath : str, equivalencyPath : str) -> None:
         """
         Generates the basic structure of the recipe graph, a Directed Acyclic Graph.
         There are 4 node types :
@@ -24,6 +30,7 @@ class GraphCreator:
 
         self.itemPath = itemPath
         self.recipePath = recipePath
+        self.equivalencyPath = equivalencyPath
 
         # Item list
         self.itemList, self.modList = self._getItems()
@@ -35,13 +42,18 @@ class GraphCreator:
         # We keep a copy of the original graph just in case
         self.originalGraph = self._generateGraph()
         self.log(f"Full graph with following info : {self.originalGraph}")
+
+        # Equivalency links for each tag, defined in "equivalecnyTags.json"
+        # This condenses the nodes into one and removes the recipes in between them
+        self._makeLinks()
+
+        # Cycle collapsing
         self.G = self.originalGraph.copy()
         self._collapseCycles()
         self.log(f"Directed Acyclical Graph with following info : {self.G}")
 
     def _getItems(self) -> tuple[list, list]:
-        items = open(self.itemPath).readlines()
-        items = [s.replace("\n", "") for s in items]
+        items = json.load(open(self.itemPath))
         return items, list(np.unique([s.split(":")[0] for s in items]))
 
     def _getRecipes(self) -> dict:
@@ -104,6 +116,19 @@ class GraphCreator:
                 inAmount = list(self.recipeDict[r]["input"][ingr].values())
                 outAmount = self.recipeDict[r]["output"][output[0]]
 
+                if "FluidIngredient" in ingr:
+                    # The recipe contains fluids
+                    # We treat a fluid the same as an item, even though the unit for a fluid is the mB
+                    # We must thus add the fluid node as if they were items
+                    graph.add_nodes_from(
+                        inputs,
+                        type="item",
+                        SCT=set(),
+                        hasComputed=False,
+                        color='#8ceef5',
+                        size=30,
+                        shape="dot")
+
                 # Item -> Ingredient (not necessarily unique)
                 graph.add_edges_from([(i, ingr) for i in inputs])
 
@@ -112,9 +137,76 @@ class GraphCreator:
 
                 # Recipe -> Item
                 graph.add_edge(f"{self.recipeDict[r]['type']}-{r}", output[0], weight=outAmount)
-        self.log(f"Added {len([x for x,y in graph.nodes.data() if y['type'] == 'ingredient'])} ingredient nodes")
+
+        # Fallback
+        # If a node is still empty by this point, we assume it's an item
+        for node, data in graph.copy().nodes.data():
+            if len(data) == 0:
+                graph.nodes[node]['type'] = "item"
+                graph.nodes[node]['SCT'] = set()
+                graph.nodes[node]['hasComputed'] = False
+                graph.nodes[node]['color'] = '#8ceef5'
+                graph.nodes[node]['size'] = 30
+                graph.nodes[node]['shape'] = "dot"
+
+        self.log(f"Added {len([x for x, y in graph.nodes.data() if y['type'] == 'ingredient'])} ingredient nodes")
         self.log(f"Added {len([x for x, y in graph.nodes.data() if y['type'] == 'recipe'])} recipe nodes")
         return graph
+
+    def _makeLinks(self):
+        """
+        Set an equivalency link between a set of nodes, meaning that every node of the set is condensed into one
+        """
+        nodesList = json.load(open(self.equivalencyPath))
+        self.log(f"Found {len(nodesList)} equivalency tags")
+
+        for tag,nodes in nodesList.items():
+            self.log(f"Adding tag {tag}, replacing {len(nodes)} nodes")
+
+            # Check if every entry is within the item list
+            diff = set(nodes) - set(self.itemList)
+            if len(diff) > 0:
+                self.log(f"Found {len(diff)} unknown items in tag : {diff}", level=logging.WARNING)
+            nodes = set(nodes) - set(diff)
+
+            # Add tag node as item node
+            self.originalGraph.add_node(
+                tag,
+                type="item",
+                SCT=set(),
+                hasComputed=False,
+                color='#8ceef5',
+                size=30,
+                shape="dot",)
+
+            # Copies every connecting edge to the equivalency node
+            for inc,out,data in self.originalGraph.copy().edges().data():
+                if inc in nodes:
+                    self.originalGraph.add_edge(tag, out, **data)
+                if out in nodes:
+                    self.originalGraph.add_edge(inc, tag, **data)
+
+            # Remove the nodes
+            for node in self.originalGraph.copy().nodes():
+                if node in nodes:
+                    self.originalGraph.remove_node(node)
+
+            # Removes the cycling recipes
+            reverse = nx.reverse(self.originalGraph)
+
+            for pred in self.originalGraph.copy().predecessors(tag):
+                if self.originalGraph.nodes[pred]['type'] == 'recipe':
+                    # Reverses the graph and gets descendants <=> gets predecessors
+                    preds = set(nx.descendants_at_distance(reverse, pred, 2))
+                    if tag in preds:
+                        self.log(f"{pred} is a cycling recipe for tag node {tag}", level=logging.DEBUG)
+                        self.originalGraph.remove_node(pred)
+
+            # Remove non-used ingredient
+            for succ in self.originalGraph.copy().successors(tag):
+                if self.originalGraph.nodes[succ]['type'] == 'ingredient' and self.originalGraph.out_degree(succ) == 0:
+                    self.log(f"{succ} is an empty ingredient for tag node {tag}", level=logging.DEBUG)
+
 
     def _getCycles(self) -> dict[str, set]:
         cycles = [c for c in nx.strongly_connected_components(self.originalGraph) if len(c) > 1]
@@ -178,7 +270,7 @@ class GraphCreator:
             handler = logging.StreamHandler()
             handler.setFormatter(logging.Formatter(f'%(levelname)s - %(name)s - %(funcName)s - %(message)s'))
             logger.addHandler(handler)
-            logger.setLevel(logging.DEBUG)
+            logger.setLevel(logging.INFO)
         return logger
 
     def log(self, message, level=logging.INFO):

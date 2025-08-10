@@ -1,0 +1,16 @@
+{
+  "protection_pixel:hellsnakeasloot": {
+    "output": {
+      "protection_pixel:hellsnakeas_chestplate": 1
+    },
+    "input": {
+      "protection_pixel:hellsnake_chestplate" : 1,
+      "create:sturdy_sheet" : 2,
+      "protection_pixel:heatoverlockingmechanism" : 2,
+      "create:precision_mechanism" : 2,
+      "protection_pixel:smallnetheritesheet" : 2,
+      "minecraft:lava" : 250
+    },
+    "type": "custom"
+  }
+}
