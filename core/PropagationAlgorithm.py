@@ -188,7 +188,8 @@ class Propagation:
             'sophisticatedbackpacks:*infinity_upgrade',
             'sophisticatedstorage:inaccessible_slot',
             'sophisticatedstorage:*infinity_upgrade',
-            'supplementaries:raked_gravel'
+            'supplementaries:raked_gravel',
+            'create:cardboard_package_*'
         }
         self.log(f"Banned keywords are : {BANNED_KEYWORDS}")
         toDrop = []
