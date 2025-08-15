@@ -1,16 +1,299 @@
 {
-  "protection_pixel:hellsnakeasloot": {
+  "supplementaries:safe": {
     "output": {
-      "protection_pixel:hellsnakeas_chestplate": 1
+      "supplementaries:safe": 1
     },
     "input": {
-      "protection_pixel:hellsnake_chestplate" : 1,
-      "create:sturdy_sheet" : 2,
-      "protection_pixel:heatoverlockingmechanism" : 2,
-      "create:precision_mechanism" : 2,
-      "protection_pixel:smallnetheritesheet" : 2,
-      "minecraft:lava" : 250
+      "#minecraft:shulker_box" : 1,
+      "minecraft:netherite_ingot" : 1
+    }
+  },
+  "irons_spellbooks:archevoker_helmet": {
+    "output": {
+      "irons_spellbooks:archevoker_helmet": 1
     },
-    "type": "custom"
+    "input": {
+      "irons_spellbooks:wizard_helmet" : 1,
+      "irons_spellbooks:evocation_rune," : 1
+    }
+  },
+  "irons_spellbooks:archevoker_chestplate": {
+    "output": {
+      "irons_spellbooks:archevoker_chestplate": 1
+    },
+    "input": {
+      "irons_spellbooks:wizard_chestplate" : 1,
+      "irons_spellbooks:evocation_rune," : 1
+    }
+  },
+  "irons_spellbooks:archevoker_leggings": {
+    "output": {
+      "irons_spellbooks:archevoker_leggings": 1
+    },
+    "input": {
+      "irons_spellbooks:wizard_leggings" : 1,
+      "irons_spellbooks:evocation_rune," : 1
+    }
+  },
+  "irons_spellbooks:archevoker_boots": {
+    "output": {
+      "irons_spellbooks:archevoker_boots": 1
+    },
+    "input": {
+      "irons_spellbooks:wizard_boots" : 1,
+      "irons_spellbooks:evocation_rune," : 1
+    }
+  },
+  "irons_spellbooks:cryomancer_helmet": {
+    "output": {
+      "irons_spellbooks:cryomancer_helmet": 1
+    },
+    "input": {
+      "irons_spellbooks:wizard_helmet" : 1,
+      "irons_spellbooks:ice_rune," : 1
+    }
+  },
+  "irons_spellbooks:cryomancer_chestplate": {
+    "output": {
+      "irons_spellbooks:cryomancer_chestplate": 1
+    },
+    "input": {
+      "irons_spellbooks:wizard_chestplate" : 1,
+      "irons_spellbooks:ice_rune," : 1
+    }
+  },
+  "irons_spellbooks:cryomancer_leggings": {
+    "output": {
+      "irons_spellbooks:cryomancer_leggings": 1
+    },
+    "input": {
+      "irons_spellbooks:wizard_leggings" : 1,
+      "irons_spellbooks:ice_rune," : 1
+    }
+  },
+  "irons_spellbooks:cryomancer_boots": {
+    "output": {
+      "irons_spellbooks:cryomancer_boots": 1
+    },
+    "input": {
+      "irons_spellbooks:wizard_boots" : 1,
+      "irons_spellbooks:ice_rune," : 1
+    }
+  },
+  "irons_spellbooks:cultist_helmet": {
+    "output": {
+      "irons_spellbooks:cultist_helmet": 1
+    },
+    "input": {
+      "irons_spellbooks:wizard_helmet" : 1,
+      "irons_spellbooks:blood_rune," : 1
+    }
+  },
+  "irons_spellbooks:cultist_chestplate": {
+    "output": {
+      "irons_spellbooks:cultist_chestplate": 1
+    },
+    "input": {
+      "irons_spellbooks:wizard_chestplate" : 1,
+      "irons_spellbooks:blood_rune," : 1
+    }
+  },
+  "irons_spellbooks:cultist_leggings": {
+    "output": {
+      "irons_spellbooks:cultist_leggings": 1
+    },
+    "input": {
+      "irons_spellbooks:wizard_leggings" : 1,
+      "irons_spellbooks:blood_rune," : 1
+    }
+  },
+  "irons_spellbooks:cultist_boots": {
+    "output": {
+      "irons_spellbooks:cultist_boots": 1
+    },
+    "input": {
+      "irons_spellbooks:wizard_boots" : 1,
+      "irons_spellbooks:blood_rune," : 1
+    }
+  },
+  "irons_spellbooks:electromancer_helmet": {
+    "output": {
+      "irons_spellbooks:electromancer_helmet": 1
+    },
+    "input": {
+      "irons_spellbooks:wizard_helmet" : 1,
+      "irons_spellbooks:lightning_rune," : 1
+    }
+  },
+  "irons_spellbooks:electromancer_chestplate": {
+    "output": {
+      "irons_spellbooks:electromancer_chestplate": 1
+    },
+    "input": {
+      "irons_spellbooks:wizard_chestplate" : 1,
+      "irons_spellbooks:lightning_rune," : 1
+    }
+  },
+  "irons_spellbooks:electromancer_leggings": {
+    "output": {
+      "irons_spellbooks:electromancer_leggings": 1
+    },
+    "input": {
+      "irons_spellbooks:wizard_leggings" : 1,
+      "irons_spellbooks:lightning_rune," : 1
+    }
+  },
+  "irons_spellbooks:electromancer_boots": {
+    "output": {
+      "irons_spellbooks:electromancer_boots": 1
+    },
+    "input": {
+      "irons_spellbooks:wizard_boots" : 1,
+      "irons_spellbooks:lightning_rune," : 1
+    }
+  },
+  "irons_spellbooks:plagued_helmet": {
+    "output": {
+      "irons_spellbooks:plagued_helmet": 1
+    },
+    "input": {
+      "irons_spellbooks:wizard_helmet" : 1,
+      "irons_spellbooks:nature_rune," : 1
+    }
+  },
+  "irons_spellbooks:plagued_chestplate": {
+    "output": {
+      "irons_spellbooks:plagued_chestplate": 1
+    },
+    "input": {
+      "irons_spellbooks:wizard_chestplate" : 1,
+      "irons_spellbooks:nature_rune," : 1
+    }
+  },
+  "irons_spellbooks:plagued_leggings": {
+    "output": {
+      "irons_spellbooks:plagued_leggings": 1
+    },
+    "input": {
+      "irons_spellbooks:wizard_leggings" : 1,
+      "irons_spellbooks:nature_rune," : 1
+    }
+  },
+  "irons_spellbooks:plagued_boots": {
+    "output": {
+      "irons_spellbooks:plagued_boots": 1
+    },
+    "input": {
+      "irons_spellbooks:wizard_boots": 1,
+      "irons_spellbooks:nature_rune,": 1
+    }
+  },
+  "irons_spellbooks:priest_helmet": {
+    "output": {
+      "irons_spellbooks:priest_helmet": 1
+    },
+    "input": {
+      "irons_spellbooks:wizard_helmet" : 1,
+      "irons_spellbooks:holy_rune," : 1
+    }
+  },
+  "irons_spellbooks:priest_chestplate": {
+    "output": {
+      "irons_spellbooks:priest_chestplate": 1
+    },
+    "input": {
+      "irons_spellbooks:wizard_chestplate" : 1,
+      "irons_spellbooks:holy_rune," : 1
+    }
+  },
+  "irons_spellbooks:priest_leggings": {
+    "output": {
+      "irons_spellbooks:priest_leggings": 1
+    },
+    "input": {
+      "irons_spellbooks:wizard_leggings" : 1,
+      "irons_spellbooks:holy_rune," : 1
+    }
+  },
+  "irons_spellbooks:priest_boots": {
+    "output": {
+      "irons_spellbooks:priest_boots": 1
+    },
+    "input": {
+      "irons_spellbooks:wizard_boots" : 1,
+      "irons_spellbooks:holy_rune," : 1
+    }
+  },
+  "irons_spellbooks:pyromancer_helmet": {
+    "output": {
+      "irons_spellbooks:pyromancer_helmet": 1
+    },
+    "input": {
+      "irons_spellbooks:wizard_helmet" : 1,
+      "irons_spellbooks:fire_rune," : 1
+    }
+  },
+  "irons_spellbooks:pyromancer_chestplate": {
+    "output": {
+      "irons_spellbooks:pyromancer_chestplate": 1
+    },
+    "input": {
+      "irons_spellbooks:wizard_chestplate" : 1,
+      "irons_spellbooks:fire_rune," : 1
+    }
+  },
+  "irons_spellbooks:pyromancer_leggings": {
+    "output": {
+      "irons_spellbooks:pyromancer_leggings": 1
+    },
+    "input": {
+      "irons_spellbooks:wizard_leggings" : 1,
+      "irons_spellbooks:fire_rune," : 1
+    }
+  },
+  "irons_spellbooks:pyromancer_boots": {
+    "output": {
+      "irons_spellbooks:pyromancer_boots": 1
+    },
+    "input": {
+      "irons_spellbooks:wizard_boots" : 1,
+      "irons_spellbooks:fire_rune," : 1
+    }
+  },
+  "irons_spellbooks:shadowwalker_helmet": {
+    "output": {
+      "irons_spellbooks:shadowwalker_helmet": 1
+    },
+    "input": {
+      "irons_spellbooks:wizard_helmet" : 1,
+      "irons_spellbooks:ender_rune," : 1
+    }
+  },
+  "irons_spellbooks:shadowwalker_chestplate": {
+    "output": {
+      "irons_spellbooks:shadowwalker_chestplate": 1
+    },
+    "input": {
+      "irons_spellbooks:wizard_chestplate" : 1,
+      "irons_spellbooks:ender_rune," : 1
+    }
+  },
+  "irons_spellbooks:shadowwalker_leggings": {
+    "output": {
+      "irons_spellbooks:shadowwalker_leggings": 1
+    },
+    "input": {
+      "irons_spellbooks:wizard_leggings" : 1,
+      "irons_spellbooks:ender_rune," : 1
+    }
+  },
+  "irons_spellbooks:shadowwalker_boots": {
+    "output": {
+      "irons_spellbooks:shadowwalker_boots": 1
+    },
+    "input": {
+      "irons_spellbooks:wizard_boots" : 1,
+      "irons_spellbooks:ender_rune," : 1
+    }
   }
 }
