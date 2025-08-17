@@ -4,16 +4,16 @@ from core.PropagationAlgorithm import Propagation
 import networkx as nx
 import pickle
 
-#gc = GraphCreator("config/items.txt", "config/recipes.json", "config/equivalencyTags.json", "config/CustomRecipe.json", "config/bannedKeywords.json")
-#with open("fullGraph.txt", "w", encoding="utf-8") as f:
-#    nx.write_network_text(gc.originalGraph, f)
-#
-#with open('graph.gpickle', 'wb') as f:
-#    pickle.dump(gc, f, pickle.HIGHEST_PROTOCOL)
+gc = GraphCreator("config/items.txt", "config/recipes.json", "config/equivalencyTags.json", "config/CustomRecipe.json", "config/bannedKeywords.json")
+with open("fullGraph.txt", "w", encoding="utf-8") as f:
+    nx.write_network_text(gc.originalGraph, f)
+
+with open('fullGraph.gpickle', 'wb') as f:
+    pickle.dump(gc, f, pickle.HIGHEST_PROTOCOL)
 
 #plotGraph(gc.G, "full", fixedInOut=False)
 
-with open('graph.gpickle', 'rb') as f:
+with open('fullGraph.gpickle', 'rb') as f:
     gc = pickle.load(f)
 prop = Propagation(gc.G)
 prop.generateAtomicInputs()

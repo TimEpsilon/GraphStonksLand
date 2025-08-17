@@ -49,7 +49,7 @@ class CycleSolver(NodeSolver):
                 elif targetType == "recipe":
                     # The logic is r = sum(Xi * ci)
                     keys = list(values.keys())
-                    valuesCartesian = [np.array(list(values[k]), dtype=np.float64) for k in keys]
+                    valuesCartesian = [np.array(list(values[k]) if len(values[k]) > 0 else [0], dtype=np.float64) for k in keys]
                     weightsCartesian = np.array([weights[k] for k in keys], dtype=np.float64)
 
                     # Cartesian product via itertools, results in list of tuples
@@ -139,7 +139,9 @@ class CycleSolver(NodeSolver):
                 # We don't keep the previous values as they are only used for the convergence to the fixed point
                 self.log(f"New values : {updatedSCT}", level=logging.DEBUG)
                 for node in self.subgraph.nodes():
-                    self.subgraph.nodes[node]["SCT"] = updatedSCT[node]
+                    # Ensures we don't replace an existing value with an empty one
+                    if len(updatedSCT[node]) > 0:
+                        self.subgraph.nodes[node]["SCT"] = updatedSCT[node]
 
                 Niter += 1
             if Niter == maxIter:

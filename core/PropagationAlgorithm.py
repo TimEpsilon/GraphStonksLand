@@ -187,7 +187,7 @@ class Propagation:
             handler = logging.StreamHandler()
             handler.setFormatter(logging.Formatter(f'%(levelname)s - %(name)s - %(funcName)s - %(message)s'))
             logger.addHandler(handler)
-            logger.setLevel(logging.DEBUG)
+            logger.setLevel(logging.INFO)
         return logger
 
     def log(self, message, level=logging.INFO):

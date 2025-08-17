@@ -176,6 +176,7 @@ class GraphCreator:
             toDrop.extend(toBan)
         self.originalGraph.remove_nodes_from(toDrop)
         self.log(f"Dropped {len(toDrop)} nodes")
+        self.log(f"{toDrop}", level=logging.DEBUG)
 
     def _makeLinks(self):
         """
@@ -341,7 +342,7 @@ class GraphCreator:
             handler = logging.StreamHandler()
             handler.setFormatter(logging.Formatter(f'%(levelname)s - %(name)s - %(funcName)s - %(message)s'))
             logger.addHandler(handler)
-            logger.setLevel(logging.INFO)
+            logger.setLevel(logging.DEBUG)
         return logger
 
     def log(self, message, level=logging.INFO):
