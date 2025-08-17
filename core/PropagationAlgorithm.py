@@ -1,4 +1,5 @@
 import fnmatch
+import json
 import logging
 import os
 import pathlib
@@ -11,9 +12,10 @@ import pandas as pd
 from core.solver.CycleSolver import CycleSolver
 from core.solver.IngredientSolver import IngredientSolver
 from core.solver.ItemSolver import ItemSolver
+from core.solver.NodeSolver import NodeSolver
 from core.solver.RecipeSolver import RecipeSolver
 
-ATOMICPATH = os.path.join(pathlib.Path(__file__).parent.resolve(), "../atomicInputs.csv")
+ATOMICPATH = os.path.join(pathlib.Path(__file__).parent.resolve(), "../config/atomicInputs.csv")
 
 class Propagation:
 
@@ -24,7 +26,9 @@ class Propagation:
         :param graph: the Directed Acyclic Graph on which the algorithm will be applied.
         """
         self.logger = self._logInit()
+
         self.graph = graph
+
         self.partitionMap = self._generatePartitionMap()
         self._generateNodeToCycle()
 
@@ -40,12 +44,16 @@ class Propagation:
             if pd.isna(row["cycle"]):
                 self.graph.nodes[row["node"]]["SCT"] = {row["value"]}
                 self.graph.nodes[row["node"]]["hasComputed"] = True
+                self.log(f"{row['node']} has value {row['value']}", level=logging.DEBUG)
             else:
                 if row["representative"] is None:
                     self.log(f"{row['node']} has no representative", level=logging.ERROR)
-                    raise ValueError
-                self.graph.nodes[row["node"]]["subgraph"].nodes[row["representative"]] = {row["value"]}
-                self.graph.nodes[row["node"]]["subgraph"].nodes[row["hasComputed"]] = True
+                    continue
+                subgr = self.graph.nodes[row["node"]]["subgraph"]
+                subgr.nodes[row["representative"]]["SCT"] = {row["value"]}
+                subgr.nodes[row["representative"]]["originalSCT"] = {row["value"]}
+                subgr.nodes[row["representative"]]["hasComputed"] = True
+
         self.log("Starting values initialized")
 
         # Init solvers
@@ -80,17 +88,22 @@ class Propagation:
                 for future in as_completed(futures):
                     future.result()
 
-    def getOutputs(self):
+    def saveOutputs(self):
         self.log("Getting outputs")
         outputs = pd.DataFrame(columns=("node","SCT"))
         for node,data in self.graph.nodes.data():
             if data["type"] == "item":
-                outputs.loc[len(outputs)] = [node, data["SCT"]]
+                out = list(data["SCT"])[0] if len(data["SCT"]) > 0 else 0
+                out = format(out, '.3f')
+                outputs.loc[len(outputs)] = [node, out]
+
             if data["type"] == "cycle":
                 for subnode, subdata in data["subgraph"].nodes.data():
                     if subdata["type"] == "item":
-                        outputs.loc[len(outputs)] = [subnode, subdata["SCT"]]
-        return outputs
+                        out = list(subdata["SCT"])[0] if len(subdata["SCT"]) > 0 else 0
+                        out = format(out, '.3f')
+                        outputs.loc[len(outputs)] = [subnode, out]
+        outputs.to_csv("output.csv", index=False)
 
 
     def generateAtomicInputs(self):
@@ -113,164 +126,44 @@ class Propagation:
                         if self.graph.nodes[node]["subgraph"].nodes[subnode]["type"] != "item":
                             continue
                         tokeep.add(subnode)
-                    inputs.loc[len(inputs)] = [node, 0, tokeep, None, self.partitionMap[node]]
+                    inputs.loc[len(inputs)] = [node, 0.0, tokeep, None, self.partitionMap[node]]
                 else:
-                    inputs.loc[len(inputs)] = [node, 0, None, None, self.partitionMap[node]]
+                    inputs.loc[len(inputs)] = [node, 0.0, None, None, self.partitionMap[node]]
         self.inputs = inputs
-        self._filterAtomicInputs()
         self.log(f"Full input table size is {len(self.inputs)}")
 
     def saveAtomicInputs(self):
         self.inputs.to_csv(ATOMICPATH, index=False)
         self.log(f"Inputs saved to atomicInputs.csv")
 
-    def loadAtomicInputs(self):
-        if os.path.exists(ATOMICPATH):
-            self.log("Found an existing input file")
-            self.inputs = pd.read_csv(ATOMICPATH)
-        else:
-            self.log("No input file found")
+    def crossmatchAtomicInputs(self, path):
+        """
+        Using an already existing table of values, sets some values in the input table beforehand
+        :param path: the path to the crossmatching table
+        """
+        crossmatch = pd.read_csv(path,header=0)
+        crossmatch["value"] = crossmatch["value"].astype(float)
+        crossmatch.set_index("node", inplace=True)
+        crossmatch = crossmatch.T.to_dict("list")
 
-    def matchInputValue(self, pattern, value, overwrite=False):
-        toSet = set(fnmatch.filter(self.inputs["node"], pattern))
-        if not overwrite:
-            toSet = toSet.difference(set(self.inputs[self.inputs["value"] != 0]["node"]))
-        self.log(f"{pattern} matches up with {toSet}")
-        self.inputs.loc[self.inputs["node"].isin(toSet), "value"] = value
+        counter = 0
+        for i,row in self.inputs.copy().iterrows():
+            # Basic node
+            if row["node"] in crossmatch:
+                self.inputs.at[i, "value"] = crossmatch[row["node"]][0]
+                counter += 1
+                continue
 
-    def _filterAtomicInputs(self):
-        BANNED_KEYWORDS = {
-            "*spawn_egg",
-            "*command_block*",
-            "*creative*",
-            "minecraft:bedrock",
-            "minecraft:jigsaw",
-            "minecraft:barrier",
-            "minecraft:light",
-            "minecraft:structure*",
-            "minecraft:petrified_oak_slab",
-            "*debug_*",
-            "minecraft:knowledge_book",
-            "minecraft:reinforced_deepslate",
-            "minecraft:budding_amethyst",
-            "minecraft:chorus_plant",
-            "minecraft:dirt_path",
-            "minecraft:end_portal_frame",
-            "minecraft:farmland",
-            "*:infested_*",
-            "minecraft:*spawner",
-            "create:*minecart_contraption",
-            'amendments:dye_bottle',
-            'create:andesite_encased_*',
-            'create:chromatic_compound',
-            'create:*_backtank_placeable',
-            'create:elevator_contact',
-            'create:handheld_worldshaper',
-            'create:incomplete_*',
-            'create:refined_radiance*',
-            'create:schematic',
-            'create:shadow_steel*',
-            'create:shopping_list',
-            'create:unprocessed_obsidian_sheet',
-            'exposure:broken_interplanar_projector',
-            'exposure:chromatic_sheet',
-            'exposure:signed_album',
-            'exposure:stacked_photographs',
-            'ftblibrary:icon_item',
-            'lootr:lootr*',
-            'minecraft:air',
-            'minecraft:chipped_anvil',
-            'minecraft:damaged_anvil',
-            'modonomicon:*',
-            'moonlight:*',
-            'randomium:any_item',
-            'sereneseasons:ss_icon',
-            'sophisticatedbackpacks:*infinity_upgrade',
-            'sophisticatedstorage:inaccessible_slot',
-            'sophisticatedstorage:*infinity_upgrade',
-            'supplementaries:raked_gravel',
-            'create:cardboard_package_*',
-            "born_in_chaos_v1:*argillite*_n",
-            "born_in_chaos_v1:*cursed*",
-            "born_in_chaos_v1:supreme_measure",
-            "born_in_chaos_v1:stop_hammer",
-            "born_in_chaos_v1:killer_rabbit_ears_helmet",
-            "born_in_chaos_v1:*easter_egg",
-            "born_in_chaos_v1:staffof_blindness",
-            "born_in_chaos_v1:spawn*",
-            "arcane_abilities:skill_xp_rune",
-            "betterarcheology:loot_vase*",
-            "born_in_chaos_v1:ai",
-            "born_in_chaos_v1:all_charm",
-            "born_in_chaos_v1:*_icon",
-            "born_in_chaos_v1:closed_hound_trap",
-            "born_in_chaos_v1:dark_ice",
-            "born_in_chaos_v1:fel_soil_destructible",
-            "born_in_chaos_v1:hats",
-            "born_in_chaos_v1:lifeturnedouttobeacomedyicon",
-            "born_in_chaos_v1:magicskull",
-            "born_in_chaos_v1:shakeand_mixicon",
-            "born_in_chaos_v1:spirit_guideicon",
-            "born_in_chaos_v1:spruce_cowboy_in_the_moonlighticon",
-            "born_in_chaos_v1:squireofthedarklordicon",
-            "create:brass_encased*",
-            "create:crushed_raw_aluminum",
-            "create:crushed_raw_lead",
-            "create:crushed_raw_nickel",
-            "create:crushed_raw_osmium",
-            "create:crushed_raw_platinum",
-            "create:crushed_raw_quicksilver",
-            "create:crushed_raw_silver",
-            "create:crushed_raw_tin",
-            "create:crushed_raw_uranium",
-            "create:potion",
-            "darkdoppelganger:summon_scroll",
-            "fdbosses:debug",
-            "fdbosses:no_entity_spawn_block",
-            "irons_spellbooks:archevoker_logbook*",
-            "irons_spellbooks:armor_pile",
-            "irons_spellbooks:cinderous_soul_rune"
-            "irons_spellbooks:gold_crown",
-            "irons_spellbooks:legendary_spell_book",
-            "irons_spellbooks:lurker_ring",
-            "irons_spellbooks:misery",
-            "irons_spellbooks:staff_of_the_nines",
-            "irons_spellbooks:wimpy_spell_book",
-            "protection_pixel:incomplete*",
-            "minecraft:splash_potion",
-            "minecraft:suspicious_stew",
-            "minecraft:bundle",
-            "minecraft:filled_map",
-            "minecraft:firework_star",
-            "minecraft:lingering_potion",
-            "minecraft:potion",
-            "minecraft:tipped_arrow",
-            "minecraft:vault",
-            "minecraft:written_book",
-            "paraglider:anti_vessel",
-            "paraglider:*_elixir_*",
-            "paraglider:essence",
-            "protection_pixel:foldedsteamectoskeleton",
-            "protection_pixel:openmaneuveringwing",
-            "sophisticatedstorage:*_pump_upgrade",
-            "stonkstimecore:*",
-            "supplementaries:bomb_spiky",
-            "supplementaries:bubble_block",
-            "supplementaries:bunting",
-            "supplementaries:gold_gate",
-            "supplementaries:sconce_green",
-            "supplementaries:suspicious_gravel_bricks"
-        }
-        self.log(f"Banned keywords are : {BANNED_KEYWORDS}")
-        toDrop = []
-        for ban in BANNED_KEYWORDS:
-            toBan = fnmatch.filter(self.inputs["node"], ban)
-            self.log(f"Keyword {ban} matches with {toBan}", level=logging.DEBUG)
-            for i,row in self.inputs.iterrows():
-                if row["node"] in toBan:
-                    toDrop.append(i)
-        self.inputs.drop(toDrop, inplace=True)
-        self.log(f"Dropped {len(toDrop)} nodes")
+            # Cycle node
+            if not pd.isna(row["cycle"]):
+                for subnode in row["cycle"]:
+                    if subnode in crossmatch:
+                        self.inputs.at[i, "representative"] = subnode
+                        self.inputs.at[i, "value"] = crossmatch[subnode][0]
+                        counter += 1
+                        continue
+
+        self.log(f"Cross matched {counter} atoms")
 
     def _generatePartitionMap(self):
         partitionMap = {}

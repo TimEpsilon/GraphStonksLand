@@ -14,7 +14,7 @@
     },
     "input": {
       "irons_spellbooks:wizard_helmet" : 1,
-      "irons_spellbooks:evocation_rune," : 1
+      "irons_spellbooks:evocation_rune" : 1
     }
   },
   "irons_spellbooks:archevoker_chestplate": {
@@ -23,7 +23,7 @@
     },
     "input": {
       "irons_spellbooks:wizard_chestplate" : 1,
-      "irons_spellbooks:evocation_rune," : 1
+      "irons_spellbooks:evocation_rune" : 1
     }
   },
   "irons_spellbooks:archevoker_leggings": {
@@ -32,7 +32,7 @@
     },
     "input": {
       "irons_spellbooks:wizard_leggings" : 1,
-      "irons_spellbooks:evocation_rune," : 1
+      "irons_spellbooks:evocation_rune" : 1
     }
   },
   "irons_spellbooks:archevoker_boots": {
@@ -41,7 +41,7 @@
     },
     "input": {
       "irons_spellbooks:wizard_boots" : 1,
-      "irons_spellbooks:evocation_rune," : 1
+      "irons_spellbooks:evocation_rune" : 1
     }
   },
   "irons_spellbooks:cryomancer_helmet": {
@@ -50,7 +50,7 @@
     },
     "input": {
       "irons_spellbooks:wizard_helmet" : 1,
-      "irons_spellbooks:ice_rune," : 1
+      "irons_spellbooks:ice_rune" : 1
     }
   },
   "irons_spellbooks:cryomancer_chestplate": {
@@ -59,7 +59,7 @@
     },
     "input": {
       "irons_spellbooks:wizard_chestplate" : 1,
-      "irons_spellbooks:ice_rune," : 1
+      "irons_spellbooks:ice_rune" : 1
     }
   },
   "irons_spellbooks:cryomancer_leggings": {
@@ -68,7 +68,7 @@
     },
     "input": {
       "irons_spellbooks:wizard_leggings" : 1,
-      "irons_spellbooks:ice_rune," : 1
+      "irons_spellbooks:ice_rune" : 1
     }
   },
   "irons_spellbooks:cryomancer_boots": {
@@ -77,7 +77,7 @@
     },
     "input": {
       "irons_spellbooks:wizard_boots" : 1,
-      "irons_spellbooks:ice_rune," : 1
+      "irons_spellbooks:ice_rune" : 1
     }
   },
   "irons_spellbooks:cultist_helmet": {
@@ -86,7 +86,7 @@
     },
     "input": {
       "irons_spellbooks:wizard_helmet" : 1,
-      "irons_spellbooks:blood_rune," : 1
+      "irons_spellbooks:blood_rune" : 1
     }
   },
   "irons_spellbooks:cultist_chestplate": {
@@ -95,7 +95,7 @@
     },
     "input": {
       "irons_spellbooks:wizard_chestplate" : 1,
-      "irons_spellbooks:blood_rune," : 1
+      "irons_spellbooks:blood_rune" : 1
     }
   },
   "irons_spellbooks:cultist_leggings": {
@@ -104,7 +104,7 @@
     },
     "input": {
       "irons_spellbooks:wizard_leggings" : 1,
-      "irons_spellbooks:blood_rune," : 1
+      "irons_spellbooks:blood_rune" : 1
     }
   },
   "irons_spellbooks:cultist_boots": {
@@ -113,7 +113,7 @@
     },
     "input": {
       "irons_spellbooks:wizard_boots" : 1,
-      "irons_spellbooks:blood_rune," : 1
+      "irons_spellbooks:blood_rune" : 1
     }
   },
   "irons_spellbooks:electromancer_helmet": {
@@ -122,7 +122,7 @@
     },
     "input": {
       "irons_spellbooks:wizard_helmet" : 1,
-      "irons_spellbooks:lightning_rune," : 1
+      "irons_spellbooks:lightning_rune" : 1
     }
   },
   "irons_spellbooks:electromancer_chestplate": {
@@ -131,7 +131,7 @@
     },
     "input": {
       "irons_spellbooks:wizard_chestplate" : 1,
-      "irons_spellbooks:lightning_rune," : 1
+      "irons_spellbooks:lightning_rune" : 1
     }
   },
   "irons_spellbooks:electromancer_leggings": {
@@ -140,7 +140,7 @@
     },
     "input": {
       "irons_spellbooks:wizard_leggings" : 1,
-      "irons_spellbooks:lightning_rune," : 1
+      "irons_spellbooks:lightning_rune" : 1
     }
   },
   "irons_spellbooks:electromancer_boots": {
@@ -149,7 +149,7 @@
     },
     "input": {
       "irons_spellbooks:wizard_boots" : 1,
-      "irons_spellbooks:lightning_rune," : 1
+      "irons_spellbooks:lightning_rune" : 1
     }
   },
   "irons_spellbooks:plagued_helmet": {
@@ -158,7 +158,7 @@
     },
     "input": {
       "irons_spellbooks:wizard_helmet" : 1,
-      "irons_spellbooks:nature_rune," : 1
+      "irons_spellbooks:nature_rune" : 1
     }
   },
   "irons_spellbooks:plagued_chestplate": {
@@ -167,7 +167,7 @@
     },
     "input": {
       "irons_spellbooks:wizard_chestplate" : 1,
-      "irons_spellbooks:nature_rune," : 1
+      "irons_spellbooks:nature_rune" : 1
     }
   },
   "irons_spellbooks:plagued_leggings": {
@@ -176,7 +176,7 @@
     },
     "input": {
       "irons_spellbooks:wizard_leggings" : 1,
-      "irons_spellbooks:nature_rune," : 1
+      "irons_spellbooks:nature_rune" : 1
     }
   },
   "irons_spellbooks:plagued_boots": {
@@ -185,7 +185,7 @@
     },
     "input": {
       "irons_spellbooks:wizard_boots": 1,
-      "irons_spellbooks:nature_rune,": 1
+      "irons_spellbooks:nature_rune": 1
     }
   },
   "irons_spellbooks:priest_helmet": {
@@ -194,7 +194,7 @@
     },
     "input": {
       "irons_spellbooks:wizard_helmet" : 1,
-      "irons_spellbooks:holy_rune," : 1
+      "irons_spellbooks:holy_rune" : 1
     }
   },
   "irons_spellbooks:priest_chestplate": {
@@ -203,7 +203,7 @@
     },
     "input": {
       "irons_spellbooks:wizard_chestplate" : 1,
-      "irons_spellbooks:holy_rune," : 1
+      "irons_spellbooks:holy_rune" : 1
     }
   },
   "irons_spellbooks:priest_leggings": {
@@ -212,7 +212,7 @@
     },
     "input": {
       "irons_spellbooks:wizard_leggings" : 1,
-      "irons_spellbooks:holy_rune," : 1
+      "irons_spellbooks:holy_rune" : 1
     }
   },
   "irons_spellbooks:priest_boots": {
@@ -221,7 +221,7 @@
     },
     "input": {
       "irons_spellbooks:wizard_boots" : 1,
-      "irons_spellbooks:holy_rune," : 1
+      "irons_spellbooks:holy_rune" : 1
     }
   },
   "irons_spellbooks:pyromancer_helmet": {
@@ -230,7 +230,7 @@
     },
     "input": {
       "irons_spellbooks:wizard_helmet" : 1,
-      "irons_spellbooks:fire_rune," : 1
+      "irons_spellbooks:fire_rune" : 1
     }
   },
   "irons_spellbooks:pyromancer_chestplate": {
@@ -239,7 +239,7 @@
     },
     "input": {
       "irons_spellbooks:wizard_chestplate" : 1,
-      "irons_spellbooks:fire_rune," : 1
+      "irons_spellbooks:fire_rune" : 1
     }
   },
   "irons_spellbooks:pyromancer_leggings": {
@@ -248,7 +248,7 @@
     },
     "input": {
       "irons_spellbooks:wizard_leggings" : 1,
-      "irons_spellbooks:fire_rune," : 1
+      "irons_spellbooks:fire_rune" : 1
     }
   },
   "irons_spellbooks:pyromancer_boots": {
@@ -257,7 +257,7 @@
     },
     "input": {
       "irons_spellbooks:wizard_boots" : 1,
-      "irons_spellbooks:fire_rune," : 1
+      "irons_spellbooks:fire_rune" : 1
     }
   },
   "irons_spellbooks:shadowwalker_helmet": {
@@ -266,7 +266,7 @@
     },
     "input": {
       "irons_spellbooks:wizard_helmet" : 1,
-      "irons_spellbooks:ender_rune," : 1
+      "irons_spellbooks:ender_rune" : 1
     }
   },
   "irons_spellbooks:shadowwalker_chestplate": {
@@ -275,7 +275,7 @@
     },
     "input": {
       "irons_spellbooks:wizard_chestplate" : 1,
-      "irons_spellbooks:ender_rune," : 1
+      "irons_spellbooks:ender_rune" : 1
     }
   },
   "irons_spellbooks:shadowwalker_leggings": {
@@ -284,7 +284,7 @@
     },
     "input": {
       "irons_spellbooks:wizard_leggings" : 1,
-      "irons_spellbooks:ender_rune," : 1
+      "irons_spellbooks:ender_rune" : 1
     }
   },
   "irons_spellbooks:shadowwalker_boots": {
@@ -293,7 +293,56 @@
     },
     "input": {
       "irons_spellbooks:wizard_boots" : 1,
-      "irons_spellbooks:ender_rune," : 1
+      "irons_spellbooks:ender_rune" : 1
+    }
+  },
+  "minecraft:lava_bucket" : {
+    "output" : {
+      "minecraft:lava_bucket" : 1
+    },
+    "input" : {
+      "minecraft:lava" : 1000
+    }
+  },
+    "minecraft:water_bucket" : {
+    "output" : {
+      "minecraft:water_bucket" : 1
+    },
+    "input" : {
+      "minecraft:water" : 1000
+    }
+  },
+    "minecraft:milk_bucket" : {
+    "output" : {
+      "minecraft:milk_bucket" : 1
+    },
+    "input" : {
+      "minecraft:milk" : 1000
+    }
+  },
+  "create:honey_bucket" : {
+    "output" : {
+      "create:honey_bucket" : 1
+    },
+    "input" : {
+      "create:honey" : 1000
+    }
+  },
+  "create:chocolate_bucket" : {
+    "output" : {
+      "create:chocolate_bucket" : 1
+    },
+    "input" : {
+      "create:chocolate" : 1000
+    }
+  },
+  "supplementaries:trapped_present" : {
+    "output" : {
+      "#supplementaries:trapped_present" : 1
+    },
+    "input" : {
+      "#supplementaries:present" : 1,
+      "minecraft:tripwire_hook" : 1
     }
   }
 }

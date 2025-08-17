@@ -915,7 +915,20 @@
     "minecraft:stripped_oak_log",
     "minecraft:stripped_spruce_log",
     "minecraft:stripped_warped_stem",
-    "minecraft:stripped_crimson_stem"
+    "minecraft:stripped_crimson_stem",
+    "luminous_nether:withered_log",
+    "luminous_nether:stripped_withered_log",
+    "luminous_nether:goldenstem",
+    "luminous_nether:shredded_stem",
+    "luminousworld:bao_bob_log",
+    "luminousworld:stripped_baobab_log",
+    "luminousworld:palm_log",
+    "luminousworld:stripped_palm_log",
+    "luminousworld:soft_birch_log",
+    "luminousworld:auburnlog",
+    "luminousworld:stripped_auburn_log",
+    "luminousworld:whiteoaklog",
+    "luminousworld:stripped_white_oak_log"
   ],
   "#create:rare_package" : [
     "create:rare_creeper_package",
@@ -939,7 +952,13 @@
     "minecraft:jungle_leaves",
     "minecraft:mangrove_leaves",
     "minecraft:oak_leaves",
-    "minecraft:spruce_leaves"
+    "minecraft:spruce_leaves",
+    "luminousworld:whiteoakleaves",
+    "luminousworld:yellow_birch_leaves",
+    "luminousworld:bao_bab_leaves",
+    "luminousworld:autumnleaves",
+    "luminousworld:palm_leaves",
+    "luminous_nether:ash_leaves"
   ],
   "#saplings" : [
     "minecraft:acacia_sapling",
@@ -951,7 +970,12 @@
     "minecraft:spruce_sapling",
     "minecraft:azalea",
     "minecraft:flowering_azalea",
-    "minecraft:mangrove_propagule"
+    "minecraft:mangrove_propagule",
+    "luminousworld:auburn_sapling",
+    "luminousworld:bao_bab_sapling",
+    "luminousworld:palm_sapling",
+    "luminousworld:tall_birch_sapling",
+    "luminousworld:white_oak_sapling"
   ],
   "#flowers" : [
     "minecraft:dandelion",
@@ -968,7 +992,14 @@
     "minecraft:lily_of_the_valley",
     "minecraft:pink_petals",
     "born_in_chaos_v1:marigolds",
-    "born_in_chaos_v1:river_mint"
+    "born_in_chaos_v1:river_mint",
+    "luminousworld:blue_petunias",
+    "luminousworld:purple_petunias",
+    "luminousworld:sunset_petunias",
+    "luminousworld:white_petunias",
+    "luminousworld:yellowpetunias",
+    "luminousworld:grassflowers",
+    "luminousworld:yellow_grassflowers"
   ],
   "#tall_flowers" : [
     "minecraft:sunflower",
@@ -1103,5 +1134,364 @@
   "#supplementaries:bamboo_spikes" : [
     "supplementaries:bamboo_spikes_tipped",
     "supplementaries:bamboo_spikes"
+  ],
+  "#luminous_nether:loot_vase" : [
+    "luminous_nether:loot_vase",
+    "luminous_nether:loot_vase_2",
+    "luminous_nether:loot_vase_3",
+    "luminous_nether:loot_vase_4",
+    "luminous_nether:loot_vase_5",
+    "luminous_nether:loot_vase_6",
+    "luminous_nether:lootvase_7",
+    "luminous_nether:loot_vase_8",
+    "luminous_nether:loot_vase_9",
+    "luminous_nether:loot_vase_10",
+    "luminous_nether:loot_vase_11",
+    "luminous_nether:loot_vase_12"
+  ],
+  "#luminousworld:acaciashelf" : [
+    "luminousworld:acaciashelf",
+    "luminousworld:acaciashelf_2",
+    "luminousworld:acaciashelf_3",
+    "luminousworld:acaciashelf_4"
+  ],
+  "#luminousworld:acaciatable" : [
+    "luminousworld:acaciatable",
+    "luminousworld:acaciatable_2",
+    "luminousworld:acaciatable_3",
+    "luminousworld:acaciatable_4"
+  ],
+  "#luminousworld:auburnshelf" : [
+    "luminousworld:auburnshelf",
+    "luminousworld:auburnshelf_2",
+    "luminousworld:auburnshelf_3",
+    "luminousworld:auburnshelf_4"
+  ],
+  "#luminousworld:auburntable" : [
+    "luminousworld:auburntable",
+    "luminousworld:auburntable_2",
+    "luminousworld:auburntable_3",
+    "luminousworld:auburntable_4"
+  ],
+  "#luminousworld:baoshelf" : [
+    "luminousworld:baoshelf_1",
+    "luminousworld:baoshelf_2",
+    "luminousworld:baoshelf_3",
+    "luminousworld:baoshelf_4"
+  ],
+  "#luminousworld:baotable" : [
+    "luminousworld:baotable",
+    "luminousworld:baotable_2",
+    "luminousworld:baotable_3",
+    "luminousworld:baotable_4"
+  ],
+  "#luminousworld:birchshelf" : [
+    "luminousworld:birchshelf_1",
+    "luminousworld:birchshelf_2",
+    "luminousworld:birchshelf_3",
+    "luminousworld:birchshelf_4"
+  ],
+  "#luminousworld:birchtable" : [
+    "luminousworld:birchtable",
+    "luminousworld:birchtable_2",
+    "luminousworld:birchtable_3",
+    "luminousworld:birchtable_4"
+  ],
+  "#luminousworld:bookstack" : [
+    "luminousworld:bookstack",
+    "luminousworld:bookstacktwo",
+    "luminousworld:bookstackthree"
+  ],
+  "#luminousworld:clovers" : [
+    "luminousworld:clovers",
+    "luminousworld:clovers_1",
+    "luminousworld:clovers_2",
+    "luminousworld:clovers_3",
+    "luminousworld:clovers_4",
+    "luminousworld:clovers_5"
+  ],
+  "#luminousworld:blue_petunia_pot" : [
+    "luminousworld:blue_petunia_pot",
+    "luminousworld:blue_petunia_pot_2",
+    "luminousworld:blue_petunia_pot_3",
+    "luminousworld:blue_petunia_pot_4"
+  ],
+  "#luminousworld:cornflower_pot" : [
+    "luminousworld:cornflower_pot",
+    "luminousworld:cornflower_pot_2",
+    "luminousworld:cornflower_pot_3",
+    "luminousworld:cornflowerpot_4"
+  ],
+  "#luminousworld:dandelionpot" : [
+    "luminousworld:dandelionpot",
+    "luminousworld:dandelionpot_2",
+    "luminousworld:dandelionpot_3",
+    "luminousworld:dandelionpot_4"
+  ],
+  "#luminousworld:emptyflowerpot" : [
+    "luminousworld:emptyflowerpot",
+    "luminousworld:emptyflowerpot_2",
+    "luminousworld:emptyflowerpot_3",
+    "luminousworld:emptyflowerpot_4"
+  ],
+  "#luminousworld:firerespotdecorative" : [
+    "luminousworld:firerespotdecorative_1",
+    "luminousworld:firerespotdecorative_2",
+    "luminousworld:firerespotdecorative_3"
+  ],
+  "#luminousworld:hastepotdecorative" : [
+    "luminousworld:hastepotdecorative_1",
+    "luminousworld:hastepotdecorative_2",
+    "luminousworld:hastepotdecorative_3"
+  ],
+  "#luminousworld:healing_pot_decorative" : [
+    "luminousworld:healing_pot_decorative_1",
+    "luminousworld:healing_pot_decorative_2",
+    "luminousworld:healing_pot_decorative_3"
+  ],
+  "#luminousworld:invispotdecorative" : [
+    "luminousworld:invispotdecorative_1",
+    "luminousworld:invispotdecorative_2",
+    "luminousworld:invispotdecorative_3"
+  ],
+  "#luminousworld:j_bpotdecorative" : [
+    "luminousworld:j_bpotdecorative_1",
+    "luminousworld:j_bpotdecorative_2",
+    "luminousworld:j_bpotdecorative_3"
+  ],
+  "#luminousworld:n_vpotdecorative" : [
+    "luminousworld:n_vpotdecorative_1",
+    "luminousworld:n_vpotdecorative_2",
+    "luminousworld:n_vpotdecorative_3"
+  ],
+  "#luminousworld:orchid_pot" : [
+    "luminousworld:orchid_pot",
+    "luminousworld:orchid_pot_3",
+    "luminousworld:orchid_pot_4",
+    "luminousworld:orchidpot_2"
+  ],
+  "#luminousworld:purplepetuniapot" : [
+    "luminousworld:purplepetuniapot",
+    "luminousworld:purplepetuniapot_2",
+    "luminousworld:purplepetuniapot_3",
+    "luminousworld:purplepetuniapot_4"
+  ],
+  "#luminousworld:regenpotdecorative" : [
+    "luminousworld:regenpotdecorative_1",
+    "luminousworld:regenpotdecorative_2",
+    "luminousworld:regenpotdecorative_3"
+  ],
+  "#luminousworld:roseflower_pot" : [
+    "luminousworld:roseflower_pot",
+    "luminousworld:roseflower_pot_2",
+    "luminousworld:roseflowerpot_3",
+    "luminousworld:roseflowerpot_4"
+  ],
+  "#luminousworld:speedpotdecorative" : [
+    "luminousworld:speedpotdecorative_1",
+    "luminousworld:speedpotdecorative_2",
+    "luminousworld:speedpotdecorative_3"
+  ],
+  "#luminousworld:strengthpotdecorative" : [
+    "luminousworld:strengthpotdecorative_1",
+    "luminousworld:strengthpotdecorative_2",
+    "luminousworld:strengthpotdecorative_3"
+  ],
+  "#luminousworld:sunsetpetuniapot" : [
+    "luminousworld:sunsetpetuniapot",
+    "luminousworld:sunsetpetuniapot_2",
+    "luminousworld:sunsetpetuniapot_3",
+    "luminousworld:sunsetpetuniapot_4"
+  ],
+  "#luminousworld:w_bpotdecorative" : [
+    "luminousworld:w_bpotdecorative_1",
+    "luminousworld:w_bpotdecorative_2",
+    "luminousworld:w_bpotdecorative_3"
+  ],
+  "#luminousworld:whitepetuniapot" : [
+    "luminousworld:whitepetuniapot",
+    "luminousworld:white_petuniapot_2",
+    "luminousworld:whitepetuniapot_3",
+    "luminousworld:whitepetuniapot_4"
+  ],
+  "#luminousworld:yellowpetuniapot" : [
+    "luminousworld:yellowpetuniapot",
+    "luminousworld:yellowpetuniapot_2",
+    "luminousworld:yellowpetuniapot_3",
+    "luminousworld:yellowpetuniapot_4"
+  ],
+  "#luminousworld:darkoakshelf" : [
+    "luminousworld:darkoakshelf",
+    "luminousworld:darkoakshelf_2",
+    "luminousworld:darkoakshelf_3",
+    "luminousworld:darkoakshelf_4"
+  ],
+  "#luminousworld:darkoaktable" : [
+    "luminousworld:darkoaktable",
+    "luminousworld:darkoaktable_2",
+    "luminousworld:darkoaktable_3",
+    "luminousworld:darkoaktable_4"
+  ],
+  "#luminousworld:decorative_gb" : [
+    "luminousworld:decorative_gb_1",
+    "luminousworld:decorative_gb_2",
+    "luminousworld:decorative_gb_3",
+    "luminousworld:decorative_gb_4",
+    "luminousworld:decorative_gb_5"
+  ],
+  "#luminousworld:decorative_gp" : [
+    "luminousworld:decorative_gp_1",
+    "luminousworld:decorative_gp_2",
+    "luminousworld:decorative_gp_3",
+    "luminousworld:decorative_gp_4",
+    "luminousworld:decorative_gp_5"
+  ],
+  "#luminousworld:decorative_pickaxe_diamond" : [
+    "luminousworld:decorative_pickaxe_diamond_1",
+    "luminousworld:decorative_pickaxe_diamond_2",
+    "luminousworld:decorative_pickaxe_diamond_3",
+    "luminousworld:decorative_pickaxe_diamond_4"
+  ],
+  "#luminousworld:decorative_pickaxe_gold" : [
+    "luminousworld:decorative_pickaxe_gold_1",
+    "luminousworld:decorative_pickaxe_gold_2",
+    "luminousworld:decorative_pickaxe_gold_3",
+    "luminousworld:decorative_pickaxe_gold_4"
+  ],
+  "#luminousworld:decorative_pickaxe_iron" : [
+    "luminousworld:decorative_pickaxe_iron_1",
+    "luminousworld:decorative_pickaxe_iron_2",
+    "luminousworld:decorative_pickaxe_iron_3",
+    "luminousworld:decorative_pickaxe_iron_4"
+  ],
+  "#luminousworld:decorative_pickaxe_netherite" : [
+    "luminousworld:decorative_pickaxe_netherite_1",
+    "luminousworld:decorative_pickaxe_netherite_2",
+    "luminousworld:decorative_pickaxe_netherite_3",
+    "luminousworld:decorative_pickaxe_netherite_4"
+  ],
+  "#luminousworld:decorativesworddiamond" : [
+    "luminousworld:decorativesworddiamond_1",
+    "luminousworld:decorativesworddiamond_2",
+    "luminousworld:decorativesworddiamond_3",
+    "luminousworld:decorativesworddiamond_4"
+  ],
+  "#luminousworld:decorativeswordgold" : [
+    "luminousworld:decorativeswordgold_1",
+    "luminousworld:decorativeswordgold_2",
+    "luminousworld:decorativeswordgold_3",
+    "luminousworld:decorativeswordgold_4"
+  ],
+  "#luminousworld:decorativeswordiron" : [
+    "luminousworld:decorativeswordiron",
+    "luminousworld:decorativeswordiron_2",
+    "luminousworld:decorativeswordiron_3",
+    "luminousworld:decorativeswordiron_4"
+  ],
+  "#luminousworld:decorativeswordnetherite" : [
+    "luminousworld:decorativeswordnetherite_1",
+    "luminousworld:decorativeswordnetherite_2",
+    "luminousworld:decorativeswordnetherite_3",
+    "luminousworld:decorativeswordnetherite_4"
+  ],
+  "#luminousworld:hanging_lantern" : [
+    "luminousworld:hanging_lantern",
+    "luminousworld:hanginglantern_2",
+    "luminousworld:hanginglantern_3",
+    "luminousworld:hanginglantern_4",
+    "luminousworld:hanginglantern_5",
+    "luminousworld:hanginglantern_6",
+    "luminousworld:hanginglantern_7",
+    "luminousworld:hanginglantern_8"
+  ],
+  "#luminousworld:jungleshelf" : [
+    "luminousworld:jungleshelf",
+    "luminousworld:jungleshelf_2",
+    "luminousworld:jungleshelf_3",
+    "luminousworld:jungleshelf_4"
+  ],
+  "#luminousworld:jungletable" : [
+    "luminousworld:jungletable",
+    "luminousworld:jungletable_2",
+    "luminousworld:jungletable_3",
+    "luminousworld:jungletable_4"
+  ],
+  "#luminousworld:mangroveshelf" : [
+    "luminousworld:mangroveshelf",
+    "luminousworld:mangroveshelf_2",
+    "luminousworld:mangroveshelf_3",
+    "luminousworld:mangroveshelf_4"
+  ],
+  "#luminousworld:mangrovetable" : [
+    "luminousworld:mangrovetable",
+    "luminousworld:mangrovetable_2",
+    "luminousworld:mangrovetable_3",
+    "luminousworld:mangrovetable_4"
+  ],
+  "#luminousworld:oakshelf" : [
+    "luminousworld:oakshelf_1",
+    "luminousworld:oakshelf_2",
+    "luminousworld:oakshelf_3",
+    "luminousworld:oakshelf_4"
+  ],
+  "#luminousworld:oaktable" : [
+    "luminousworld:oaktable",
+    "luminousworld:oaktable_2",
+    "luminousworld:oaktable_3",
+    "luminousworld:oaktable_4"
+  ],
+  "#luminousworld:palmshelf" : [
+    "luminousworld:palmshelf",
+    "luminousworld:palmshelf_2",
+    "luminousworld:palmshelf_3",
+    "luminousworld:palmshelf_4"
+  ],
+  "#luminousworld:palmtable" : [
+    "luminousworld:palmtable",
+    "luminousworld:palmtable_2",
+    "luminousworld:palmtable_3",
+    "luminousworld:palmtable_4"
+  ],
+  "#luminousworld:paperpile" : [
+    "luminousworld:paperpile_1",
+    "luminousworld:paperpile_2",
+    "luminousworld:paperpile_3",
+    "luminousworld:paperpile_4",
+    "luminousworld:paperpile_5",
+    "luminousworld:paperpile_6"
+  ],
+  "#luminousworld:small_cauldron" : [
+    "luminousworld:small_cauldron",
+    "luminousworld:small_cauldron_2",
+    "luminousworld:small_cauldron_3",
+    "luminousworld:small_cauldron_4",
+    "luminousworld:small_cauldron_5",
+    "luminousworld:small_cauldron_6",
+    "luminousworld:small_cauldron_7",
+    "luminousworld:small_cauldron_8"
+  ],
+  "#luminousworld:spruceshelf" : [
+    "luminousworld:spruceshelf_1",
+    "luminousworld:spruceshelf_2",
+    "luminousworld:spruceshelf_3",
+    "luminousworld:spruceshelf_4"
+  ],
+  "#luminousworld:sprucetable" : [
+    "luminousworld:sprucetable",
+    "luminousworld:sprucetable_2",
+    "luminousworld:sprucetable_3",
+    "luminousworld:sprucetable_4"
+  ],
+  "#luminousworld:whiteoakshelf" : [
+    "luminousworld:whiteoakshelf",
+    "luminousworld:whiteoakshelf_2",
+    "luminousworld:whiteoakshelf_3",
+    "luminousworld:whiteoakshelf_4"
+  ],
+  "#luminousworld:whiteoaktable" : [
+    "luminousworld:whiteoaktable",
+    "luminousworld:whiteoaktable_2",
+    "luminousworld:whiteoaktable_3",
+    "luminousworld:whiteoaktable_4"
   ]
 }

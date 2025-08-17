@@ -1,6 +1,5 @@
+import fnmatch
 import logging
-import os
-from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import numpy as np
 import json
@@ -9,11 +8,7 @@ import networkx as nx
 
 class GraphCreator:
 
-    BLACKLIST_RECIPES = {
-        "minecraft:smithing"
-    }
-
-    def __init__(self, itemPath : str, recipePath : str, equivalencyPath : str) -> None:
+    def __init__(self, itemPath : str, recipePath : str, equivalencyPath : str, additionalRecipesPath : str, bannedPath : str) -> None:
         """
         Generates the basic structure of the recipe graph, a Directed Acyclic Graph.
         There are 4 node types :
@@ -25,12 +20,17 @@ class GraphCreator:
 
         :param itemPath: path to the item list txt
         :param recipePath: path to the recipe json file
+        :param equivalencyPath: path to the equivalency json file (tag list)
+        :param additionalRecipesPath: path to the additional recipes json file. Can contain tags defined in equivalencyPath
+        :param bannedPath: path to the banned keywords file
         """
         self.logger = self._logInit()
 
         self.itemPath = itemPath
         self.recipePath = recipePath
         self.equivalencyPath = equivalencyPath
+        self.customRecipes = additionalRecipesPath
+        self.bannedKeywords = bannedPath
 
         # Item list
         self.itemList, self.modList = self._getItems()
@@ -43,13 +43,25 @@ class GraphCreator:
         self.originalGraph = self._generateGraph()
         self.log(f"Full graph with following info : {self.originalGraph}")
 
-        # Equivalency links for each tag, defined in "equivalecnyTags.json"
+        # Filter unwanted nodes
+        self._filterNodes()
+
+        # Equivalency links for each tag, defined in "equivalencyTags.json"
         # This condenses the nodes into one and removes the recipes in between them
         self._makeLinks()
+
+        # Adding Custom Recipes
+        # We need a custom logic for ingredients
+        self._makeCustomRecipes()
+
+        # Graph pruning
+        # Removes unnecessary ingredient / recipe nodes
+        self._pruneGraph()
 
         # Cycle collapsing
         self.G = self.originalGraph.copy()
         self._collapseCycles()
+
         self.log(f"Directed Acyclical Graph with following info : {self.G}")
 
     def _getItems(self) -> tuple[list, list]:
@@ -153,6 +165,18 @@ class GraphCreator:
         self.log(f"Added {len([x for x, y in graph.nodes.data() if y['type'] == 'recipe'])} recipe nodes")
         return graph
 
+    def _filterNodes(self):
+        # The banned keywords file applies to all nodes, so it will remove recipes as well
+        BANNED_KEYWORDS = json.load(open(self.bannedKeywords))["keywords"]
+        self.log(f"Banned keywords are : {BANNED_KEYWORDS}")
+        toDrop = []
+        for ban in BANNED_KEYWORDS:
+            toBan = fnmatch.filter(self.originalGraph.nodes, ban)
+            self.log(f"Keyword {ban} matches with {toBan}", level=logging.DEBUG)
+            toDrop.extend(toBan)
+        self.originalGraph.remove_nodes_from(toDrop)
+        self.log(f"Dropped {len(toDrop)} nodes")
+
     def _makeLinks(self):
         """
         Set an equivalency link between a set of nodes, meaning that every node of the set is condensed into one
@@ -207,6 +231,46 @@ class GraphCreator:
                 if self.originalGraph.nodes[succ]['type'] == 'ingredient' and self.originalGraph.out_degree(succ) == 0:
                     self.log(f"{succ} is an empty ingredient for tag node {tag}", level=logging.DEBUG)
 
+    def _makeCustomRecipes(self):
+        recipes = json.load(open(self.customRecipes))
+        self.log(f"Found {len(recipes)} additional recipes")
+
+        for r in recipes.keys():
+            recipe = f"custom-{r}"
+            output = list(recipes[r]["output"])[0]
+
+            # The recipe node
+            self.originalGraph.add_node(
+                recipe,
+                type="recipe",
+                SCT=set(),
+                hasComputed=False,
+                color='green',
+                size=15,
+                shape="diamond")
+
+            # Recipe -> output
+            self.originalGraph.add_edge(recipe, output, weight=recipes[r]["output"][output])
+
+            for i in recipes[r]['input']:
+                ingr = f"Ingredient@custom-{r}-{i}"
+
+                # Ingredient Node
+                self.originalGraph.add_node(
+                    ingr,
+                    type="ingredient",
+                    SCT=set(),
+                    hasComputed=False,
+                    color='orange',
+                    size=5,
+                    shape="square")
+
+                # Ingredient -> recipe
+                self.originalGraph.add_edge(ingr, recipe, weight=recipes[r]["input"][i])
+                # Item -> Ingredient
+                self.originalGraph.add_edge(i, ingr)
+
+
 
     def _getCycles(self) -> dict[str, set]:
         cycles = [c for c in nx.strongly_connected_components(self.originalGraph) if len(c) > 1]
@@ -238,15 +302,19 @@ class GraphCreator:
             outEdges = list()
 
             for n in cycle:
+
+                # Add a virtual edge outside -> inside
                 for p in self.originalGraph.predecessors(n):
                     if p not in cycle and self.originalGraph.nodes[p]["type"] != "cycle":
                         inEdges.append((p, n, self.originalGraph[p][n]))
                         cycleIn.add((p, cycleid))
                         if p in self.nodeToCycle.keys():
                             cycleIn.add((self.nodeToCycle[p], cycleid))
+
+                # Add a virtual edge inside -> outside
                 for s in self.originalGraph.successors(n):
                     if s not in cycle and self.originalGraph.nodes[s]["type"] != "cycle":
-                        outEdges.append((s, n, self.originalGraph[n][s]))
+                        outEdges.append((n, s, self.originalGraph[n][s]))
                         cycleOut.add((cycleid, s))
                         if s in self.nodeToCycle.keys():
                             cycleOut.add((cycleid, self.nodeToCycle[s]))
@@ -261,8 +329,11 @@ class GraphCreator:
         self.G.add_edges_from(cycleOut)
         self.G.remove_nodes_from(toRemove)
 
-        # Give the graph the map node -> cycle for easier retrieval
-        self.G.graph["nodeToCycle"] = self.nodeToCycle
+    def _pruneGraph(self):
+        for node,data in self.originalGraph.copy().nodes.data():
+            if data["type"] in ["ingredient", "recipe"] and self.originalGraph.in_degree(node) == 0:
+                self.log(f"Pruning {node}", level=logging.DEBUG)
+                self.originalGraph.remove_node(node)
 
     def _logInit(self):
         logger = logging.getLogger(self.__class__.__name__)

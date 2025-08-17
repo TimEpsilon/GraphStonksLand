@@ -33,7 +33,6 @@ class CycleSolver(NodeSolver):
         self.fullPredecessors, self.subTargets, self.predecessorsWeight, self.predecessorsValue = self.getTruePredecessors()
 
         if self.arePredecessorsSolved():
-            self.log(f"Solving {self.thisNode}")
             # 1 - Init the cycle nodes
             for target in self.subTargets:
                 targetType = self.subgraph.nodes[target]["type"]
@@ -78,7 +77,6 @@ class CycleSolver(NodeSolver):
                 updatedSCT = {}
 
                 for node in self.subgraph.nodes():
-                    self.log(f"Subnode is {node}", level=logging.DEBUG)
                     nodeType = self.subgraph.nodes[node]["type"]
                     predecessors = list(self.subgraph.predecessors(node))
                     candidates = set()
@@ -151,8 +149,6 @@ class CycleSolver(NodeSolver):
             self.log(f"{self.thisNode} values Computed in {Niter} iterations.")
         else:
             self.log(f"{self.thisNode} predecessors aren't all Computed", level=logging.WARNING)
-
-
 
 
     def getTruePredecessors(self) -> tuple[dict[str, set[str]], set[str], dict[str, dict[str, float]], dict[str, dict[str, set[float]]]]:

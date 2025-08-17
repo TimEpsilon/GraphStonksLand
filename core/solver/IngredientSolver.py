@@ -34,13 +34,17 @@ class IngredientSolver(NodeSolver):
             self.log(f"{self.thisNode} already has a value. Skipping.")
             return
         if self.arePredecessorsSolved():
-            self.log(f"Solving {self.thisNode}")
             # The logic is Xi = {xi}
-            candidates = set.union(*self.predecessorsValue.values())
-            candidates = self.cutTooLow(candidates)
-            candidates = self.selectionMethod(candidates)
+            if len(self.predecessors) > 0:
+                candidates = set.union(*self.predecessorsValue.values())
+                candidates = self.cutTooLow(candidates)
+                candidates = self.selectionMethod(candidates)
+            else :
+                self.log(f"{self.thisNode} has no predecessors.", level=logging.WARNING)
+                candidates = set()
+            self.log(f"{self.thisNode} has values {candidates}")
             self.graph.nodes[self.thisNode]["SCT"] = candidates
             self.graph.nodes[self.thisNode]["hasComputed"] = True
-            self.log(f"{self.thisNode} has values {candidates}")
+
         else:
             self.log(f"{self.thisNode} predecessors aren't all Computed", level=logging.WARNING)

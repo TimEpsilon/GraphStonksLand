@@ -47,7 +47,7 @@ class NodeSolver(ABC):
                 for e in self.graph.nodes[p]["outEdges"]:
                     if e[1] == self.thisNode:
                         predecessors.add(e[0])
-                        edgeWeight[e[0]] = e[2]["weight"]
+                        edgeWeight[e[0]] = e[2].get("weight")
                         nodeValue[e[0]] = self.graph.nodes[p]["subgraph"].nodes[e[0]]["SCT"]
 
         return predecessors, edgeWeight, nodeValue
@@ -67,11 +67,11 @@ class NodeSolver(ABC):
 
     @staticmethod
     def cutTooLow(candidates, threshold=0.001):
-        candidates = np.array(list(candidates))
+        candidates = np.array(list(candidates)) if len(candidates) > 0 else np.array([0])
         candidates = np.round(candidates / threshold) * threshold
         return set(candidates[candidates >= threshold].astype(float).tolist())
 
     def selectionMethod(self, values : set):
-        result = min(values)
+        result = min(values) if len(values) > 0 else 0
         self.log(f"Candidates {values} have been reduced to {result}", level=logging.DEBUG)
         return {result}

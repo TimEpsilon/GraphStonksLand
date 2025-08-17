@@ -35,18 +35,20 @@ class RecipeSolver(NodeSolver):
             self.log(f"{self.thisNode} already has a value. Skipping.")
             return
         if self.arePredecessorsSolved():
-            self.log(f"Solving {self.thisNode}")
             # The logic is r = sum(Xi * ci)
             # For a given node i, there is only one ci but multiple Xi
             # Since there are multiple Xi for each i, we must compute every configuration of Xi
             keys = list(self.predecessorsValue.keys())
-            values = [np.array(list(self.predecessorsValue[k]), dtype=np.float64) for k in keys]
+            values = [np.array(list(self.predecessorsValue[k]) if len(self.predecessorsValue[k]) > 0 else [0], dtype=np.float64) for k in keys]
             weights = np.array([self.predecessorsWeight[k] for k in keys], dtype=np.float64)
 
             # Cartesian product via itertools, results in list of tuples
             combos = np.array(list(itertools.product(*values)), dtype=np.float64)  # shape: (n_combos, n_keys)
 
             # Weighted sum along axis 1 (dot product with weights)
+            if self.thisNode == "smithing-better_weaponry:netherite_sai_craft":
+                print(combos)
+                print(weights)
             candidates = self.cutTooLow(combos @ weights)
             self.graph.nodes[self.thisNode]["SCT"] = candidates
             self.graph.nodes[self.thisNode]["hasComputed"] = True
