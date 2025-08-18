@@ -19,13 +19,15 @@ ATOMICPATH = os.path.join(pathlib.Path(__file__).parent.resolve(), "../config/at
 
 class Propagation:
 
-    def __init__(self, graph : nx.DiGraph):
+    def __init__(self, graph : nx.DiGraph, equivalencyPath : str):
         """
         This class implements the value propagation algorithm on the given graph.
 
         :param graph: the Directed Acyclic Graph on which the algorithm will be applied.
+        :param equivalencyPath: the path of the file containing the equivalency tags.
         """
         self.logger = self._logInit()
+        self.equivalencyPath = equivalencyPath
 
         self.graph = graph
 
@@ -104,6 +106,24 @@ class Propagation:
                         out = format(out, '.3f')
                         outputs.loc[len(outputs)] = [subnode, out]
         outputs.to_csv("output.csv", index=False)
+
+        self.log("Saving output JSON")
+        # To Json for easier managing back in Java
+        outputs.set_index("node", inplace=True)
+        outputs = outputs.T.to_dict("list")
+        outputs = dict(sorted(outputs.items()))
+
+        equivalencies = json.load(open(self.equivalencyPath))
+        js = {}
+        for key in outputs:
+            if "#" in key:
+                for subkey in equivalencies[key]:
+                    js[subkey] = {"SCT" : float(outputs[key][0])}
+            else:
+                js[key] = {"SCT" : float(outputs[key][0])}
+
+        with open("SCT.json", "w") as f:
+            json.dump({"values" : js}, f, indent=4)
 
 
     def generateAtomicInputs(self):

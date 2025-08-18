@@ -123,7 +123,6 @@ minecraft:crimson_nylium,0.04,,,part-103
 luminous_nether:golden_mushroom,0.05,,,part-000
 born_in_chaos_v1:tombstone_rotborne,256.0,,,part-104
 crystal_chronicles:alveolus_block,0.05,,,part-105
-minecraft:oxidized_copper_door,0.0,,,part-000
 minecraft:tube_coral_fan,0.4,,,part-106
 artifacts:withered_bracelet,512.0,,,part-107
 luminousworld:cherry_treant_trophy,512.0,,,part-108
@@ -175,7 +174,6 @@ born_in_chaos_v1:elixirof_insect_protection,16.0,,,part-143
 minecraft:red_mushroom_block,0.1,,,part-144
 createoreexcavation:raw_redstone,5.0,,,part-000
 minecraft:large_fern,0.05,,,part-000
-create:oxidized_copper_shingles,0.0,,,part-000
 minecraft:amethyst_cluster,6.0,,,part-000
 luminous_nether:haunt_armor_trim,80.0,,,part-145
 sophisticatedcore:xp_bucket,1.0,,,part-146
@@ -234,7 +232,6 @@ irons_spellbooks:bloody_vellum,12.0,,,part-000
 minecraft:dead_horn_coral,0.4,,,part-183
 luminousworld:frozen_vile_gator_trophy,512.0,,,part-184
 born_in_chaos_v1:tombstone_memesus,256.0,,,part-185
-create:oxidized_copper_tiles,0.0,,,part-000
 born_in_chaos_v1:serpumpkinhead_m,128.0,,,part-186
 artifacts:strider_shoes,512.0,,,part-188
 born_in_chaos_v1:creepy_gift,10.0,,,part-189
@@ -554,7 +551,6 @@ luminousworld:soulbfjar,64.0,,,part-417
 luminous_nether:gilded_bundle,64.0,,,part-418
 born_in_chaos_v1:anluka_doors,64.0,,,part-419
 irons_spellbooks:blood_vial,8.0,,,part-000
-minecraft:oxidized_copper_trapdoor,0.0,,,part-000
 relics:midnight_robe,512.0,,,part-420
 irons_spellbooks:necronomicon_spell_book,1024.0,,,part-421
 luminousworld:frigid_horn,64.0,,,part-422
@@ -688,7 +684,6 @@ artifacts:golden_hook,512.0,,,part-513
 luminous_nether:tall_ash_grass,0.05,,,part-514
 irons_spellbooks:cinder_essence,8.0,,,part-000
 minecraft:rabbit_foot,16.0,,,part-515
-minecraft:oxidized_copper,0.0,,,part-000
 born_in_chaos_v1:puddleof_stimulation,8.0,,,part-516
 irons_spellbooks:greater_evasion_elixir,96.0,,,part-517
 betterarcheology:soul_totem,2048.0,,,part-518
@@ -720,19 +715,19 @@ minecraft:milk,0.005,,,part-000
 #realmrpg_skeletons,32.0,,,part-530
 #luminous_nether:loot_vase,18.0,,,part-531
 #luminousworld:clovers,0.05,,,part-532
-cycle-92,0.08,"{'create:cut_ochrum_bricks', 'create:cut_ochrum_brick_slab', 'create:cut_ochrum_stairs', 'create:cut_ochrum_wall', 'create:small_ochrum_brick_wall', 'create:cut_ochrum_brick_stairs', 'create:polished_cut_ochrum_stairs', 'create:small_ochrum_bricks', 'create:ochrum', 'create:cut_ochrum', 'create:cut_ochrum_slab', 'create:cut_ochrum_brick_wall', 'create:ochrum_pillar', 'create:polished_cut_ochrum_wall', 'create:polished_cut_ochrum_slab', 'create:small_ochrum_brick_slab', 'create:small_ochrum_brick_stairs', 'create:layered_ochrum', 'create:polished_cut_ochrum'}",create:ochrum,part-000
-cycle-97,0.08,"{'create:polished_cut_tuff_slab', 'create:cut_tuff_wall', 'create:small_tuff_brick_slab', 'create:small_tuff_brick_wall', 'create:cut_tuff_brick_stairs', 'create:polished_cut_tuff', 'create:polished_cut_tuff_stairs', 'create:cut_tuff_brick_wall', 'minecraft:tuff', 'create:cut_tuff_brick_slab', 'create:small_tuff_bricks', 'create:layered_tuff', 'create:polished_cut_tuff_wall', 'create:small_tuff_brick_stairs', 'create:tuff_pillar', 'create:cut_tuff_bricks', 'create:cut_tuff_stairs', 'create:cut_tuff_slab', 'create:cut_tuff'}",minecraft:tuff,part-000
-cycle-98,0.08,"{'create:cut_asurine_wall', 'create:asurine_pillar', 'create:cut_asurine_slab', 'create:small_asurine_brick_wall', 'create:cut_asurine_brick_wall', 'create:small_asurine_brick_slab', 'create:small_asurine_brick_stairs', 'create:polished_cut_asurine', 'create:cut_asurine_brick_stairs', 'create:polished_cut_asurine_stairs', 'create:small_asurine_bricks', 'create:polished_cut_asurine_slab', 'create:polished_cut_asurine_wall', 'create:cut_asurine_brick_slab', 'create:cut_asurine_bricks', 'create:cut_asurine_stairs', 'create:asurine', 'create:cut_asurine', 'create:layered_asurine'}",create:asurine,part-000
-cycle-102,0.08,"{'create:crimsite', 'create:cut_crimsite_brick_slab', 'create:cut_crimsite', 'create:polished_cut_crimsite', 'create:polished_cut_crimsite_slab', 'create:cut_crimsite_stairs', 'create:cut_crimsite_wall', 'create:polished_cut_crimsite_wall', 'create:layered_crimsite', 'create:crimsite_pillar', 'create:polished_cut_crimsite_stairs', 'create:small_crimsite_brick_wall', 'create:small_crimsite_bricks', 'create:cut_crimsite_bricks', 'create:cut_crimsite_brick_wall', 'create:cut_crimsite_brick_stairs', 'create:cut_crimsite_slab', 'create:small_crimsite_brick_slab', 'create:small_crimsite_brick_stairs'}",create:crimsite,part-000
-cycle-103,0.08,"{'create:cut_limestone_brick_stairs', 'create:small_limestone_brick_slab', 'create:cut_limestone_slab', 'create:cut_limestone_bricks', 'create:cut_limestone_brick_wall', 'create:limestone_pillar', 'create:polished_cut_limestone', 'create:layered_limestone', 'create:polished_cut_limestone_wall', 'create:small_limestone_bricks', 'create:small_limestone_brick_wall', 'create:cut_limestone_stairs', 'create:polished_cut_limestone_stairs', 'create:small_limestone_brick_stairs', 'create:polished_cut_limestone_slab', 'create:limestone', 'create:cut_limestone_brick_slab', 'create:cut_limestone_wall', 'create:cut_limestone'}",create:limestone,part-533
-cycle-104,0.7,"{'crystal_chronicles:rotten_flesh_block', 'minecraft:rotten_flesh'}",minecraft:rotten_flesh,part-000
-cycle-109,0.08,"{'create:polished_cut_calcite_slab', 'create:small_calcite_bricks', 'create:calcite_pillar', 'create:cut_calcite_wall', 'create:polished_cut_calcite', 'create:cut_calcite_brick_wall', 'create:cut_calcite_brick_slab', 'create:small_calcite_brick_slab', 'create:cut_calcite', 'create:cut_calcite_slab', 'create:polished_cut_calcite_wall', 'create:layered_calcite', 'minecraft:calcite', 'create:small_calcite_brick_wall', 'create:cut_calcite_stairs', 'create:cut_calcite_bricks', 'create:cut_calcite_brick_stairs', 'create:polished_cut_calcite_stairs', 'create:small_calcite_brick_stairs'}",minecraft:calcite,part-000
-cycle-113,1.0,"{'supplementaries:flax_block', 'supplementaries:flax'}",supplementaries:flax,part-000
-cycle-115,0.08,"{'create:polished_cut_veridium_wall', 'create:cut_veridium_slab', 'create:layered_veridium', 'create:polished_cut_veridium_stairs', 'create:veridium', 'create:cut_veridium_bricks', 'create:cut_veridium_brick_wall', 'create:cut_veridium_brick_stairs', 'create:small_veridium_brick_stairs', 'create:cut_veridium_brick_slab', 'create:polished_cut_veridium', 'create:cut_veridium_stairs', 'create:small_veridium_brick_slab', 'create:veridium_pillar', 'create:polished_cut_veridium_slab', 'create:small_veridium_brick_wall', 'create:small_veridium_bricks', 'create:cut_veridium_wall', 'create:cut_veridium'}",create:veridium,part-000
+cycle-89,0.08,"{'create:ochrum', 'create:small_ochrum_bricks', 'create:cut_ochrum_stairs', 'create:layered_ochrum', 'create:cut_ochrum_brick_wall', 'create:polished_cut_ochrum_slab', 'create:cut_ochrum_wall', 'create:small_ochrum_brick_stairs', 'create:cut_ochrum_slab', 'create:cut_ochrum_bricks', 'create:small_ochrum_brick_wall', 'create:small_ochrum_brick_slab', 'create:polished_cut_ochrum', 'create:polished_cut_ochrum_stairs', 'create:cut_ochrum_brick_slab', 'create:cut_ochrum_brick_stairs', 'create:ochrum_pillar', 'create:polished_cut_ochrum_wall', 'create:cut_ochrum'}",create:ochrum,part-000
+cycle-94,0.08,"{'minecraft:tuff', 'create:cut_tuff_wall', 'create:cut_tuff', 'create:polished_cut_tuff_wall', 'create:small_tuff_brick_stairs', 'create:cut_tuff_bricks', 'create:small_tuff_bricks', 'create:cut_tuff_brick_wall', 'create:polished_cut_tuff', 'create:polished_cut_tuff_slab', 'create:layered_tuff', 'create:cut_tuff_brick_stairs', 'create:cut_tuff_brick_slab', 'create:cut_tuff_slab', 'create:cut_tuff_stairs', 'create:small_tuff_brick_slab', 'create:polished_cut_tuff_stairs', 'create:small_tuff_brick_wall', 'create:tuff_pillar'}",minecraft:tuff,part-000
+cycle-95,0.08,"{'create:layered_asurine', 'create:polished_cut_asurine_stairs', 'create:small_asurine_bricks', 'create:polished_cut_asurine_slab', 'create:cut_asurine_brick_slab', 'create:polished_cut_asurine', 'create:cut_asurine_slab', 'create:small_asurine_brick_stairs', 'create:small_asurine_brick_slab', 'create:polished_cut_asurine_wall', 'create:cut_asurine_brick_stairs', 'create:cut_asurine_wall', 'create:asurine_pillar', 'create:cut_asurine_stairs', 'create:small_asurine_brick_wall', 'create:cut_asurine_bricks', 'create:cut_asurine', 'create:cut_asurine_brick_wall', 'create:asurine'}",create:asurine,part-000
+cycle-99,0.08,"{'create:polished_cut_crimsite', 'create:cut_crimsite', 'create:cut_crimsite_brick_stairs', 'create:polished_cut_crimsite_slab', 'create:small_crimsite_brick_wall', 'create:small_crimsite_brick_stairs', 'create:cut_crimsite_bricks', 'create:crimsite', 'create:cut_crimsite_wall', 'create:polished_cut_crimsite_wall', 'create:cut_crimsite_stairs', 'create:polished_cut_crimsite_stairs', 'create:small_crimsite_brick_slab', 'create:crimsite_pillar', 'create:cut_crimsite_brick_wall', 'create:cut_crimsite_slab', 'create:layered_crimsite', 'create:cut_crimsite_brick_slab', 'create:small_crimsite_bricks'}",create:crimsite,part-000
+cycle-100,0.08,"{'create:small_limestone_brick_slab', 'create:cut_limestone_stairs', 'create:cut_limestone', 'create:small_limestone_brick_wall', 'create:polished_cut_limestone_stairs', 'create:polished_cut_limestone_slab', 'create:cut_limestone_brick_stairs', 'create:polished_cut_limestone_wall', 'create:limestone_pillar', 'create:cut_limestone_brick_wall', 'create:cut_limestone_slab', 'create:cut_limestone_wall', 'create:layered_limestone', 'create:cut_limestone_bricks', 'create:polished_cut_limestone', 'create:small_limestone_brick_stairs', 'create:cut_limestone_brick_slab', 'create:limestone', 'create:small_limestone_bricks'}",create:limestone,part-533
+cycle-101,0.7,"{'crystal_chronicles:rotten_flesh_block', 'minecraft:rotten_flesh'}",minecraft:rotten_flesh,part-000
+cycle-106,0.08,"{'create:cut_calcite', 'create:cut_calcite_stairs', 'create:cut_calcite_brick_stairs', 'create:cut_calcite_wall', 'minecraft:calcite', 'create:cut_calcite_brick_wall', 'create:small_calcite_brick_wall', 'create:polished_cut_calcite_stairs', 'create:small_calcite_bricks', 'create:layered_calcite', 'create:cut_calcite_bricks', 'create:cut_calcite_brick_slab', 'create:small_calcite_brick_stairs', 'create:calcite_pillar', 'create:cut_calcite_slab', 'create:polished_cut_calcite', 'create:small_calcite_brick_slab', 'create:polished_cut_calcite_slab', 'create:polished_cut_calcite_wall'}",minecraft:calcite,part-000
+cycle-110,1.0,"{'supplementaries:flax', 'supplementaries:flax_block'}",supplementaries:flax,part-000
+cycle-115,0.08,"{'create:cut_veridium_brick_slab', 'create:small_veridium_brick_wall', 'create:small_veridium_brick_slab', 'create:cut_veridium_brick_wall', 'create:polished_cut_veridium_slab', 'create:polished_cut_veridium_stairs', 'create:veridium', 'create:layered_veridium', 'create:cut_veridium_bricks', 'create:small_veridium_bricks', 'create:cut_veridium_slab', 'create:polished_cut_veridium_wall', 'create:small_veridium_brick_stairs', 'create:polished_cut_veridium', 'create:cut_veridium_wall', 'create:cut_veridium_brick_stairs', 'create:cut_veridium', 'create:cut_veridium_stairs', 'create:veridium_pillar'}",create:veridium,part-000
 cycle-118,5.0,"{'luminous_nether:ghostly_essence', 'luminous_nether:ghost_block'}",luminous_nether:ghostly_essence,part-000
 cycle-121,12.0,"{'create:experience_block', 'create:experience_nugget'}",create:experience_nugget,part-534
-cycle-123,10.0,"{'born_in_chaos_v1:shattered_skull', 'born_in_chaos_v1:pile_of_skulls'}",born_in_chaos_v1:shattered_skull,part-000
-cycle-124,0.8,"{'supplementaries:feather_block', 'minecraft:feather'}",minecraft:feather,part-000
+cycle-123,10.0,"{'born_in_chaos_v1:pile_of_skulls', 'born_in_chaos_v1:shattered_skull'}",born_in_chaos_v1:shattered_skull,part-000
+cycle-124,0.8,"{'minecraft:feather', 'supplementaries:feather_block'}",minecraft:feather,part-000
 cycle-125,3.0,"{'minecraft:raw_copper_block', '#copper_ore'}",#copper_ore,part-000
 cycle-128,7.0,"{'#gold_ore', 'minecraft:raw_gold_block'}",#gold_ore,part-000
 cycle-133,6.0,"{'born_in_chaos_v1:pieceofdarkmetal', 'born_in_chaos_v1:pileof_dark_metal'}",born_in_chaos_v1:pieceofdarkmetal,part-000
@@ -740,4 +735,4 @@ cycle-134,5.0,"{'#iron_ore', 'minecraft:raw_iron_block'}",#iron_ore,part-000
 cycle-135,0.1,"{'minecraft:nether_wart', 'minecraft:nether_wart_block'}",minecraft:nether_wart,part-000
 cycle-136,256.0,{'minecraft:elytra'},minecraft:elytra,part-000
 cycle-140,0.4,"{'minecraft:wheat', 'minecraft:hay_block'}",minecraft:wheat,part-000
-cycle-141,5.0,"{'#zinc_ore', 'create:raw_zinc_block'}",#zinc_ore,part-000
+cycle-141,5.0,"{'create:raw_zinc_block', '#zinc_ore'}",#zinc_ore,part-000
