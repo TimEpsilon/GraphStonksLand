@@ -378,7 +378,7 @@ minecraft:salmon_bucket,1
 born_in_chaos_v1:serpumpkinhead_m,128
 artifacts:strider_shoes,512
 born_in_chaos_v1:creepy_gift,10
-randomium:randomium,0
+randomium:randomium,-1
 minecraft:nautilus_shell,32
 minecraft:apple,1
 minecraft:powder_snow_bucket,1

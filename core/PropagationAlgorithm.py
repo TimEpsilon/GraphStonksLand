@@ -7,6 +7,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 
 import networkx as nx
+import numpy as np
 import pandas as pd
 
 from core.solver.CycleSolver import CycleSolver
@@ -95,7 +96,9 @@ class Propagation:
         outputs = pd.DataFrame(columns=("node","SCT"))
         for node,data in self.graph.nodes.data():
             if data["type"] == "item":
-                out = list(data["SCT"])[0] if len(data["SCT"]) > 0 else 0
+                sct = np.array(list(data["SCT"])).astype(float)
+                sct = sct[sct!=0]
+                out = sct.min() if len(sct) > 0 else 0
                 out = format(out, '.3f')
                 outputs.loc[len(outputs)] = [node, out]
 
@@ -122,8 +125,10 @@ class Propagation:
             else:
                 js[key] = {"SCT" : float(outputs[key][0])}
 
-        with open("SCT.json", "w") as f:
+        with open("sct.json", "w") as f:
             json.dump({"values" : js}, f, indent=4)
+
+        return outputs
 
 
     def generateAtomicInputs(self):

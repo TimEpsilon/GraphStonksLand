@@ -1849,6 +1849,7 @@
   "minecraft:magenta_glazed_terracotta",
   "create:crushed_raw_nickel",
   "mcwfences:jungle_pyramid_gate",
+  "strawstatues:straw_statue",
   "luminousworld:palm_pressure_plate",
   "mcwroofs:gutter_middle_black",
   "mcwroofs:white_concrete_upper_lower_roof",
