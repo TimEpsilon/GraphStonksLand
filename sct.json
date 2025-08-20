@@ -1,0 +1,25 @@
+{
+    "values": {
+        "minecraft:diamond_ore": {
+            "SCT": 10.0
+        },
+        "minecraft:deepslate_diamond_ore": {
+            "SCT": 10.0
+        },
+        "createoreexcavation:raw_diamond": {
+            "SCT": 10.0
+        },
+        "born_in_chaos_v1:diamond_termite_shard": {
+            "SCT": 1.11
+        },
+        "minecraft:diamond": {
+            "SCT": 48.0
+        },
+        "minecraft:diamond_block": {
+            "SCT": 45.0
+        },
+        "minecraft:diamond_horse_armor": {
+            "SCT": 48.0
+        }
+    }
+}
