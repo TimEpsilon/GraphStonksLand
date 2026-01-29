@@ -56,7 +56,7 @@ def plotGraph(G, name, ylim=1000, fixedInOut=True):
         e["font"] = {"size": 15, "color": "black"}
         e['arrows'] = 'to'
         e['arrowStrikethrough'] = False
-        e['width'] = 1 + 2 * weight
+        e['width'] = 1 + 2 * np.log10(weight+1)
         e['smooth'] = False
 
     g.barnes_hut(spring_strength=1, spring_length=1000, overlap=1)

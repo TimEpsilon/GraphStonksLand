@@ -8,7 +8,7 @@ import networkx as nx
 
 class GraphCreator:
 
-    def __init__(self, itemPath : str, recipePath : str, equivalencyPath : str, additionalRecipesPath : str, bannedPath : str) -> None:
+    def __init__(self, itemPath : str, recipePath : str, tagPath : str, equivalencyPath : str, additionalRecipesPath : str, bannedPath : str) -> None:
         """
         Generates the basic structure of the recipe graph, a Directed Acyclic Graph.
         There are 4 node types :
@@ -20,6 +20,7 @@ class GraphCreator:
 
         :param itemPath: path to the item list txt
         :param recipePath: path to the recipe json file
+        :param tagPath : path to the tag json file
         :param equivalencyPath: path to the equivalency json file (tag list)
         :param additionalRecipesPath: path to the additional recipes json file. Can contain tags defined in equivalencyPath
         :param bannedPath: path to the banned keywords file
@@ -28,6 +29,7 @@ class GraphCreator:
 
         self.itemPath = itemPath
         self.recipePath = recipePath
+        self.tagPath = tagPath
         self.equivalencyPath = equivalencyPath
         self.customRecipes = additionalRecipesPath
         self.bannedKeywords = bannedPath
@@ -37,6 +39,9 @@ class GraphCreator:
 
         # Recipe dict
         self.recipeDict = self._getRecipes()
+
+        # Tag dict
+        self.equivalentTags = self._getTags()
 
         # Graph
         # We keep a copy of the original graph just in case
@@ -80,6 +85,19 @@ class GraphCreator:
                 if new == "Ingredient@1":
                     recipes[r]["input"].pop(new)
         return recipes
+
+    def _getTags(self) -> dict:
+        tags = json.load(open(self.tagPath))
+        equivalentNodes = json.load(open(self.equivalencyPath))
+        for key,nodes in equivalentNodes.items():
+            updatedNodes = []
+            for node in nodes:
+                if "#" in node:
+                    updatedNodes += tags[node.replace("#", "")]
+                else:
+                    updatedNodes.append(node)
+            equivalentNodes[key] = updatedNodes
+        return equivalentNodes
 
     def _generateGraph(self) -> nx.DiGraph:
         self.log("Generating Graph")
@@ -182,10 +200,9 @@ class GraphCreator:
         """
         Set an equivalency link between a set of nodes, meaning that every node of the set is condensed into one
         """
-        nodesList = json.load(open(self.equivalencyPath))
-        self.log(f"Found {len(nodesList)} equivalency tags")
+        self.log(f"Found {len(self.equivalentTags)} equivalency tags")
 
-        for tag,nodes in nodesList.items():
+        for tag,nodes in self.equivalentTags.items():
             self.log(f"Adding tag {tag}, replacing {len(nodes)} nodes")
 
             # Check if every entry is within the item list
@@ -271,8 +288,6 @@ class GraphCreator:
                 # Item -> Ingredient
                 self.originalGraph.add_edge(i, ingr)
 
-
-
     def _getCycles(self) -> dict[str, set]:
         cycles = [c for c in nx.strongly_connected_components(self.originalGraph) if len(c) > 1]
         results = {}
@@ -332,6 +347,7 @@ class GraphCreator:
 
     def _pruneGraph(self):
         for node,data in self.originalGraph.copy().nodes.data():
+            print(node)
             if data["type"] in ["ingredient", "recipe"] and self.originalGraph.in_degree(node) == 0:
                 self.log(f"Pruning {node}", level=logging.DEBUG)
                 self.originalGraph.remove_node(node)

@@ -4,7 +4,7 @@
       "supplementaries:safe": 1
     },
     "input": {
-      "#minecraft:shulker_box" : 1,
+      "#c:shulker_boxes" : 1,
       "minecraft:netherite_ingot" : 1
     }
   },
@@ -338,10 +338,10 @@
   },
   "supplementaries:trapped_present" : {
     "output" : {
-      "#supplementaries:trapped_present" : 1
+      "#supplementaries:trapped_presents" : 1
     },
     "input" : {
-      "#supplementaries:present" : 1,
+      "#supplementaries:presents" : 1,
       "minecraft:tripwire_hook" : 1
     }
   }

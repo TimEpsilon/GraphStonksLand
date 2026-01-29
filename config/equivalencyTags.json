@@ -1,658 +1,56 @@
 {
-  "#comforts:hammock" : [
-    "comforts:hammock_black",
-    "comforts:hammock_blue",
-    "comforts:hammock_brown",
-    "comforts:hammock_cyan",
-    "comforts:hammock_gray",
-    "comforts:hammock_green",
-    "comforts:hammock_light_blue",
-    "comforts:hammock_light_gray",
-    "comforts:hammock_lime",
-    "comforts:hammock_magenta",
-    "comforts:hammock_orange",
-    "comforts:hammock_pink",
-    "comforts:hammock_purple",
-    "comforts:hammock_red",
-    "comforts:hammock_white",
-    "comforts:hammock_yellow"
+  "#comforts:hammocks" : [
+    "#comforts:hammocks"
   ],
-  "#comforts:sleeping_bag" : [
-    "comforts:sleeping_bag_black",
-    "comforts:sleeping_bag_blue",
-    "comforts:sleeping_bag_brown",
-    "comforts:sleeping_bag_cyan",
-    "comforts:sleeping_bag_gray",
-    "comforts:sleeping_bag_green",
-    "comforts:sleeping_bag_light_blue",
-    "comforts:sleeping_bag_light_gray",
-    "comforts:sleeping_bag_lime",
-    "comforts:sleeping_bag_magenta",
-    "comforts:sleeping_bag_orange",
-    "comforts:sleeping_bag_pink",
-    "comforts:sleeping_bag_purple",
-    "comforts:sleeping_bag_red",
-    "comforts:sleeping_bag_white",
-    "comforts:sleeping_bag_yellow"
+  "#comforts:sleeping_bags" : [
+    "#comforts:sleeping_bags"
   ],
-  "#create:postbox" : [
-    "create:black_postbox",
-    "create:blue_postbox",
-    "create:brown_postbox",
-    "create:cyan_postbox",
-    "create:gray_postbox",
-    "create:green_postbox",
-    "create:light_blue_postbox",
-    "create:light_gray_postbox",
-    "create:lime_postbox",
-    "create:magenta_postbox",
-    "create:orange_postbox",
-    "create:pink_postbox",
-    "create:purple_postbox",
-    "create:red_postbox",
-    "create:white_postbox",
-    "create:yellow_postbox"
+  "#create:postboxes" : [
+    "#create:postboxes"
   ],
-  "#create:seat" : [
-    "create:black_seat",
-    "create:blue_seat",
-    "create:brown_seat",
-    "create:cyan_seat",
-    "create:gray_seat",
-    "create:green_seat",
-    "create:light_blue_seat",
-    "create:light_gray_seat",
-    "create:lime_seat",
-    "create:magenta_seat",
-    "create:orange_seat",
-    "create:pink_seat",
-    "create:purple_seat",
-    "create:red_seat",
-    "create:white_seat",
-    "create:yellow_seat"
+  "#create:seats" : [
+    "#create:seats"
   ],
-  "#create:table_cloth" : [
-    "create:black_table_cloth",
-    "create:blue_table_cloth",
-    "create:brown_table_cloth",
-    "create:cyan_table_cloth",
-    "create:gray_table_cloth",
-    "create:green_table_cloth",
-    "create:light_blue_table_cloth",
-    "create:light_gray_table_cloth",
-    "create:lime_table_cloth",
-    "create:magenta_table_cloth",
-    "create:orange_table_cloth",
-    "create:pink_table_cloth",
-    "create:purple_table_cloth",
-    "create:red_table_cloth",
-    "create:white_table_cloth",
-    "create:yellow_table_cloth"
+  "#create:dyed_table_cloths" : [
+    "#create:dyed_table_cloths"
   ],
-  "#create:toolbox" : [
-    "create:black_toolbox",
-    "create:blue_toolbox",
-    "create:brown_toolbox",
-    "create:cyan_toolbox",
-    "create:gray_toolbox",
-    "create:green_toolbox",
-    "create:light_blue_toolbox",
-    "create:light_gray_toolbox",
-    "create:lime_toolbox",
-    "create:magenta_toolbox",
-    "create:orange_toolbox",
-    "create:pink_toolbox",
-    "create:purple_toolbox",
-    "create:red_toolbox",
-    "create:white_toolbox",
-    "create:yellow_toolbox"
+  "#create:toolboxes" : [
+    "#create:toolboxes"
   ],
-  "#create:valve_handle" : [
-    "create:copper_valve_handle",
-    "create:black_valve_handle",
-    "create:blue_valve_handle",
-    "create:brown_valve_handle",
-    "create:cyan_valve_handle",
-    "create:gray_valve_handle",
-    "create:green_valve_handle",
-    "create:light_gray_valve_handle",
-    "create:light_blue_valve_handle",
-    "create:lime_valve_handle",
-    "create:magenta_valve_handle",
-    "create:orange_valve_handle",
-    "create:pink_valve_handle",
-    "create:purple_valve_handle",
-    "create:red_valve_handle",
-    "create:white_valve_handle",
-    "create:yellow_valve_handle"
+  "#create:valve_handles" : [
+    "#create:valve_handles"
   ],
-  "#dried_ghast:harness" : [
-    "dried_ghast:black_harness",
-    "dried_ghast:blue_harness",
-    "dried_ghast:brown_harness",
-    "dried_ghast:cyan_harness",
-    "dried_ghast:gray_harness",
-    "dried_ghast:green_harness",
-    "dried_ghast:light_gray_harness",
-    "dried_ghast:light_blue_harness",
-    "dried_ghast:lime_harness",
-    "dried_ghast:magenta_harness",
-    "dried_ghast:orange_harness",
-    "dried_ghast:pink_harness",
-    "dried_ghast:purple_harness",
-    "dried_ghast:red_harness",
-    "dried_ghast:white_harness",
-    "dried_ghast:yellow_harness"
+  "#minecraft:harnesses" : [
+    "#minecraft:harnesses"
   ],
-  "#mcwroofs:gutter_base" : [
-    "mcwroofs:gutter_base",
-    "mcwroofs:gutter_base_black",
-    "mcwroofs:gutter_base_blue",
-    "mcwroofs:gutter_base_brown",
-    "mcwroofs:gutter_base_cyan",
-    "mcwroofs:gutter_base_gray",
-    "mcwroofs:gutter_base_green",
-    "mcwroofs:gutter_base_light_blue",
-    "mcwroofs:gutter_base_light_gray",
-    "mcwroofs:gutter_base_lime",
-    "mcwroofs:gutter_base_magenta",
-    "mcwroofs:gutter_base_orange",
-    "mcwroofs:gutter_base_pink",
-    "mcwroofs:gutter_base_purple",
-    "mcwroofs:gutter_base_red",
-    "mcwroofs:gutter_base_white",
-    "mcwroofs:gutter_base_yellow"
+  "#minecraft:banners" : [
+    "#minecraft:banners"
   ],
-  "#mcwlights:ceiling_light" : [
-    "mcwlights:black_ceiling_light",
-    "mcwlights:blue_ceiling_light",
-    "mcwlights:brown_ceiling_light",
-    "mcwlights:cyan_ceiling_light",
-    "mcwlights:gray_ceiling_light",
-    "mcwlights:green_ceiling_light",
-    "mcwlights:light_blue_ceiling_light",
-    "mcwlights:light_gray_ceiling_light",
-    "mcwlights:lime_ceiling_light",
-    "mcwlights:magenta_ceiling_light",
-    "mcwlights:orange_ceiling_light",
-    "mcwlights:pink_ceiling_light",
-    "mcwlights:purple_ceiling_light",
-    "mcwlights:red_ceiling_light",
-    "mcwlights:white_ceiling_light",
-    "mcwlights:yellow_ceiling_light"
+  "#minecraft:beds" : [
+    "#minecraft:beds"
   ],
-  "#mcwlights:lamp" : [
-    "mcwlights:black_lamp",
-    "mcwlights:blue_lamp",
-    "mcwlights:brown_lamp",
-    "mcwlights:cyan_lamp",
-    "mcwlights:gray_lamp",
-    "mcwlights:green_lamp",
-    "mcwlights:light_blue_lamp",
-    "mcwlights:light_gray_lamp",
-    "mcwlights:lime_lamp",
-    "mcwlights:magenta_lamp",
-    "mcwlights:orange_lamp",
-    "mcwlights:pink_lamp",
-    "mcwlights:purple_lamp",
-    "mcwlights:red_lamp",
-    "mcwlights:white_lamp",
-    "mcwlights:yellow_lamp"
+  "#minecraft:candles" : [
+    "#minecraft:candles"
   ],
-  "#mcwlights:paper_lamp" : [
-    "mcwlights:black_paper_lamp",
-    "mcwlights:blue_paper_lamp",
-    "mcwlights:brown_paper_lamp",
-    "mcwlights:cyan_paper_lamp",
-    "mcwlights:gray_paper_lamp",
-    "mcwlights:green_paper_lamp",
-    "mcwlights:light_blue_paper_lamp",
-    "mcwlights:light_gray_paper_lamp",
-    "mcwlights:lime_paper_lamp",
-    "mcwlights:magenta_paper_lamp",
-    "mcwlights:orange_paper_lamp",
-    "mcwlights:pink_paper_lamp",
-    "mcwlights:purple_paper_lamp",
-    "mcwlights:red_paper_lamp",
-    "mcwlights:white_paper_lamp",
-    "mcwlights:yellow_paper_lamp"
+  "#minecraft:wool_carpets" : [
+    "#minecraft:wool_carpets"
   ],
-  "#mcwroofs:concrete_attic_roof" : [
-    "mcwroofs:black_concrete_attic_roof",
-    "mcwroofs:blue_concrete_attic_roof",
-    "mcwroofs:brown_concrete_attic_roof",
-    "mcwroofs:cyan_concrete_attic_roof",
-    "mcwroofs:gray_concrete_attic_roof",
-    "mcwroofs:green_concrete_attic_roof",
-    "mcwroofs:light_blue_concrete_attic_roof",
-    "mcwroofs:light_gray_concrete_attic_roof",
-    "mcwroofs:lime_concrete_attic_roof",
-    "mcwroofs:magenta_concrete_attic_roof",
-    "mcwroofs:orange_concrete_attic_roof",
-    "mcwroofs:pink_concrete_attic_roof",
-    "mcwroofs:purple_concrete_attic_roof",
-    "mcwroofs:red_concrete_attic_roof",
-    "mcwroofs:white_concrete_attic_roof",
-    "mcwroofs:yellow_concrete_attic_roof"
+  "#c:concretes" : [
+    "#c:concretes"
   ],
-  "#mcwroofs:concrete_lower_roof" : [
-    "mcwroofs:black_concrete_lower_roof",
-    "mcwroofs:blue_concrete_lower_roof",
-    "mcwroofs:brown_concrete_lower_roof",
-    "mcwroofs:cyan_concrete_lower_roof",
-    "mcwroofs:gray_concrete_lower_roof",
-    "mcwroofs:green_concrete_lower_roof",
-    "mcwroofs:light_blue_concrete_lower_roof",
-    "mcwroofs:light_gray_concrete_lower_roof",
-    "mcwroofs:lime_concrete_lower_roof",
-    "mcwroofs:magenta_concrete_lower_roof",
-    "mcwroofs:orange_concrete_lower_roof",
-    "mcwroofs:pink_concrete_lower_roof",
-    "mcwroofs:purple_concrete_lower_roof",
-    "mcwroofs:red_concrete_lower_roof",
-    "mcwroofs:white_concrete_lower_roof",
-    "mcwroofs:yellow_concrete_lower_roof"
+  "#c:concrete_powders" : [
+    "#c:concrete_powders"
   ],
-  "#mcwroofs:concrete_roof" : [
-    "mcwroofs:black_concrete_roof",
-    "mcwroofs:blue_concrete_roof",
-    "mcwroofs:brown_concrete_roof",
-    "mcwroofs:cyan_concrete_roof",
-    "mcwroofs:gray_concrete_roof",
-    "mcwroofs:green_concrete_roof",
-    "mcwroofs:light_blue_concrete_roof",
-    "mcwroofs:light_gray_concrete_roof",
-    "mcwroofs:lime_concrete_roof",
-    "mcwroofs:magenta_concrete_roof",
-    "mcwroofs:orange_concrete_roof",
-    "mcwroofs:pink_concrete_roof",
-    "mcwroofs:purple_concrete_roof",
-    "mcwroofs:red_concrete_roof",
-    "mcwroofs:white_concrete_roof",
-    "mcwroofs:yellow_concrete_roof"
+  "#c:glazed_terracottas" : [
+    "#c:glazed_terracottas"
   ],
-  "#mcwroofs:concrete_steep_roof" : [
-    "mcwroofs:black_concrete_steep_roof",
-    "mcwroofs:blue_concrete_steep_roof",
-    "mcwroofs:brown_concrete_steep_roof",
-    "mcwroofs:cyan_concrete_steep_roof",
-    "mcwroofs:gray_concrete_steep_roof",
-    "mcwroofs:green_concrete_steep_roof",
-    "mcwroofs:light_blue_concrete_steep_roof",
-    "mcwroofs:light_gray_concrete_steep_roof",
-    "mcwroofs:lime_concrete_steep_roof",
-    "mcwroofs:magenta_concrete_steep_roof",
-    "mcwroofs:orange_concrete_steep_roof",
-    "mcwroofs:pink_concrete_steep_roof",
-    "mcwroofs:purple_concrete_steep_roof",
-    "mcwroofs:red_concrete_steep_roof",
-    "mcwroofs:white_concrete_steep_roof",
-    "mcwroofs:yellow_concrete_steep_roof"
+  "#c:shulker_boxes" : [
+    "#c:shulker_boxes"
   ],
-  "#mcwroofs:concrete_top_roof" : [
-    "mcwroofs:black_concrete_top_roof",
-    "mcwroofs:blue_concrete_top_roof",
-    "mcwroofs:brown_concrete_top_roof",
-    "mcwroofs:cyan_concrete_top_roof",
-    "mcwroofs:gray_concrete_top_roof",
-    "mcwroofs:green_concrete_top_roof",
-    "mcwroofs:light_blue_concrete_top_roof",
-    "mcwroofs:light_gray_concrete_top_roof",
-    "mcwroofs:lime_concrete_top_roof",
-    "mcwroofs:magenta_concrete_top_roof",
-    "mcwroofs:orange_concrete_top_roof",
-    "mcwroofs:pink_concrete_top_roof",
-    "mcwroofs:purple_concrete_top_roof",
-    "mcwroofs:red_concrete_top_roof",
-    "mcwroofs:white_concrete_top_roof",
-    "mcwroofs:yellow_concrete_top_roof"
+  "#c:glass_blocks/cheap" : [
+    "#c:glass_blocks/cheap"
   ],
-  "#mcwroofs:concrete_upper_lower_roof" : [
-    "mcwroofs:black_concrete_upper_lower_roof",
-    "mcwroofs:blue_concrete_upper_lower_roof",
-    "mcwroofs:brown_concrete_upper_lower_roof",
-    "mcwroofs:cyan_concrete_upper_lower_roof",
-    "mcwroofs:gray_concrete_upper_lower_roof",
-    "mcwroofs:green_concrete_upper_lower_roof",
-    "mcwroofs:light_blue_concrete_upper_lower_roof",
-    "mcwroofs:light_gray_concrete_upper_lower_roof",
-    "mcwroofs:lime_concrete_upper_lower_roof",
-    "mcwroofs:magenta_concrete_upper_lower_roof",
-    "mcwroofs:orange_concrete_upper_lower_roof",
-    "mcwroofs:pink_concrete_upper_lower_roof",
-    "mcwroofs:purple_concrete_upper_lower_roof",
-    "mcwroofs:red_concrete_upper_lower_roof",
-    "mcwroofs:white_concrete_upper_lower_roof",
-    "mcwroofs:yellow_concrete_upper_lower_roof"
-  ],
-  "#mcwroofs:stripped_awning" : [
-    "mcwroofs:black_striped_awning",
-    "mcwroofs:blue_striped_awning",
-    "mcwroofs:brown_striped_awning",
-    "mcwroofs:cyan_striped_awning",
-    "mcwroofs:gray_striped_awning",
-    "mcwroofs:green_striped_awning",
-    "mcwroofs:light_blue_striped_awning",
-    "mcwroofs:light_gray_striped_awning",
-    "mcwroofs:lime_striped_awning",
-    "mcwroofs:magenta_striped_awning",
-    "mcwroofs:orange_striped_awning",
-    "mcwroofs:pink_striped_awning",
-    "mcwroofs:purple_striped_awning",
-    "mcwroofs:red_striped_awning",
-    "mcwroofs:yellow_striped_awning"
-  ],
-  "#mcwroofs:terracotta_attic_roof" : [
-    "mcwroofs:black_terracotta_attic_roof",
-    "mcwroofs:blue_terracotta_attic_roof",
-    "mcwroofs:brown_terracotta_attic_roof",
-    "mcwroofs:cyan_terracotta_attic_roof",
-    "mcwroofs:gray_terracotta_attic_roof",
-    "mcwroofs:green_terracotta_attic_roof",
-    "mcwroofs:light_blue_terracotta_attic_roof",
-    "mcwroofs:light_gray_terracotta_attic_roof",
-    "mcwroofs:lime_terracotta_attic_roof",
-    "mcwroofs:magenta_terracotta_attic_roof",
-    "mcwroofs:orange_terracotta_attic_roof",
-    "mcwroofs:pink_terracotta_attic_roof",
-    "mcwroofs:purple_terracotta_attic_roof",
-    "mcwroofs:red_terracotta_attic_roof",
-    "mcwroofs:white_terracotta_attic_roof",
-    "mcwroofs:yellow_terracotta_attic_roof"
-  ],
-  "#mcwroofs:terracotta_lower_roof" : [
-    "mcwroofs:black_terracotta_lower_roof",
-    "mcwroofs:blue_terracotta_lower_roof",
-    "mcwroofs:brown_terracotta_lower_roof",
-    "mcwroofs:cyan_terracotta_lower_roof",
-    "mcwroofs:gray_terracotta_lower_roof",
-    "mcwroofs:green_terracotta_lower_roof",
-    "mcwroofs:light_blue_terracotta_lower_roof",
-    "mcwroofs:light_gray_terracotta_lower_roof",
-    "mcwroofs:lime_terracotta_lower_roof",
-    "mcwroofs:magenta_terracotta_lower_roof",
-    "mcwroofs:orange_terracotta_lower_roof",
-    "mcwroofs:pink_terracotta_lower_roof",
-    "mcwroofs:purple_terracotta_lower_roof",
-    "mcwroofs:red_terracotta_lower_roof",
-    "mcwroofs:white_terracotta_lower_roof",
-    "mcwroofs:yellow_terracotta_lower_roof"
-  ],
-  "#mcwroofs:terracotta_roof" : [
-    "mcwroofs:black_terracotta_roof",
-    "mcwroofs:blue_terracotta_roof",
-    "mcwroofs:brown_terracotta_roof",
-    "mcwroofs:cyan_terracotta_roof",
-    "mcwroofs:gray_terracotta_roof",
-    "mcwroofs:green_terracotta_roof",
-    "mcwroofs:light_blue_terracotta_roof",
-    "mcwroofs:light_gray_terracotta_roof",
-    "mcwroofs:lime_terracotta_roof",
-    "mcwroofs:magenta_terracotta_roof",
-    "mcwroofs:orange_terracotta_roof",
-    "mcwroofs:pink_terracotta_roof",
-    "mcwroofs:purple_terracotta_roof",
-    "mcwroofs:red_terracotta_roof",
-    "mcwroofs:white_terracotta_roof",
-    "mcwroofs:yellow_terracotta_roof"
-  ],
-  "#mcwroofs:terracotta_steep_roof" : [
-    "mcwroofs:black_terracotta_steep_roof",
-    "mcwroofs:blue_terracotta_steep_roof",
-    "mcwroofs:brown_terracotta_steep_roof",
-    "mcwroofs:cyan_terracotta_steep_roof",
-    "mcwroofs:gray_terracotta_steep_roof",
-    "mcwroofs:green_terracotta_steep_roof",
-    "mcwroofs:light_blue_terracotta_steep_roof",
-    "mcwroofs:light_gray_terracotta_steep_roof",
-    "mcwroofs:lime_terracotta_steep_roof",
-    "mcwroofs:magenta_terracotta_steep_roof",
-    "mcwroofs:orange_terracotta_steep_roof",
-    "mcwroofs:pink_terracotta_steep_roof",
-    "mcwroofs:purple_terracotta_steep_roof",
-    "mcwroofs:red_terracotta_steep_roof",
-    "mcwroofs:white_terracotta_steep_roof",
-    "mcwroofs:yellow_terracotta_steep_roof"
-  ],
-  "#mcwroofs:terracotta_top_roof" : [
-    "mcwroofs:black_terracotta_top_roof",
-    "mcwroofs:blue_terracotta_top_roof",
-    "mcwroofs:brown_terracotta_top_roof",
-    "mcwroofs:cyan_terracotta_top_roof",
-    "mcwroofs:gray_terracotta_top_roof",
-    "mcwroofs:green_terracotta_top_roof",
-    "mcwroofs:light_blue_terracotta_top_roof",
-    "mcwroofs:light_gray_terracotta_top_roof",
-    "mcwroofs:lime_terracotta_top_roof",
-    "mcwroofs:magenta_terracotta_top_roof",
-    "mcwroofs:orange_terracotta_top_roof",
-    "mcwroofs:pink_terracotta_top_roof",
-    "mcwroofs:purple_terracotta_top_roof",
-    "mcwroofs:red_terracotta_top_roof",
-    "mcwroofs:white_terracotta_top_roof",
-    "mcwroofs:yellow_terracotta_top_roof"
-  ],
-  "#mcwroofs:terracotta_upper_lower_roof" : [
-    "mcwroofs:black_terracotta_upper_lower_roof",
-    "mcwroofs:blue_terracotta_upper_lower_roof",
-    "mcwroofs:brown_terracotta_upper_lower_roof",
-    "mcwroofs:cyan_terracotta_upper_lower_roof",
-    "mcwroofs:gray_terracotta_upper_lower_roof",
-    "mcwroofs:green_terracotta_upper_lower_roof",
-    "mcwroofs:light_blue_terracotta_upper_lower_roof",
-    "mcwroofs:light_gray_terracotta_upper_lower_roof",
-    "mcwroofs:lime_terracotta_upper_lower_roof",
-    "mcwroofs:magenta_terracotta_upper_lower_roof",
-    "mcwroofs:orange_terracotta_upper_lower_roof",
-    "mcwroofs:pink_terracotta_upper_lower_roof",
-    "mcwroofs:purple_terracotta_upper_lower_roof",
-    "mcwroofs:red_terracotta_upper_lower_roof",
-    "mcwroofs:white_terracotta_upper_lower_roof",
-    "mcwroofs:yellow_terracotta_upper_lower_roof"
-  ],
-  "#mcwroofs:terracotta_upper_steep_roof" : [
-    "mcwroofs:black_terracotta_upper_steep_roof",
-    "mcwroofs:blue_terracotta_upper_steep_roof",
-    "mcwroofs:brown_terracotta_upper_steep_roof",
-    "mcwroofs:cyan_terracotta_upper_steep_roof",
-    "mcwroofs:gray_terracotta_upper_steep_roof",
-    "mcwroofs:green_terracotta_upper_steep_roof",
-    "mcwroofs:light_blue_terracotta_upper_steep_roof",
-    "mcwroofs:light_gray_terracotta_upper_steep_roof",
-    "mcwroofs:lime_terracotta_upper_steep_roof",
-    "mcwroofs:magenta_terracotta_upper_steep_roof",
-    "mcwroofs:orange_terracotta_upper_steep_roof",
-    "mcwroofs:pink_terracotta_upper_steep_roof",
-    "mcwroofs:purple_terracotta_upper_steep_roof",
-    "mcwroofs:red_terracotta_upper_steep_roof",
-    "mcwroofs:white_terracotta_upper_steep_roof",
-    "mcwroofs:yellow_terracotta_upper_steep_roof"
-  ],
-  "#mcwroofs:gutter_middle" : [
-    "mcwroofs:gutter_middle",
-    "mcwroofs:gutter_middle_black",
-    "mcwroofs:gutter_middle_blue",
-    "mcwroofs:gutter_middle_brown",
-    "mcwroofs:gutter_middle_cyan",
-    "mcwroofs:gutter_middle_gray",
-    "mcwroofs:gutter_middle_green",
-    "mcwroofs:gutter_middle_light_blue",
-    "mcwroofs:gutter_middle_light_gray",
-    "mcwroofs:gutter_middle_lime",
-    "mcwroofs:gutter_middle_magenta",
-    "mcwroofs:gutter_middle_orange",
-    "mcwroofs:gutter_middle_pink",
-    "mcwroofs:gutter_middle_purple",
-    "mcwroofs:gutter_middle_red",
-    "mcwroofs:gutter_middle_white",
-    "mcwroofs:gutter_middle_yellow"
-  ],
-  "#minecraft:banner" : [
-    "minecraft:black_banner",
-    "minecraft:blue_banner",
-    "minecraft:brown_banner",
-    "minecraft:cyan_banner",
-    "minecraft:gray_banner",
-    "minecraft:green_banner",
-    "minecraft:light_blue_banner",
-    "minecraft:light_gray_banner",
-    "minecraft:lime_banner",
-    "minecraft:magenta_banner",
-    "minecraft:orange_banner",
-    "minecraft:pink_banner",
-    "minecraft:purple_banner",
-    "minecraft:red_banner",
-    "minecraft:white_banner",
-    "minecraft:yellow_banner"
-  ],
-  "#minecraft:bed" : [
-    "minecraft:black_bed",
-    "minecraft:blue_bed",
-    "minecraft:brown_bed",
-    "minecraft:cyan_bed",
-    "minecraft:gray_bed",
-    "minecraft:green_bed",
-    "minecraft:light_blue_bed",
-    "minecraft:light_gray_bed",
-    "minecraft:lime_bed",
-    "minecraft:magenta_bed",
-    "minecraft:orange_bed",
-    "minecraft:pink_bed",
-    "minecraft:purple_bed",
-    "minecraft:red_bed",
-    "minecraft:white_bed",
-    "minecraft:yellow_bed"
-  ],
-  "#minecraft:candle" : [
-    "minecraft:candle",
-    "minecraft:black_candle",
-    "minecraft:blue_candle",
-    "minecraft:brown_candle",
-    "minecraft:cyan_candle",
-    "minecraft:gray_candle",
-    "minecraft:green_candle",
-    "minecraft:light_blue_candle",
-    "minecraft:light_gray_candle",
-    "minecraft:lime_candle",
-    "minecraft:magenta_candle",
-    "minecraft:orange_candle",
-    "minecraft:pink_candle",
-    "minecraft:purple_candle",
-    "minecraft:red_candle",
-    "minecraft:white_candle",
-    "minecraft:yellow_candle"
-  ],
-  "#minecraft:carpet" : [
-    "minecraft:black_carpet",
-    "minecraft:blue_carpet",
-    "minecraft:brown_carpet",
-    "minecraft:cyan_carpet",
-    "minecraft:gray_carpet",
-    "minecraft:green_carpet",
-    "minecraft:light_blue_carpet",
-    "minecraft:light_gray_carpet",
-    "minecraft:lime_carpet",
-    "minecraft:magenta_carpet",
-    "minecraft:orange_carpet",
-    "minecraft:pink_carpet",
-    "minecraft:purple_carpet",
-    "minecraft:red_carpet",
-    "minecraft:white_carpet",
-    "minecraft:yellow_carpet"
-  ],
-  "#minecraft:concrete" : [
-    "minecraft:black_concrete",
-    "minecraft:blue_concrete",
-    "minecraft:brown_concrete",
-    "minecraft:cyan_concrete",
-    "minecraft:gray_concrete",
-    "minecraft:green_concrete",
-    "minecraft:light_blue_concrete",
-    "minecraft:light_gray_concrete",
-    "minecraft:lime_concrete",
-    "minecraft:magenta_concrete",
-    "minecraft:orange_concrete",
-    "minecraft:pink_concrete",
-    "minecraft:purple_concrete",
-    "minecraft:red_concrete",
-    "minecraft:white_concrete",
-    "minecraft:yellow_concrete"
-  ],
-  "#minecraft:concrete_powder" : [
-    "minecraft:black_concrete_powder",
-    "minecraft:blue_concrete_powder",
-    "minecraft:brown_concrete_powder",
-    "minecraft:cyan_concrete_powder",
-    "minecraft:gray_concrete_powder",
-    "minecraft:green_concrete_powder",
-    "minecraft:light_blue_concrete_powder",
-    "minecraft:light_gray_concrete_powder",
-    "minecraft:lime_concrete_powder",
-    "minecraft:magenta_concrete_powder",
-    "minecraft:orange_concrete_powder",
-    "minecraft:pink_concrete_powder",
-    "minecraft:purple_concrete_powder",
-    "minecraft:red_concrete_powder",
-    "minecraft:white_concrete_powder",
-    "minecraft:yellow_concrete_powder"
-  ],
-  "#minecraft:glazed_terracotta" : [
-    "minecraft:black_glazed_terracotta",
-    "minecraft:blue_glazed_terracotta",
-    "minecraft:brown_glazed_terracotta",
-    "minecraft:cyan_glazed_terracotta",
-    "minecraft:gray_glazed_terracotta",
-    "minecraft:green_glazed_terracotta",
-    "minecraft:light_blue_glazed_terracotta",
-    "minecraft:light_gray_glazed_terracotta",
-    "minecraft:lime_glazed_terracotta",
-    "minecraft:magenta_glazed_terracotta",
-    "minecraft:orange_glazed_terracotta",
-    "minecraft:pink_glazed_terracotta",
-    "minecraft:purple_glazed_terracotta",
-    "minecraft:red_glazed_terracotta",
-    "minecraft:white_glazed_terracotta",
-    "minecraft:yellow_glazed_terracotta"
-  ],
-  "#minecraft:shulker_box" : [
-    "minecraft:shulker_box",
-    "minecraft:black_shulker_box",
-    "minecraft:blue_shulker_box",
-    "minecraft:brown_shulker_box",
-    "minecraft:cyan_shulker_box",
-    "minecraft:gray_shulker_box",
-    "minecraft:green_shulker_box",
-    "minecraft:light_blue_shulker_box",
-    "minecraft:light_gray_shulker_box",
-    "minecraft:lime_shulker_box",
-    "minecraft:magenta_shulker_box",
-    "minecraft:orange_shulker_box",
-    "minecraft:pink_shulker_box",
-    "minecraft:purple_shulker_box",
-    "minecraft:red_shulker_box",
-    "minecraft:white_shulker_box",
-    "minecraft:yellow_shulker_box"
-  ],
-  "#minecraft:stained_glass" : [
-    "minecraft:glass",
-    "minecraft:black_stained_glass",
-    "minecraft:blue_stained_glass",
-    "minecraft:brown_stained_glass",
-    "minecraft:cyan_stained_glass",
-    "minecraft:gray_stained_glass",
-    "minecraft:green_stained_glass",
-    "minecraft:light_blue_stained_glass",
-    "minecraft:light_gray_stained_glass",
-    "minecraft:lime_stained_glass",
-    "minecraft:magenta_stained_glass",
-    "minecraft:orange_stained_glass",
-    "minecraft:pink_stained_glass",
-    "minecraft:purple_stained_glass",
-    "minecraft:red_stained_glass",
-    "minecraft:white_stained_glass",
-    "minecraft:yellow_stained_glass"
-  ],
-  "#minecraft:stained_glass_pane" : [
+  "#minecraft:stained_glass_panes" : [
     "minecraft:glass_pane",
     "minecraft:black_stained_glass_pane",
     "minecraft:blue_stained_glass_pane",
@@ -672,191 +70,52 @@
     "minecraft:yellow_stained_glass_pane"
   ],
   "#minecraft:terracotta" : [
-    "minecraft:terracotta",
-    "minecraft:black_terracotta",
-    "minecraft:blue_terracotta",
-    "minecraft:brown_terracotta",
-    "minecraft:cyan_terracotta",
-    "minecraft:gray_terracotta",
-    "minecraft:green_terracotta",
-    "minecraft:light_blue_terracotta",
-    "minecraft:light_gray_terracotta",
-    "minecraft:lime_terracotta",
-    "minecraft:magenta_terracotta",
-    "minecraft:orange_terracotta",
-    "minecraft:pink_terracotta",
-    "minecraft:purple_terracotta",
-    "minecraft:red_terracotta",
-    "minecraft:white_terracotta",
-    "minecraft:yellow_terracotta"
+    "#minecraft:terracotta"
   ],
   "#minecraft:wool" : [
-    "minecraft:black_wool",
-    "minecraft:blue_wool",
-    "minecraft:brown_wool",
-    "minecraft:cyan_wool",
-    "minecraft:gray_wool",
-    "minecraft:green_wool",
-    "minecraft:light_blue_wool",
-    "minecraft:light_gray_wool",
-    "minecraft:lime_wool",
-    "minecraft:magenta_wool",
-    "minecraft:orange_wool",
-    "minecraft:pink_wool",
-    "minecraft:purple_wool",
-    "minecraft:red_wool",
-    "minecraft:white_wool",
-    "minecraft:yellow_wool"
+    "#minecraft:wool"
   ],
-  "#numismatics:card" : [
-    "numismatics:black_card",
-    "numismatics:blue_card",
-    "numismatics:brown_card",
-    "numismatics:cyan_card",
-    "numismatics:gray_card",
-    "numismatics:green_card",
-    "numismatics:light_blue_card",
-    "numismatics:light_gray_card",
-    "numismatics:lime_card",
-    "numismatics:magenta_card",
-    "numismatics:orange_card",
-    "numismatics:pink_card",
-    "numismatics:purple_card",
-    "numismatics:red_card",
-    "numismatics:white_card",
-    "numismatics:yellow_card"
+  "#numismatics:cards" : [
+    "#numismatics:cards"
   ],
-  "#numismatics:id_card" : [
-    "numismatics:black_id_card",
-    "numismatics:blue_id_card",
-    "numismatics:brown_id_card",
-    "numismatics:cyan_id_card",
-    "numismatics:gray_id_card",
-    "numismatics:green_id_card",
-    "numismatics:light_blue_id_card",
-    "numismatics:light_gray_id_card",
-    "numismatics:lime_id_card",
-    "numismatics:magenta_id_card",
-    "numismatics:orange_id_card",
-    "numismatics:pink_id_card",
-    "numismatics:purple_id_card",
-    "numismatics:red_id_card",
-    "numismatics:white_id_card",
-    "numismatics:yellow_id_card"
+  "#numismatics:id_cards" : [
+    "#numismatics:id_cards"
   ],
-  "#supplementaries:awning" : [
-    "supplementaries:awning",
-    "supplementaries:awning_black",
-    "supplementaries:awning_blue",
-    "supplementaries:awning_brown",
-    "supplementaries:awning_cyan",
-    "supplementaries:awning_gray",
-    "supplementaries:awning_green",
-    "supplementaries:awning_light_blue",
-    "supplementaries:awning_light_gray",
-    "supplementaries:awning_lime",
-    "supplementaries:awning_magenta",
-    "supplementaries:awning_orange",
-    "supplementaries:awning_pink",
-    "supplementaries:awning_purple",
-    "supplementaries:awning_red",
-    "supplementaries:awning_white",
-    "supplementaries:awning_yellow"
+  "#supplementaries:awnings" : [
+    "#supplementaries:awnings"
   ],
-  "#supplementaries:candle_holder" : [
+  "#supplementaries:candle_holders" : [
     "supplementaries:candle_holder",
-    "supplementaries:candle_holder_black",
-    "supplementaries:candle_holder_blue",
-    "supplementaries:candle_holder_brown",
-    "supplementaries:candle_holder_cyan",
-    "supplementaries:candle_holder_gray",
-    "supplementaries:candle_holder_green",
-    "supplementaries:candle_holder_light_blue",
-    "supplementaries:candle_holder_light_gray",
-    "supplementaries:candle_holder_lime",
-    "supplementaries:candle_holder_magenta",
-    "supplementaries:candle_holder_orange",
-    "supplementaries:candle_holder_pink",
-    "supplementaries:candle_holder_purple",
-    "supplementaries:candle_holder_red",
     "supplementaries:candle_holder_white",
-    "supplementaries:candle_holder_yellow"
+    "supplementaries:candle_holder_red",
+    "supplementaries:candle_holder_cyan",
+    "supplementaries:candle_holder_lime",
+    "supplementaries:candle_holder_yellow",
+    "supplementaries:candle_holder_magenta",
+    "supplementaries:candle_holder_brown",
+    "supplementaries:candle_holder_light_blue",
+    "supplementaries:candle_holder_blue",
+    "supplementaries:candle_holder_green",
+    "supplementaries:candle_holder_pink",
+    "supplementaries:candle_holder_light_gray",
+    "supplementaries:candle_holder_purple",
+    "supplementaries:candle_holder_black",
+    "supplementaries:candle_holder_orange",
+    "supplementaries:candle_holder_gray"
   ],
-  "#supplementaries:flag" : [
-    "supplementaries:flag_black",
-    "supplementaries:flag_blue",
-    "supplementaries:flag_brown",
-    "supplementaries:flag_cyan",
-    "supplementaries:flag_gray",
-    "supplementaries:flag_green",
-    "supplementaries:flag_light_blue",
-    "supplementaries:flag_light_gray",
-    "supplementaries:flag_lime",
-    "supplementaries:flag_magenta",
-    "supplementaries:flag_orange",
-    "supplementaries:flag_pink",
-    "supplementaries:flag_purple",
-    "supplementaries:flag_red",
-    "supplementaries:flag_white",
-    "supplementaries:flag_yellow"
+  "#supplementaries:flags" : [
+    "#supplementaries:flags"
   ],
-  "#supplementaries:present" : [
-    "supplementaries:present",
-    "supplementaries:present_black",
-    "supplementaries:present_blue",
-    "supplementaries:present_brown",
-    "supplementaries:present_cyan",
-    "supplementaries:present_gray",
-    "supplementaries:present_green",
-    "supplementaries:present_light_blue",
-    "supplementaries:present_light_gray",
-    "supplementaries:present_lime",
-    "supplementaries:present_magenta",
-    "supplementaries:present_orange",
-    "supplementaries:present_pink",
-    "supplementaries:present_purple",
-    "supplementaries:present_red",
-    "supplementaries:present_white",
-    "supplementaries:present_yellow"
+  "#supplementaries:presents" : [
+    "#supplementaries:presents"
   ],
-  "#supplementaries:trapped_present" : [
-    "supplementaries:trapped_present",
-    "supplementaries:trapped_present_black",
-    "supplementaries:trapped_present_blue",
-    "supplementaries:trapped_present_brown",
-    "supplementaries:trapped_present_cyan",
-    "supplementaries:trapped_present_gray",
-    "supplementaries:trapped_present_green",
-    "supplementaries:trapped_present_light_blue",
-    "supplementaries:trapped_present_light_gray",
-    "supplementaries:trapped_present_lime",
-    "supplementaries:trapped_present_magenta",
-    "supplementaries:trapped_present_orange",
-    "supplementaries:trapped_present_pink",
-    "supplementaries:trapped_present_purple",
-    "supplementaries:trapped_present_red",
-    "supplementaries:trapped_present_white",
-    "supplementaries:trapped_present_yellow"
+  "#supplementaries:trapped_presents" : [
+    "#supplementaries:trapped_presents"
   ],
-  "#supplementaries:bunting" : [
-    "supplementaries:bunting_black",
-    "supplementaries:bunting_blue",
-    "supplementaries:bunting_brown",
-    "supplementaries:bunting_cyan",
-    "supplementaries:bunting_gray",
-    "supplementaries:bunting_green",
-    "supplementaries:bunting_light_blue",
-    "supplementaries:bunting_light_gray",
-    "supplementaries:bunting_lime",
-    "supplementaries:bunting_magenta",
-    "supplementaries:bunting_orange",
-    "supplementaries:bunting_pink",
-    "supplementaries:bunting_purple",
-    "supplementaries:bunting_red",
-    "supplementaries:bunting_white",
-    "supplementaries:bunting_yellow"
+  "#supplementaries:buntings" : [
+    "#supplementaries:buntings"
   ],
-  "#suppsquared:gold_candle_holder" : [
+  "#suppsquared:gold_candle_holders" : [
     "suppsquared:gold_candle_holder",
     "suppsquared:gold_candle_holder_black",
     "suppsquared:gold_candle_holder_blue",
@@ -875,62 +134,26 @@
     "suppsquared:gold_candle_holder_white",
     "suppsquared:gold_candle_holder_yellow"
   ],
-  "#suppsquared:sack" : [
-    "supplementaries:sack",
-    "suppsquared:sack_black",
-    "suppsquared:sack_blue",
-    "suppsquared:sack_brown",
-    "suppsquared:sack_cyan",
-    "suppsquared:sack_gray",
-    "suppsquared:sack_green",
-    "suppsquared:sack_light_blue",
-    "suppsquared:sack_lime",
-    "suppsquared:sack_magenta",
-    "suppsquared:sack_orange",
-    "suppsquared:sack_pink",
-    "suppsquared:sack_purple",
-    "suppsquared:sack_white",
-    "suppsquared:sack_yellow",
-    "suppsquared:sack_light_blue",
-    "suppsquared:sack_light_gray",
-    "suppsquared:sack_red"
+  "#supplementaries:sacks" : [
+    "#supplementaries:sacks"
   ],
-  "#log" : [
-    "minecraft:acacia_log",
-    "minecraft:birch_log",
-    "minecraft:cherry_log",
-    "minecraft:dark_oak_log",
-    "minecraft:jungle_log",
-    "minecraft:mangrove_log",
-    "minecraft:oak_log",
-    "minecraft:spruce_log",
-    "minecraft:warped_stem",
-    "minecraft:crimson_stem",
-    "minecraft:stripped_acacia_log",
-    "minecraft:stripped_birch_log",
-    "minecraft:stripped_cherry_log",
-    "minecraft:stripped_dark_oak_log",
-    "minecraft:stripped_jungle_log",
-    "minecraft:stripped_mangrove_log",
-    "minecraft:stripped_oak_log",
-    "minecraft:stripped_spruce_log",
-    "minecraft:stripped_warped_stem",
-    "minecraft:stripped_crimson_stem",
-    "luminous_nether:withered_log",
-    "luminous_nether:stripped_withered_log",
-    "luminous_nether:goldenstem",
-    "luminous_nether:shredded_stem",
-    "luminousworld:bao_bob_log",
-    "luminousworld:stripped_baobab_log",
-    "luminousworld:palm_log",
-    "luminousworld:stripped_palm_log",
-    "luminousworld:soft_birch_log",
-    "luminousworld:auburnlog",
-    "luminousworld:stripped_auburn_log",
-    "luminousworld:whiteoaklog",
-    "luminousworld:stripped_white_oak_log"
+  "#minecraft:bundles" : [
+    "#minecraft:bundles"
   ],
-  "#create:rare_package" : [
+  "#logs" : [
+    "#minecraft:acacia_logs",
+    "#minecraft:oak_logs",
+    "#minecraft:pale_oak_logs",
+    "#hazennstuff:blocks/frostbite_birch_logs",
+    "#minecraft:spruce_logs",
+    "#minecraft:birch_logs",
+    "#minecraft:mangrove_logs",
+    "#betterarcheology:rotten_logs",
+    "#minecraft:cherry_logs",
+    "#minecraft:jungle_logs",
+    "#minecraft:dark_oak_logs"
+  ],
+  "#create:rare_packages" : [
     "create:rare_creeper_package",
     "create:rare_darcy_package",
     "create:rare_evan_package",
@@ -942,40 +165,11 @@
     "create:rare_up_package",
     "create:rare_vector_package"
   ],
-  "#leaves" : [
-    "minecraft:acacia_leaves",
-    "minecraft:azalea_leaves",
-    "minecraft:birch_leaves",
-    "minecraft:cherry_leaves",
-    "minecraft:dark_oak_leaves",
-    "minecraft:flowering_azalea_leaves",
-    "minecraft:jungle_leaves",
-    "minecraft:mangrove_leaves",
-    "minecraft:oak_leaves",
-    "minecraft:spruce_leaves",
-    "luminousworld:whiteoakleaves",
-    "luminousworld:yellow_birch_leaves",
-    "luminousworld:bao_bab_leaves",
-    "luminousworld:autumnleaves",
-    "luminousworld:palm_leaves",
-    "luminous_nether:ash_leaves"
+  "#minecraft:leaves": [
+    "#minecraft:leaves"
   ],
-  "#saplings" : [
-    "minecraft:acacia_sapling",
-    "minecraft:birch_sapling",
-    "minecraft:cherry_sapling",
-    "minecraft:dark_oak_sapling",
-    "minecraft:jungle_sapling",
-    "minecraft:oak_sapling",
-    "minecraft:spruce_sapling",
-    "minecraft:azalea",
-    "minecraft:flowering_azalea",
-    "minecraft:mangrove_propagule",
-    "luminousworld:auburn_sapling",
-    "luminousworld:bao_bab_sapling",
-    "luminousworld:palm_sapling",
-    "luminousworld:tall_birch_sapling",
-    "luminousworld:white_oak_sapling"
+  "minecraft:saplings": [
+    "#minecraft:saplings"
   ],
   "#flowers" : [
     "minecraft:dandelion",
@@ -991,15 +185,13 @@
     "minecraft:cornflower",
     "minecraft:lily_of_the_valley",
     "minecraft:pink_petals",
+    "minecraft:wildflowers",
+    "minecraft:open_eyeblossom",
+    "minecraft:closed_eyeblossom",
+    "minecraft:cactus_flower",
     "born_in_chaos_v1:marigolds",
     "born_in_chaos_v1:river_mint",
-    "luminousworld:blue_petunias",
-    "luminousworld:purple_petunias",
-    "luminousworld:sunset_petunias",
-    "luminousworld:white_petunias",
-    "luminousworld:yellowpetunias",
-    "luminousworld:grassflowers",
-    "luminousworld:yellow_grassflowers"
+    "somemoreblocks:luminous_flower"
   ],
   "#tall_flowers" : [
     "minecraft:sunflower",
@@ -1007,494 +199,181 @@
     "minecraft:rose_bush",
     "minecraft:peony"
   ],
-  "#gravel" : [
+  "#plants" : [
+    "minecraft:spore_blossom",
+    "somemoreblocks:big_lily_pad",
+    "somemoreblocks:brown_mushroom_colony"
+  ],
+  "#bamboo_blocks" : [
+    "somemoreblocks:carved_bamboo_block",
+    "minecraft:stripped_bamboo_block",
+    "minecraft:bamboo_block"
+  ],
+  "#gravels" : [
     "minecraft:gravel",
     "minecraft:suspicious_gravel",
     "supplementaries:raked_gravel",
-    "mcwpaths:gravel_path_block"
+    "lootr:suspicious_gravel"
   ],
-  "#sand" : [
+  "#sands" : [
     "minecraft:sand",
     "minecraft:suspicious_sand",
-    "minecraft:red_sand"
+    "minecraft:red_sand",
+    "betterarcheology:suspicious_red_sand",
+    "lootr:suspicious_sand"
   ],
-  "#coal_ore" : [
-    "minecraft:coal_ore",
-    "minecraft:deepslate_coal_ore"
+  "#dirts" : [
+    "#minecraft:dirt",
+    "betterarcheology:suspicious_dirt"
   ],
-  "#iron_ore" : [
-    "minecraft:iron_ore",
-    "minecraft:deepslate_iron_ore",
+  "#tombstones" : [
+    "born_in_chaos_v1:tombstone_2003wise",
+    "born_in_chaos_v1:tombstone_2_dling",
+    "born_in_chaos_v1:tombstone_carrion",
+    "born_in_chaos_v1:tombstone_d_4rkdevilx",
+    "born_in_chaos_v1:tombstone_dark_titan_066",
+    "born_in_chaos_v1:tombstone_derivas",
+    "born_in_chaos_v1:tombstone_euthymia",
+    "born_in_chaos_v1:tombstone_feral",
+    "born_in_chaos_v1:tombstone_fubuki_banzai",
+    "born_in_chaos_v1:tombstone_memesus",
+    "born_in_chaos_v1:tombstone_mike_rory",
+    "born_in_chaos_v1:tombstone_nino_4416",
+    "born_in_chaos_v1:tombstone_orion",
+    "born_in_chaos_v1:tombstone_petasi",
+    "born_in_chaos_v1:tombstone_plug",
+    "born_in_chaos_v1:tombstone_rotborne",
+    "born_in_chaos_v1:tombstone_somfunambulist",
+    "born_in_chaos_v1:tombstone_tem_187",
+    "born_in_chaos_v1:tombstone_the_gentleman_frog"
+  ],
+  "#pots" : [
+    "lootr:decorated_pot",
+    "minecraft:decorated_pot"
+  ],
+  "#pot_sherds" : [
+    "#minecraft:decorated_pot_sherds"
+  ],
+  "#skull" : [
+    "minecraft:creeper_head",
+    "minecraft:zombie_head",
+    "minecraft:skeleton_skull",
+    "minecraft:piglin_head",
+    "supplementaries:enderman_head",
+    "supplementaries:spider_head"
+  ],
+  "#stones" : [
+    "#minecraft:stone_tool_materials",
+    "create:limestone",
+    "create:asurine",
+    "create:crimstine",
+    "create:ochrum",
+    "create:scoria",
+    "create:scorchia",
+    "create:veridium",
+    "minecraft:calcite"
+  ],
+  "#coal_ores" : [
+    "#c:ores/coal",
+    "minecraft:coal"
+  ],
+  "#iron_ores" : [
+    "#c:ores/iron",
     "minecraft:raw_iron"
   ],
-  "#gold_ore" : [
-    "minecraft:gold_ore",
-    "minecraft:deepslate_gold_ore",
-    "minecraft:raw_gold",
-    "minecraft:nether_gold_ore"
+  "#gold_ores" : [
+    "#c:ores/gold",
+    "minecraft:raw_gold"
   ],
-  "#copper_ore" : [
-    "minecraft:copper_ore",
-    "minecraft:deepslate_copper_ore",
+  "#copper_ores" : [
+    "#c:ores/copper",
     "minecraft:raw_copper"
   ],
-  "#redstone_ore" : [
-    "minecraft:redstone_ore",
-    "minecraft:deepslate_redstone_ore"
+  "#redstone_ores" : [
+    "#c:ores/redstone"
   ],
-  "#emerald_ore" : [
-    "minecraft:emerald_ore",
-    "minecraft:deepslate_emerald_ore",
+  "#emerald_ores" : [
+    "#c:ores/emerald",
     "createoreexcavation:raw_emerald"
   ],
-  "#lapis_ore" : [
-    "minecraft:lapis_ore",
-    "minecraft:deepslate_lapis_ore"
+  "#lapis_ores" : [
+    "#c:ores/lapis"
   ],
-  "#diamond_ore" : [
-    "minecraft:diamond_ore",
-    "minecraft:deepslate_diamond_ore",
+  "#diamond_ores" : [
+    "#c:ores/diamond",
     "createoreexcavation:raw_diamond"
   ],
-  "#randomium_ore" : [
-    "randomium:randomium_ore",
-    "randomium:randomium_ore_deepslate",
-    "randomium:randomium_ore_end"
+  "#quartz_ores" : [
+    "minecraft:nether_quartz_ore",
+    "minecraft:quartz"
   ],
-  "#mithril_ore" : [
-    "irons_spellbooks:mithril_ore",
-    "irons_spellbooks:deepslate_mithril_ore",
+  "#born_in_chaos_v1:infected_diamond_ore" : [
+    "born_in_chaos_v1:infected_deepslate_diamond_ore",
+    "born_in_chaos_v1:infected_diamond_ore"
+  ],
+  "#randomium_ores" : [
+    "#c:ores/randomium"
+  ],
+  "#mithril_ores" : [
+    "#c:ores/mithril",
     "irons_spellbooks:raw_mithril"
   ],
-  "#zinc_ore" : [
-    "create:zinc_ore",
-    "create:deepslate_zinc_ore",
+  "#zinc_ores" : [
+    "#c:ores/zinc",
     "create:raw_zinc"
   ],
-  "#create:blaze_burner" : [
-    "create:blaze_burner",
-    "create:empty_blaze_burner",
-    "numismatics:blaze_banker"
+  "#zenalite_ores" : [
+    "#hazennstuff:blocks/zenalite_ores",
+    "hazennstuff:raw_zenalite",
+    "hazennstuff:zenalite_end_stone_ore"
   ],
-  "#minecraft:pumpkin" : [
+  "#chlorophyte_ores" : [
+    "hazennstuff:chlorophyte_ore",
+    "hazennstuff:chlorophyte_chunk"
+  ],
+  "#dreadstone_ores" : [
+    "hazennstuff:dreadstone_ore",
+    "hazennstuff:dreadstone"
+  ],
+  "#solar_core_ores" : [
+    "hazennstuff:solar_core_netherrack_ore",
+    "hazennstuff:solar_core_blackstone_ore",
+    "hazennstuff:solar_core"
+  ],
+  "#create:blaze_burners" : [
+    "create:blaze_burner",
+    "create:empty_blaze_burner"
+  ],
+  "#minecraft:pumpkins" : [
     "minecraft:carved_pumpkin",
     "minecraft:pumpkin"
   ],
-  "#realmrpg_skeletons" : [
-    "realmrpg_skeletons:acrobat_skeleton",
-    "realmrpg_skeletons:arrow_skeleton",
-    "realmrpg_skeletons:basic_skeleton",
-    "realmrpg_skeletons:bow_skeleton",
-    "realmrpg_skeletons:buried_skeleton",
-    "realmrpg_skeletons:burnt_skeleton",
-    "realmrpg_skeletons:cactus_skeleton",
-    "realmrpg_skeletons:chorus_skeleton",
-    "realmrpg_skeletons:chorus_tangled_skeleton",
-    "realmrpg_skeletons:common_skeleton",
-    "realmrpg_skeletons:corrupted_skeleton",
-    "realmrpg_skeletons:crimson_tangled_skeleton",
-    "realmrpg_skeletons:crystal_skeleton",
-    "realmrpg_skeletons:devastated_skeleton",
-    "realmrpg_skeletons:dragon_burnt_skeleton",
-    "realmrpg_skeletons:dripstone_skeleton",
-    "realmrpg_skeletons:duelist_skeleton",
-    "realmrpg_skeletons:dungeon_crawler_skeleton",
-    "realmrpg_skeletons:dusty_skeleton",
-    "realmrpg_skeletons:explorer_skeleton",
-    "realmrpg_skeletons:frozen_waterdrop_skeleton",
-    "realmrpg_skeletons:fungus_gatherer_skeleton",
-    "realmrpg_skeletons:headache_skeleton",
-    "realmrpg_skeletons:headless_skeleton",
-    "realmrpg_skeletons:hunted_skeleton",
-    "realmrpg_skeletons:lucky_skeleton",
-    "realmrpg_skeletons:melted_skeleton",
-    "realmrpg_skeletons:mossy_skeleton",
-    "realmrpg_skeletons:mushroomer_skeleton",
-    "realmrpg_skeletons:neutralized_skeleton",
-    "realmrpg_skeletons:pierced_skeleton",
-    "realmrpg_skeletons:powder_snow_skeleton",
-    "realmrpg_skeletons:quicksand_skeleton",
-    "realmrpg_skeletons:rookie_skeleton",
-    "realmrpg_skeletons:shot_skeleton",
-    "realmrpg_skeletons:shroom_skeleton",
-    "realmrpg_skeletons:skeleton_from_the_sky",
-    "realmrpg_skeletons:slain_skeleton",
-    "realmrpg_skeletons:snow_skeleton",
-    "realmrpg_skeletons:spider_victim_skeleton",
-    "realmrpg_skeletons:stalactite_skeleton",
-    "realmrpg_skeletons:swimmer_skeleton",
-    "realmrpg_skeletons:thief_skeleton",
-    "realmrpg_skeletons:trident_skeleton",
-    "realmrpg_skeletons:unsaved_skeleton",
-    "realmrpg_skeletons:vines_tangled_skeleton",
-    "realmrpg_skeletons:waterdrop_skeleton",
-    "realmrpg_skeletons:webbed_skeleton",
-    "realmrpg_skeletons:winter_skeleton"
-  ],
   "#supplementaries:bamboo_spikes" : [
-    "supplementaries:bamboo_spikes_tipped",
-    "supplementaries:bamboo_spikes"
+    "#supplementaries:bamboo_spikes"
   ],
-  "#luminous_nether:loot_vase" : [
-    "luminous_nether:loot_vase",
-    "luminous_nether:loot_vase_2",
-    "luminous_nether:loot_vase_3",
-    "luminous_nether:loot_vase_4",
-    "luminous_nether:loot_vase_5",
-    "luminous_nether:loot_vase_6",
-    "luminous_nether:lootvase_7",
-    "luminous_nether:loot_vase_8",
-    "luminous_nether:loot_vase_9",
-    "luminous_nether:loot_vase_10",
-    "luminous_nether:loot_vase_11",
-    "luminous_nether:loot_vase_12"
+  "#relics": [
+    "#rarcompat:mimificable",
+    "arcane_abilities:fate_beacon",
+    "arcane_abilities:icy_crystal",
+    "arcane_abilities:shadow_lantern",
+    "arcane_abilities:stellar_sphere",
+    "arcane_abilities:weightless_boot",
+    "artifacts:aqua_dashers",
+    "artifacts:everlasting_beef",
+    "artifacts:strider_shoes"
   ],
-  "#luminousworld:acaciashelf" : [
-    "luminousworld:acaciashelf",
-    "luminousworld:acaciashelf_2",
-    "luminousworld:acaciashelf_3",
-    "luminousworld:acaciashelf_4"
+  "#archeology_totems" : [
+    "betterarcheology:growth_totem",
+    "betterarcheology:radiance_totem",
+    "betterarcheology:soul_totem",
+    "betterarcheology:torrent_totem"
   ],
-  "#luminousworld:acaciatable" : [
-    "luminousworld:acaciatable",
-    "luminousworld:acaciatable_2",
-    "luminousworld:acaciatable_3",
-    "luminousworld:acaciatable_4"
+  "#music_discs" : [
+    "#c:music_discs",
+    "#minecraft:music_discs",
+    "vista:cassette"
   ],
-  "#luminousworld:auburnshelf" : [
-    "luminousworld:auburnshelf",
-    "luminousworld:auburnshelf_2",
-    "luminousworld:auburnshelf_3",
-    "luminousworld:auburnshelf_4"
-  ],
-  "#luminousworld:auburntable" : [
-    "luminousworld:auburntable",
-    "luminousworld:auburntable_2",
-    "luminousworld:auburntable_3",
-    "luminousworld:auburntable_4"
-  ],
-  "#luminousworld:baoshelf" : [
-    "luminousworld:baoshelf_1",
-    "luminousworld:baoshelf_2",
-    "luminousworld:baoshelf_3",
-    "luminousworld:baoshelf_4"
-  ],
-  "#luminousworld:baotable" : [
-    "luminousworld:baotable",
-    "luminousworld:baotable_2",
-    "luminousworld:baotable_3",
-    "luminousworld:baotable_4"
-  ],
-  "#luminousworld:birchshelf" : [
-    "luminousworld:birchshelf_1",
-    "luminousworld:birchshelf_2",
-    "luminousworld:birchshelf_3",
-    "luminousworld:birchshelf_4"
-  ],
-  "#luminousworld:birchtable" : [
-    "luminousworld:birchtable",
-    "luminousworld:birchtable_2",
-    "luminousworld:birchtable_3",
-    "luminousworld:birchtable_4"
-  ],
-  "#luminousworld:bookstack" : [
-    "luminousworld:bookstack",
-    "luminousworld:bookstacktwo",
-    "luminousworld:bookstackthree"
-  ],
-  "#luminousworld:clovers" : [
-    "luminousworld:clovers",
-    "luminousworld:clovers_1",
-    "luminousworld:clovers_2",
-    "luminousworld:clovers_3",
-    "luminousworld:clovers_4",
-    "luminousworld:clovers_5"
-  ],
-  "#luminousworld:blue_petunia_pot" : [
-    "luminousworld:blue_petunia_pot",
-    "luminousworld:blue_petunia_pot_2",
-    "luminousworld:blue_petunia_pot_3",
-    "luminousworld:blue_petunia_pot_4"
-  ],
-  "#luminousworld:cornflower_pot" : [
-    "luminousworld:cornflower_pot",
-    "luminousworld:cornflower_pot_2",
-    "luminousworld:cornflower_pot_3",
-    "luminousworld:cornflowerpot_4"
-  ],
-  "#luminousworld:dandelionpot" : [
-    "luminousworld:dandelionpot",
-    "luminousworld:dandelionpot_2",
-    "luminousworld:dandelionpot_3",
-    "luminousworld:dandelionpot_4"
-  ],
-  "#luminousworld:emptyflowerpot" : [
-    "luminousworld:emptyflowerpot",
-    "luminousworld:emptyflowerpot_2",
-    "luminousworld:emptyflowerpot_3",
-    "luminousworld:emptyflowerpot_4"
-  ],
-  "#luminousworld:firerespotdecorative" : [
-    "luminousworld:firerespotdecorative_1",
-    "luminousworld:firerespotdecorative_2",
-    "luminousworld:firerespotdecorative_3"
-  ],
-  "#luminousworld:hastepotdecorative" : [
-    "luminousworld:hastepotdecorative_1",
-    "luminousworld:hastepotdecorative_2",
-    "luminousworld:hastepotdecorative_3"
-  ],
-  "#luminousworld:healing_pot_decorative" : [
-    "luminousworld:healing_pot_decorative_1",
-    "luminousworld:healing_pot_decorative_2",
-    "luminousworld:healing_pot_decorative_3"
-  ],
-  "#luminousworld:invispotdecorative" : [
-    "luminousworld:invispotdecorative_1",
-    "luminousworld:invispotdecorative_2",
-    "luminousworld:invispotdecorative_3"
-  ],
-  "#luminousworld:j_bpotdecorative" : [
-    "luminousworld:j_bpotdecorative_1",
-    "luminousworld:j_bpotdecorative_2",
-    "luminousworld:j_bpotdecorative_3"
-  ],
-  "#luminousworld:n_vpotdecorative" : [
-    "luminousworld:n_vpotdecorative_1",
-    "luminousworld:n_vpotdecorative_2",
-    "luminousworld:n_vpotdecorative_3"
-  ],
-  "#luminousworld:orchid_pot" : [
-    "luminousworld:orchid_pot",
-    "luminousworld:orchid_pot_3",
-    "luminousworld:orchid_pot_4",
-    "luminousworld:orchidpot_2"
-  ],
-  "#luminousworld:purplepetuniapot" : [
-    "luminousworld:purplepetuniapot",
-    "luminousworld:purplepetuniapot_2",
-    "luminousworld:purplepetuniapot_3",
-    "luminousworld:purplepetuniapot_4"
-  ],
-  "#luminousworld:regenpotdecorative" : [
-    "luminousworld:regenpotdecorative_1",
-    "luminousworld:regenpotdecorative_2",
-    "luminousworld:regenpotdecorative_3"
-  ],
-  "#luminousworld:roseflower_pot" : [
-    "luminousworld:roseflower_pot",
-    "luminousworld:roseflower_pot_2",
-    "luminousworld:roseflowerpot_3",
-    "luminousworld:roseflowerpot_4"
-  ],
-  "#luminousworld:speedpotdecorative" : [
-    "luminousworld:speedpotdecorative_1",
-    "luminousworld:speedpotdecorative_2",
-    "luminousworld:speedpotdecorative_3"
-  ],
-  "#luminousworld:strengthpotdecorative" : [
-    "luminousworld:strengthpotdecorative_1",
-    "luminousworld:strengthpotdecorative_2",
-    "luminousworld:strengthpotdecorative_3"
-  ],
-  "#luminousworld:sunsetpetuniapot" : [
-    "luminousworld:sunsetpetuniapot",
-    "luminousworld:sunsetpetuniapot_2",
-    "luminousworld:sunsetpetuniapot_3",
-    "luminousworld:sunsetpetuniapot_4"
-  ],
-  "#luminousworld:w_bpotdecorative" : [
-    "luminousworld:w_bpotdecorative_1",
-    "luminousworld:w_bpotdecorative_2",
-    "luminousworld:w_bpotdecorative_3"
-  ],
-  "#luminousworld:whitepetuniapot" : [
-    "luminousworld:whitepetuniapot",
-    "luminousworld:white_petuniapot_2",
-    "luminousworld:whitepetuniapot_3",
-    "luminousworld:whitepetuniapot_4"
-  ],
-  "#luminousworld:yellowpetuniapot" : [
-    "luminousworld:yellowpetuniapot",
-    "luminousworld:yellowpetuniapot_2",
-    "luminousworld:yellowpetuniapot_3",
-    "luminousworld:yellowpetuniapot_4"
-  ],
-  "#luminousworld:darkoakshelf" : [
-    "luminousworld:darkoakshelf",
-    "luminousworld:darkoakshelf_2",
-    "luminousworld:darkoakshelf_3",
-    "luminousworld:darkoakshelf_4"
-  ],
-  "#luminousworld:darkoaktable" : [
-    "luminousworld:darkoaktable",
-    "luminousworld:darkoaktable_2",
-    "luminousworld:darkoaktable_3",
-    "luminousworld:darkoaktable_4"
-  ],
-  "#luminousworld:decorative_gb" : [
-    "luminousworld:decorative_gb_1",
-    "luminousworld:decorative_gb_2",
-    "luminousworld:decorative_gb_3",
-    "luminousworld:decorative_gb_4",
-    "luminousworld:decorative_gb_5"
-  ],
-  "#luminousworld:decorative_gp" : [
-    "luminousworld:decorative_gp_1",
-    "luminousworld:decorative_gp_2",
-    "luminousworld:decorative_gp_3",
-    "luminousworld:decorative_gp_4",
-    "luminousworld:decorative_gp_5"
-  ],
-  "#luminousworld:decorative_pickaxe_diamond" : [
-    "luminousworld:decorative_pickaxe_diamond_1",
-    "luminousworld:decorative_pickaxe_diamond_2",
-    "luminousworld:decorative_pickaxe_diamond_3",
-    "luminousworld:decorative_pickaxe_diamond_4"
-  ],
-  "#luminousworld:decorative_pickaxe_gold" : [
-    "luminousworld:decorative_pickaxe_gold_1",
-    "luminousworld:decorative_pickaxe_gold_2",
-    "luminousworld:decorative_pickaxe_gold_3",
-    "luminousworld:decorative_pickaxe_gold_4"
-  ],
-  "#luminousworld:decorative_pickaxe_iron" : [
-    "luminousworld:decorative_pickaxe_iron_1",
-    "luminousworld:decorative_pickaxe_iron_2",
-    "luminousworld:decorative_pickaxe_iron_3",
-    "luminousworld:decorative_pickaxe_iron_4"
-  ],
-  "#luminousworld:decorative_pickaxe_netherite" : [
-    "luminousworld:decorative_pickaxe_netherite_1",
-    "luminousworld:decorative_pickaxe_netherite_2",
-    "luminousworld:decorative_pickaxe_netherite_3",
-    "luminousworld:decorative_pickaxe_netherite_4"
-  ],
-  "#luminousworld:decorativesworddiamond" : [
-    "luminousworld:decorativesworddiamond_1",
-    "luminousworld:decorativesworddiamond_2",
-    "luminousworld:decorativesworddiamond_3",
-    "luminousworld:decorativesworddiamond_4"
-  ],
-  "#luminousworld:decorativeswordgold" : [
-    "luminousworld:decorativeswordgold_1",
-    "luminousworld:decorativeswordgold_2",
-    "luminousworld:decorativeswordgold_3",
-    "luminousworld:decorativeswordgold_4"
-  ],
-  "#luminousworld:decorativeswordiron" : [
-    "luminousworld:decorativeswordiron",
-    "luminousworld:decorativeswordiron_2",
-    "luminousworld:decorativeswordiron_3",
-    "luminousworld:decorativeswordiron_4"
-  ],
-  "#luminousworld:decorativeswordnetherite" : [
-    "luminousworld:decorativeswordnetherite_1",
-    "luminousworld:decorativeswordnetherite_2",
-    "luminousworld:decorativeswordnetherite_3",
-    "luminousworld:decorativeswordnetherite_4"
-  ],
-  "#luminousworld:hanging_lantern" : [
-    "luminousworld:hanging_lantern",
-    "luminousworld:hanginglantern_2",
-    "luminousworld:hanginglantern_3",
-    "luminousworld:hanginglantern_4",
-    "luminousworld:hanginglantern_5",
-    "luminousworld:hanginglantern_6",
-    "luminousworld:hanginglantern_7",
-    "luminousworld:hanginglantern_8"
-  ],
-  "#luminousworld:jungleshelf" : [
-    "luminousworld:jungleshelf",
-    "luminousworld:jungleshelf_2",
-    "luminousworld:jungleshelf_3",
-    "luminousworld:jungleshelf_4"
-  ],
-  "#luminousworld:jungletable" : [
-    "luminousworld:jungletable",
-    "luminousworld:jungletable_2",
-    "luminousworld:jungletable_3",
-    "luminousworld:jungletable_4"
-  ],
-  "#luminousworld:mangroveshelf" : [
-    "luminousworld:mangroveshelf",
-    "luminousworld:mangroveshelf_2",
-    "luminousworld:mangroveshelf_3",
-    "luminousworld:mangroveshelf_4"
-  ],
-  "#luminousworld:mangrovetable" : [
-    "luminousworld:mangrovetable",
-    "luminousworld:mangrovetable_2",
-    "luminousworld:mangrovetable_3",
-    "luminousworld:mangrovetable_4"
-  ],
-  "#luminousworld:oakshelf" : [
-    "luminousworld:oakshelf_1",
-    "luminousworld:oakshelf_2",
-    "luminousworld:oakshelf_3",
-    "luminousworld:oakshelf_4"
-  ],
-  "#luminousworld:oaktable" : [
-    "luminousworld:oaktable",
-    "luminousworld:oaktable_2",
-    "luminousworld:oaktable_3",
-    "luminousworld:oaktable_4"
-  ],
-  "#luminousworld:palmshelf" : [
-    "luminousworld:palmshelf",
-    "luminousworld:palmshelf_2",
-    "luminousworld:palmshelf_3",
-    "luminousworld:palmshelf_4"
-  ],
-  "#luminousworld:palmtable" : [
-    "luminousworld:palmtable",
-    "luminousworld:palmtable_2",
-    "luminousworld:palmtable_3",
-    "luminousworld:palmtable_4"
-  ],
-  "#luminousworld:paperpile" : [
-    "luminousworld:paperpile_1",
-    "luminousworld:paperpile_2",
-    "luminousworld:paperpile_3",
-    "luminousworld:paperpile_4",
-    "luminousworld:paperpile_5",
-    "luminousworld:paperpile_6"
-  ],
-  "#luminousworld:small_cauldron" : [
-    "luminousworld:small_cauldron",
-    "luminousworld:small_cauldron_2",
-    "luminousworld:small_cauldron_3",
-    "luminousworld:small_cauldron_4",
-    "luminousworld:small_cauldron_5",
-    "luminousworld:small_cauldron_6",
-    "luminousworld:small_cauldron_7",
-    "luminousworld:small_cauldron_8"
-  ],
-  "#luminousworld:spruceshelf" : [
-    "luminousworld:spruceshelf_1",
-    "luminousworld:spruceshelf_2",
-    "luminousworld:spruceshelf_3",
-    "luminousworld:spruceshelf_4"
-  ],
-  "#luminousworld:sprucetable" : [
-    "luminousworld:sprucetable",
-    "luminousworld:sprucetable_2",
-    "luminousworld:sprucetable_3",
-    "luminousworld:sprucetable_4"
-  ],
-  "#luminousworld:whiteoakshelf" : [
-    "luminousworld:whiteoakshelf",
-    "luminousworld:whiteoakshelf_2",
-    "luminousworld:whiteoakshelf_3",
-    "luminousworld:whiteoakshelf_4"
-  ],
-  "#luminousworld:whiteoaktable" : [
-    "luminousworld:whiteoaktable",
-    "luminousworld:whiteoaktable_2",
-    "luminousworld:whiteoaktable_3",
-    "luminousworld:whiteoaktable_4"
-  ],
-    "#minecraft:copper_grate" : [
+    "#minecraft:copper_grates" : [
       "minecraft:copper_grate",
       "minecraft:exposed_copper_grate",
       "minecraft:weathered_copper_grate",
@@ -1506,7 +385,7 @@
       "create:weathered_copper_shingle_stairs",
       "create:oxidized_copper_shingle_stairs"
   ],
-  "#minecraft:copper_door" : [
+  "#minecraft:copper_doors" : [
       "minecraft:copper_door",
       "minecraft:exposed_copper_door",
       "minecraft:weathered_copper_door",
@@ -1536,52 +415,76 @@
       "create:weathered_copper_tile_stairs",
       "create:oxidized_copper_tile_stairs"
   ],
-  "#minecraft:cut_copper" : [
+  "#minecraft:cut_coppers" : [
       "minecraft:cut_copper",
       "minecraft:exposed_cut_copper",
       "minecraft:weathered_cut_copper",
       "minecraft:oxidized_cut_copper"
   ],
-  "#create:copper_tile_slab" : [
+  "#create:copper_tile_slabs" : [
       "create:copper_tile_slab",
       "create:exposed_copper_tile_slab",
       "create:weathered_copper_tile_slab",
       "create:oxidized_copper_tile_slab"
   ],
-  "#minecraft:cut_copper_slab" : [
+  "#minecraft:cut_copper_slabs" : [
       "minecraft:cut_copper_slab",
       "minecraft:exposed_cut_copper_slab",
       "minecraft:weathered_cut_copper_slab",
       "minecraft:oxidized_cut_copper_slab"
   ],
-  "#minecraft:copper_trapdoor" : [
+  "#minecraft:copper_trapdoors" : [
       "minecraft:copper_trapdoor",
       "minecraft:exposed_copper_trapdoor",
       "minecraft:weathered_copper_trapdoor",
       "minecraft:oxidized_copper_trapdoor"
   ],
-  "#create:copper_shingle_slab" : [
+  "#create:copper_shingle_slabs" : [
       "create:copper_shingle_slab",
       "create:exposed_copper_shingle_slab",
       "create:weathered_copper_shingle_slab",
       "create:oxidized_copper_shingle_slab"
   ],
-  "#minecraft:copper" : [
+  "#minecraft:coppers" : [
       "minecraft:copper_block",
       "minecraft:exposed_copper",
       "minecraft:weathered_copper",
       "minecraft:oxidized_copper"
   ],
-  "#minecraft:chiseled_copper" : [
+  "#minecraft:chiseled_coppers" : [
       "minecraft:chiseled_copper",
       "minecraft:exposed_chiseled_copper",
       "minecraft:weathered_chiseled_copper",
       "minecraft:oxidized_chiseled_copper"
   ],
-  "#minecraft:copper_bulb" : [
+  "#minecraft:copper_bulbs" : [
       "minecraft:copper_bulb",
       "minecraft:exposed_copper_bulb",
       "minecraft:weathered_copper_bulb",
       "minecraft:oxidized_copper_bulb"
+  ],
+  "#somemoreblocks:copper_bricks" : [
+    "somemoreblocks:copper_bricks",
+    "somemoreblocks:exposed_copper_bricks",
+    "somemoreblocks:weathered_copper_bricks",
+    "somemoreblocks:oxidized_copper_bricks"
+  ],
+    "#somemoreblocks:cracked_copper_bricks" : [
+    "somemoreblocks:cracked_copper_bricks",
+    "somemoreblocks:exposed_cracked_copper_bricks",
+    "somemoreblocks:weathered_cracked_copper_bricks",
+    "somemoreblocks:oxidized_cracked_copper_bricks"
+  ],
+    "#somemoreblocks:copper_pillars" : [
+    "somemoreblocks:copper_pillar",
+    "somemoreblocks:exposed_copper_pillar",
+    "somemoreblocks:weathered_copper_pillar",
+    "somemoreblocks:oxidized_copper_pillar"
+  ],
+    "#somemoreblocks:cracked_cut_coppers" : [
+    "somemoreblocks:cracked_cut_copper",
+    "somemoreblocks:exposed_cracked_cut_copper",
+    "somemoreblocks:weathered_cracked_cut_copper",
+    "somemoreblocks:oxidized_cracked_cut_copper"
   ]
 }

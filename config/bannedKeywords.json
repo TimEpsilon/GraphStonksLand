@@ -139,8 +139,18 @@
     "luminous_nether:driprot_vine",
     "suppsquared:daub_frame_slab",
     "suppsquared:daub_frame_stairs",
-
+    "aces_spell_utils:example_*",
     "crafting-irons_spellbooks:uninscribe_rune",
-    "*-*from_removing_wax"
+    "*-*from_removing_wax",
+    "*:*unfinished*",
+    "fdlib:test_multiblock",
+    "gtbcs_spell_lib:gsl_example_crit_staff",
+    "gtbcs_spell_lib:gsl_example_item",
+    "gtbcs_spell_lib:gsl_example_lore_item",
+    "gtbcs_spell_lib:gsl_test_echo",
+    "irons_spellbooks:claymore",
+    "somemoreblocks:*leaves_bucket",
+    "hazennstuff:*arbitrium_robes*",
+    "hazennstuff:hazennstuff:geckolib_*"
   ]
 }
