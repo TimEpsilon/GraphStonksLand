@@ -46,9 +46,6 @@ class RecipeSolver(NodeSolver):
             combos = np.array(list(itertools.product(*values)), dtype=np.float64)  # shape: (n_combos, n_keys)
 
             # Weighted sum along axis 1 (dot product with weights)
-            if self.thisNode == "smithing-better_weaponry:netherite_sai_craft":
-                print(combos)
-                print(weights)
             candidates = self.cutTooLow(combos @ weights)
             self.graph.nodes[self.thisNode]["SCT"] = candidates
             self.graph.nodes[self.thisNode]["hasComputed"] = True

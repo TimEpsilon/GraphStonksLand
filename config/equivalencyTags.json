@@ -153,8 +153,8 @@
     "#minecraft:jungle_logs",
     "#minecraft:dark_oak_logs",
     "crystal_chronicles:bronchus",
-    "#minecraft:crimson_stem",
-    "#minecraft:warped_stem"
+    "#minecraft:crimson_stems",
+    "#minecraft:warped_stems"
   ],
   "#create:rare_packages" : [
     "create:rare_creeper_package",
@@ -171,7 +171,7 @@
   "#minecraft:leaves": [
     "#minecraft:leaves"
   ],
-  "minecraft:saplings": [
+  "#minecraft:saplings": [
     "#minecraft:saplings"
   ],
   "#flowers" : [
@@ -264,10 +264,6 @@
     "minecraft:ochre_froglight",
     "minecraft:pearlescent_froglight",
     "minecraft:verdant_froglight"
-  ],
-  "#experience" : [
-    "sophisticatedcore:xp_bucket",
-    "sophisticatedcore:xp_still"
   ],
   "#eggs" : [
     "#c:eggs"
@@ -525,17 +521,9 @@
     "betterarcheology:soul_totem",
     "betterarcheology:torrent_totem"
   ],
-  "#create:honey" : [
+  "#create:honeys" : [
     "create:honey",
     "create:flowing_honey"
-  ],
-  "#create:lightnings" : [
-    "create_wizardry:lightning",
-    "create_wizardry:lightning_bucket"
-  ],
-  "#create:mana" : [
-    "create_wizardry:mana_bucket",
-    "create_wizardry:mana"
   ],
   "#born_in_chaos_v1:charms" : [
     "born_in_chaos_v1:charmof_endurance",
@@ -552,14 +540,6 @@
     "born_in_chaos_v1:gummy_vampire_teeth",
     "born_in_chaos_v1:chocolate_heart",
     "born_in_chaos_v1:coffee_candy"
-  ],
-  "#born_in_chaos_v1:fel_lamps" : [
-    "born_in_chaos_v1:empty_fel_lamp",
-    "born_in_chaos_v1:fel_lamp"
-  ],
-  "#born_in_chaos_v1:pumpkinhead_lamp" : [
-    "born_in_chaos_v1:lord_pumpkinheads_empty_lamp",
-    "born_in_chaos_v1:lord_pumpkinheads_lamp"
   ],
   "#born_in_chaos_v1:pumpkins" : [
     "born_in_chaos_v1:evil_carved_pumpkin",
@@ -593,11 +573,6 @@
     "crystal_chronicles:hanging_veins",
     "crystal_chronicles:skin_layer",
     "crystal_chronicles:veins"
-  ],
-  "#crystal_chronicles:bloods" : [
-    "crystal_chronicles:blood_bucket",
-    "crystal_chronicles:flowing_blood",
-    "crystal_chronicles:source_blood"
   ],
   "#fdbosses:trophies" : [
     "fdbosses:chesed_trophy",

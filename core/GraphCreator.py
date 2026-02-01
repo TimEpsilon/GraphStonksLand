@@ -206,7 +206,7 @@ class GraphCreator:
             self.log(f"Adding tag {tag}, replacing {len(nodes)} nodes")
 
             # Check if every entry is within the item list
-            diff = set(nodes) - set(self.itemList)
+            diff = set(nodes) - set(self.originalGraph.nodes)
             if len(diff) > 0:
                 self.log(f"Found {len(diff)} unknown items in tag : {diff}", level=logging.WARNING)
             nodes = set(nodes) - set(diff)
@@ -268,6 +268,8 @@ class GraphCreator:
                 shape="diamond")
 
             # Recipe -> output
+            if not self.originalGraph.has_node(output):
+                self.log(f"{output} doesn't exist for recipe {recipe}", level=logging.ERROR)
             self.originalGraph.add_edge(recipe, output, weight=recipes[r]["output"][output])
 
             for i in recipes[r]['input']:
@@ -286,6 +288,8 @@ class GraphCreator:
                 # Ingredient -> recipe
                 self.originalGraph.add_edge(ingr, recipe, weight=recipes[r]["input"][i])
                 # Item -> Ingredient
+                if not self.originalGraph.has_node(i):
+                    self.log(f"{i} doesn't exist for recipe {recipe}", level=logging.ERROR)
                 self.originalGraph.add_edge(i, ingr)
 
     def _getCycles(self) -> dict[str, set]:
@@ -347,7 +351,6 @@ class GraphCreator:
 
     def _pruneGraph(self):
         for node,data in self.originalGraph.copy().nodes.data():
-            print(node)
             if data["type"] in ["ingredient", "recipe"] and self.originalGraph.in_degree(node) == 0:
                 self.log(f"Pruning {node}", level=logging.DEBUG)
                 self.originalGraph.remove_node(node)

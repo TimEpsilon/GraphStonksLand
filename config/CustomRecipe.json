@@ -304,11 +304,43 @@
       "minecraft:lava" : 1000
     }
   },
+  "minecraft:lava" : {
+    "input" : {
+      "minecraft:lava_bucket" : 1
+    },
+    "output" : {
+      "minecraft:lava" : 1000
+    }
+  },
+  "create_wizardry:mana_bucket" : {
+    "output" : {
+      "create_wizardry:mana_bucket" : 1
+    },
+    "input" : {
+      "create_wizardry:mana" : 1000
+    }
+  },
+  "create_wizardry:mana" : {
+    "input" : {
+      "create_wizardry:mana_bucket" : 1
+    },
+    "output" : {
+      "create_wizardry:mana" : 1000
+    }
+  },
     "minecraft:water_bucket" : {
     "output" : {
       "minecraft:water_bucket" : 1
     },
     "input" : {
+      "minecraft:water" : 1000
+    }
+  },
+  "minecraft:water" : {
+    "input" : {
+      "minecraft:water_bucket" : 1
+    },
+    "output" : {
       "minecraft:water" : 1000
     }
   },
@@ -320,12 +352,28 @@
       "minecraft:milk" : 1000
     }
   },
+  "minecraft:milk" : {
+    "input" : {
+      "minecraft:milk_bucket" : 1
+    },
+    "output" : {
+      "minecraft:milk" : 1000
+    }
+  },
   "create:honey_bucket" : {
     "output" : {
       "create:honey_bucket" : 1
     },
     "input" : {
-      "create:honey" : 1000
+      "#create:honeys" : 1000
+    }
+  },
+  "create:honey" : {
+    "input" : {
+      "create:honey_bucket" : 1
+    },
+    "output" : {
+      "#create:honeys" : 1000
     }
   },
   "create:chocolate_bucket" : {
@@ -334,6 +382,62 @@
     },
     "input" : {
       "create:chocolate" : 1000
+    }
+  },
+  "create:chocolate" : {
+    "input" : {
+      "create:chocolate_bucket" : 1
+    },
+    "output" : {
+      "create:chocolate" : 1000
+    }
+  },
+  "create_wizardry:blood_bucket" : {
+    "output" : {
+      "create_wizardry:blood_bucket" : 1
+    },
+    "input" : {
+      "irons_spellbooks:blood" : 1000
+    }
+  },
+  "irons_spellbooks:blood" : {
+    "input" : {
+      "create_wizardry:blood_bucket" : 1
+    },
+    "output" : {
+      "irons_spellbooks:blood" : 1000
+    }
+  },
+  "create_wizardry:lightning_bucket" : {
+    "output" : {
+      "create_wizardry:lightning_bucket" : 1
+    },
+    "input" : {
+      "create_wizardry:lightning" : 1000
+    }
+  },
+  "create_wizardry:lightning" : {
+    "input" : {
+      "create_wizardry:lightning_bucket" : 1
+    },
+    "output" : {
+      "create_wizardry:lightning" : 1000
+    }
+  },
+    "sophisticatedcore:xp_bucket" : {
+    "output" : {
+      "sophisticatedcore:xp_bucket" : 1
+    },
+    "input" : {
+      "sophisticatedcore:xp_still" : 1000
+    }
+  },
+  "sophisticatedcore:xp_still" : {
+    "input" : {
+      "sophisticatedcore:xp_bucket" : 1
+    },
+    "output" : {
+      "sophisticatedcore:xp_still" : 1000
     }
   },
   "supplementaries:trapped_present" : {
@@ -358,7 +462,7 @@
       "numismatics:blaze_banker" : 1
     },
     "input" : {
-      "create:empty_blaze_burner" : 1,
+      "#create:blaze_burners" : 1,
       "numismatics:banking_guide" : 1
     }
   }
