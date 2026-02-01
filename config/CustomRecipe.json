@@ -344,5 +344,22 @@
       "#supplementaries:presents" : 1,
       "minecraft:tripwire_hook" : 1
     }
+  },
+  "born_in_chaos_v1:diamond_shard" : {
+    "output" : {
+      "born_in_chaos_v1:diamond_termite_shard" : 9
+    },
+    "input" : {
+      "minecraft:diamond" : 1
+    }
+  },
+  "numismatics:blaze_banker" : {
+    "output" : {
+      "numismatics:blaze_banker" : 1
+    },
+    "input" : {
+      "create:empty_blaze_burner" : 1,
+      "numismatics:banking_guide" : 1
+    }
   }
 }
