@@ -151,7 +151,10 @@
     "#betterarcheology:rotten_logs",
     "#minecraft:cherry_logs",
     "#minecraft:jungle_logs",
-    "#minecraft:dark_oak_logs"
+    "#minecraft:dark_oak_logs",
+    "crystal_chronicles:bronchus",
+    "#minecraft:crimson_stem",
+    "#minecraft:warped_stem"
   ],
   "#create:rare_packages" : [
     "create:rare_creeper_package",
@@ -197,12 +200,128 @@
     "minecraft:sunflower",
     "minecraft:lilac",
     "minecraft:rose_bush",
-    "minecraft:peony"
+    "minecraft:peony",
+    "somemoreblocks:tall_warped_fungus_colony",
+    "minecraft:large_fern",
+    "minecraft:mushroom_stem",
+    "minecraft:brown_mushroom_block",
+    "minecraft:red_mushroom_block",
+    "somemoreblocks:carved_mushroom_stem",
+    "somemoreblocks:tall_brown_mushroom_colony",
+    "somemoreblocks:tall_cactus",
+    "somemoreblocks:tall_crimson_fungus_colony",
+    "somemoreblocks:tall_dune_grass",
+    "somemoreblocks:tall_red_mushroom_colony"
+
   ],
   "#plants" : [
     "minecraft:spore_blossom",
     "somemoreblocks:big_lily_pad",
-    "somemoreblocks:brown_mushroom_colony"
+    "somemoreblocks:brown_mushroom_colony",
+    "hazennstuff:fireblossom",
+    "minecraft:big_dripleaf",
+    "minecraft:brown_mushroom",
+    "minecraft:bush",
+    "minecraft:cactus",
+    "minecraft:crimson_roots",
+    "minecraft:dead_bush",
+    "minecraft:red_mushroom",
+    "minecraft:glow_lichen",
+    "minecraft:hanging_roots",
+    "minecraft:leaf_litter",
+    "minecraft:lily_pad",
+    "minecraft:nether_sprouts",
+    "minecraft:pale_hanging_moss",
+    "minecraft:sea_pickle",
+    "minecraft:seagrass",
+    "minecraft:short_dry_grass",
+    "minecraft:short_grass",
+    "minecraft:small_dripleaf",
+    "minecraft:sugar_cane",
+    "minecraft:tall_dry_grass",
+    "minecraft:tall_grass",
+    "minecraft:fern",
+    "minecraft:firefly_bush",
+    "minecraft:twisting_vines",
+    "minecraft:vine",
+    "minecraft:warped_roots",
+    "minecraft:weeping_vines",
+    "somemoreblocks:cattail",
+    "somemoreblocks:clover",
+    "somemoreblocks:crimson_fungus_colony",
+    "somemoreblocks:dune_grass",
+    "somemoreblocks:nether_clover",
+    "somemoreblocks:red_mushroom_colony",
+    "somemoreblocks:reeds",
+    "somemoreblocks:small_lily_pads",
+    "somemoreblocks:tiny_cactus",
+    "somemoreblocks:warped_fungus_colony",
+    "supplementaries:barnacles",
+    "supplementaries:wild_flax"
+
+  ],
+  "#froglight" : [
+    "minecraft:ochre_froglight",
+    "minecraft:pearlescent_froglight",
+    "minecraft:verdant_froglight"
+  ],
+  "#experience" : [
+    "sophisticatedcore:xp_bucket",
+    "sophisticatedcore:xp_still"
+  ],
+  "#eggs" : [
+    "#c:eggs"
+  ],
+  "#plant_foods" : [
+    "minecraft:carrot",
+    "minecraft:beetroot",
+    "minecraft:melon_slice",
+    "minecraft:potato"
+  ],
+  "#meat_foods" : [
+    "minecraft:chicken",
+    "minecraft:beef",
+    "minecraft:mutton",
+    "minecraft:porkchop",
+    "minecraft:rabbit"
+  ],
+  "#fish_foods" : [
+    "minecraft:cod",
+    "minecraft:tropical_fish",
+    "minecraft:pufferfish",
+    "minecraft:salmon"
+  ],
+  "#corals" : [
+    "minecraft:brain_coral",
+    "minecraft:brain_coral_block",
+    "minecraft:brain_coral_fan",
+    "minecraft:bubble_coral",
+    "minecraft:bubble_coral_block",
+    "minecraft:bubble_coral_fan",
+    "minecraft:dead_brain_coral",
+    "minecraft:dead_brain_coral_block",
+    "minecraft:dead_brain_coral_fan",
+    "minecraft:dead_bubble_coral",
+    "minecraft:dead_bubble_coral_block",
+    "minecraft:dead_bubble_coral_fan",
+    "minecraft:dead_fire_coral",
+    "minecraft:dead_fire_coral_block",
+    "minecraft:dead_fire_coral_fan",
+    "minecraft:dead_horn_coral",
+    "minecraft:dead_horn_coral_block",
+    "minecraft:dead_horn_coral_fan",
+    "minecraft:dead_tube_coral",
+    "minecraft:dead_tube_coral_block",
+    "minecraft:dead_tube_coral_fan",
+    "minecraft:fire_coral",
+    "minecraft:fire_coral_block",
+    "minecraft:fire_coral_fan",
+    "minecraft:horn_coral",
+    "minecraft:horn_coral_block",
+    "minecraft:horn_coral_fan",
+    "minecraft:tube_coral",
+    "minecraft:tube_coral_block",
+    "minecraft:tube_coral_fan"
   ],
   "#bamboo_blocks" : [
     "somemoreblocks:carved_bamboo_block",
@@ -254,7 +373,7 @@
   "#pot_sherds" : [
     "#minecraft:decorated_pot_sherds"
   ],
-  "#skull" : [
+  "#skulls" : [
     "minecraft:creeper_head",
     "minecraft:zombie_head",
     "minecraft:skeleton_skull",
@@ -266,12 +385,24 @@
     "#minecraft:stone_tool_materials",
     "create:limestone",
     "create:asurine",
-    "create:crimstine",
+    "create:crimsite",
     "create:ochrum",
     "create:scoria",
     "create:scorchia",
     "create:veridium",
-    "minecraft:calcite"
+    "minecraft:calcite",
+    "crystal_chronicles:crustone",
+    "hazennstuff:abysslate",
+    "hazennstuff:aquastone",
+    "hazennstuff:cobbled_voidstone",
+    "hazennstuff:runestone_slag",
+    "hazennstuff:voidstone",
+    "minecraft:basalt",
+    "minecraft:end_stone"
+  ],
+  "#seeds" : [
+    "#c:seeds",
+    "minecraft:cocoa_beans"
   ],
   "#coal_ores" : [
     "#c:ores/coal",
@@ -307,7 +438,7 @@
     "minecraft:nether_quartz_ore",
     "minecraft:quartz"
   ],
-  "#born_in_chaos_v1:infected_diamond_ore" : [
+  "#born_in_chaos_v1:infected_diamond_ores" : [
     "born_in_chaos_v1:infected_deepslate_diamond_ore",
     "born_in_chaos_v1:infected_diamond_ore"
   ],
@@ -340,6 +471,10 @@
     "hazennstuff:solar_core_blackstone_ore",
     "hazennstuff:solar_core"
   ],
+  "#dark_metal_ores" : [
+    "born_in_chaos_v1:pieceofdarkmetal",
+    "born_in_chaos_v1:dark_metal_deposit"
+  ],
   "#create:blaze_burners" : [
     "create:blaze_burner",
     "create:empty_blaze_burner"
@@ -360,7 +495,29 @@
     "arcane_abilities:weightless_boot",
     "artifacts:aqua_dashers",
     "artifacts:everlasting_beef",
-    "artifacts:strider_shoes"
+    "artifacts:strider_shoes",
+    "relics:leafy_ring"
+  ],
+  "#archeology_fossils" : [
+    "betterarcheology:chicken_fossil_body",
+    "betterarcheology:chicken_fossil_head",
+    "betterarcheology:creeper_fossil_body",
+    "betterarcheology:creeper_fossil_head",
+    "betterarcheology:guardian_fossil_body",
+    "betterarcheology:guardian_fossil_head",
+    "betterarcheology:ocelot_fossil_body",
+    "betterarcheology:ocelot_fossil_head",
+    "betterarcheology:sheep_fossil_body",
+    "betterarcheology:sheep_fossil_head",
+    "betterarcheology:villager_fossil_body",
+    "betterarcheology:villager_fossil_head",
+    "betterarcheology:wolf_fossil_body",
+    "betterarcheology:wolf_fossil_head"
+  ],
+  "#archeology:vases" : [
+    "betterarcheology:vase",
+    "betterarcheology:vase_creeper",
+    "betterarcheology:vase_green"
   ],
   "#archeology_totems" : [
     "betterarcheology:growth_totem",
@@ -368,10 +525,93 @@
     "betterarcheology:soul_totem",
     "betterarcheology:torrent_totem"
   ],
+  "#create:honey" : [
+    "create:honey",
+    "create:flowing_honey"
+  ],
+  "#create:lightnings" : [
+    "create_wizardry:lightning",
+    "create_wizardry:lightning_bucket"
+  ],
+  "#create:mana" : [
+    "create_wizardry:mana_bucket",
+    "create_wizardry:mana"
+  ],
+  "#born_in_chaos_v1:charms" : [
+    "born_in_chaos_v1:charmof_endurance",
+    "born_in_chaos_v1:charmof_fury",
+    "born_in_chaos_v1:charmof_power",
+    "born_in_chaos_v1:charmof_resistance",
+    "born_in_chaos_v1:charmof_stealth"
+  ],
+  "#born_in_chaos_v1:candies" : [
+    "born_in_chaos_v1:holiday_candy",
+    "born_in_chaos_v1:mint_candy",
+    "born_in_chaos_v1:mint_ice_cream",
+    "born_in_chaos_v1:caramel_pepper",
+    "born_in_chaos_v1:gummy_vampire_teeth",
+    "born_in_chaos_v1:chocolate_heart",
+    "born_in_chaos_v1:coffee_candy"
+  ],
+  "#born_in_chaos_v1:fel_lamps" : [
+    "born_in_chaos_v1:empty_fel_lamp",
+    "born_in_chaos_v1:fel_lamp"
+  ],
+  "#born_in_chaos_v1:pumpkinhead_lamp" : [
+    "born_in_chaos_v1:lord_pumpkinheads_empty_lamp",
+    "born_in_chaos_v1:lord_pumpkinheads_lamp"
+  ],
+  "#born_in_chaos_v1:pumpkins" : [
+    "born_in_chaos_v1:evil_carved_pumpkin",
+    "born_in_chaos_v1:cultivated_pumpkin"
+  ],
+  "#born_in_chaos_v1:scorched_planks" : [
+    "born_in_chaos_v1:fragile_scorched_boards",
+    "born_in_chaos_v1:scorched_planks"
+  ],
   "#music_discs" : [
     "#c:music_discs",
     "#minecraft:music_discs",
-    "vista:cassette"
+    "vista:cassette",
+    "betterarcheology:music_disc_swings",
+    "irons_spellbooks:music_disc_dead_king_lullaby"
+  ],
+  "#crystal_chronicles:flesh_blocks" : [
+    "crystal_chronicles:alveolus_block",
+    "crystal_chronicles:artree_base",
+    "crystal_chronicles:artree_capillary",
+    "crystal_chronicles:artree_vein",
+    "crystal_chronicles:flesh_block",
+    "crystal_chronicles:muscle_block",
+    "crystal_chronicles:tendon_block"
+  ],
+  "#crystal_chronicles:flesh_plants" : [
+    "crystal_chronicles:alveolus",
+    "crystal_chronicles:axon",
+    "crystal_chronicles:blood_bases",
+    "crystal_chronicles:tall_blood_bases",
+    "crystal_chronicles:hanging_veins",
+    "crystal_chronicles:skin_layer",
+    "crystal_chronicles:veins"
+  ],
+  "#crystal_chronicles:bloods" : [
+    "crystal_chronicles:blood_bucket",
+    "crystal_chronicles:flowing_blood",
+    "crystal_chronicles:source_blood"
+  ],
+  "#fdbosses:trophies" : [
+    "fdbosses:chesed_trophy",
+    "fdbosses:geburah_trophy",
+    "fdbosses:malkuth_trophy"
+  ],
+  "#fdbosses:cores" : [
+    "fdbosses:fire_and_ice_core",
+    "fdbosses:justice_core",
+    "fdbosses:lightning_core"
+  ],
+  "#hazennstuff:frostbite_planks" : [
+    "hazennstuff:frostbite_birch_nailed_planks",
+    "hazennstuff:frostbite_birch_planks"
   ],
     "#minecraft:copper_grates" : [
       "minecraft:copper_grate",
