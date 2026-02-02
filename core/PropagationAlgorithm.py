@@ -166,25 +166,24 @@ class Propagation:
         Using an already existing table of values, sets some values in the input table beforehand
         :param path: the path to the crossmatching table
         """
-        crossmatch = pd.read_csv(path,header=0)
+        crossmatch = pd.read_csv(path)
         crossmatch["value"] = crossmatch["value"].astype(float)
         crossmatch.set_index("node", inplace=True)
-        crossmatch = crossmatch.T.to_dict("list")
 
         counter = 0
         for i,row in self.inputs.copy().iterrows():
             # Basic node
-            if row["node"] in crossmatch:
-                self.inputs.at[i, "value"] = crossmatch[row["node"]][0]
+            if row["node"] in crossmatch.index:
+                self.inputs.at[i, "value"] = crossmatch.loc[row["node"],"value"]
                 counter += 1
                 continue
 
             # Cycle node
             if not pd.isna(row["cycle"]):
                 for subnode in row["cycle"]:
-                    if subnode in crossmatch:
+                    if subnode in crossmatch.index:
                         self.inputs.at[i, "representative"] = subnode
-                        self.inputs.at[i, "value"] = crossmatch[subnode][0]
+                        self.inputs.at[i, "value"] = crossmatch.loc[subnode,"value"]
                         counter += 1
                         continue
 

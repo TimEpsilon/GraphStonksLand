@@ -66,7 +66,7 @@ class NodeSolver(ABC):
 
 
     @staticmethod
-    def cutTooLow(candidates, threshold=0.001):
+    def cutTooLow(candidates, threshold=0.01):
         candidates = np.array(list(candidates)) if len(candidates) > 0 else np.array([0])
         candidates = np.round(candidates / threshold) * threshold
         return set(candidates[candidates >= threshold].astype(float).tolist())

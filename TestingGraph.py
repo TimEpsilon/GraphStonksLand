@@ -5,14 +5,14 @@ import networkx as nx
 import pickle
 
 # Uncomment to generate full graph from scratch
-gc = GraphCreator("config/input/items.txt", "config/input/recipes.json", "config/input/tags.json", "config/equivalencyTags.json", "config/CustomRecipe.json", "config/bannedKeywords.json")
-with open("fullGraph.txt", "w", encoding="utf-8") as f:
-    nx.write_network_text(gc.originalGraph, f)
-
-with open('fullGraph.gpickle', 'wb') as f:
-    pickle.dump(gc, f, pickle.HIGHEST_PROTOCOL)
-
-plotGraph(gc.G, "full", fixedInOut=False)
+#gc = GraphCreator("config/input/items.txt", "config/input/recipes.json", "config/input/tags.json", "config/equivalencyTags.json", "config/CustomRecipe.json", "config/bannedKeywords.json")
+#with open("fullGraph.txt", "w", encoding="utf-8") as f:
+#    nx.write_network_text(gc.originalGraph, f)
+#
+#with open('fullGraph.gpickle', 'wb') as f:
+#    pickle.dump(gc, f, pickle.HIGHEST_PROTOCOL)
+#
+#plotGraph(gc.G, "full", fixedInOut=False)
 
 # Uncommment if graph has been saved beforehand
 with open('fullGraph.gpickle', 'rb') as f:
