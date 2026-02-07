@@ -401,38 +401,31 @@
     "minecraft:cocoa_beans"
   ],
   "#coal_ores" : [
-    "#c:ores/coal",
-    "minecraft:coal"
+    "#c:ores/coal"
   ],
   "#iron_ores" : [
-    "#c:ores/iron",
-    "minecraft:raw_iron"
+    "#c:ores/iron"
   ],
   "#gold_ores" : [
-    "#c:ores/gold",
-    "minecraft:raw_gold"
+    "#c:ores/gold"
   ],
   "#copper_ores" : [
-    "#c:ores/copper",
-    "minecraft:raw_copper"
+    "#c:ores/copper"
   ],
   "#redstone_ores" : [
     "#c:ores/redstone"
   ],
   "#emerald_ores" : [
-    "#c:ores/emerald",
-    "createoreexcavation:raw_emerald"
+    "#c:ores/emerald"
   ],
   "#lapis_ores" : [
     "#c:ores/lapis"
   ],
   "#diamond_ores" : [
-    "#c:ores/diamond",
-    "createoreexcavation:raw_diamond"
+    "#c:ores/diamond"
   ],
   "#quartz_ores" : [
-    "minecraft:nether_quartz_ore",
-    "minecraft:quartz"
+    "minecraft:nether_quartz_ore"
   ],
   "#born_in_chaos_v1:infected_diamond_ores" : [
     "born_in_chaos_v1:infected_deepslate_diamond_ore",
@@ -442,12 +435,10 @@
     "#c:ores/randomium"
   ],
   "#mithril_ores" : [
-    "#c:ores/mithril",
-    "irons_spellbooks:raw_mithril"
+    "#c:ores/mithril"
   ],
   "#zinc_ores" : [
-    "#c:ores/zinc",
-    "create:raw_zinc"
+    "#c:ores/zinc"
   ],
   "#zenalite_ores" : [
     "#hazennstuff:blocks/zenalite_ores",
@@ -455,21 +446,17 @@
     "hazennstuff:zenalite_end_stone_ore"
   ],
   "#chlorophyte_ores" : [
-    "hazennstuff:chlorophyte_ore",
-    "hazennstuff:chlorophyte_chunk"
+    "hazennstuff:chlorophyte_ore"
   ],
   "#dreadstone_ores" : [
-    "hazennstuff:dreadstone_ore",
-    "hazennstuff:dreadstone"
+    "hazennstuff:dreadstone_ore"
   ],
   "#solar_core_ores" : [
     "hazennstuff:solar_core_netherrack_ore",
-    "hazennstuff:solar_core_blackstone_ore",
-    "hazennstuff:solar_core"
+    "hazennstuff:solar_core_blackstone_ore"
   ],
   "#dark_metal_ores" : [
-    "born_in_chaos_v1:pieceofdarkmetal",
-    "born_in_chaos_v1:dark_metal_deposit"
+    "born_in_chaos_v1:pieceofdarkmetal"
   ],
   "#create:blaze_burners" : [
     "create:blaze_burner",

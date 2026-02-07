@@ -105,7 +105,7 @@ class Propagation:
             if data["type"] == "cycle":
                 for subnode, subdata in data["subgraph"].nodes.data():
                     if subdata["type"] == "item":
-                        out = list(subdata["SCT"])[0] if len(subdata["SCT"]) > 0 else 0
+                        out = np.array(list(subdata["SCT"])).min() if len(subdata["SCT"]) > 0 else 0
                         out = format(out, '.3f')
                         outputs.loc[len(outputs)] = [subnode, out]
         outputs.to_csv("output.csv", index=False)

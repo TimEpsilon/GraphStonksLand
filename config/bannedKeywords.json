@@ -111,7 +111,6 @@
     "protection_pixel:foldedsteamectoskeleton",
     "protection_pixel:openmaneuveringwing",
     "sophisticatedstorage:*pump_upgrade",
-    "stonkstimecore:*",
     "supplementaries:bomb_spiky",
     "supplementaries:bubble_block",
     "supplementaries:bunting",
@@ -203,6 +202,7 @@
     "irons_spellbooks:oakskin_elixir",
     "irons_spellbooks:evasion_elixir",
     "irons_spellbooks:greater_evasion_elixir",
-    "irons_spellbooks:greater_healing_potion"
+    "irons_spellbooks:greater_healing_potion",
+    "crafting-born_in_chaos_v1:solsendk"
   ]
 }

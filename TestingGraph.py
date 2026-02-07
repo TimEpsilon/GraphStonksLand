@@ -1,5 +1,4 @@
 from core.GraphCreator import GraphCreator
-from core.PlotGraph import plotGraph
 from core.PropagationAlgorithm import Propagation
 import networkx as nx
 import pickle
@@ -12,7 +11,6 @@ import pickle
 #with open('fullGraph.gpickle', 'wb') as f:
 #    pickle.dump(gc, f, pickle.HIGHEST_PROTOCOL)
 #
-#plotGraph(gc.G, "full", fixedInOut=False)
 
 # Uncommment if graph has been saved beforehand
 with open('fullGraph.gpickle', 'rb') as f:
@@ -27,4 +25,7 @@ prop.setupForSolving()
 
 prop.solve()
 prop.saveOutputs()
+
+with open('fullGraph-solved.gpickle', 'wb') as f:
+    pickle.dump(gc, f, pickle.HIGHEST_PROTOCOL)
 
