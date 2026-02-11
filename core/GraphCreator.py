@@ -4,11 +4,18 @@ import logging
 import numpy as np
 import json
 import networkx as nx
-
+import pandas as pd
 
 class GraphCreator:
 
-    def __init__(self, itemPath : str, recipePath : str, tagPath : str, equivalencyPath : str, additionalRecipesPath : str, bannedPath : str) -> None:
+    def __init__(self,
+                 itemPath : str,
+                 recipePath : str,
+                 tagPath : str,
+                 equivalencyPath : str,
+                 additionalRecipesPath : str,
+                 bannedPath : str,
+                 sourceItems : str) -> None:
         """
         Generates the basic structure of the recipe graph, a Directed Acyclic Graph.
         There are 4 node types :
@@ -24,6 +31,7 @@ class GraphCreator:
         :param equivalencyPath: path to the equivalency json file (tag list)
         :param additionalRecipesPath: path to the additional recipes json file. Can contain tags defined in equivalencyPath
         :param bannedPath: path to the banned keywords file
+        :param sourceItems: path to the atomic inputs reference file (any node within it that isn't already an atom will have it's incoming edges removed)
         """
         self.logger = self._logInit()
 
@@ -33,6 +41,7 @@ class GraphCreator:
         self.equivalencyPath = equivalencyPath
         self.customRecipes = additionalRecipesPath
         self.bannedKeywords = bannedPath
+        self.sourceItems = sourceItems
 
         # Item list
         self.itemList, self.modList = self._getItems()
@@ -42,6 +51,9 @@ class GraphCreator:
 
         # Tag dict
         self.equivalentTags = self._getTags()
+
+        # Atomic items
+        self.atomicItems = pd.read_csv(self.sourceItems)
 
         # Graph
         # We keep a copy of the original graph just in case
@@ -58,6 +70,9 @@ class GraphCreator:
         # Adding Custom Recipes
         # We need a custom logic for ingredients
         self._makeCustomRecipes()
+
+        # Make every atom a source node
+        self._makeAtoms()
 
         # Graph pruning
         # Removes unnecessary ingredient / recipe nodes
@@ -291,6 +306,15 @@ class GraphCreator:
                 if not self.originalGraph.has_node(i):
                     self.log(f"{i} doesn't exist for recipe {recipe}", level=logging.ERROR)
                 self.originalGraph.add_edge(i, ingr)
+
+    def _makeAtoms(self):
+        for node in self.atomicItems["node"]:
+            preds =  list(self.originalGraph.predecessors(node))
+            if len(preds) > 0:
+                self.log(f"input node {node} has predecessors {preds}, removing", level=logging.INFO)
+                for pred in preds:
+                    self.originalGraph.remove_edge(pred, node)
+
 
     def _getCycles(self) -> dict[str, set]:
         cycles = [c for c in nx.strongly_connected_components(self.originalGraph) if len(c) > 1]

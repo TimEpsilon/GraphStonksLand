@@ -58,11 +58,11 @@ class NodeSolver(ABC):
             handler = logging.StreamHandler()
             handler.setFormatter(logging.Formatter(f'%(levelname)s - %(name)s - %(funcName)s - %(message)s'))
             logger.addHandler(handler)
-            logger.setLevel(logging.INFO)
+            logger.setLevel(logging.DEBUG)
         return logger
 
     def log(self, message, level=logging.INFO):
-        self.logger.log(level, f'{message}', stacklevel=2)
+        self.logger.log(level, f'{self.thisNode} - {message}', stacklevel=2)
 
 
     @staticmethod

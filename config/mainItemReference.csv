@@ -103,7 +103,6 @@ born_in_chaos_v1:bagof_candy,3200.0
 born_in_chaos_v1:elixirof_insect_protection,650.0
 createoreexcavation:raw_redstone,75.0
 minecraft:amethyst_cluster,40.0
-#experience,150.0
 somemoreblocks:polished_snow,0.5
 born_in_chaos_v1:monster_flesh,25.0
 minecraft:torchflower,5.0
@@ -200,7 +199,7 @@ minecraft:tadpole_bucket,100.0
 born_in_chaos_v1:bloody_gadfly_eye,30.0
 #archeology_fossils,7500.0
 born_in_chaos_v1:rotten_fish,27.5
-minecraft:pointed_dripstone,1.0
+minecraft:pointed_dripstone,0.02
 minecraft:netherrack,0.1
 hazennstuff:the_tribunes_medallion,1300.0
 minecraft:turtle_egg,45.0
@@ -213,7 +212,6 @@ irons_spellbooks:scroll,40.0
 irons_spellbooks:divine_soulshard,7200.0
 somemoreblocks:polished_basalt_bricks,0.5
 minecraft:water,2.5
-#create:lightnings,1800.0
 minecraft:milk,7.5
 irons_spellbooks:greater_healing_elixir,650.0
 #logs,5.0
@@ -221,7 +219,7 @@ irons_spellbooks:greater_healing_elixir,650.0
 #minecraft:leaves,0.2
 #flowers,0.5
 #tall_flowers,0.5
-#dirts,0.3
+#dirts,0.2
 #tombstones,25000.0
 #pot_sherds,4000.0
 #skulls,750.0
@@ -254,14 +252,15 @@ minecraft:wheat,30.0
 #zinc_ores,25.0
 born_in_chaos_v1:empty_fel_lamp,210.0
 born_in_chaos_v1:lord_pumpkinheads_empty_lamp,1050.0
-#create:honey,30.0
+#create:honeys,30.0
 #crystal_chronicles:flesh_blocks,1.0
 #crystal_chronicles:flesh_plants,0.25
 born_in_chaos_v1:magical_holiday_candy,45.0
 create_wizardry:lightning_bucket,80.0
 sophisticatedcore:xp_bucket,25.0
-#plants,0.25
+#plants,0.5
 #minecraft:saplings,0.2
 stonkstimecore:time_gear,21600.0
 createoreexcavation:raw_emerald,100.0
 minecraft:raw_copper,6.0
+#stones,0.3
