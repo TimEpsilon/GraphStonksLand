@@ -30,12 +30,13 @@ class ItemSolver(NodeSolver):
         if self.arePredecessorsSolved():
             # The logic is x = rk / ck
             # For a given node k, there is only one ck but multiple rk
-            candidates = [np.array(list(self.graph.nodes[p]["SCT"])) / self.graph[p][self.thisNode].get("weight", np.nan) for p in self.predecessors]
+            candidates = dict()
+            for p in self.predecessors:
+                candidates[p] = self.cutTooLow(np.array(list(self.graph.nodes[p]["SCT"])) / self.graph[p][self.thisNode].get("weight", np.nan))
             if len(candidates) == 0:
                 self.log(f"{self.thisNode} has no value. Skipping.")
-            candidates = np.concatenate(candidates)
-            candidates = self.cutTooLow(candidates)
-            self.graph.nodes[self.thisNode]["SCT"] = candidates
+            self.graph.nodes[self.thisNode]["SCT"] = set().union(*candidates.values())
+            self.graph.nodes[self.thisNode]["SCTMap"] = candidates
             self.graph.nodes[self.thisNode]["hasComputed"] = True
             self.log(f"{self.thisNode} has values {candidates}")
         else:

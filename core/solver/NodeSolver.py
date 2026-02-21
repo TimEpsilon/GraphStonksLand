@@ -71,7 +71,19 @@ class NodeSolver(ABC):
         candidates = np.round(candidates / threshold) * threshold
         return set(candidates[candidates >= threshold].astype(float).tolist())
 
-    def selectionMethod(self, values : set):
-        result = min(values) if len(values) > 0 else 0
+    @staticmethod
+    def selectionMethod(values : set | dict[str, set[float]]):
+        vals = values.copy()
+        if type(values) == dict:
+            vals = [values[f] for f in values.keys() if f.startswith("minecraft:")]  # Priority to minecraft recipes
+            vals = set().union(*vals)
+            if len(vals) == 0:
+                vals = set().union(*values.values())
+        vals = np.array(list(vals))
+        result = min(vals[vals != 0]) if len(vals[vals != 0]) > 0 else 0
+        return result
+
+    def _selectionMethod(self, values : set | dict[str, float]):
+        result = NodeSolver.selectionMethod(values)
         self.log(f"Candidates {values} have been reduced to {result}", level=logging.DEBUG)
         return {result}

@@ -96,9 +96,7 @@ class Propagation:
         outputs = pd.DataFrame(columns=("node","SCT"))
         for node,data in self.graph.nodes.data():
             if data["type"] == "item":
-                sct = np.array(list(data["SCT"])).astype(float)
-                sct = sct[sct!=0]
-                out = sct.min() if len(sct) > 0 else 0
+                out = NodeSolver.selectionMethod(data["SCTMap"] if "SCTMap" in data else data["SCT"])
                 out = format(out, '.3f')
                 outputs.loc[len(outputs)] = [node, out]
 
@@ -169,6 +167,7 @@ class Propagation:
         crossmatch = pd.read_csv(path)
         crossmatch["value"] = crossmatch["value"].astype(float)
         crossmatch.set_index("node", inplace=True)
+        #print(crossmatch.index[crossmatch.duplicated(keep=False)])
 
         counter = 0
         for i,row in self.inputs.copy().iterrows():

@@ -271,7 +271,6 @@
   "#plant_foods" : [
     "minecraft:carrot",
     "minecraft:beetroot",
-    "minecraft:melon_slice",
     "minecraft:potato"
   ],
   "#meat_foods" : [
@@ -394,7 +393,9 @@
     "hazennstuff:runestone_slag",
     "hazennstuff:voidstone",
     "minecraft:basalt",
-    "minecraft:end_stone"
+    "minecraft:end_stone",
+    "minecraft:warped_nylium",
+    "minecraft:crimson_nylium"
   ],
   "#seeds" : [
     "#c:seeds",
@@ -541,7 +542,8 @@
     "#minecraft:music_discs",
     "vista:cassette",
     "betterarcheology:music_disc_swings",
-    "irons_spellbooks:music_disc_dead_king_lullaby"
+    "irons_spellbooks:music_disc_dead_king_lullaby",
+    "irons_spellbooks:music_disc_whispers_of_ice"
   ],
   "#crystal_chronicles:flesh_blocks" : [
     "crystal_chronicles:alveolus_block",

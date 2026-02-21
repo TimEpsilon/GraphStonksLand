@@ -38,7 +38,7 @@ class IngredientSolver(NodeSolver):
             if len(self.predecessors) > 0:
                 candidates = set.union(*self.predecessorsValue.values())
                 candidates = self.cutTooLow(candidates)
-                candidates = self.selectionMethod(candidates)
+                candidates = self._selectionMethod(candidates)
             else :
                 self.log(f"{self.thisNode} has no predecessors.", level=logging.WARNING)
                 candidates = set()

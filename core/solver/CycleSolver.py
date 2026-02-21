@@ -45,7 +45,7 @@ class CycleSolver(NodeSolver):
                 elif targetType == "ingredient":
                     # The logic is Xi = {xi}
                     candidates = set.union(*values.values())
-                    candidates = self.selectionMethod(candidates)
+                    candidates = self._selectionMethod(candidates)
                 elif targetType == "recipe":
                     # The logic is r = sum(Xi * ci)
                     keys = list(values.keys())
@@ -101,7 +101,7 @@ class CycleSolver(NodeSolver):
                             candidates.update(self.subgraph.nodes[node]["originalSCT"])
 
                         if candidates:
-                            candidates = self.selectionMethod(candidates)
+                            candidates = self._selectionMethod(candidates)
                             candidates = self.cutTooLow(candidates)
                         updatedSCT[node] = candidates
 
