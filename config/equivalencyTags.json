@@ -395,7 +395,8 @@
     "minecraft:basalt",
     "minecraft:end_stone",
     "minecraft:warped_nylium",
-    "minecraft:crimson_nylium"
+    "minecraft:crimson_nylium",
+    "minecraft:cinnabar"
   ],
   "#seeds" : [
     "#c:seeds",
@@ -457,7 +458,7 @@
     "hazennstuff:solar_core_blackstone_ore"
   ],
   "#dark_metal_ores" : [
-    "born_in_chaos_v1:pieceofdarkmetal"
+    "born_in_chaos_v1:dark_metal_deposit"
   ],
   "#create:blaze_burners" : [
     "create:blaze_burner",
@@ -471,7 +472,7 @@
     "#supplementaries:bamboo_spikes"
   ],
   "#relics": [
-    "#rarcompat:mimificable",
+    "#reliquified_artifacts:mimificable",
     "arcane_abilities:fate_beacon",
     "arcane_abilities:icy_crystal",
     "arcane_abilities:shadow_lantern",
@@ -690,5 +691,18 @@
     "somemoreblocks:exposed_cracked_cut_copper",
     "somemoreblocks:weathered_cracked_cut_copper",
     "somemoreblocks:oxidized_cracked_cut_copper"
+  ],
+  "#darkdoppelganger:drops" : [
+    "darkdoppelganger:doppelganger_ring",
+    "darkdoppelganger:elder_necklace",
+    "darkdoppelganger:summons_necklace"
+  ],
+  "#irons_spellbooks:tyros_drops" : [
+    "irons_spellbooks:decrepit_scythe",
+    "irons_spellbooks:betrayer_signet"
+  ],
+  "#irons_spellbooks:dead_king_drops" : [
+    "irons_spellbooks:blood_staff",
+    "irons_spellbooks:necronomicon_spell_book"
   ]
 }

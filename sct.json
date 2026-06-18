@@ -849,9 +849,6 @@
         "minecraft:beetroot": {
             "SCT": 7.5
         },
-        "minecraft:melon_slice": {
-            "SCT": 7.5
-        },
         "minecraft:potato": {
             "SCT": 7.5
         },
@@ -1002,7 +999,7 @@
         "#c:ores/redstone": {
             "SCT": 45.0
         },
-        "#rarcompat:mimificable": {
+        "#reliquified_artifacts:mimificable": {
             "SCT": 5000.0
         },
         "arcane_abilities:fate_beacon": {
@@ -1182,6 +1179,9 @@
         "minecraft:crimson_nylium": {
             "SCT": 0.3
         },
+        "minecraft:cinnabar": {
+            "SCT": 0.3
+        },
         "#supplementaries:awnings": {
             "SCT": 23.1
         },
@@ -1249,7 +1249,7 @@
             "SCT": 4.0
         },
         "#supplementaries:sacks": {
-            "SCT": 120.0
+            "SCT": 23.4
         },
         "#supplementaries:trapped_presents": {
             "SCT": 22.42
@@ -1421,12 +1421,6 @@
         },
         "amendments:dragon_charge": {
             "SCT": 235.9
-        },
-        "arcane_abilities:skills_grimoire": {
-            "SCT": 40.51
-        },
-        "artifacts:eternal_steak": {
-            "SCT": 5000.0
         },
         "better_weaponry:amethyst_armor_boots": {
             "SCT": 22.84
@@ -1957,13 +1951,13 @@
             "SCT": 5.0
         },
         "betterarcheology:cracked_mud_brick_slab": {
-            "SCT": 15.1
+            "SCT": 0.1
         },
         "betterarcheology:cracked_mud_brick_stairs": {
-            "SCT": 30.2
+            "SCT": 0.2
         },
         "betterarcheology:cracked_mud_bricks": {
-            "SCT": 30.2
+            "SCT": 0.2
         },
         "betterarcheology:creeper_fossil": {
             "SCT": 15000.0
@@ -2107,13 +2101,13 @@
             "SCT": 10.0
         },
         "born_in_chaos_v1:creepy_cookies_with_milk": {
-            "SCT": 3782.55
+            "SCT": 36.3
         },
         "born_in_chaos_v1:creepy_gift": {
             "SCT": 1900.0
         },
         "born_in_chaos_v1:creepy_nutcracker": {
-            "SCT": 480.05
+            "SCT": 485.0
         },
         "born_in_chaos_v1:damned_demomans_hat_helmet": {
             "SCT": 1600.0
@@ -2242,7 +2236,7 @@
             "SCT": 385.0
         },
         "born_in_chaos_v1:icy_sweetness": {
-            "SCT": 5872.75
+            "SCT": 5872.52
         },
         "born_in_chaos_v1:infernal_evil_pumpkin": {
             "SCT": 151.3
@@ -2320,7 +2314,7 @@
             "SCT": 600.0
         },
         "born_in_chaos_v1:nut_hammer": {
-            "SCT": 400.65
+            "SCT": 405.6
         },
         "born_in_chaos_v1:orange_stained_glass": {
             "SCT": 3.62
@@ -2494,7 +2488,7 @@
             "SCT": 22.73
         },
         "born_in_chaos_v1:stimulating_bomb": {
-            "SCT": 715.25
+            "SCT": 715.02
         },
         "born_in_chaos_v1:stimulating_decoction": {
             "SCT": 650.0
@@ -2518,7 +2512,7 @@
             "SCT": 1520.0
         },
         "born_in_chaos_v1:transforming_easter_cake": {
-            "SCT": 303.46
+            "SCT": 303.34
         },
         "born_in_chaos_v1:transmuting_elixir": {
             "SCT": 1670.0
@@ -2531,6 +2525,162 @@
         },
         "born_in_chaos_v1:wood_splitter_axe": {
             "SCT": 60.0
+        },
+        "bountiful:bounty": {
+            "SCT": 0.0
+        },
+        "bountiful:bountyboard": {
+            "SCT": 96.0
+        },
+        "bountiful:decree": {
+            "SCT": 48.61
+        },
+        "brewinandchewin:apple_jelly": {
+            "SCT": 30.02
+        },
+        "brewinandchewin:beer": {
+            "SCT": 2.52
+        },
+        "brewinandchewin:bloody_mary": {
+            "SCT": 2.52
+        },
+        "brewinandchewin:cheesy_pasta": {
+            "SCT": 43.75
+        },
+        "brewinandchewin:coaster": {
+            "SCT": 0.6
+        },
+        "brewinandchewin:cocoa_fudge": {
+            "SCT": 0.62
+        },
+        "brewinandchewin:creamy_onion_soup": {
+            "SCT": 37.5
+        },
+        "brewinandchewin:dread_nog": {
+            "SCT": 2.52
+        },
+        "brewinandchewin:egg_grog": {
+            "SCT": 2.52
+        },
+        "brewinandchewin:fiery_fondue": {
+            "SCT": 0.0
+        },
+        "brewinandchewin:fiery_fondue_pot": {
+            "SCT": 38.43
+        },
+        "brewinandchewin:flaxen_cheese_wedge": {
+            "SCT": 0.0
+        },
+        "brewinandchewin:flaxen_cheese_wheel": {
+            "SCT": 0.0
+        },
+        "brewinandchewin:flowing_honey": {
+            "SCT": 0.0
+        },
+        "brewinandchewin:glittering_grenadine": {
+            "SCT": 2.52
+        },
+        "brewinandchewin:glow_berry_marmalade": {
+            "SCT": 15.02
+        },
+        "brewinandchewin:ham_and_cheese_sandwich": {
+            "SCT": 30.0
+        },
+        "brewinandchewin:heating_cask": {
+            "SCT": 247.14
+        },
+        "brewinandchewin:honey": {
+            "SCT": 0.0
+        },
+        "brewinandchewin:horror_lasagna": {
+            "SCT": 38.43
+        },
+        "brewinandchewin:ice_crate": {
+            "SCT": 30.82
+        },
+        "brewinandchewin:jerky": {
+            "SCT": 2.5
+        },
+        "brewinandchewin:keg": {
+            "SCT": 214.96
+        },
+        "brewinandchewin:kimchi": {
+            "SCT": 3.8
+        },
+        "brewinandchewin:kippers": {
+            "SCT": 13.8
+        },
+        "brewinandchewin:kombucha": {
+            "SCT": 2.52
+        },
+        "brewinandchewin:mead": {
+            "SCT": 2.52
+        },
+        "brewinandchewin:pale_jane": {
+            "SCT": 0.57
+        },
+        "brewinandchewin:pickled_pickles": {
+            "SCT": 3.0
+        },
+        "brewinandchewin:pizza": {
+            "SCT": 91.92
+        },
+        "brewinandchewin:pizza_slice": {
+            "SCT": 22.98
+        },
+        "brewinandchewin:quiche": {
+            "SCT": 125.04
+        },
+        "brewinandchewin:quiche_slice": {
+            "SCT": 31.26
+        },
+        "brewinandchewin:red_rum": {
+            "SCT": 2.52
+        },
+        "brewinandchewin:rice_wine": {
+            "SCT": 0.8
+        },
+        "brewinandchewin:saccharine_rum": {
+            "SCT": 2.52
+        },
+        "brewinandchewin:salty_folly": {
+            "SCT": 1.1
+        },
+        "brewinandchewin:scarlet_cheese_wedge": {
+            "SCT": 0.0
+        },
+        "brewinandchewin:scarlet_cheese_wheel": {
+            "SCT": 0.0
+        },
+        "brewinandchewin:scarlet_pierogi": {
+            "SCT": 42.5
+        },
+        "brewinandchewin:steel_toe_stout": {
+            "SCT": 2.52
+        },
+        "brewinandchewin:strongroot_ale": {
+            "SCT": 2.52
+        },
+        "brewinandchewin:sweet_berry_jam": {
+            "SCT": 15.02
+        },
+        "brewinandchewin:tankard": {
+            "SCT": 2.52
+        },
+        "brewinandchewin:unripe_flaxen_cheese_wheel": {
+            "SCT": 0.82
+        },
+        "brewinandchewin:unripe_scarlet_cheese_wheel": {
+            "SCT": 5.52
+        },
+        "brewinandchewin:vegetable_omelet": {
+            "SCT": 41.5
+        },
+        "brewinandchewin:vodka": {
+            "SCT": 2.52
+        },
+        "brewinandchewin:withering_dross": {
+            "SCT": 2.52
         },
         "chimes:amethyst_chimes": {
             "SCT": 55.71
@@ -2614,7 +2764,7 @@
             "SCT": 0.82
         },
         "create:bar_of_chocolate": {
-            "SCT": 1875.0
+            "SCT": 2.5
         },
         "create:basin": {
             "SCT": 4.3
@@ -2629,10 +2779,10 @@
             "SCT": 0.76
         },
         "create:blaze_cake": {
-            "SCT": 19.85
+            "SCT": 19.62
         },
         "create:blaze_cake_base": {
-            "SCT": 17.35
+            "SCT": 17.12
         },
         "create:bound_cardboard_block": {
             "SCT": 18.2
@@ -2677,7 +2827,7 @@
             "SCT": 148.74
         },
         "create:builders_tea": {
-            "SCT": 937.55
+            "SCT": 0.05
         },
         "create:calcite_pillar": {
             "SCT": 0.3
@@ -2704,7 +2854,7 @@
             "SCT": 2.2
         },
         "create:cart_assembler": {
-            "SCT": 26.82
+            "SCT": 36.72
         },
         "create:chain_conveyor": {
             "SCT": 8.43
@@ -2716,13 +2866,13 @@
             "SCT": 0.76
         },
         "create:chocolate": {
-            "SCT": 7.5
+            "SCT": 0.01
         },
         "create:chocolate_bucket": {
-            "SCT": 7500.0
+            "SCT": 10.0
         },
         "create:chocolate_glazed_berries": {
-            "SCT": 1880.0
+            "SCT": 7.5
         },
         "create:chute": {
             "SCT": 26.25
@@ -2797,7 +2947,7 @@
             "SCT": 1.83
         },
         "create:crafting_blueprint": {
-            "SCT": 69.76
+            "SCT": 10.96
         },
         "create:crimsite_pillar": {
             "SCT": 0.3
@@ -3225,6 +3375,9 @@
         "create:filter": {
             "SCT": 63.88
         },
+        "create:flowing_chocolate": {
+            "SCT": 0.0
+        },
         "create:fluid_pipe": {
             "SCT": 4.5
         },
@@ -3370,7 +3523,7 @@
             "SCT": 0.3
         },
         "create:linear_chassis": {
-            "SCT": 0.62
+            "SCT": 5.57
         },
         "create:linked_controller": {
             "SCT": 39.78
@@ -3688,7 +3841,7 @@
             "SCT": 37.7
         },
         "create:radial_chassis": {
-            "SCT": 0.62
+            "SCT": 5.57
         },
         "create:railway_casing": {
             "SCT": 173.99
@@ -3748,7 +3901,7 @@
             "SCT": 2.46
         },
         "create:schematicannon": {
-            "SCT": 704.6
+            "SCT": 714.5
         },
         "create:scorchia_pillar": {
             "SCT": 0.3
@@ -3757,7 +3910,7 @@
             "SCT": 0.3
         },
         "create:secondary_linear_chassis": {
-            "SCT": 0.62
+            "SCT": 5.57
         },
         "create:sequenced_gearshift": {
             "SCT": 295.87
@@ -3985,10 +4138,10 @@
             "SCT": 97.34
         },
         "create:sweet_roll": {
-            "SCT": 1905.0
+            "SCT": 32.5
         },
         "create:tea": {
-            "SCT": 3.75
+            "SCT": 0.01
         },
         "create:tiled_glass": {
             "SCT": 0.3
@@ -4051,7 +4204,7 @@
             "SCT": 10.06
         },
         "create:waxed_copper_shingle_slab": {
-            "SCT": 71.5
+            "SCT": 36.5
         },
         "create:waxed_copper_shingle_stairs": {
             "SCT": 73.0
@@ -4060,7 +4213,7 @@
             "SCT": 73.0
         },
         "create:waxed_copper_tile_slab": {
-            "SCT": 71.5
+            "SCT": 36.5
         },
         "create:waxed_copper_tile_stairs": {
             "SCT": 73.0
@@ -4069,7 +4222,7 @@
             "SCT": 73.0
         },
         "create:waxed_exposed_copper_shingle_slab": {
-            "SCT": 71.5
+            "SCT": 36.5
         },
         "create:waxed_exposed_copper_shingle_stairs": {
             "SCT": 73.0
@@ -4078,7 +4231,7 @@
             "SCT": 73.0
         },
         "create:waxed_exposed_copper_tile_slab": {
-            "SCT": 71.5
+            "SCT": 36.5
         },
         "create:waxed_exposed_copper_tile_stairs": {
             "SCT": 73.0
@@ -4087,7 +4240,7 @@
             "SCT": 73.0
         },
         "create:waxed_oxidized_copper_shingle_slab": {
-            "SCT": 71.5
+            "SCT": 36.5
         },
         "create:waxed_oxidized_copper_shingle_stairs": {
             "SCT": 73.0
@@ -4096,7 +4249,7 @@
             "SCT": 73.0
         },
         "create:waxed_oxidized_copper_tile_slab": {
-            "SCT": 71.5
+            "SCT": 36.5
         },
         "create:waxed_oxidized_copper_tile_stairs": {
             "SCT": 73.0
@@ -4105,7 +4258,7 @@
             "SCT": 73.0
         },
         "create:waxed_weathered_copper_shingle_slab": {
-            "SCT": 71.5
+            "SCT": 36.5
         },
         "create:waxed_weathered_copper_shingle_stairs": {
             "SCT": 73.0
@@ -4114,7 +4267,7 @@
             "SCT": 73.0
         },
         "create:waxed_weathered_copper_tile_slab": {
-            "SCT": 71.5
+            "SCT": 36.5
         },
         "create:waxed_weathered_copper_tile_stairs": {
             "SCT": 73.0
@@ -4177,7 +4330,7 @@
             "SCT": 461.24
         },
         "create_wizardry:blood_bucket": {
-            "SCT": 240.0
+            "SCT": 120.0
         },
         "create_wizardry:channeler": {
             "SCT": 420.97
@@ -4239,8 +4392,38 @@
         "createoreexcavation:vein_finder": {
             "SCT": 91.91
         },
+        "crystal_chronicles:acidic_brine_bucket": {
+            "SCT": 0.0
+        },
+        "crystal_chronicles:aurum": {
+            "SCT": 0.0
+        },
+        "crystal_chronicles:aurum_slab": {
+            "SCT": 0.0
+        },
+        "crystal_chronicles:aurum_stairs": {
+            "SCT": 0.0
+        },
+        "crystal_chronicles:aurum_wall": {
+            "SCT": 0.0
+        },
+        "crystal_chronicles:avaricite_shard": {
+            "SCT": 1850.0
+        },
+        "crystal_chronicles:blood_knight_boots": {
+            "SCT": 2130.65
+        },
+        "crystal_chronicles:blood_knight_chestplate": {
+            "SCT": 2130.65
+        },
+        "crystal_chronicles:blood_knight_helmet": {
+            "SCT": 2130.65
+        },
+        "crystal_chronicles:blood_knight_leggings": {
+            "SCT": 2130.65
+        },
         "crystal_chronicles:blood_scythe": {
-            "SCT": 1998.48
+            "SCT": 3693.58
         },
         "crystal_chronicles:bronchus_button": {
             "SCT": 1.25
@@ -4269,9 +4452,6 @@
         "crystal_chronicles:bronchus_trapdoor": {
             "SCT": 3.75
         },
-        "crystal_chronicles:chakram": {
-            "SCT": 2543.44
-        },
         "crystal_chronicles:chiseled_crustone": {
             "SCT": 0.3
         },
@@ -4284,31 +4464,28 @@
         "crystal_chronicles:chiseled_crustone_wall": {
             "SCT": 0.3
         },
-        "crystal_chronicles:clever_light": {
-            "SCT": 32.4
+        "crystal_chronicles:cracked_crustone_brick_slab": {
+            "SCT": 0.15
+        },
+        "crystal_chronicles:cracked_crustone_brick_stairs": {
+            "SCT": 0.3
+        },
+        "crystal_chronicles:cracked_crustone_brick_wall": {
+            "SCT": 0.3
         },
         "crystal_chronicles:cracked_crustone_bricks": {
             "SCT": 0.3
         },
-        "crystal_chronicles:cracked_crustone_bricks_slab": {
+        "crystal_chronicles:crustone_brick_slab": {
             "SCT": 0.15
         },
-        "crystal_chronicles:cracked_crustone_bricks_stairs": {
+        "crystal_chronicles:crustone_brick_stairs": {
             "SCT": 0.3
         },
-        "crystal_chronicles:cracked_crustone_bricks_wall": {
+        "crystal_chronicles:crustone_brick_wall": {
             "SCT": 0.3
         },
         "crystal_chronicles:crustone_bricks": {
-            "SCT": 0.3
-        },
-        "crystal_chronicles:crustone_bricks_slab": {
-            "SCT": 0.15
-        },
-        "crystal_chronicles:crustone_bricks_stairs": {
-            "SCT": 0.3
-        },
-        "crystal_chronicles:crustone_bricks_wall": {
             "SCT": 0.3
         },
         "crystal_chronicles:crustone_slab": {
@@ -4320,41 +4497,50 @@
         "crystal_chronicles:crustone_wall": {
             "SCT": 0.3
         },
+        "crystal_chronicles:diffraction_ring": {
+            "SCT": 7260.0
+        },
         "crystal_chronicles:divinite_shard": {
-            "SCT": 656.42
+            "SCT": 1850.71
         },
-        "crystal_chronicles:electromancer_boots": {
-            "SCT": 1026.36
+        "crystal_chronicles:ender_mage_boots": {
+            "SCT": 2130.6
         },
-        "crystal_chronicles:electromancer_chestplate": {
-            "SCT": 1266.36
+        "crystal_chronicles:ender_mage_chestplate": {
+            "SCT": 2130.6
         },
-        "crystal_chronicles:electromancer_helmet": {
-            "SCT": 1086.36
+        "crystal_chronicles:ender_mage_helmet": {
+            "SCT": 2130.6
         },
-        "crystal_chronicles:electromancer_leggings": {
-            "SCT": 1206.36
+        "crystal_chronicles:ender_mage_leggings": {
+            "SCT": 2130.6
+        },
+        "crystal_chronicles:ender_sickle": {
+            "SCT": 3718.48
+        },
+        "crystal_chronicles:ender_staff": {
+            "SCT": 8229.5
+        },
+        "crystal_chronicles:evocation_knight_boots": {
+            "SCT": 2310.6
+        },
+        "crystal_chronicles:evocation_knight_chestplate": {
+            "SCT": 2310.6
+        },
+        "crystal_chronicles:evocation_knight_helmet": {
+            "SCT": 2310.6
+        },
+        "crystal_chronicles:evocation_knight_leggings": {
+            "SCT": 2310.6
         },
         "crystal_chronicles:evocation_twinblade": {
-            "SCT": 740.6
-        },
-        "crystal_chronicles:evoker_boots": {
-            "SCT": 960.6
-        },
-        "crystal_chronicles:evoker_chestplate": {
-            "SCT": 1200.6
-        },
-        "crystal_chronicles:evoker_helmet": {
-            "SCT": 1020.6
-        },
-        "crystal_chronicles:evoker_leggings": {
-            "SCT": 1140.6
+            "SCT": 3718.48
         },
         "crystal_chronicles:eye": {
             "SCT": 30.0
         },
         "crystal_chronicles:eye_block": {
-            "SCT": 120.0
+            "SCT": 301.8
         },
         "crystal_chronicles:fat_tissue_ball": {
             "SCT": 10.0
@@ -4362,62 +4548,116 @@
         "crystal_chronicles:fat_tissue_block": {
             "SCT": 40.0
         },
+        "crystal_chronicles:fire_chakram": {
+            "SCT": 3798.48
+        },
+        "crystal_chronicles:fire_knight_boots": {
+            "SCT": 2130.6
+        },
+        "crystal_chronicles:fire_knight_chestplate": {
+            "SCT": 2130.6
+        },
+        "crystal_chronicles:fire_knight_helmet": {
+            "SCT": 2130.6
+        },
+        "crystal_chronicles:fire_knight_leggings": {
+            "SCT": 2130.6
+        },
         "crystal_chronicles:floralite_shard": {
-            "SCT": 613.21
+            "SCT": 1807.5
+        },
+        "crystal_chronicles:green_salt_deposit": {
+            "SCT": 0.0
         },
         "crystal_chronicles:hemalite_block": {
             "SCT": 50.0
         },
         "crystal_chronicles:hemalite_shard": {
-            "SCT": 665.76
+            "SCT": 1830.05
+        },
+        "crystal_chronicles:holy_knight_boots": {
+            "SCT": 2316.99
+        },
+        "crystal_chronicles:holy_knight_chestplate": {
+            "SCT": 2316.99
+        },
+        "crystal_chronicles:holy_knight_helmet": {
+            "SCT": 2316.99
+        },
+        "crystal_chronicles:holy_knight_leggings": {
+            "SCT": 2316.99
+        },
+        "crystal_chronicles:holy_shield": {
+            "SCT": 3876.42
+        },
+        "crystal_chronicles:holy_sword": {
+            "SCT": 3839.9
         },
         "crystal_chronicles:ice_hammer": {
-            "SCT": 3057.95
+            "SCT": 3644.02
+        },
+        "crystal_chronicles:ice_knight_boots": {
+            "SCT": 1866.24
+        },
+        "crystal_chronicles:ice_knight_chestplate": {
+            "SCT": 1866.24
+        },
+        "crystal_chronicles:ice_knight_helmet": {
+            "SCT": 1866.24
+        },
+        "crystal_chronicles:ice_knight_leggings": {
+            "SCT": 1866.24
         },
         "crystal_chronicles:ice_shard": {
-            "SCT": 611.35
+            "SCT": 1805.64
         },
         "crystal_chronicles:lightning_bident": {
-            "SCT": 1878.48
+            "SCT": 4318.58
         },
-        "crystal_chronicles:mage_boots": {
-            "SCT": 1116.31
+        "crystal_chronicles:lightning_knight_boots": {
+            "SCT": 2040.65
         },
-        "crystal_chronicles:mage_chestplate": {
-            "SCT": 1356.31
+        "crystal_chronicles:lightning_knight_chestplate": {
+            "SCT": 2040.65
         },
-        "crystal_chronicles:mage_helmet": {
-            "SCT": 1176.31
+        "crystal_chronicles:lightning_knight_helmet": {
+            "SCT": 2040.65
         },
-        "crystal_chronicles:mage_leggings": {
-            "SCT": 1296.31
+        "crystal_chronicles:lightning_knight_leggings": {
+            "SCT": 2040.65
+        },
+        "crystal_chronicles:lightning_staff": {
+            "SCT": 2614.05
+        },
+        "crystal_chronicles:nature_knight_boots": {
+            "SCT": 1928.1
+        },
+        "crystal_chronicles:nature_knight_chestplate": {
+            "SCT": 1928.1
+        },
+        "crystal_chronicles:nature_knight_helmet": {
+            "SCT": 1928.1
+        },
+        "crystal_chronicles:nature_knight_leggings": {
+            "SCT": 1928.1
+        },
+        "crystal_chronicles:nature_spear": {
+            "SCT": 3634.18
         },
         "crystal_chronicles:neuron": {
             "SCT": 10.0
         },
         "crystal_chronicles:neuron_block": {
-            "SCT": 80.4
+            "SCT": 281.8
         },
         "crystal_chronicles:neuron_torch": {
-            "SCT": 10.25
+            "SCT": 2.56
         },
-        "crystal_chronicles:paladin_boots": {
-            "SCT": 1302.7
+        "crystal_chronicles:orange_salt_deposit": {
+            "SCT": 0.0
         },
-        "crystal_chronicles:paladin_chestplate": {
-            "SCT": 1542.7
-        },
-        "crystal_chronicles:paladin_helmet": {
-            "SCT": 1362.7
-        },
-        "crystal_chronicles:paladin_leggings": {
-            "SCT": 1482.7
-        },
-        "crystal_chronicles:paladin_shield": {
-            "SCT": 1487.84
-        },
-        "crystal_chronicles:paladin_sword": {
-            "SCT": 1313.44
+        "crystal_chronicles:player_sensor": {
+            "SCT": 66.8
         },
         "crystal_chronicles:polished_crustone": {
             "SCT": 0.3
@@ -4431,71 +4671,86 @@
         "crystal_chronicles:polished_crustone_wall": {
             "SCT": 0.3
         },
-        "crystal_chronicles:pyromancer_boots": {
-            "SCT": 1116.31
+        "crystal_chronicles:polished_stone_bricks": {
+            "SCT": 0.3
         },
-        "crystal_chronicles:pyromancer_chestplate": {
-            "SCT": 1356.31
+        "crystal_chronicles:portal_frame_block": {
+            "SCT": 15.3
         },
-        "crystal_chronicles:pyromancer_helmet": {
-            "SCT": 1176.31
+        "crystal_chronicles:prismatic_knight_boots": {
+            "SCT": 9066.54
         },
-        "crystal_chronicles:pyromancer_leggings": {
-            "SCT": 1296.31
+        "crystal_chronicles:prismatic_knight_chestplate": {
+            "SCT": 9066.54
         },
-        "crystal_chronicles:rogue_boots": {
-            "SCT": 1386.36
+        "crystal_chronicles:prismatic_knight_helmet": {
+            "SCT": 9066.54
         },
-        "crystal_chronicles:rogue_chestplate": {
-            "SCT": 1626.36
+        "crystal_chronicles:prismatic_knight_leggings": {
+            "SCT": 9066.54
         },
-        "crystal_chronicles:rogue_helmet": {
-            "SCT": 1446.36
+        "crystal_chronicles:pyrite": {
+            "SCT": 0.0
         },
-        "crystal_chronicles:rogue_leggings": {
-            "SCT": 1566.36
+        "crystal_chronicles:pyrite_chunk": {
+            "SCT": 0.0
+        },
+        "crystal_chronicles:pyrite_slab": {
+            "SCT": 0.0
+        },
+        "crystal_chronicles:pyrite_stairs": {
+            "SCT": 0.0
+        },
+        "crystal_chronicles:pyrite_wall": {
+            "SCT": 0.0
+        },
+        "crystal_chronicles:red_salt_deposit": {
+            "SCT": 0.0
         },
         "crystal_chronicles:rotten_flesh_block": {
             "SCT": 10.0
         },
-        "crystal_chronicles:spear": {
-            "SCT": 1840.83
+        "crystal_chronicles:salt_formation": {
+            "SCT": 0.0
         },
-        "crystal_chronicles:staff": {
-            "SCT": 636.91
+        "crystal_chronicles:sulphur_powder": {
+            "SCT": 0.0
         },
-        "crystal_chronicles:tank_boots": {
-            "SCT": 851.95
+        "crystal_chronicles:tall_salt_formation": {
+            "SCT": 0.0
         },
-        "crystal_chronicles:tank_chestplate": {
-            "SCT": 1091.95
+        "crystal_chronicles:tall_villi": {
+            "SCT": 0.0
         },
-        "crystal_chronicles:tank_helmet": {
-            "SCT": 911.95
+        "crystal_chronicles:vermilion_brine_vent_base": {
+            "SCT": 0.0
         },
-        "crystal_chronicles:tank_leggings": {
-            "SCT": 1031.95
+        "crystal_chronicles:vermilion_brine_vent_top": {
+            "SCT": 0.0
         },
-        "crystal_chronicles:toxic_boots": {
-            "SCT": 913.81
+        "crystal_chronicles:vermilion_salt_deposit": {
+            "SCT": 0.0
         },
-        "crystal_chronicles:toxic_chestplate": {
-            "SCT": 1153.81
-        },
-        "crystal_chronicles:toxic_helmet": {
-            "SCT": 973.81
-        },
-        "crystal_chronicles:toxic_leggings": {
-            "SCT": 1093.81
+        "crystal_chronicles:villi": {
+            "SCT": 0.0
         },
         "crystal_chronicles:voidstone_shard": {
-            "SCT": 635.71
+            "SCT": 1830.0
         },
         "crystal_chronicles:volcanite_shard": {
-            "SCT": 635.71
+            "SCT": 1830.0
         },
         "crystal_chronicles:voltite_shard": {
-            "SCT": 625.76
+            "SCT": 1820.05
+        },
+        "crystal_chronicles:yellow_brine_vent_base": {
+            "SCT": 0.0
+        },
+        "crystal_chronicles:yellow_brine_vent_top": {
+            "SCT": 0.0
+        },
+        "crystal_chronicles:yellow_salt_deposit": {
+            "SCT": 0.0
         },
         "darkdoppelganger:doppelganger_ring": {
             "SCT": 7500.0
@@ -4508,6 +4763,9 @@
         },
         "darkdoppelganger:summons_necklace": {
             "SCT": 7500.0
+        },
+        "dummmmmmy:target_dummy": {
+            "SCT": 273.75
         },
         "exposure:aged_photograph": {
             "SCT": 21.75
@@ -4568,6 +4826,549 @@
         },
         "exposure_polaroid:instant_color_slide": {
             "SCT": 0.6
+        },
+        "farmersdelight:acacia_cabinet": {
+            "SCT": 6.22
+        },
+        "farmersdelight:apple_cider": {
+            "SCT": 20.02
+        },
+        "farmersdelight:apple_pie": {
+            "SCT": 210.08
+        },
+        "farmersdelight:apple_pie_slice": {
+            "SCT": 52.52
+        },
+        "farmersdelight:bacon": {
+            "SCT": 10.0
+        },
+        "farmersdelight:bacon_and_eggs": {
+            "SCT": 54.93
+        },
+        "farmersdelight:bacon_sandwich": {
+            "SCT": 40.0
+        },
+        "farmersdelight:baked_cod_stew": {
+            "SCT": 38.25
+        },
+        "farmersdelight:bamboo_basket": {
+            "SCT": 4.8
+        },
+        "farmersdelight:bamboo_cabinet": {
+            "SCT": 6.72
+        },
+        "farmersdelight:barbecue_stick": {
+            "SCT": 10.6
+        },
+        "farmersdelight:beef_patty": {
+            "SCT": 10.0
+        },
+        "farmersdelight:beef_stew": {
+            "SCT": 25.0
+        },
+        "farmersdelight:beetroot_crate": {
+            "SCT": 67.5
+        },
+        "farmersdelight:birch_cabinet": {
+            "SCT": 6.22
+        },
+        "farmersdelight:black_canvas_sign": {
+            "SCT": 4.1
+        },
+        "farmersdelight:black_hanging_canvas_sign": {
+            "SCT": 4.1
+        },
+        "farmersdelight:blue_canvas_sign": {
+            "SCT": 2.35
+        },
+        "farmersdelight:blue_hanging_canvas_sign": {
+            "SCT": 2.35
+        },
+        "farmersdelight:bone_broth": {
+            "SCT": 6.14
+        },
+        "farmersdelight:brown_canvas_sign": {
+            "SCT": 2.25
+        },
+        "farmersdelight:brown_hanging_canvas_sign": {
+            "SCT": 2.25
+        },
+        "farmersdelight:brown_mushroom_colony": {
+            "SCT": 0.0
+        },
+        "farmersdelight:cabbage": {
+            "SCT": 0.0
+        },
+        "farmersdelight:cabbage_crate": {
+            "SCT": 0.0
+        },
+        "farmersdelight:cabbage_leaf": {
+            "SCT": 0.0
+        },
+        "farmersdelight:cabbage_rolls": {
+            "SCT": 0.5
+        },
+        "farmersdelight:cake_slice": {
+            "SCT": 7.79
+        },
+        "farmersdelight:canvas": {
+            "SCT": 1.2
+        },
+        "farmersdelight:canvas_rug": {
+            "SCT": 0.6
+        },
+        "farmersdelight:canvas_sign": {
+            "SCT": 2.65
+        },
+        "farmersdelight:carrot_crate": {
+            "SCT": 67.5
+        },
+        "farmersdelight:cherry_cabinet": {
+            "SCT": 6.22
+        },
+        "farmersdelight:chicken_cuts": {
+            "SCT": 10.0
+        },
+        "farmersdelight:chicken_sandwich": {
+            "SCT": 47.5
+        },
+        "farmersdelight:chicken_soup": {
+            "SCT": 25.0
+        },
+        "farmersdelight:chocolate_pie": {
+            "SCT": 91.12
+        },
+        "farmersdelight:chocolate_pie_slice": {
+            "SCT": 22.78
+        },
+        "farmersdelight:cod_roll": {
+            "SCT": 13.9
+        },
+        "farmersdelight:cod_slice": {
+            "SCT": 13.75
+        },
+        "farmersdelight:cooked_bacon": {
+            "SCT": 10.0
+        },
+        "farmersdelight:cooked_chicken_cuts": {
+            "SCT": 10.0
+        },
+        "farmersdelight:cooked_cod_slice": {
+            "SCT": 13.75
+        },
+        "farmersdelight:cooked_mutton_chops": {
+            "SCT": 10.0
+        },
+        "farmersdelight:cooked_rice": {
+            "SCT": 0.3
+        },
+        "farmersdelight:cooked_salmon_slice": {
+            "SCT": 13.75
+        },
+        "farmersdelight:cooking_pot": {
+            "SCT": 178.6
+        },
+        "farmersdelight:crimson_cabinet": {
+            "SCT": 6.22
+        },
+        "farmersdelight:cutting_board": {
+            "SCT": 6.16
+        },
+        "farmersdelight:cyan_canvas_sign": {
+            "SCT": 2.35
+        },
+        "farmersdelight:cyan_hanging_canvas_sign": {
+            "SCT": 2.35
+        },
+        "farmersdelight:dark_oak_cabinet": {
+            "SCT": 6.22
+        },
+        "farmersdelight:diamond_knife": {
+            "SCT": 80.6
+        },
+        "farmersdelight:dog_food": {
+            "SCT": 13.1
+        },
+        "farmersdelight:dumplings": {
+            "SCT": 15.25
+        },
+        "farmersdelight:egg_sandwich": {
+            "SCT": 64.0
+        },
+        "farmersdelight:fish_stew": {
+            "SCT": 14.68
+        },
+        "farmersdelight:flint_knife": {
+            "SCT": 0.9
+        },
+        "farmersdelight:fried_egg": {
+            "SCT": 17.0
+        },
+        "farmersdelight:fried_rice": {
+            "SCT": 24.8
+        },
+        "farmersdelight:fruit_salad": {
+            "SCT": 23.83
+        },
+        "farmersdelight:full_tatami_mat": {
+            "SCT": 0.6
+        },
+        "farmersdelight:gleaming_salad": {
+            "SCT": 0.0
+        },
+        "farmersdelight:gleaming_salad_block": {
+            "SCT": 26.78
+        },
+        "farmersdelight:glow_berry_custard": {
+            "SCT": 22.07
+        },
+        "farmersdelight:golden_knife": {
+            "SCT": 45.6
+        },
+        "farmersdelight:gray_canvas_sign": {
+            "SCT": 2.6
+        },
+        "farmersdelight:gray_hanging_canvas_sign": {
+            "SCT": 2.6
+        },
+        "farmersdelight:green_canvas_sign": {
+            "SCT": 2.35
+        },
+        "farmersdelight:green_hanging_canvas_sign": {
+            "SCT": 2.35
+        },
+        "farmersdelight:grilled_salmon": {
+            "SCT": 19.68
+        },
+        "farmersdelight:half_tatami_mat": {
+            "SCT": 0.3
+        },
+        "farmersdelight:ham": {
+            "SCT": 0.0
+        },
+        "farmersdelight:hamburger": {
+            "SCT": 40.0
+        },
+        "farmersdelight:hanging_canvas_sign": {
+            "SCT": 5.77
+        },
+        "farmersdelight:honey_cookie": {
+            "SCT": 7.51
+        },
+        "farmersdelight:honey_glazed_ham": {
+            "SCT": 0.0
+        },
+        "farmersdelight:honey_glazed_ham_block": {
+            "SCT": 21.58
+        },
+        "farmersdelight:horse_feed": {
+            "SCT": 298.3
+        },
+        "farmersdelight:hot_cocoa": {
+            "SCT": 0.67
+        },
+        "farmersdelight:iron_knife": {
+            "SCT": 35.6
+        },
+        "farmersdelight:jungle_cabinet": {
+            "SCT": 6.22
+        },
+        "farmersdelight:kelp_roll": {
+            "SCT": 8.4
+        },
+        "farmersdelight:kelp_roll_slice": {
+            "SCT": 2.8
+        },
+        "farmersdelight:light_blue_canvas_sign": {
+            "SCT": 2.3
+        },
+        "farmersdelight:light_blue_hanging_canvas_sign": {
+            "SCT": 2.3
+        },
+        "farmersdelight:light_gray_canvas_sign": {
+            "SCT": 2.35
+        },
+        "farmersdelight:light_gray_hanging_canvas_sign": {
+            "SCT": 2.35
+        },
+        "farmersdelight:lime_canvas_sign": {
+            "SCT": 2.3
+        },
+        "farmersdelight:lime_hanging_canvas_sign": {
+            "SCT": 2.3
+        },
+        "farmersdelight:magenta_canvas_sign": {
+            "SCT": 2.27
+        },
+        "farmersdelight:magenta_hanging_canvas_sign": {
+            "SCT": 2.27
+        },
+        "farmersdelight:mangrove_cabinet": {
+            "SCT": 6.22
+        },
+        "farmersdelight:melon_juice": {
+            "SCT": 2.87
+        },
+        "farmersdelight:melon_popsicle": {
+            "SCT": 21.4
+        },
+        "farmersdelight:milk_bottle": {
+            "SCT": 0.05
+        },
+        "farmersdelight:minced_beef": {
+            "SCT": 10.0
+        },
+        "farmersdelight:mixed_salad": {
+            "SCT": 8.43
+        },
+        "farmersdelight:mushroom_rice": {
+            "SCT": 8.8
+        },
+        "farmersdelight:mutton_chops": {
+            "SCT": 10.0
+        },
+        "farmersdelight:mutton_wrap": {
+            "SCT": 40.0
+        },
+        "farmersdelight:nether_salad": {
+            "SCT": 1.93
+        },
+        "farmersdelight:netherite_knife": {
+            "SCT": 1265.7
+        },
+        "farmersdelight:noodle_soup": {
+            "SCT": 57.1
+        },
+        "farmersdelight:oak_cabinet": {
+            "SCT": 6.22
+        },
+        "farmersdelight:onion": {
+            "SCT": 0.0
+        },
+        "farmersdelight:onion_crate": {
+            "SCT": 0.0
+        },
+        "farmersdelight:onion_soup": {
+            "SCT": 30.05
+        },
+        "farmersdelight:orange_canvas_sign": {
+            "SCT": 2.27
+        },
+        "farmersdelight:orange_hanging_canvas_sign": {
+            "SCT": 2.27
+        },
+        "farmersdelight:organic_compost": {
+            "SCT": 0.8
+        },
+        "farmersdelight:pasta_with_meatballs": {
+            "SCT": 40.93
+        },
+        "farmersdelight:pasta_with_mutton_chop": {
+            "SCT": 40.93
+        },
+        "farmersdelight:pie_crust": {
+            "SCT": 90.05
+        },
+        "farmersdelight:pink_canvas_sign": {
+            "SCT": 2.26
+        },
+        "farmersdelight:pink_hanging_canvas_sign": {
+            "SCT": 2.26
+        },
+        "farmersdelight:potato_crate": {
+            "SCT": 67.5
+        },
+        "farmersdelight:pumpkin_pie_slice": {
+            "SCT": 2.92
+        },
+        "farmersdelight:pumpkin_slice": {
+            "SCT": 1.5
+        },
+        "farmersdelight:pumpkin_soup": {
+            "SCT": 11.55
+        },
+        "farmersdelight:purple_canvas_sign": {
+            "SCT": 2.31
+        },
+        "farmersdelight:purple_hanging_canvas_sign": {
+            "SCT": 2.31
+        },
+        "farmersdelight:ratatouille": {
+            "SCT": 15.0
+        },
+        "farmersdelight:raw_pasta": {
+            "SCT": 30.0
+        },
+        "farmersdelight:red_canvas_sign": {
+            "SCT": 2.27
+        },
+        "farmersdelight:red_hanging_canvas_sign": {
+            "SCT": 2.27
+        },
+        "farmersdelight:red_mushroom_colony": {
+            "SCT": 0.0
+        },
+        "farmersdelight:rice_bag": {
+            "SCT": 2.7
+        },
+        "farmersdelight:rice_bale": {
+            "SCT": 0.0
+        },
+        "farmersdelight:rice_panicle": {
+            "SCT": 0.0
+        },
+        "farmersdelight:rice_roll_medley_block": {
+            "SCT": 78.83
+        },
+        "farmersdelight:rich_soil": {
+            "SCT": 0.0
+        },
+        "farmersdelight:rich_soil_farmland": {
+            "SCT": 0.0
+        },
+        "farmersdelight:roast_chicken": {
+            "SCT": 0.0
+        },
+        "farmersdelight:roast_chicken_block": {
+            "SCT": 97.93
+        },
+        "farmersdelight:roasted_mutton_chops": {
+            "SCT": 18.73
+        },
+        "farmersdelight:rope": {
+            "SCT": 0.0
+        },
+        "farmersdelight:rope_fence": {
+            "SCT": 0.4
+        },
+        "farmersdelight:rope_fence_gate": {
+            "SCT": 2.4
+        },
+        "farmersdelight:rotten_tomato": {
+            "SCT": 0.0
+        },
+        "farmersdelight:safety_net": {
+            "SCT": 0.0
+        },
+        "farmersdelight:salmon_roll": {
+            "SCT": 13.9
+        },
+        "farmersdelight:salmon_slice": {
+            "SCT": 13.75
+        },
+        "farmersdelight:sandy_shrub": {
+            "SCT": 0.0
+        },
+        "farmersdelight:shepherds_pie": {
+            "SCT": 0.0
+        },
+        "farmersdelight:shepherds_pie_block": {
+            "SCT": 45.98
+        },
+        "farmersdelight:skillet": {
+            "SCT": 140.08
+        },
+        "farmersdelight:smoked_ham": {
+            "SCT": 0.0
+        },
+        "farmersdelight:spruce_cabinet": {
+            "SCT": 6.22
+        },
+        "farmersdelight:squid_ink_pasta": {
+            "SCT": 56.25
+        },
+        "farmersdelight:steak_and_potatoes": {
+            "SCT": 28.73
+        },
+        "farmersdelight:stove": {
+            "SCT": 127.08
+        },
+        "farmersdelight:straw": {
+            "SCT": 0.0
+        },
+        "farmersdelight:straw_bale": {
+            "SCT": 0.0
+        },
+        "farmersdelight:stuffed_potato": {
+            "SCT": 17.55
+        },
+        "farmersdelight:stuffed_pumpkin": {
+            "SCT": 0.0
+        },
+        "farmersdelight:stuffed_pumpkin_block": {
+            "SCT": 20.8
+        },
+        "farmersdelight:sweet_berry_cheesecake": {
+            "SCT": 120.15
+        },
+        "farmersdelight:sweet_berry_cheesecake_slice": {
+            "SCT": 30.04
+        },
+        "farmersdelight:sweet_berry_cookie": {
+            "SCT": 8.12
+        },
+        "farmersdelight:tatami": {
+            "SCT": 1.2
+        },
+        "farmersdelight:tomato": {
+            "SCT": 0.0
+        },
+        "farmersdelight:tomato_crate": {
+            "SCT": 0.0
+        },
+        "farmersdelight:tomato_sauce": {
+            "SCT": 0.93
+        },
+        "farmersdelight:tree_bark": {
+            "SCT": 0.0
+        },
+        "farmersdelight:vegetable_noodles": {
+            "SCT": 45.5
+        },
+        "farmersdelight:vegetable_soup": {
+            "SCT": 22.5
+        },
+        "farmersdelight:warped_cabinet": {
+            "SCT": 6.22
+        },
+        "farmersdelight:wheat_dough": {
+            "SCT": 35.67
+        },
+        "farmersdelight:white_canvas_sign": {
+            "SCT": 2.25
+        },
+        "farmersdelight:white_hanging_canvas_sign": {
+            "SCT": 2.25
+        },
+        "farmersdelight:wild_beetroots": {
+            "SCT": 0.0
+        },
+        "farmersdelight:wild_cabbages": {
+            "SCT": 0.0
+        },
+        "farmersdelight:wild_carrots": {
+            "SCT": 0.0
+        },
+        "farmersdelight:wild_onions": {
+            "SCT": 0.0
+        },
+        "farmersdelight:wild_potatoes": {
+            "SCT": 0.0
+        },
+        "farmersdelight:wild_rice": {
+            "SCT": 0.0
+        },
+        "farmersdelight:wild_tomatoes": {
+            "SCT": 0.0
+        },
+        "farmersdelight:wooden_basket": {
+            "SCT": 6.0
+        },
+        "farmersdelight:yellow_canvas_sign": {
+            "SCT": 2.27
+        },
+        "farmersdelight:yellow_hanging_canvas_sign": {
+            "SCT": 2.27
         },
         "fdbosses:chiseled_justicestone_bricks": {
             "SCT": 0.25
@@ -4651,22 +5452,22 @@
             "SCT": 35.0
         },
         "hazennstuff:abberant_predator_boots": {
-            "SCT": 16546.01
+            "SCT": 17130.64
         },
         "hazennstuff:abberant_predator_chestplate": {
-            "SCT": 17573.51
+            "SCT": 19155.64
         },
         "hazennstuff:abberant_predator_helmet": {
-            "SCT": 16868.51
+            "SCT": 17805.64
         },
         "hazennstuff:abberant_predator_leggings": {
-            "SCT": 17251.01
+            "SCT": 18480.64
         },
         "hazennstuff:abomination": {
-            "SCT": 13229.77
+            "SCT": 14879.77
         },
         "hazennstuff:absolute": {
-            "SCT": 14957.04
+            "SCT": 19306.97
         },
         "hazennstuff:abstract": {
             "SCT": 520.9
@@ -4675,25 +5476,31 @@
             "SCT": 7615.7
         },
         "hazennstuff:alchemist_supreme_boots": {
-            "SCT": 2193.17
+            "SCT": 2838.1
         },
         "hazennstuff:alchemist_supreme_chestplate": {
-            "SCT": 3220.67
+            "SCT": 4863.1
         },
         "hazennstuff:alchemist_supreme_helmet": {
-            "SCT": 2515.67
+            "SCT": 3513.1
         },
         "hazennstuff:alchemist_supreme_leggings": {
-            "SCT": 2898.17
+            "SCT": 4188.1
         },
         "hazennstuff:ancient_warriors_axe": {
-            "SCT": 2644.44
+            "SCT": 3056.94
+        },
+        "hazennstuff:angel_wings": {
+            "SCT": 0.0
         },
         "hazennstuff:arbitrium_wings": {
-            "SCT": 2530.3
+            "SCT": 5240.04
+        },
+        "hazennstuff:arcane_sea_shell": {
+            "SCT": 0.0
         },
         "hazennstuff:arcane_steel_block": {
-            "SCT": 61.2
+            "SCT": 55.44
         },
         "hazennstuff:archery_rune": {
             "SCT": 17.82
@@ -4701,65 +5508,74 @@
         "hazennstuff:archery_upgrade_orb": {
             "SCT": 777.56
         },
+        "hazennstuff:astraconic_weaver_boots": {
+            "SCT": 2418.12
+        },
+        "hazennstuff:astraconic_weaver_chestplate": {
+            "SCT": 4683.12
+        },
+        "hazennstuff:astraconic_weaver_helmet": {
+            "SCT": 3153.12
+        },
+        "hazennstuff:astraconic_weaver_leggings": {
+            "SCT": 3948.12
+        },
+        "hazennstuff:astralite_cleaver": {
+            "SCT": 5694.08
+        },
         "hazennstuff:atlas_boots": {
-            "SCT": 315.1
+            "SCT": 74.8
         },
         "hazennstuff:atlas_chestplate": {
-            "SCT": 555.1
+            "SCT": 74.8
         },
         "hazennstuff:atlas_helmet": {
-            "SCT": 375.1
+            "SCT": 74.8
         },
         "hazennstuff:atlas_leggings": {
-            "SCT": 495.1
+            "SCT": 74.8
         },
         "hazennstuff:beongae": {
-            "SCT": 2235.1
+            "SCT": 3472.6
         },
         "hazennstuff:blade_of_grass": {
-            "SCT": 141.5
+            "SCT": 139.58
         },
         "hazennstuff:blade_of_the_legate": {
             "SCT": 1300.0
         },
         "hazennstuff:blazeborne_boots": {
-            "SCT": 1953.17
+            "SCT": 2598.1
         },
         "hazennstuff:blazeborne_chestplate": {
-            "SCT": 2980.67
+            "SCT": 4623.1
         },
         "hazennstuff:blazeborne_helmet": {
-            "SCT": 2275.67
+            "SCT": 3273.1
         },
         "hazennstuff:blazeborne_leggings": {
-            "SCT": 2658.17
+            "SCT": 3948.1
         },
         "hazennstuff:bountiful_harvest": {
-            "SCT": 3523.75
+            "SCT": 6636.25
         },
         "hazennstuff:bounty_hunter_boots": {
-            "SCT": 257.92
+            "SCT": 257.84
         },
         "hazennstuff:bounty_hunter_chestplate": {
-            "SCT": 497.92
+            "SCT": 497.84
         },
         "hazennstuff:bounty_hunter_helmet": {
-            "SCT": 317.92
+            "SCT": 317.84
         },
         "hazennstuff:bounty_hunter_leggings": {
-            "SCT": 437.92
+            "SCT": 437.84
         },
-        "hazennstuff:calamitas_boots": {
-            "SCT": 5093.61
+        "hazennstuff:catalyst": {
+            "SCT": 0.0
         },
-        "hazennstuff:calamitas_chestplate": {
-            "SCT": 7148.61
-        },
-        "hazennstuff:calamitas_helmet": {
-            "SCT": 5738.61
-        },
-        "hazennstuff:calamitas_leggings": {
-            "SCT": 6503.61
+        "hazennstuff:ceaseless_void": {
+            "SCT": 2442.26
         },
         "hazennstuff:charred_bones": {
             "SCT": 55.0
@@ -4786,49 +5602,76 @@
             "SCT": 4945.7
         },
         "hazennstuff:chlorophyte_mask": {
-            "SCT": 5452.97
+            "SCT": 5452.9
         },
         "hazennstuff:cloth_of_the_flamebearer": {
             "SCT": 3600.0
         },
+        "hazennstuff:concentrated_upgrade_orb_fire": {
+            "SCT": 0.0
+        },
+        "hazennstuff:concentrated_upgrade_orb_ice": {
+            "SCT": 0.0
+        },
+        "hazennstuff:coralite_cane": {
+            "SCT": 2452.56
+        },
+        "hazennstuff:corn_beef": {
+            "SCT": 0.0
+        },
+        "hazennstuff:cosmic_gold_ingot": {
+            "SCT": 1350.0
+        },
+        "hazennstuff:cosmic_scholar_boots": {
+            "SCT": 240.32
+        },
+        "hazennstuff:cosmic_scholar_chestplate": {
+            "SCT": 480.32
+        },
+        "hazennstuff:cosmic_scholar_helmet": {
+            "SCT": 300.32
+        },
+        "hazennstuff:cosmic_scholar_leggings": {
+            "SCT": 420.32
+        },
         "hazennstuff:creaking_boots": {
-            "SCT": 1683.17
+            "SCT": 2328.1
         },
         "hazennstuff:creaking_chestplate": {
-            "SCT": 2710.67
+            "SCT": 4353.1
         },
         "hazennstuff:creaking_helmet": {
-            "SCT": 2005.67
+            "SCT": 3003.1
         },
         "hazennstuff:creaking_leggings": {
-            "SCT": 2388.17
+            "SCT": 3678.1
         },
         "hazennstuff:crude_metal": {
             "SCT": 160.0
         },
         "hazennstuff:cryogenic_ruler_boots": {
-            "SCT": 1593.17
+            "SCT": 2238.1
         },
         "hazennstuff:cryogenic_ruler_chestplate": {
-            "SCT": 2620.67
+            "SCT": 4263.1
         },
         "hazennstuff:cryogenic_ruler_helmet": {
-            "SCT": 1915.67
+            "SCT": 2913.1
         },
         "hazennstuff:cryogenic_ruler_leggings": {
-            "SCT": 2298.17
+            "SCT": 3588.1
         },
         "hazennstuff:crystal_arachnid_boots": {
-            "SCT": 1598.81
+            "SCT": 2243.74
         },
         "hazennstuff:crystal_arachnid_chestplate": {
-            "SCT": 2626.31
+            "SCT": 4268.74
         },
         "hazennstuff:crystal_arachnid_helmet": {
-            "SCT": 1921.31
+            "SCT": 2918.74
         },
         "hazennstuff:crystal_arachnid_leggings": {
-            "SCT": 2303.81
+            "SCT": 3593.74
         },
         "hazennstuff:dark_ritual_templar_boots": {
             "SCT": 900.04
@@ -4843,58 +5686,76 @@
             "SCT": 900.04
         },
         "hazennstuff:dawnmaker": {
-            "SCT": 3806.08
+            "SCT": 3804.16
         },
         "hazennstuff:demonite_ingot": {
             "SCT": 280.0
         },
         "hazennstuff:deus_essence": {
-            "SCT": 900.0
+            "SCT": 3600.0
         },
         "hazennstuff:divine_greatsword": {
-            "SCT": 1416.81
+            "SCT": 1414.89
         },
         "hazennstuff:divine_lemon": {
-            "SCT": 915.0
+            "SCT": 3608.2
         },
         "hazennstuff:divine_mold": {
-            "SCT": 542.6
+            "SCT": 542.52
         },
         "hazennstuff:draconic_splitter": {
-            "SCT": 1015.0
+            "SCT": 1840.0
         },
         "hazennstuff:dreadsteel_ingot": {
             "SCT": 680.0
         },
         "hazennstuff:dreadsteel_knight_boots": {
-            "SCT": 3147.87
+            "SCT": 3147.8
         },
         "hazennstuff:dreadsteel_knight_chestplate": {
-            "SCT": 5507.87
+            "SCT": 5507.8
         },
         "hazennstuff:dreadsteel_knight_helmet": {
-            "SCT": 3907.87
+            "SCT": 3907.8
         },
         "hazennstuff:dreadsteel_knight_leggings": {
-            "SCT": 4747.87
+            "SCT": 4747.8
         },
         "hazennstuff:dreadstone": {
             "SCT": 40.0
         },
+        "hazennstuff:elder_guardian_boots": {
+            "SCT": 3378.12
+        },
+        "hazennstuff:elder_guardian_chestplate": {
+            "SCT": 5643.12
+        },
+        "hazennstuff:elder_guardian_helmet": {
+            "SCT": 4113.12
+        },
+        "hazennstuff:elder_guardian_leggings": {
+            "SCT": 4908.12
+        },
+        "hazennstuff:elder_guardian_spine": {
+            "SCT": 0.0
+        },
         "hazennstuff:eldritch_rune": {
             "SCT": 7200.3
         },
+        "hazennstuff:eldritch_upgrade_orb": {
+            "SCT": 58237.4
+        },
         "hazennstuff:ender_dragon_boots": {
-            "SCT": 1953.17
+            "SCT": 2598.1
         },
         "hazennstuff:ender_dragon_chestplate": {
-            "SCT": 2980.67
+            "SCT": 4623.1
         },
         "hazennstuff:ender_dragon_helmet": {
-            "SCT": 2275.67
+            "SCT": 3273.1
         },
         "hazennstuff:ender_dragon_leggings": {
-            "SCT": 2658.17
+            "SCT": 3948.1
         },
         "hazennstuff:energized_core_spellbook": {
             "SCT": 1312.78
@@ -4908,53 +5769,80 @@
         "hazennstuff:excalibur_fragment": {
             "SCT": 2300.0
         },
-        "hazennstuff:fireblossom_boots": {
-            "SCT": 92.43
+        "hazennstuff:fallen_angel_wings": {
+            "SCT": 0.0
         },
-        "hazennstuff:fireblossom_chestplate": {
-            "SCT": 92.43
+        "hazennstuff:fireblossom_battlemage_boots": {
+            "SCT": 1657.86
         },
-        "hazennstuff:fireblossom_crown": {
-            "SCT": 184.86
+        "hazennstuff:fireblossom_battlemage_chestplate": {
+            "SCT": 1657.86
         },
-        "hazennstuff:fireblossom_helmet": {
-            "SCT": 92.43
+        "hazennstuff:fireblossom_battlemage_helmet": {
+            "SCT": 1657.86
         },
-        "hazennstuff:fireblossom_leggings": {
-            "SCT": 92.43
+        "hazennstuff:fireblossom_battlemage_leggings": {
+            "SCT": 1657.86
+        },
+        "hazennstuff:fireblossom_gown_boots": {
+            "SCT": 0.0
+        },
+        "hazennstuff:fireblossom_gown_chestplate": {
+            "SCT": 0.0
+        },
+        "hazennstuff:fireblossom_gown_helmet": {
+            "SCT": 0.0
+        },
+        "hazennstuff:fireblossom_gown_leggings": {
+            "SCT": 0.0
+        },
+        "hazennstuff:fireblossom_knight_boots": {
+            "SCT": 155.66
+        },
+        "hazennstuff:fireblossom_knight_chestplate": {
+            "SCT": 155.66
+        },
+        "hazennstuff:fireblossom_knight_helmet": {
+            "SCT": 155.66
+        },
+        "hazennstuff:fireblossom_knight_leggings": {
+            "SCT": 155.66
         },
         "hazennstuff:fireblossom_rapier": {
-            "SCT": 2593.0
+            "SCT": 3005.5
         },
         "hazennstuff:firebrand": {
             "SCT": 285.0
         },
         "hazennstuff:flaming_template": {
-            "SCT": 91.93
+            "SCT": 155.16
         },
         "hazennstuff:flesh_mass_boots": {
-            "SCT": 2313.17
+            "SCT": 2598.1
         },
         "hazennstuff:flesh_mass_chestplate": {
-            "SCT": 3340.67
+            "SCT": 4623.1
         },
         "hazennstuff:flesh_mass_helmet": {
-            "SCT": 2635.67
+            "SCT": 3273.1
         },
         "hazennstuff:flesh_mass_leggings": {
-            "SCT": 3018.17
+            "SCT": 3948.1
+        },
+        "hazennstuff:fried_ice_spider_egg": {
+            "SCT": 15.0
         },
         "hazennstuff:frieren_boots": {
-            "SCT": 313.25
+            "SCT": 72.95
         },
         "hazennstuff:frieren_chestplate": {
-            "SCT": 553.25
+            "SCT": 72.95
         },
         "hazennstuff:frieren_helmet": {
-            "SCT": 373.25
+            "SCT": 72.95
         },
         "hazennstuff:frieren_leggings": {
-            "SCT": 493.25
+            "SCT": 72.95
         },
         "hazennstuff:frieren_staff": {
             "SCT": 109.46
@@ -4978,112 +5866,115 @@
             "SCT": 1.25
         },
         "hazennstuff:frostbite_hunter_boots": {
-            "SCT": 1670.95
+            "SCT": 2495.8
         },
         "hazennstuff:frostbite_hunter_chestplate": {
-            "SCT": 2698.45
+            "SCT": 4760.8
         },
         "hazennstuff:frostbite_hunter_helmet": {
-            "SCT": 1993.45
+            "SCT": 3230.8
         },
         "hazennstuff:frostbite_hunter_leggings": {
-            "SCT": 2375.95
+            "SCT": 4025.8
         },
         "hazennstuff:frostbite_knight_boots": {
-            "SCT": 4540.94
+            "SCT": 5361.96
         },
         "hazennstuff:frostbite_knight_chestplate": {
-            "SCT": 7688.44
+            "SCT": 9746.96
         },
         "hazennstuff:frostbite_knight_helmet": {
-            "SCT": 5563.44
+            "SCT": 6796.96
         },
         "hazennstuff:frostbite_knight_leggings": {
-            "SCT": 6665.94
+            "SCT": 8311.96
         },
         "hazennstuff:frostburn_dagger": {
-            "SCT": 44.28
+            "SCT": 43.0
         },
         "hazennstuff:gabriel_ultrakill_boots": {
-            "SCT": 2742.97
+            "SCT": 3387.9
         },
         "hazennstuff:gabriel_ultrakill_chestplate": {
-            "SCT": 5460.47
+            "SCT": 7102.9
         },
         "hazennstuff:gabriel_ultrakill_helmet": {
-            "SCT": 3065.47
+            "SCT": 4062.9
         },
         "hazennstuff:gabriel_ultrakill_leggings": {
-            "SCT": 3537.97
+            "SCT": 4827.9
         },
         "hazennstuff:galvanized_sheath": {
-            "SCT": 1222.88
+            "SCT": 1635.38
         },
         "hazennstuff:garments_of_the_first_flamebearer_boots": {
-            "SCT": 9485.7
+            "SCT": 10193.86
         },
         "hazennstuff:garments_of_the_first_flamebearer_chestplate": {
-            "SCT": 21313.2
+            "SCT": 23018.86
         },
         "hazennstuff:garments_of_the_first_flamebearer_helmet": {
-            "SCT": 13408.2
+            "SCT": 14468.86
         },
         "hazennstuff:garments_of_the_first_flamebearer_leggings": {
-            "SCT": 17390.7
-        },
-        "hazennstuff:garments_of_the_first_flamebearer_soul_boots": {
-            "SCT": 9504.1
-        },
-        "hazennstuff:garments_of_the_first_flamebearer_soul_chestplate": {
-            "SCT": 21331.6
-        },
-        "hazennstuff:garments_of_the_first_flamebearer_soul_helmet": {
-            "SCT": 13426.6
-        },
-        "hazennstuff:garments_of_the_first_flamebearer_soul_leggings": {
-            "SCT": 17409.1
+            "SCT": 18743.86
         },
         "hazennstuff:giorno_giovanna_boots": {
-            "SCT": 315.29
+            "SCT": 74.99
         },
         "hazennstuff:giorno_giovanna_chestplate": {
-            "SCT": 555.29
+            "SCT": 74.99
         },
         "hazennstuff:giorno_giovanna_helmet": {
-            "SCT": 375.29
+            "SCT": 74.99
         },
         "hazennstuff:giorno_giovanna_leggings": {
-            "SCT": 495.29
+            "SCT": 74.99
+        },
+        "hazennstuff:glassweaver_boots": {
+            "SCT": 2500.92
+        },
+        "hazennstuff:glassweaver_chestplate": {
+            "SCT": 4765.92
+        },
+        "hazennstuff:glassweaver_helmet": {
+            "SCT": 3235.92
+        },
+        "hazennstuff:glassweaver_leggings": {
+            "SCT": 4030.92
+        },
+        "hazennstuff:glassweaver_scepter": {
+            "SCT": 1482.66
         },
         "hazennstuff:glowing_mushroom": {
             "SCT": 3.45
         },
         "hazennstuff:golden_shower_spellbook": {
-            "SCT": 2416.02
+            "SCT": 2828.52
         },
         "hazennstuff:hallowed_ingot": {
             "SCT": 662.84
         },
         "hazennstuff:hammer_of_justice": {
-            "SCT": 3137.4
+            "SCT": 3547.98
         },
         "hazennstuff:hammush": {
-            "SCT": 330.5
+            "SCT": 741.08
         },
         "hazennstuff:hazel_boots": {
-            "SCT": 2792.94
+            "SCT": 3437.8
         },
         "hazennstuff:hazel_chestplate": {
-            "SCT": 3820.44
+            "SCT": 5462.8
         },
         "hazennstuff:hazel_helmet": {
-            "SCT": 3115.44
+            "SCT": 4112.8
         },
         "hazennstuff:hazel_leggings": {
-            "SCT": 3497.94
+            "SCT": 4787.8
         },
         "hazennstuff:hazens_excalibur": {
-            "SCT": 1913.14
+            "SCT": 2323.72
         },
         "hazennstuff:health_rune": {
             "SCT": 393.26
@@ -5092,49 +5983,70 @@
             "SCT": 3781.08
         },
         "hazennstuff:herta_puppet_boots": {
-            "SCT": 300.6
+            "SCT": 120.6
         },
         "hazennstuff:herta_puppet_chestplate": {
-            "SCT": 540.6
+            "SCT": 120.6
         },
         "hazennstuff:herta_puppet_helmet": {
-            "SCT": 360.6
+            "SCT": 120.6
         },
         "hazennstuff:herta_puppet_leggings": {
-            "SCT": 480.6
+            "SCT": 120.6
         },
         "hazennstuff:how_did_you_find_the_hazel_chestplate": {
-            "SCT": 3900.44
+            "SCT": 5481.6
         },
         "hazennstuff:how_did_you_find_the_mothic_witch_chestplate": {
-            "SCT": 3524.57
+            "SCT": 5105.8
+        },
+        "hazennstuff:hydro_rune": {
+            "SCT": 0.3
+        },
+        "hazennstuff:hydro_upgrade_orb": {
+            "SCT": 0.0
         },
         "hazennstuff:ice_pike": {
-            "SCT": 2394.76
+            "SCT": 2391.56
         },
         "hazennstuff:infestation_boots": {
-            "SCT": 16053.47
+            "SCT": 16638.1
         },
         "hazennstuff:infestation_chestplate": {
-            "SCT": 17080.97
+            "SCT": 18663.1
         },
         "hazennstuff:infestation_helmet": {
-            "SCT": 16375.97
+            "SCT": 17313.1
         },
         "hazennstuff:infestation_leggings": {
-            "SCT": 16758.47
+            "SCT": 17988.1
         },
         "hazennstuff:iron431_boots": {
-            "SCT": 950.84
+            "SCT": 982.8
         },
         "hazennstuff:iron431_chestplate": {
-            "SCT": 954.7
+            "SCT": 982.8
         },
         "hazennstuff:iron431_helmet": {
-            "SCT": 954.7
+            "SCT": 982.8
         },
         "hazennstuff:iron431_leggings": {
-            "SCT": 954.7
+            "SCT": 982.8
+        },
+        "hazennstuff:legacy_fireblossom_boots": {
+            "SCT": 0.0
+        },
+        "hazennstuff:legacy_fireblossom_chestplate": {
+            "SCT": 0.0
+        },
+        "hazennstuff:legacy_fireblossom_crown": {
+            "SCT": 0.0
+        },
+        "hazennstuff:legacy_fireblossom_helmet": {
+            "SCT": 0.0
+        },
+        "hazennstuff:legacy_fireblossom_leggings": {
+            "SCT": 0.0
         },
         "hazennstuff:legionnaire_commander_boots": {
             "SCT": 1584.91
@@ -5164,25 +6076,25 @@
             "SCT": 1700.0
         },
         "hazennstuff:lemon": {
-            "SCT": 15.0
+            "SCT": 8.2
         },
         "hazennstuff:lemon_god_boots": {
-            "SCT": 1830.84
+            "SCT": 4556.0
         },
         "hazennstuff:lemon_god_chestplate": {
-            "SCT": 1834.7
+            "SCT": 4556.0
         },
         "hazennstuff:lemon_god_helmet": {
-            "SCT": 1834.7
+            "SCT": 4556.0
         },
         "hazennstuff:lemon_god_leggings": {
-            "SCT": 1834.7
+            "SCT": 4556.0
         },
         "hazennstuff:lights_bane": {
-            "SCT": 580.4
+            "SCT": 578.48
         },
         "hazennstuff:mage_bane": {
-            "SCT": 1531.0
+            "SCT": 1529.08
         },
         "hazennstuff:magehunter_boots": {
             "SCT": 870.0
@@ -5199,17 +6111,29 @@
         "hazennstuff:malice": {
             "SCT": 2950.0
         },
+        "hazennstuff:masked_fool_boots": {
+            "SCT": 720.32
+        },
+        "hazennstuff:masked_fool_chestplate": {
+            "SCT": 960.32
+        },
+        "hazennstuff:masked_fool_helmet": {
+            "SCT": 780.32
+        },
+        "hazennstuff:masked_fool_leggings": {
+            "SCT": 900.32
+        },
         "hazennstuff:maverick_boots": {
-            "SCT": 2405.33
+            "SCT": 3050.26
         },
         "hazennstuff:maverick_chestplate": {
-            "SCT": 3432.83
+            "SCT": 5075.26
         },
         "hazennstuff:maverick_helmet": {
-            "SCT": 2727.83
+            "SCT": 3725.26
         },
         "hazennstuff:maverick_leggings": {
-            "SCT": 3110.33
+            "SCT": 4400.26
         },
         "hazennstuff:melee_rune": {
             "SCT": 320.3
@@ -5230,73 +6154,82 @@
             "SCT": 410.0
         },
         "hazennstuff:mithril_battlemage_boots": {
-            "SCT": 900.9
+            "SCT": 660.6
         },
         "hazennstuff:mithril_battlemage_chestplate": {
-            "SCT": 1140.9
+            "SCT": 660.6
         },
         "hazennstuff:mithril_battlemage_helmet": {
-            "SCT": 960.9
+            "SCT": 660.6
         },
         "hazennstuff:mithril_battlemage_leggings": {
-            "SCT": 1080.9
+            "SCT": 660.6
         },
         "hazennstuff:mithril_block": {
             "SCT": 5400.0
         },
         "hazennstuff:mossy_mud_brick_slab": {
-            "SCT": 30.22
+            "SCT": 0.22
         },
         "hazennstuff:mossy_mud_brick_stairs": {
-            "SCT": 90.68
+            "SCT": 0.68
         },
         "hazennstuff:mossy_mud_brick_wall": {
-            "SCT": 9.52
+            "SCT": 0.45
         },
         "hazennstuff:mossy_mud_bricks": {
-            "SCT": 60.45
+            "SCT": 0.45
         },
         "hazennstuff:mothic_witch_boots": {
-            "SCT": 2417.07
+            "SCT": 3062.0
         },
         "hazennstuff:mothic_witch_chestplate": {
-            "SCT": 3444.57
+            "SCT": 5087.0
         },
         "hazennstuff:mothic_witch_helmet": {
-            "SCT": 2739.57
+            "SCT": 3737.0
         },
         "hazennstuff:mothic_witch_leggings": {
-            "SCT": 3122.07
+            "SCT": 4412.0
         },
         "hazennstuff:muramasa": {
             "SCT": 1400.0
         },
         "hazennstuff:mycelium_guardian_boots": {
-            "SCT": 1131.32
+            "SCT": 890.95
         },
         "hazennstuff:mycelium_guardian_chestplate": {
-            "SCT": 1371.32
+            "SCT": 890.95
         },
         "hazennstuff:mycelium_guardian_helmet": {
-            "SCT": 1191.32
+            "SCT": 890.95
         },
         "hazennstuff:mycelium_guardian_leggings": {
-            "SCT": 1311.32
+            "SCT": 890.95
         },
-        "hazennstuff:neru_boots": {
-            "SCT": 88.57
+        "hazennstuff:nautilus_knight_boots": {
+            "SCT": 240.32
         },
-        "hazennstuff:neru_chestplate": {
-            "SCT": 88.57
+        "hazennstuff:nautilus_knight_chestplate": {
+            "SCT": 480.32
         },
-        "hazennstuff:neru_helmet": {
-            "SCT": 88.57
+        "hazennstuff:nautilus_knight_helmet": {
+            "SCT": 300.32
         },
-        "hazennstuff:neru_leggings": {
-            "SCT": 88.57
+        "hazennstuff:nautilus_knight_leggings": {
+            "SCT": 420.32
+        },
+        "hazennstuff:nether_star_fragment": {
+            "SCT": 1200.0
+        },
+        "hazennstuff:nexus": {
+            "SCT": 4102.26
+        },
+        "hazennstuff:nightmare_fuel": {
+            "SCT": 0.0
         },
         "hazennstuff:nights_edge": {
-            "SCT": 9713.7
+            "SCT": 9704.1
         },
         "hazennstuff:obsidian_claymore": {
             "SCT": 4000.0
@@ -5304,20 +6237,23 @@
         "hazennstuff:overgrown_bone": {
             "SCT": 60.0
         },
+        "hazennstuff:pendant_of_harmony": {
+            "SCT": 0.0
+        },
         "hazennstuff:permafrost_fragment": {
-            "SCT": 2.55
+            "SCT": 2.31
         },
         "hazennstuff:permafrost_prince_boots": {
-            "SCT": 1691.65
+            "SCT": 2514.58
         },
         "hazennstuff:permafrost_prince_chestplate": {
-            "SCT": 2719.15
+            "SCT": 4779.58
         },
         "hazennstuff:permafrost_prince_helmet": {
-            "SCT": 2014.15
+            "SCT": 3249.58
         },
         "hazennstuff:permafrost_prince_leggings": {
-            "SCT": 2396.65
+            "SCT": 4044.58
         },
         "hazennstuff:phantasmium": {
             "SCT": 0.25
@@ -5331,29 +6267,17 @@
         "hazennstuff:prismatic_shard": {
             "SCT": 6.4
         },
-        "hazennstuff:project_sekai_boots": {
-            "SCT": 88.65
-        },
-        "hazennstuff:project_sekai_chestplate": {
-            "SCT": 88.65
-        },
-        "hazennstuff:project_sekai_helmet": {
-            "SCT": 88.65
-        },
-        "hazennstuff:project_sekai_leggings": {
-            "SCT": 88.65
-        },
         "hazennstuff:pyrium_battlemage_boots": {
-            "SCT": 361.5
+            "SCT": 121.2
         },
         "hazennstuff:pyrium_battlemage_chestplate": {
-            "SCT": 601.5
+            "SCT": 121.2
         },
         "hazennstuff:pyrium_battlemage_helmet": {
-            "SCT": 421.5
+            "SCT": 121.2
         },
         "hazennstuff:pyrium_battlemage_leggings": {
-            "SCT": 541.5
+            "SCT": 121.2
         },
         "hazennstuff:pyrium_block": {
             "SCT": 540.0
@@ -5374,22 +6298,28 @@
             "SCT": 6.67
         },
         "hazennstuff:radiance": {
-            "SCT": 6225.85
+            "SCT": 10573.14
         },
-        "hazennstuff:radiance_rune": {
-            "SCT": 27.9
+        "hazennstuff:radiant_crystal_boots": {
+            "SCT": 267.92
         },
-        "hazennstuff:radiance_upgrade_orb": {
-            "SCT": 858.2
+        "hazennstuff:radiant_crystal_chestplate": {
+            "SCT": 507.92
+        },
+        "hazennstuff:radiant_crystal_helmet": {
+            "SCT": 327.92
+        },
+        "hazennstuff:radiant_crystal_leggings": {
+            "SCT": 447.92
         },
         "hazennstuff:ravens_bane": {
-            "SCT": 945.0
+            "SCT": 1770.0
         },
         "hazennstuff:refined": {
-            "SCT": 1605.71
+            "SCT": 1603.07
         },
         "hazennstuff:reinforced": {
-            "SCT": 4498.58
+            "SCT": 6145.94
         },
         "hazennstuff:ring_of_efficiency": {
             "SCT": 673.34
@@ -5403,116 +6333,101 @@
         "hazennstuff:rose_quartz": {
             "SCT": 49.12
         },
-        "hazennstuff:rotten_girl_boots": {
-            "SCT": 88.65
-        },
-        "hazennstuff:rotten_girl_chestplate": {
-            "SCT": 88.65
-        },
-        "hazennstuff:rotten_girl_helmet": {
-            "SCT": 88.65
-        },
-        "hazennstuff:rotten_girl_leggings": {
-            "SCT": 88.65
-        },
         "hazennstuff:runestone_fragments": {
             "SCT": 0.04
         },
         "hazennstuff:ruptured": {
-            "SCT": 6.11
+            "SCT": 6.03
         },
         "hazennstuff:sacred": {
-            "SCT": 8620.64
+            "SCT": 8613.84
         },
         "hazennstuff:sacred_robes_boots": {
-            "SCT": 915.88
+            "SCT": 947.84
         },
         "hazennstuff:sacred_robes_chestplate": {
-            "SCT": 919.74
+            "SCT": 947.84
         },
         "hazennstuff:sacred_robes_helmet": {
-            "SCT": 919.74
+            "SCT": 947.84
         },
         "hazennstuff:sacred_robes_leggings": {
-            "SCT": 919.74
+            "SCT": 947.84
         },
         "hazennstuff:scroll_sheath": {
-            "SCT": 7756.58
+            "SCT": 8580.94
         },
         "hazennstuff:seraph_boots": {
-            "SCT": 2201.69
+            "SCT": 2846.62
         },
         "hazennstuff:seraph_chestplate": {
-            "SCT": 3229.19
+            "SCT": 4871.62
         },
         "hazennstuff:seraph_helmet": {
-            "SCT": 2524.19
+            "SCT": 3521.62
         },
         "hazennstuff:seraph_leggings": {
-            "SCT": 2906.69
+            "SCT": 4196.62
+        },
+        "hazennstuff:servant_of_ender_egg": {
+            "SCT": 0.0
         },
         "hazennstuff:shadestone": {
             "SCT": 280.0
         },
-        "hazennstuff:shadow_rune": {
-            "SCT": 480.3
+        "hazennstuff:shadow_jester_boots": {
+            "SCT": 3858.12
+        },
+        "hazennstuff:shadow_jester_chestplate": {
+            "SCT": 6123.12
+        },
+        "hazennstuff:shadow_jester_helmet": {
+            "SCT": 4593.12
+        },
+        "hazennstuff:shadow_jester_leggings": {
+            "SCT": 5388.12
         },
         "hazennstuff:shadow_scale": {
             "SCT": 60.0
         },
         "hazennstuff:shadow_scale_boots": {
-            "SCT": 1821.2
+            "SCT": 2240.92
         },
         "hazennstuff:shadow_scale_chestplate": {
-            "SCT": 3181.2
+            "SCT": 3600.92
         },
         "hazennstuff:shadow_scale_helmet": {
-            "SCT": 2161.2
+            "SCT": 2580.92
         },
         "hazennstuff:shadow_scale_leggings": {
-            "SCT": 2841.2
-        },
-        "hazennstuff:shadow_upgrade_orb": {
-            "SCT": 4477.4
+            "SCT": 3260.92
         },
         "hazennstuff:shattered": {
-            "SCT": 450.68
+            "SCT": 443.88
         },
         "hazennstuff:silver_scraps": {
             "SCT": 30.0
         },
         "hazennstuff:singularity": {
-            "SCT": 16511.34
+            "SCT": 20854.47
         },
         "hazennstuff:skyscorcher": {
-            "SCT": 9764.2
+            "SCT": 11001.7
         },
         "hazennstuff:slc_cat_boots": {
-            "SCT": 2404.93
+            "SCT": 3049.78
         },
         "hazennstuff:slc_cat_chestplate": {
-            "SCT": 3432.43
+            "SCT": 5074.78
         },
         "hazennstuff:slc_cat_helmet": {
-            "SCT": 2727.43
+            "SCT": 3724.78
         },
         "hazennstuff:slc_cat_leggings": {
-            "SCT": 3109.93
+            "SCT": 4399.78
         },
         "hazennstuff:solar_core": {
             "SCT": 60.0
-        },
-        "hazennstuff:soul_flame_boots": {
-            "SCT": 2045.4
-        },
-        "hazennstuff:soul_flame_chestplate": {
-            "SCT": 3072.9
-        },
-        "hazennstuff:soul_flame_helmet": {
-            "SCT": 2367.9
-        },
-        "hazennstuff:soul_flame_leggings": {
-            "SCT": 2750.4
         },
         "hazennstuff:soul_legionnaire_ruler_boots": {
             "SCT": 1603.31
@@ -5526,35 +6441,41 @@
         "hazennstuff:soul_legionnaire_ruler_leggings": {
             "SCT": 1843.31
         },
+        "hazennstuff:soul_reaper": {
+            "SCT": 5189.08
+        },
         "hazennstuff:soulcalling_scepter": {
-            "SCT": 7600.84
+            "SCT": 7510.84
         },
         "hazennstuff:spectral_pickaxe": {
             "SCT": 2226.6
         },
         "hazennstuff:spectral_spelunker_boots": {
-            "SCT": 675.6
+            "SCT": 495.6
         },
         "hazennstuff:spectral_spelunker_chestplate": {
-            "SCT": 1160.6
+            "SCT": 740.6
         },
         "hazennstuff:spectral_spelunker_helmet": {
-            "SCT": 785.6
+            "SCT": 545.6
         },
         "hazennstuff:spectral_spelunker_leggings": {
-            "SCT": 1030.6
+            "SCT": 670.6
         },
         "hazennstuff:spectrum": {
-            "SCT": 614.0
+            "SCT": 1437.08
         },
         "hazennstuff:spider_fang": {
             "SCT": 25.0
+        },
+        "hazennstuff:stardust": {
+            "SCT": 0.0
         },
         "hazennstuff:starfury": {
             "SCT": 2300.0
         },
         "hazennstuff:starkissed_zenalite": {
-            "SCT": 262.5
+            "SCT": 675.0
         },
         "hazennstuff:steel_ingot": {
             "SCT": 160.0
@@ -5566,91 +6487,79 @@
             "SCT": 172.64
         },
         "hazennstuff:strengthened": {
-            "SCT": 14784.07
+            "SCT": 16427.27
         },
         "hazennstuff:stripped_wisewood_log": {
-            "SCT": 5.01
+            "SCT": 5.0
         },
         "hazennstuff:stripped_wisewood_wood": {
-            "SCT": 5.01
-        },
-        "hazennstuff:synthesizer_v_boots": {
-            "SCT": 88.57
-        },
-        "hazennstuff:synthesizer_v_chestplate": {
-            "SCT": 88.57
-        },
-        "hazennstuff:synthesizer_v_helmet": {
-            "SCT": 88.57
-        },
-        "hazennstuff:synthesizer_v_leggings": {
-            "SCT": 88.57
+            "SCT": 5.0
         },
         "hazennstuff:terraprisma": {
-            "SCT": 9589.0
+            "SCT": 9587.08
         },
         "hazennstuff:the_devourer": {
-            "SCT": 6386.5
+            "SCT": 6382.66
         },
         "hazennstuff:the_prefects_ring": {
             "SCT": 1300.0
+        },
+        "hazennstuff:the_recluse_egg": {
+            "SCT": 0.0
         },
         "hazennstuff:the_tribunes_medallion": {
             "SCT": 1300.0
         },
         "hazennstuff:the_wither_boots": {
-            "SCT": 3495.67
+            "SCT": 3720.6
         },
         "hazennstuff:the_wither_chestplate": {
-            "SCT": 4523.17
+            "SCT": 5745.6
         },
         "hazennstuff:the_wither_helmet": {
-            "SCT": 3818.17
+            "SCT": 4395.6
         },
         "hazennstuff:the_wither_leggings": {
-            "SCT": 4200.67
+            "SCT": 5070.6
         },
         "hazennstuff:thunder_prowler_boots": {
-            "SCT": 1833.17
+            "SCT": 2478.1
         },
         "hazennstuff:thunder_prowler_chestplate": {
-            "SCT": 2860.67
+            "SCT": 4503.1
         },
         "hazennstuff:thunder_prowler_helmet": {
-            "SCT": 2680.67
+            "SCT": 4503.1
         },
         "hazennstuff:thunder_prowler_leggings": {
-            "SCT": 2538.17
+            "SCT": 3828.1
         },
-        "hazennstuff:utau_boots": {
-            "SCT": 113.4
+        "hazennstuff:tidal_wave": {
+            "SCT": 2399.08
         },
-        "hazennstuff:utau_chestplate": {
-            "SCT": 113.4
-        },
-        "hazennstuff:utau_helmet": {
-            "SCT": 113.4
-        },
-        "hazennstuff:utau_leggings": {
-            "SCT": 113.4
+        "hazennstuff:tyros_loot_bag": {
+            "SCT": 19573.34
         },
         "hazennstuff:vampire_knives": {
-            "SCT": 4626.75
+            "SCT": 4354.83
+        },
+        "hazennstuff:void_wanderer_egg": {
+            "SCT": 0.0
         },
         "hazennstuff:volcano": {
-            "SCT": 351.0
+            "SCT": 349.08
         },
         "hazennstuff:volt_core": {
             "SCT": 200.4
         },
         "hazennstuff:war_flaming_lance": {
-            "SCT": 990.0
+            "SCT": 1815.0
         },
         "hazennstuff:white_lily_staff": {
             "SCT": 863.04
         },
         "hazennstuff:wisewood_button": {
-            "SCT": 0.07
+            "SCT": 1.25
         },
         "hazennstuff:wisewood_cane": {
             "SCT": 65.71
@@ -5665,7 +6574,7 @@
             "SCT": 1.25
         },
         "hazennstuff:wisewood_log": {
-            "SCT": 5.01
+            "SCT": 5.0
         },
         "hazennstuff:wisewood_planks": {
             "SCT": 1.25
@@ -5683,10 +6592,10 @@
             "SCT": 1.25
         },
         "hazennstuff:wisewood_wood": {
-            "SCT": 5.01
+            "SCT": 5.0
         },
         "hazennstuff:zenalite_block": {
-            "SCT": 1050.0
+            "SCT": 2700.0
         },
         "hazennstuff:zenalite_brick_slab": {
             "SCT": 4.76
@@ -5698,13 +6607,43 @@
             "SCT": 9.52
         },
         "hazennstuff:zenalite_ingot": {
-            "SCT": 262.5
+            "SCT": 675.0
+        },
+        "hazentouvelib:cosmic_rune": {
+            "SCT": 0.3
+        },
+        "hazentouvelib:cosmic_upgrade_orb": {
+            "SCT": 637.4
+        },
+        "hazentouvelib:radiance_rune": {
+            "SCT": 27.9
+        },
+        "hazentouvelib:radiance_upgrade_orb": {
+            "SCT": 858.2
+        },
+        "hazentouvelib:shadow_rune": {
+            "SCT": 480.3
+        },
+        "hazentouvelib:shadow_upgrade_orb": {
+            "SCT": 4477.4
         },
         "heartstone:heart_banner_pattern": {
             "SCT": 1211.92
         },
         "heartstone:heartstone": {
             "SCT": 1211.42
+        },
+        "irons_lib:player_statue": {
+            "SCT": 0.0
+        },
+        "irons_lib:transmog_table": {
+            "SCT": 119.96
+        },
+        "irons_patreon_lib:player_statue": {
+            "SCT": 0.0
+        },
+        "irons_patreon_lib:transmog_table": {
+            "SCT": 0.0
         },
         "irons_spellbooks:affinity_ring": {
             "SCT": 121.67
@@ -5725,25 +6664,25 @@
             "SCT": 103.14
         },
         "irons_spellbooks:arcane_essence": {
-            "SCT": 0.1
+            "SCT": 0.02
         },
         "irons_spellbooks:arcane_ingot": {
-            "SCT": 6.8
+            "SCT": 6.16
         },
         "irons_spellbooks:arcane_rune": {
             "SCT": 0.3
         },
         "irons_spellbooks:archevoker_boots": {
-            "SCT": 440.3
+            "SCT": 260.3
         },
         "irons_spellbooks:archevoker_chestplate": {
-            "SCT": 680.3
+            "SCT": 260.3
         },
         "irons_spellbooks:archevoker_helmet": {
-            "SCT": 500.3
+            "SCT": 260.3
         },
         "irons_spellbooks:archevoker_leggings": {
-            "SCT": 620.3
+            "SCT": 260.3
         },
         "irons_spellbooks:artificer_cane": {
             "SCT": 51.96
@@ -5761,22 +6700,28 @@
             "SCT": 140.0
         },
         "irons_spellbooks:blood": {
-            "SCT": 0.24
+            "SCT": 0.12
         },
         "irons_spellbooks:blood_rune": {
-            "SCT": 240.3
+            "SCT": 120.3
         },
         "irons_spellbooks:blood_staff": {
             "SCT": 2600.0
         },
         "irons_spellbooks:blood_upgrade_orb": {
-            "SCT": 1596.2
+            "SCT": 1116.2
         },
         "irons_spellbooks:blood_vial": {
-            "SCT": 60.05
+            "SCT": 30.05
         },
         "irons_spellbooks:bloody_vellum": {
-            "SCT": 132.5
+            "SCT": 72.5
+        },
+        "irons_spellbooks:bone_key": {
+            "SCT": 0.0
+        },
+        "irons_spellbooks:bone_vault": {
+            "SCT": 0.0
         },
         "irons_spellbooks:book_stack": {
             "SCT": 4.6
@@ -5785,7 +6730,7 @@
             "SCT": 609.0
         },
         "irons_spellbooks:brazier": {
-            "SCT": 1.99
+            "SCT": 6.94
         },
         "irons_spellbooks:brazier_soul": {
             "SCT": 2.14
@@ -5797,13 +6742,16 @@
             "SCT": 1800.0
         },
         "irons_spellbooks:chronicle": {
-            "SCT": 54.1
+            "SCT": 53.46
         },
         "irons_spellbooks:cinder_essence": {
             "SCT": 17.5
         },
         "irons_spellbooks:cinderous_soulcaller": {
             "SCT": 147.5
+        },
+        "irons_spellbooks:cinderous_vault": {
+            "SCT": 0.0
         },
         "irons_spellbooks:common_ink": {
             "SCT": 0.05
@@ -5827,31 +6775,37 @@
             "SCT": 1.0
         },
         "irons_spellbooks:cryomancer_boots": {
-            "SCT": 240.3
+            "SCT": 60.3
         },
         "irons_spellbooks:cryomancer_chestplate": {
-            "SCT": 480.3
+            "SCT": 60.3
         },
         "irons_spellbooks:cryomancer_helmet": {
-            "SCT": 300.3
+            "SCT": 60.3
         },
         "irons_spellbooks:cryomancer_leggings": {
-            "SCT": 420.3
+            "SCT": 60.3
         },
         "irons_spellbooks:cultist_boots": {
-            "SCT": 480.3
+            "SCT": 180.3
         },
         "irons_spellbooks:cultist_chestplate": {
-            "SCT": 720.3
+            "SCT": 180.3
         },
         "irons_spellbooks:cultist_helmet": {
-            "SCT": 540.3
+            "SCT": 180.3
         },
         "irons_spellbooks:cultist_leggings": {
-            "SCT": 660.3
+            "SCT": 180.3
         },
         "irons_spellbooks:cursed_doll_spell_book": {
-            "SCT": 271.8
+            "SCT": 151.16
+        },
+        "irons_spellbooks:dead_king_phylactery": {
+            "SCT": 16.67
+        },
+        "irons_spellbooks:dead_king_phylactery_shard": {
+            "SCT": 0.0
         },
         "irons_spellbooks:decrepit_key": {
             "SCT": 240.0
@@ -5878,22 +6832,22 @@
             "SCT": 11509.0
         },
         "irons_spellbooks:druidic_spell_book": {
-            "SCT": 7506.21
+            "SCT": 176.05
         },
         "irons_spellbooks:eldritch_manuscript": {
             "SCT": 1850.0
         },
         "irons_spellbooks:electromancer_boots": {
-            "SCT": 320.3
+            "SCT": 140.3
         },
         "irons_spellbooks:electromancer_chestplate": {
-            "SCT": 560.3
+            "SCT": 140.3
         },
         "irons_spellbooks:electromancer_helmet": {
-            "SCT": 380.3
+            "SCT": 140.3
         },
         "irons_spellbooks:electromancer_leggings": {
-            "SCT": 500.3
+            "SCT": 140.3
         },
         "irons_spellbooks:emerald_stoneplate_ring": {
             "SCT": 46.93
@@ -5938,10 +6892,10 @@
             "SCT": 34.17
         },
         "irons_spellbooks:frosted_helve": {
-            "SCT": 13.6
+            "SCT": 12.32
         },
         "irons_spellbooks:frostward_ring": {
-            "SCT": 37.07
+            "SCT": 35.15
         },
         "irons_spellbooks:frozen_bone": {
             "SCT": 5.64
@@ -5956,13 +6910,13 @@
             "SCT": 91.28
         },
         "irons_spellbooks:gold_spell_book": {
-            "SCT": 12.7
+            "SCT": 12.54
         },
         "irons_spellbooks:graybeard_staff": {
             "SCT": 1.94
         },
         "irons_spellbooks:greater_conjurers_talisman": {
-            "SCT": 132.8
+            "SCT": 72.8
         },
         "irons_spellbooks:greater_healing_elixir": {
             "SCT": 650.0
@@ -5995,7 +6949,7 @@
             "SCT": 15.0
         },
         "irons_spellbooks:ice_staff": {
-            "SCT": 34.0
+            "SCT": 30.8
         },
         "irons_spellbooks:ice_upgrade_orb": {
             "SCT": 636.2
@@ -6082,19 +7036,19 @@
             "SCT": 0.32
         },
         "irons_spellbooks:netherite_mage_boots": {
-            "SCT": 300.6
+            "SCT": 60.3
         },
         "irons_spellbooks:netherite_mage_chestplate": {
-            "SCT": 540.6
+            "SCT": 60.3
         },
         "irons_spellbooks:netherite_mage_helmet": {
-            "SCT": 360.6
+            "SCT": 60.3
         },
         "irons_spellbooks:netherite_mage_leggings": {
-            "SCT": 480.6
+            "SCT": 60.3
         },
         "irons_spellbooks:netherite_spell_book": {
-            "SCT": 860.0
+            "SCT": 800.0
         },
         "irons_spellbooks:netherward_tincture": {
             "SCT": 650.0
@@ -6106,19 +7060,19 @@
             "SCT": 0.3
         },
         "irons_spellbooks:permafrost_shard": {
-            "SCT": 20.4
+            "SCT": 18.48
         },
         "irons_spellbooks:plagued_boots": {
-            "SCT": 270.3
+            "SCT": 90.3
         },
         "irons_spellbooks:plagued_chestplate": {
-            "SCT": 510.3
+            "SCT": 90.3
         },
         "irons_spellbooks:plagued_helmet": {
-            "SCT": 330.3
+            "SCT": 90.3
         },
         "irons_spellbooks:plagued_leggings": {
-            "SCT": 450.3
+            "SCT": 90.3
         },
         "irons_spellbooks:poisonward_ring": {
             "SCT": 46.97
@@ -6127,16 +7081,16 @@
             "SCT": 180.0
         },
         "irons_spellbooks:priest_boots": {
-            "SCT": 443.14
+            "SCT": 263.14
         },
         "irons_spellbooks:priest_chestplate": {
-            "SCT": 683.14
+            "SCT": 263.14
         },
         "irons_spellbooks:priest_helmet": {
-            "SCT": 503.14
+            "SCT": 263.14
         },
         "irons_spellbooks:priest_leggings": {
-            "SCT": 623.14
+            "SCT": 263.14
         },
         "irons_spellbooks:protection_rune": {
             "SCT": 110.3
@@ -6163,16 +7117,16 @@
             "SCT": 120.0
         },
         "irons_spellbooks:pyromancer_boots": {
-            "SCT": 360.3
+            "SCT": 180.3
         },
         "irons_spellbooks:pyromancer_chestplate": {
-            "SCT": 600.3
+            "SCT": 180.3
         },
         "irons_spellbooks:pyromancer_helmet": {
-            "SCT": 420.3
+            "SCT": 180.3
         },
         "irons_spellbooks:pyromancer_leggings": {
-            "SCT": 540.3
+            "SCT": 180.3
         },
         "irons_spellbooks:rare_ink": {
             "SCT": 0.72
@@ -6193,16 +7147,16 @@
             "SCT": 0.3
         },
         "irons_spellbooks:shadowwalker_boots": {
-            "SCT": 360.3
+            "SCT": 180.3
         },
         "irons_spellbooks:shadowwalker_chestplate": {
-            "SCT": 600.3
+            "SCT": 180.3
         },
         "irons_spellbooks:shadowwalker_helmet": {
-            "SCT": 420.3
+            "SCT": 180.3
         },
         "irons_spellbooks:shadowwalker_leggings": {
-            "SCT": 540.3
+            "SCT": 180.3
         },
         "irons_spellbooks:shriving_stone": {
             "SCT": 40.71
@@ -6225,8 +7179,17 @@
         "irons_spellbooks:timeless_slurry": {
             "SCT": 0.9
         },
+        "irons_spellbooks:tincture_of_forgetfulness": {
+            "SCT": NaN
+        },
         "irons_spellbooks:twilight_gale": {
             "SCT": 680.0
+        },
+        "irons_spellbooks:tyros_statue": {
+            "SCT": 61.5
+        },
+        "irons_spellbooks:unchained_book": {
+            "SCT": 0.0
         },
         "irons_spellbooks:uncommon_ink": {
             "SCT": 0.24
@@ -6256,10 +7219,13 @@
             "SCT": 16.67
         },
         "irons_spellbooks:weapon_parts": {
-            "SCT": 20.4
+            "SCT": 18.48
+        },
+        "irons_spellbooks:wicked_bone_ring": {
+            "SCT": 0.0
         },
         "irons_spellbooks:wisewood_bookshelf": {
-            "SCT": 14.35
+            "SCT": 14.34
         },
         "irons_spellbooks:wisewood_chiseled_bookshelf": {
             "SCT": 9.3
@@ -6430,7 +7396,7 @@
             "SCT": 217.44
         },
         "minecraft:beetroot_soup": {
-            "SCT": 45.93
+            "SCT": 22.5
         },
         "minecraft:bell": {
             "SCT": 80.0
@@ -6559,13 +7525,13 @@
             "SCT": 105.0
         },
         "minecraft:cake": {
-            "SCT": 7547.5
+            "SCT": 54.53
         },
         "minecraft:calibrated_sculk_sensor": {
             "SCT": 27.13
         },
         "minecraft:campfire": {
-            "SCT": 5.95
+            "SCT": 20.8
         },
         "minecraft:carrot_on_a_stick": {
             "SCT": 39.3
@@ -6642,6 +7608,9 @@
         "minecraft:chiseled_bookshelf": {
             "SCT": 9.3
         },
+        "minecraft:chiseled_cinnabar": {
+            "SCT": 0.3
+        },
         "minecraft:chiseled_deepslate": {
             "SCT": 0.3
         },
@@ -6666,6 +7635,9 @@
         "minecraft:chiseled_stone_bricks": {
             "SCT": 0.3
         },
+        "minecraft:chiseled_sulfur": {
+            "SCT": 0.0
+        },
         "minecraft:chiseled_tuff": {
             "SCT": 0.3
         },
@@ -6677,6 +7649,27 @@
         },
         "minecraft:chorus_fruit": {
             "SCT": 15.0
+        },
+        "minecraft:cinnabar_brick_slab": {
+            "SCT": 0.15
+        },
+        "minecraft:cinnabar_brick_stairs": {
+            "SCT": 0.3
+        },
+        "minecraft:cinnabar_brick_wall": {
+            "SCT": 0.3
+        },
+        "minecraft:cinnabar_bricks": {
+            "SCT": 0.3
+        },
+        "minecraft:cinnabar_slab": {
+            "SCT": 0.15
+        },
+        "minecraft:cinnabar_stairs": {
+            "SCT": 0.3
+        },
+        "minecraft:cinnabar_wall": {
+            "SCT": 0.3
         },
         "minecraft:clay": {
             "SCT": 0.32
@@ -7060,7 +8053,7 @@
             "SCT": 15.0
         },
         "minecraft:fermented_spider_eye": {
-            "SCT": 15.75
+            "SCT": 15.52
         },
         "minecraft:fire_charge": {
             "SCT": 4.7
@@ -7111,7 +8104,7 @@
             "SCT": 0.05
         },
         "minecraft:glistering_melon_slice": {
-            "SCT": 8.3
+            "SCT": 1.5
         },
         "minecraft:globe_banner_pattern": {
             "SCT": 360.0
@@ -7132,7 +8125,7 @@
             "SCT": 0.1
         },
         "minecraft:goat_horn": {
-            "SCT": 45.0
+            "SCT": 460.0
         },
         "minecraft:gold_block": {
             "SCT": 405.0
@@ -7216,10 +8209,10 @@
             "SCT": 70.0
         },
         "minecraft:honey_block": {
-            "SCT": 30000.0
+            "SCT": 0.2
         },
         "minecraft:honey_bottle": {
-            "SCT": 7500.05
+            "SCT": 0.05
         },
         "minecraft:honeycomb": {
             "SCT": 70.0
@@ -7357,7 +8350,7 @@
             "SCT": 0.01
         },
         "minecraft:lava_bucket": {
-            "SCT": 10.0
+            "SCT": 3.0
         },
         "minecraft:lead": {
             "SCT": 37.5
@@ -7465,16 +8458,19 @@
             "SCT": 4.0
         },
         "minecraft:melon": {
-            "SCT": 67.5
+            "SCT": 6.3
+        },
+        "minecraft:melon_slice": {
+            "SCT": 0.7
         },
         "minecraft:milk": {
-            "SCT": 7.5
+            "SCT": 0.01
         },
         "minecraft:milk_bucket": {
-            "SCT": 7500.0
+            "SCT": 7.5
         },
         "minecraft:minecart": {
-            "SCT": 175.0
+            "SCT": 8.5
         },
         "minecraft:mojang_banner_pattern": {
             "SCT": 4250.5
@@ -7507,19 +8503,19 @@
             "SCT": 0.5
         },
         "minecraft:mud_brick_slab": {
-            "SCT": 15.1
+            "SCT": 0.1
         },
         "minecraft:mud_brick_stairs": {
-            "SCT": 30.2
+            "SCT": 0.2
         },
         "minecraft:mud_brick_wall": {
-            "SCT": 30.2
+            "SCT": 0.2
         },
         "minecraft:mud_bricks": {
-            "SCT": 30.2
+            "SCT": 0.2
         },
         "minecraft:mushroom_stew": {
-            "SCT": 1.93
+            "SCT": 1.0
         },
         "minecraft:name_tag": {
             "SCT": 17.8
@@ -7657,10 +8653,10 @@
             "SCT": 9.0
         },
         "minecraft:packed_mud": {
-            "SCT": 30.2
+            "SCT": 0.2
         },
         "minecraft:painting": {
-            "SCT": 64.8
+            "SCT": 6.0
         },
         "minecraft:pale_moss_carpet": {
             "SCT": 0.13
@@ -7776,6 +8772,18 @@
         "minecraft:polished_blackstone_wall": {
             "SCT": 0.3
         },
+        "minecraft:polished_cinnabar": {
+            "SCT": 0.3
+        },
+        "minecraft:polished_cinnabar_slab": {
+            "SCT": 0.15
+        },
+        "minecraft:polished_cinnabar_stairs": {
+            "SCT": 0.3
+        },
+        "minecraft:polished_cinnabar_wall": {
+            "SCT": 0.3
+        },
         "minecraft:polished_deepslate": {
             "SCT": 0.3
         },
@@ -7806,6 +8814,18 @@
         "minecraft:polished_granite_stairs": {
             "SCT": 0.3
         },
+        "minecraft:polished_sulfur": {
+            "SCT": 0.0
+        },
+        "minecraft:polished_sulfur_slab": {
+            "SCT": 0.0
+        },
+        "minecraft:polished_sulfur_stairs": {
+            "SCT": 0.0
+        },
+        "minecraft:polished_sulfur_wall": {
+            "SCT": 0.0
+        },
         "minecraft:polished_tuff": {
             "SCT": 0.3
         },
@@ -7820,6 +8840,9 @@
         },
         "minecraft:popped_chorus_fruit": {
             "SCT": 15.0
+        },
+        "minecraft:potent_sulfur": {
+            "SCT": 0.0
         },
         "minecraft:powder_snow_bucket": {
             "SCT": 100.0
@@ -7858,7 +8881,7 @@
             "SCT": 100.0
         },
         "minecraft:pumpkin_pie": {
-            "SCT": 11.78
+            "SCT": 11.66
         },
         "minecraft:purple_dye": {
             "SCT": 0.21
@@ -7900,7 +8923,7 @@
             "SCT": 30.0
         },
         "minecraft:rabbit_stew": {
-            "SCT": 36.43
+            "SCT": 35.5
         },
         "minecraft:rail": {
             "SCT": 13.16
@@ -8020,7 +9043,7 @@
             "SCT": 1.2
         },
         "minecraft:scaffolding": {
-            "SCT": 2.8
+            "SCT": 0.5
         },
         "minecraft:sculk": {
             "SCT": 2.5
@@ -8074,7 +9097,7 @@
             "SCT": 74.96
         },
         "minecraft:smoker": {
-            "SCT": 2.6
+            "SCT": 22.4
         },
         "minecraft:smooth_basalt": {
             "SCT": 0.3
@@ -8128,7 +9151,7 @@
             "SCT": 0.25
         },
         "minecraft:soul_campfire": {
-            "SCT": 2.15
+            "SCT": 17.0
         },
         "minecraft:soul_lantern": {
             "SCT": 16.67
@@ -8251,7 +9274,37 @@
             "SCT": 15.0
         },
         "minecraft:sugar": {
-            "SCT": 0.25
+            "SCT": 0.02
+        },
+        "minecraft:sulfur": {
+            "SCT": 0.0
+        },
+        "minecraft:sulfur_brick_slab": {
+            "SCT": 0.0
+        },
+        "minecraft:sulfur_brick_stairs": {
+            "SCT": 0.0
+        },
+        "minecraft:sulfur_brick_wall": {
+            "SCT": 0.0
+        },
+        "minecraft:sulfur_bricks": {
+            "SCT": 0.0
+        },
+        "minecraft:sulfur_cube_bucket": {
+            "SCT": 0.0
+        },
+        "minecraft:sulfur_slab": {
+            "SCT": 0.0
+        },
+        "minecraft:sulfur_spike": {
+            "SCT": 0.0
+        },
+        "minecraft:sulfur_stairs": {
+            "SCT": 0.0
+        },
+        "minecraft:sulfur_wall": {
+            "SCT": 0.0
         },
         "minecraft:sweet_berries": {
             "SCT": 5.0
@@ -8539,7 +9592,7 @@
             "SCT": 0.17
         },
         "naturescompass:naturescompass": {
-            "SCT": 166.0
+            "SCT": 185.8
         },
         "numismatics:andesite_depositor": {
             "SCT": 38.56
@@ -8614,7 +9667,7 @@
             "SCT": 930.0
         },
         "patchouli:guide_book": {
-            "SCT": 2.4
+            "SCT": 2.32
         },
         "protection_pixel:alloyarmorplate": {
             "SCT": 365.86
@@ -8847,7 +9900,19 @@
         "randomium:randomium": {
             "SCT": -1.0
         },
-        "rarcompat:mimi_dust": {
+        "relics:cooked_meatball": {
+            "SCT": 0.0
+        },
+        "relics:golden_tooth": {
+            "SCT": 0.0
+        },
+        "relics:raw_meatball": {
+            "SCT": 0.0
+        },
+        "relics:shield_of_retaliation": {
+            "SCT": 0.0
+        },
+        "reliquified_artifacts:mimi_dust": {
             "SCT": 950.2
         },
         "sereneseasons:calendar": {
@@ -9067,7 +10132,7 @@
             "SCT": 0.3
         },
         "somemoreblocks:chiseled_mud_bricks": {
-            "SCT": 30.2
+            "SCT": 0.2
         },
         "somemoreblocks:chiseled_polished_basalt_bricks": {
             "SCT": 0.5
@@ -9217,10 +10282,10 @@
             "SCT": 225.0
         },
         "somemoreblocks:cracked_mud_bricks": {
-            "SCT": 30.2
+            "SCT": 0.2
         },
         "somemoreblocks:cracked_mud_tiles": {
-            "SCT": 30.2
+            "SCT": 0.2
         },
         "somemoreblocks:cracked_netherite_bricks": {
             "SCT": 5940.0
@@ -9811,16 +10876,16 @@
             "SCT": 0.5
         },
         "somemoreblocks:mossy_mud_brick_slab": {
-            "SCT": 15.2
+            "SCT": 0.2
         },
         "somemoreblocks:mossy_mud_brick_stairs": {
-            "SCT": 30.4
+            "SCT": 0.4
         },
         "somemoreblocks:mossy_mud_brick_wall": {
-            "SCT": 30.4
+            "SCT": 0.4
         },
         "somemoreblocks:mossy_mud_bricks": {
-            "SCT": 30.4
+            "SCT": 0.4
         },
         "somemoreblocks:mossy_prismarine_brick_slab": {
             "SCT": 50.05
@@ -9883,19 +10948,19 @@
             "SCT": 0.5
         },
         "somemoreblocks:mud_pillar": {
-            "SCT": 30.2
+            "SCT": 0.2
         },
         "somemoreblocks:mud_tile_slab": {
-            "SCT": 15.1
+            "SCT": 0.1
         },
         "somemoreblocks:mud_tile_stairs": {
-            "SCT": 30.2
+            "SCT": 0.2
         },
         "somemoreblocks:mud_tile_wall": {
-            "SCT": 30.2
+            "SCT": 0.2
         },
         "somemoreblocks:mud_tiles": {
-            "SCT": 30.2
+            "SCT": 0.2
         },
         "somemoreblocks:nether_bricks_pillar": {
             "SCT": 0.32
@@ -10066,13 +11131,13 @@
             "SCT": 9.0
         },
         "somemoreblocks:polished_mud": {
-            "SCT": 30.2
+            "SCT": 0.2
         },
         "somemoreblocks:polished_mud_slab": {
-            "SCT": 15.1
+            "SCT": 0.1
         },
         "somemoreblocks:polished_mud_stairs": {
-            "SCT": 30.2
+            "SCT": 0.2
         },
         "somemoreblocks:polished_prismarine": {
             "SCT": 100.0
@@ -10318,10 +11383,10 @@
             "SCT": 0.15
         },
         "somemoreblocks:smooth_mud": {
-            "SCT": 30.2
+            "SCT": 0.2
         },
         "somemoreblocks:smooth_mud_slab": {
-            "SCT": 15.1
+            "SCT": 0.1
         },
         "somemoreblocks:smooth_prismarine": {
             "SCT": 100.0
@@ -10611,6 +11676,9 @@
         "sophisticatedbackpacks:advanced_magnet_upgrade": {
             "SCT": 236.1
         },
+        "sophisticatedbackpacks:advanced_mob_catcher_upgrade": {
+            "SCT": 1648.4
+        },
         "sophisticatedbackpacks:advanced_pickup_upgrade": {
             "SCT": 236.1
         },
@@ -10691,6 +11759,9 @@
         },
         "sophisticatedbackpacks:magnet_upgrade": {
             "SCT": 236.1
+        },
+        "sophisticatedbackpacks:mob_catcher_upgrade": {
+            "SCT": 387.5
         },
         "sophisticatedbackpacks:netherite_backpack": {
             "SCT": 2493.02
@@ -10885,7 +11956,7 @@
             "SCT": 2.0
         },
         "sophisticatedstorage:decoration_table": {
-            "SCT": 151.31
+            "SCT": 166.16
         },
         "sophisticatedstorage:diamond_barrel": {
             "SCT": 1197.58
@@ -11071,7 +12142,7 @@
             "SCT": 78.69
         },
         "sophisticatedstorage:stack_upgrade_tier_1": {
-            "SCT": 146.6
+            "SCT": 186.2
         },
         "sophisticatedstorage:stack_upgrade_tier_1_plus": {
             "SCT": 78.69
@@ -11117,6 +12188,12 @@
         },
         "sophisticatedstorage:warped_storage_connector": {
             "SCT": 2.0
+        },
+        "stonkstimecore:golden_ticket": {
+            "SCT": 0.0
+        },
+        "stonkstimecore:slot_machine": {
+            "SCT": 22032.51
         },
         "stonkstimecore:stonks_temporal_chronoscope": {
             "SCT": 36312.21
@@ -11188,7 +12265,7 @@
             "SCT": 133.1
         },
         "supplementaries:candy": {
-            "SCT": 937.6
+            "SCT": 0.07
         },
         "supplementaries:cannon": {
             "SCT": 252.62
@@ -11281,13 +12358,13 @@
             "SCT": 135.0
         },
         "supplementaries:fine_wood": {
-            "SCT": 1.3
+            "SCT": 6.25
         },
         "supplementaries:fine_wood_slab": {
-            "SCT": 0.65
+            "SCT": 3.12
         },
         "supplementaries:fine_wood_stairs": {
-            "SCT": 1.95
+            "SCT": 9.38
         },
         "supplementaries:fire_pit": {
             "SCT": 40.05
@@ -11389,13 +12466,13 @@
             "SCT": 10.42
         },
         "supplementaries:pancake": {
-            "SCT": 2505.75
+            "SCT": 15.69
         },
         "supplementaries:pedestal": {
             "SCT": 0.6
         },
         "supplementaries:planter": {
-            "SCT": 1.06
+            "SCT": 0.86
         },
         "supplementaries:pulley_block": {
             "SCT": 43.68
@@ -11467,7 +12544,7 @@
             "SCT": 0.3
         },
         "supplementaries:sugar_cube": {
-            "SCT": 2.25
+            "SCT": 0.18
         },
         "supplementaries:timber_brace": {
             "SCT": 2.4
@@ -11611,7 +12688,7 @@
             "SCT": 7.76
         },
         "tiab:time_in_a_bottle": {
-            "SCT": 29000.45
+            "SCT": 28998.53
         },
         "travelerscompass:travelerscompass": {
             "SCT": 447.4
@@ -11624,6 +12701,9 @@
         },
         "vista:viewfinder": {
             "SCT": 196.43
+        },
+        "vista:wave_gate": {
+            "SCT": 0.0
         },
         "waterframes:big_tv": {
             "SCT": 756.47

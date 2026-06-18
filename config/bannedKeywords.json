@@ -149,7 +149,7 @@
     "irons_spellbooks:claymore",
     "somemoreblocks:*leaves_bucket",
     "hazennstuff:*arbitrium_robes*",
-    "hazennstuff:geckolib_*",
+    "hazennstuff:*geckolib_*",
     "born_in_chaos_v1:infernal_evil_pumpkin_s",
     "born_in_chaos_v1:puddleof_stimulation",
     "born_in_chaos_v1:puddleofintoxication",
@@ -251,7 +251,8 @@
     "create:crushing-create:crushing/ochrum",
     "create:crushing-create:crushing/asurine",
     "create:crushing-create:crushing/diorite",
-    "create:crushing-create:crushing/tuff"
-
+    "create:crushing-create:crushing/tuff",
+    "relics:pet_bone",
+    "crystal_chronicles:hemalite_block"
   ]
 }

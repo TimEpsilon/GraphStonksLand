@@ -465,5 +465,157 @@
       "#create:blaze_burners" : 1,
       "numismatics:banking_guide" : 1
     }
+  },
+  "darkdoppelganger:drops" : {
+    "output" : {
+      "#darkdoppelganger:drops" : 1
+    },
+    "input" : {
+      "darkdoppelganger:shadow_orb" : 3
+    }
+  },
+  "hazennstuff:zenalite" : {
+    "output" : {
+      "hazennstuff:raw_zenalite" : 4
+    },
+    "input" : {
+      "#zenalite_ores" : 3
+    }
+  },
+  "create:zinc" : {
+    "output" : {
+      "create:raw_zinc" : 4
+    },
+    "input" : {
+      "#zinc_ores" : 3
+    }
+  },
+  "minecraft:redstone" : {
+    "output" : {
+      "createoreexcavation:raw_redstone" : 4
+    },
+    "input" : {
+      "#redstone_ores" : 3
+    }
+  },
+  "minecraft:emerald" : {
+    "output" : {
+      "createoreexcavation:raw_emerald" : 4
+    },
+    "input" : {
+      "#emerald_ores" : 3
+    }
+  },
+  "minecraft:lapis_lazuli" : {
+    "output" : {
+      "minecraft:lapis_lazuli" : 24
+    },
+    "input" : {
+      "#lapis_ores" : 3
+    }
+  },
+  "minecraft:iron" : {
+    "output" : {
+      "minecraft:raw_iron" : 4
+    },
+    "input" : {
+      "#iron_ores" : 3
+    }
+  },
+  "minecraft:gold" : {
+    "output" : {
+      "minecraft:raw_gold" : 4
+    },
+    "input" : {
+      "#gold_ores" : 3
+    }
+  },
+  "minecraft:diamond" : {
+    "output" : {
+      "createoreexcavation:raw_diamond" : 4
+    },
+    "input" : {
+      "#diamond_ores" : 3
+    }
+  },
+  "born_in_chaos_v1:dark_metal" : {
+    "output" : {
+      "born_in_chaos_v1:pieceofdarkmetal" : 4
+    },
+    "input" : {
+      "#dark_metal_ores" : 3
+    }
+  },
+  "minecraft:coal" : {
+    "output" : {
+      "minecraft:coal" : 4
+    },
+    "input" : {
+      "#coal_ores" : 3
+    }
+  },
+  "minecraft:copper" : {
+    "output" : {
+      "minecraft:raw_copper" : 12
+    },
+    "input" : {
+      "#copper_ores" : 3
+    }
+  },
+  "minecraft:tropical_fish_bucket" : {
+    "output" : {
+      "minecraft:tropical_fish_bucket" : 4
+    },
+    "input" : {
+      "minecraft:water_bucket" : 5
+    }
+  },
+  "minecraft:salmon_bucket" : {
+    "output" : {
+      "minecraft:salmon_bucket" : 4
+    },
+    "input" : {
+      "minecraft:water_bucket" : 5
+    }
+  },
+  "minecraft:pufferfish_bucket" : {
+    "output" : {
+      "minecraft:pufferfish_bucket" : 4
+    },
+    "input" : {
+      "minecraft:water_bucket" : 5
+    }
+  },
+  "minecraft:cod_bucket" : {
+    "output" : {
+      "minecraft:cod_bucket" : 4
+    },
+    "input" : {
+      "minecraft:water_bucket" : 5
+    }
+  },
+  "minecraft:tadpole_bucket" : {
+    "output" : {
+      "minecraft:tadpole_bucket" : 3
+    },
+    "input" : {
+      "minecraft:water_bucket" : 4
+    }
+  },
+  "minecraft:axolotl_bucket" : {
+    "output" : {
+      "minecraft:axolotl_bucket" : 3
+    },
+    "input" : {
+      "minecraft:water_bucket" : 4
+    }
+  },
+  "minecraft:powder_snow_bucket" : {
+    "output" : {
+      "minecraft:powder_snow_bucket" : 3
+    },
+    "input" : {
+      "minecraft:bucket" : 4
+    }
   }
 }
