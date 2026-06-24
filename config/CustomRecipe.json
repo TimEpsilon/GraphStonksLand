@@ -302,7 +302,8 @@
     },
     "input" : {
       "minecraft:lava" : 1000
-    }
+    },
+    "override" : false
   },
   "minecraft:lava" : {
     "input" : {
@@ -310,7 +311,8 @@
     },
     "output" : {
       "minecraft:lava" : 1000
-    }
+    },
+    "override" : false
   },
   "create_wizardry:mana_bucket" : {
     "output" : {
@@ -318,7 +320,8 @@
     },
     "input" : {
       "create_wizardry:mana" : 1000
-    }
+    },
+    "override" : false
   },
   "create_wizardry:mana" : {
     "input" : {
@@ -326,7 +329,8 @@
     },
     "output" : {
       "create_wizardry:mana" : 1000
-    }
+    },
+    "override" : false
   },
     "minecraft:water_bucket" : {
     "output" : {
@@ -334,7 +338,8 @@
     },
     "input" : {
       "minecraft:water" : 1000
-    }
+    },
+    "override" : false
   },
   "minecraft:water" : {
     "input" : {
@@ -342,7 +347,8 @@
     },
     "output" : {
       "minecraft:water" : 1000
-    }
+    },
+    "override" : false
   },
     "minecraft:milk_bucket" : {
     "output" : {
@@ -350,7 +356,8 @@
     },
     "input" : {
       "minecraft:milk" : 1000
-    }
+    },
+    "override" : false
   },
   "minecraft:milk" : {
     "input" : {
@@ -358,7 +365,8 @@
     },
     "output" : {
       "minecraft:milk" : 1000
-    }
+    },
+    "override" : false
   },
   "create:honey_bucket" : {
     "output" : {
@@ -366,7 +374,8 @@
     },
     "input" : {
       "#create:honeys" : 1000
-    }
+    },
+    "override" : false
   },
   "create:honey" : {
     "input" : {
@@ -374,7 +383,8 @@
     },
     "output" : {
       "#create:honeys" : 1000
-    }
+    },
+    "override" : false
   },
   "create:chocolate_bucket" : {
     "output" : {
@@ -382,7 +392,8 @@
     },
     "input" : {
       "create:chocolate" : 1000
-    }
+    },
+    "override" : false
   },
   "create:chocolate" : {
     "input" : {
@@ -390,15 +401,8 @@
     },
     "output" : {
       "create:chocolate" : 1000
-    }
-  },
-  "create_wizardry:blood_bucket" : {
-    "output" : {
-      "create_wizardry:blood_bucket" : 1
     },
-    "input" : {
-      "irons_spellbooks:blood" : 1000
-    }
+    "override" : false
   },
   "irons_spellbooks:blood" : {
     "input" : {
@@ -406,7 +410,8 @@
     },
     "output" : {
       "irons_spellbooks:blood" : 1000
-    }
+    },
+    "override" : false
   },
   "create_wizardry:lightning_bucket" : {
     "output" : {
@@ -414,7 +419,8 @@
     },
     "input" : {
       "create_wizardry:lightning" : 1000
-    }
+    },
+    "override" : false
   },
   "create_wizardry:lightning" : {
     "input" : {
@@ -422,7 +428,8 @@
     },
     "output" : {
       "create_wizardry:lightning" : 1000
-    }
+    },
+    "override" : false
   },
     "sophisticatedcore:xp_bucket" : {
     "output" : {
@@ -430,7 +437,8 @@
     },
     "input" : {
       "sophisticatedcore:xp_still" : 1000
-    }
+    },
+    "override" : false
   },
   "sophisticatedcore:xp_still" : {
     "input" : {
@@ -438,7 +446,8 @@
     },
     "output" : {
       "sophisticatedcore:xp_still" : 1000
-    }
+    },
+    "override" : false
   },
   "supplementaries:trapped_present" : {
     "output" : {
@@ -616,6 +625,86 @@
     },
     "input" : {
       "minecraft:bucket" : 4
+    }
+  },
+  "minecraft:sulfur_cube_bucket" : {
+    "output" : {
+      "minecraft:sulfur_cube_bucket" : 3
+    },
+    "input" : {
+      "minecraft:bucket" : 4
+    }
+  },
+  "farmersdelight:gleaming_salad" : {
+    "output" : {
+      "farmersdelight:gleaming_salad" : 4
+    },
+    "input" : {
+      "farmersdelight:gleaming_salad_block" : 1
+    }
+  },
+  "farmersdelight:honey_glazed_ham" : {
+    "output" : {
+      "farmersdelight:honey_glazed_ham" : 4
+    },
+    "input" : {
+      "farmersdelight:honey_glazed_ham_block" : 1
+    }
+  },
+  "farmersdelight:roast_chicken" : {
+    "output" : {
+      "farmersdelight:roast_chicken" : 4
+    },
+    "input" : {
+      "farmersdelight:roast_chicken_block" : 1
+    }
+  },
+  "farmersdelight:shepherds_pie" : {
+    "output" : {
+      "farmersdelight:shepherds_pie" : 4
+    },
+    "input" : {
+      "farmersdelight:shepherds_pie_block" : 1
+    }
+  },
+  "farmersdelight:stuffed_pumpkin" : {
+    "output" : {
+      "farmersdelight:stuffed_pumpkin" : 4
+    },
+    "input" : {
+      "farmersdelight:stuffed_pumpkin_block" : 1
+    }
+  },
+  "farmersdelight:rich_soil" : {
+    "output" : {
+      "farmersdelight:rich_soil" : 1
+    },
+    "input" : {
+      "farmersdelight:organic_compost" : 1
+    }
+  },
+  "brewinandchewin:flaxen_cheese_wheel" : {
+    "output" : {
+      "brewinandchewin:flaxen_cheese_wheel" : 1
+    },
+    "input" : {
+      "brewinandchewin:unripe_flaxen_cheese_wheel" : 1
+    }
+  },
+  "brewinandchewin:scarlet_cheese_wheel" : {
+    "output" : {
+      "brewinandchewin:scarlet_cheese_wheel" : 1
+    },
+    "input" : {
+      "brewinandchewin:unripe_scarlet_cheese_wheel" : 1
+    }
+  },
+  "brewinandchewin:fiery_fondue" : {
+    "output" : {
+      "brewinandchewin:fiery_fondue" : 3
+    },
+    "input" : {
+      "brewinandchewin:fiery_fondue_pot" : 1
     }
   }
 }

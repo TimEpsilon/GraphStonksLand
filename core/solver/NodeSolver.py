@@ -66,7 +66,7 @@ class NodeSolver(ABC):
 
 
     @staticmethod
-    def cutTooLow(candidates, threshold=0.01):
+    def cutTooLow(candidates, threshold=0.001):
         candidates = np.array(list(candidates)) if len(candidates) > 0 else np.array([0])
         candidates = np.round(candidates / threshold) * threshold
         return set(candidates[candidates >= threshold].astype(float).tolist())
@@ -75,12 +75,12 @@ class NodeSolver(ABC):
     def selectionMethod(values : set | dict[str, set[float]]):
         vals = values.copy()
         if type(values) == dict:
-            vals = [values[f] for f in values.keys() if f.startswith("minecraft:")]  # Priority to minecraft recipes
+            vals = [values[f] for f in values.keys()]  # Priority to minecraft recipes
             vals = set().union(*vals)
             if len(vals) == 0:
                 vals = set().union(*values.values())
         vals = np.array(list(vals))
-        result = min(vals[vals != 0]) if len(vals[vals != 0]) > 0 else 0
+        result = np.nanmin(vals[vals != 0]) if len(vals[vals != 0]) > 0 else 0
         return result
 
     def _selectionMethod(self, values : set | dict[str, float]):

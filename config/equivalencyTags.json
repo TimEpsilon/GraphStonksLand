@@ -154,7 +154,9 @@
     "#minecraft:dark_oak_logs",
     "crystal_chronicles:bronchus",
     "#minecraft:crimson_stems",
-    "#minecraft:warped_stems"
+    "#minecraft:warped_stems",
+    "#hazennstuff:blocks/wisewood_logs",
+    "#hazennstuff:blocks/frostbite_birch_logs"
   ],
   "#create:rare_packages" : [
     "create:rare_creeper_package",
@@ -211,8 +213,9 @@
     "somemoreblocks:tall_cactus",
     "somemoreblocks:tall_crimson_fungus_colony",
     "somemoreblocks:tall_dune_grass",
-    "somemoreblocks:tall_red_mushroom_colony"
-
+    "somemoreblocks:tall_red_mushroom_colony",
+    "farmersdelight:brown_mushroom_colony",
+    "farmersdelight:red_mushroom_colony"
   ],
   "#plants" : [
     "minecraft:spore_blossom",
@@ -257,8 +260,10 @@
     "somemoreblocks:tiny_cactus",
     "somemoreblocks:warped_fungus_colony",
     "supplementaries:barnacles",
-    "supplementaries:wild_flax"
-
+    "supplementaries:wild_flax",
+    "crystal_chronicles:tall_villi",
+    "crystal_chronicles:villi",
+    "farmersdelight:sandy_shrub"
   ],
   "#froglight" : [
     "minecraft:ochre_froglight",
@@ -271,14 +276,18 @@
   "#plant_foods" : [
     "minecraft:carrot",
     "minecraft:beetroot",
-    "minecraft:potato"
+    "minecraft:potato",
+    "farmersdelight:tomato",
+    "farmersdelight:cabbage"
   ],
   "#meat_foods" : [
     "minecraft:chicken",
     "minecraft:beef",
     "minecraft:mutton",
     "minecraft:porkchop",
-    "minecraft:rabbit"
+    "minecraft:rabbit",
+    "farmersdelight:ham",
+    "relics:raw_meatball"
   ],
   "#fish_foods" : [
     "minecraft:cod",
@@ -444,7 +453,6 @@
   ],
   "#zenalite_ores" : [
     "#hazennstuff:blocks/zenalite_ores",
-    "hazennstuff:raw_zenalite",
     "hazennstuff:zenalite_end_stone_ore"
   ],
   "#chlorophyte_ores" : [
@@ -473,15 +481,11 @@
   ],
   "#relics": [
     "#reliquified_artifacts:mimificable",
-    "arcane_abilities:fate_beacon",
-    "arcane_abilities:icy_crystal",
-    "arcane_abilities:shadow_lantern",
-    "arcane_abilities:stellar_sphere",
-    "arcane_abilities:weightless_boot",
     "artifacts:aqua_dashers",
     "artifacts:everlasting_beef",
     "artifacts:strider_shoes",
-    "relics:leafy_ring"
+    "relics:leafy_ring",
+    "relics:shield_of_retaliation"
   ],
   "#archeology_fossils" : [
     "betterarcheology:chicken_fossil_body",
@@ -512,7 +516,8 @@
   ],
   "#create:honeys" : [
     "create:honey",
-    "create:flowing_honey"
+    "create:flowing_honey",
+    "brewinandchewin:honey"
   ],
   "#born_in_chaos_v1:charms" : [
     "born_in_chaos_v1:charmof_endurance",
@@ -704,5 +709,74 @@
   "#irons_spellbooks:dead_king_drops" : [
     "irons_spellbooks:blood_staff",
     "irons_spellbooks:necronomicon_spell_book"
+  ],
+  "#crystal_chronicles:stones": [
+    "crystal_chronicles:aurum",
+    "crystal_chronicles:bismite",
+    "crystal_chronicles:cloud_block",
+    "crystal_chronicles:cloud_layer",
+    "crystal_chronicles:dense_cloud",
+    "crystal_chronicles:green_salt_deposit",
+    "crystal_chronicles:holy_beacon",
+    "crystal_chronicles:holy_light_block",
+    "crystal_chronicles:holy_marble",
+    "crystal_chronicles:orange_salt_deposit",
+    "crystal_chronicles:pumice",
+    "crystal_chronicles:red_salt_deposit",
+    "crystal_chronicles:salt_formation",
+    "crystal_chronicles:small_sulphur_cluster",
+    "crystal_chronicles:sulphur_crystal",
+    "crystal_chronicles:sulphur_powder",
+    "crystal_chronicles:sulphuric_soil",
+    "crystal_chronicles:tall_salt_formation",
+    "crystal_chronicles:thunderstone",
+    "crystal_chronicles:vermilion_brine_vent_base",
+    "crystal_chronicles:vermilion_brine_vent_top",
+    "crystal_chronicles:vermilion_salt_deposit",
+    "crystal_chronicles:yellow_brine_vent_base",
+    "crystal_chronicles:yellow_brine_vent_top",
+    "crystal_chronicles:yellow_salt_deposit",
+    "crystal_chronicles:pyrite",
+    "crystal_chronicles:volcanite_block",
+    "crystal_chronicles:cyan_bismuth",
+    "crystal_chronicles:violet_bismuth",
+    "crystal_chronicles:purple_bismuth",
+    "crystal_chronicles:yellow_bismuth"
+  ],
+  "#grains" : [
+    "farmersdelight:rice_panicle",
+    "farmersdelight:straw",
+    "minecraft:wheat"
+  ],
+  "#farmersdelight:wild_plants" : [
+    "farmersdelight:wild_beetroots",
+    "farmersdelight:wild_cabbages",
+    "farmersdelight:wild_carrots",
+    "farmersdelight:wild_onions",
+    "farmersdelight:wild_potatoes",
+    "farmersdelight:wild_rice",
+    "farmersdelight:wild_tomatoes"
+  ],
+  "#paraglider:paragliders" : [
+    "paraglider:paraglider",
+    "paraglider:deku_leaf"
+  ],
+  "#paraglider:goddess_statues" : [
+    "paraglider:goddess_statue",
+    "paraglider:kakariko_goddess_statue",
+    "paraglider:goron_goddess_statue",
+    "paraglider:rito_goddess_statue"
+  ],
+  "#hazennstuff:netherite_battlemage_helmet" : [
+    "#hazentouvelib:armors/netherite_battlemage/netherite_battlemage_helmet"
+  ],
+  "#hazennstuff:netherite_battlemage_chestplate" : [
+    "#hazentouvelib:armors/netherite_battlemage/netherite_battlemage_chestplate"
+  ],
+  "#hazennstuff:netherite_battlemage_leggings" : [
+    "#hazentouvelib:armors/netherite_battlemage/netherite_battlemage_leggings"
+  ],
+  "#hazennstuff:netherite_battlemage_boots" : [
+    "#hazentouvelib:armors/netherite_battlemage/netherite_battlemage_boots"
   ]
 }

@@ -6,6 +6,14 @@ import json
 import networkx as nx
 import pandas as pd
 
+MOD_EQUIVALENCE = [
+    ["aces_spell_utils", "create_wizardry", "crystal_chronicles",
+     "darkdoppelganger", "gametechbcs_spellbooks", "hazennstuff"
+                                                   "irons_lib", "irons_spellbooks"],
+    ["create", "create_hypertube", "create_wizardry",
+     "createoreexcavation", "numismatics"]
+]
+
 class GraphCreator:
 
     def __init__(self,
@@ -42,6 +50,7 @@ class GraphCreator:
         self.customRecipes = additionalRecipesPath
         self.bannedKeywords = bannedPath
         self.sourceItems = sourceItems
+        self.customRecipesNotOverride = set()
 
         # Item list
         self.itemList, self.modList = self._getItems()
@@ -73,6 +82,9 @@ class GraphCreator:
 
         # Make every atom a source node
         self._makeAtoms()
+
+        # Priority to custom recipes and then to same mod recipes
+        self._recipePriority()
 
         # Graph pruning
         # Removes unnecessary ingredient / recipe nodes
@@ -285,6 +297,13 @@ class GraphCreator:
             # Recipe -> output
             if not self.originalGraph.has_node(output):
                 self.log(f"{output} doesn't exist for recipe {recipe}", level=logging.ERROR)
+
+            # Cut every other recipe
+            shouldOverride = "override" not in recipes[r] or recipes[r]["override"]
+            if shouldOverride :
+                toRemove = list(self.originalGraph.predecessors(output))
+                self.originalGraph.remove_nodes_from(toRemove)
+
             self.originalGraph.add_edge(recipe, output, weight=recipes[r]["output"][output])
 
             for i in recipes[r]['input']:
@@ -372,6 +391,33 @@ class GraphCreator:
         self.G.add_edges_from(cycleIn)
         self.G.add_edges_from(cycleOut)
         self.G.remove_nodes_from(toRemove)
+
+    def _recipePriority(self):
+        self.log("Giving Recipe Priority")
+        g = self.originalGraph
+        toRemove = set()
+        for node,data in g.nodes.data():
+            if data["type"] == "item" and self.originalGraph.in_degree(node) > 0:
+                mod = node.split(":")[0].replace("#","")
+                tmpRemove = set()
+                shouldRemove = False
+                for p in g.predecessors(node):
+                    pmod = p.split("-")[1].split(":")[0]
+                    if mod == pmod or pmod == "minecraft" or any([(mod in eq and pmod in eq) for eq in MOD_EQUIVALENCE]):
+                        shouldRemove = True
+                    else:
+                        tmpRemove.add(p)
+
+                if shouldRemove and len(tmpRemove) > 0:
+                    self.log(f"Removing {tmpRemove} from {node}", level=logging.DEBUG)
+                    toRemove = toRemove.union(tmpRemove)
+
+        self.log(f"Found {len(toRemove)} recipes to remove")
+        for n in toRemove:
+            self.originalGraph.remove_node(n)
+
+
+
 
     def _pruneGraph(self):
         for node,data in self.originalGraph.copy().nodes.data():

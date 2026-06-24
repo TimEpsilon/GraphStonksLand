@@ -70,9 +70,8 @@ class CycleSolver(NodeSolver):
             # 2 - Propagate to the other nodes in the cycle
             converged = False
             Niter = 0
-            maxIter = len(self.subgraph.nodes) + 10
+            maxIter = len(self.subgraph.nodes) + 100
             while not converged and Niter < maxIter:
-                self.log(f"Starting cycle iteration {Niter}", level=logging.DEBUG)
                 converged = True
                 updatedSCT = {}
 
@@ -137,7 +136,7 @@ class CycleSolver(NodeSolver):
 
                 # 2nd loop to update every value at once
                 # We don't keep the previous values as they are only used for the convergence to the fixed point
-                self.log(f"New values : {updatedSCT}", level=logging.DEBUG)
+                self.log(f"({Niter}) - New values : {updatedSCT}", level=logging.DEBUG)
                 for node in self.subgraph.nodes():
                     # Ensures we don't replace an existing value with an empty one
                     if len(updatedSCT[node]) > 0:
@@ -145,7 +144,7 @@ class CycleSolver(NodeSolver):
 
                 Niter += 1
             if Niter == maxIter:
-                self.log(f"{self.thisNode} has not converged after {Niter} iterations.", level=logging.WARNING)
+                self.log(f"{self.thisNode} has not converged after {Niter} iterations.", level=logging.ERROR)
 
             self.graph.nodes[self.thisNode]["hasComputed"] = True
             self.log(f"{self.thisNode} values Computed in {Niter} iterations.")
