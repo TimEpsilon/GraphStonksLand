@@ -301,7 +301,7 @@
       "minecraft:lava_bucket" : 1
     },
     "input" : {
-      "minecraft:lava" : 1000
+      "minecraft:lava-fluid1mB" : 1000
     },
     "override" : false
   },
@@ -310,7 +310,7 @@
       "minecraft:lava_bucket" : 1
     },
     "output" : {
-      "minecraft:lava" : 1000
+      "minecraft:lava-fluid1mB" : 1000
     },
     "override" : false
   },
@@ -319,7 +319,7 @@
       "create_wizardry:mana_bucket" : 1
     },
     "input" : {
-      "create_wizardry:mana" : 1000
+      "create_wizardry:mana-fluid1mB" : 1000
     },
     "override" : false
   },
@@ -328,7 +328,7 @@
       "create_wizardry:mana_bucket" : 1
     },
     "output" : {
-      "create_wizardry:mana" : 1000
+      "create_wizardry:mana-fluid1mB" : 1000
     },
     "override" : false
   },
@@ -337,7 +337,7 @@
       "minecraft:water_bucket" : 1
     },
     "input" : {
-      "minecraft:water" : 1000
+      "minecraft:water-fluid1mB" : 1000
     },
     "override" : false
   },
@@ -346,7 +346,7 @@
       "minecraft:water_bucket" : 1
     },
     "output" : {
-      "minecraft:water" : 1000
+      "minecraft:water-fluid1mB" : 1000
     },
     "override" : false
   },
@@ -355,7 +355,7 @@
       "minecraft:milk_bucket" : 1
     },
     "input" : {
-      "minecraft:milk" : 1000
+      "minecraft:milk-fluid1mB" : 1000
     },
     "override" : false
   },
@@ -364,7 +364,7 @@
       "minecraft:milk_bucket" : 1
     },
     "output" : {
-      "minecraft:milk" : 1000
+      "minecraft:milk-fluid1mB" : 1000
     },
     "override" : false
   },
@@ -391,7 +391,7 @@
       "create:chocolate_bucket" : 1
     },
     "input" : {
-      "create:chocolate" : 1000
+      "create:chocolate-fluid1mB" : 1000
     },
     "override" : false
   },
@@ -400,7 +400,7 @@
       "create:chocolate_bucket" : 1
     },
     "output" : {
-      "create:chocolate" : 1000
+      "create:chocolate-fluid1mB" : 1000
     },
     "override" : false
   },
@@ -409,7 +409,7 @@
       "create_wizardry:blood_bucket" : 1
     },
     "output" : {
-      "irons_spellbooks:blood" : 1000
+      "irons_spellbooks:blood-fluid1mB" : 1000
     },
     "override" : false
   },
@@ -418,7 +418,7 @@
       "create_wizardry:lightning_bucket" : 1
     },
     "input" : {
-      "create_wizardry:lightning" : 1000
+      "create_wizardry:lightning-fluid1mB" : 1000
     },
     "override" : false
   },
@@ -427,7 +427,7 @@
       "create_wizardry:lightning_bucket" : 1
     },
     "output" : {
-      "create_wizardry:lightning" : 1000
+      "create_wizardry:lightning-fluid1mB" : 1000
     },
     "override" : false
   },
@@ -436,7 +436,7 @@
       "sophisticatedcore:xp_bucket" : 1
     },
     "input" : {
-      "sophisticatedcore:xp_still" : 1000
+      "sophisticatedcore:xp_still-fluid1mB" : 1000
     },
     "override" : false
   },
@@ -445,7 +445,7 @@
       "sophisticatedcore:xp_bucket" : 1
     },
     "output" : {
-      "sophisticatedcore:xp_still" : 1000
+      "sophisticatedcore:xp_still-fluid1mB" : 1000
     },
     "override" : false
   },
@@ -569,6 +569,14 @@
     },
     "input" : {
       "#copper_ores" : 3
+    }
+  },
+  "irons_spellbooks:mithril" : {
+    "output" : {
+      "#irons_spellbooks:mithril_scrap" : 4
+    },
+    "input" : {
+      "#mithril_ores" : 3
     }
   },
   "minecraft:tropical_fish_bucket" : {

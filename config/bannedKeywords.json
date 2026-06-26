@@ -157,8 +157,8 @@
     "hazennstuff:true_nights_edge",
     "hazennstuff:umbranova_dormant",
     "minecraft:flowing_*",
-    "brewinandchewin:flowing_honey",
-    "create:flowing_chocolate",
+    "brewinandchewin:flowing_honey-fluid1mB",
+    "create:flowing_chocolate-fluid1mB",
     "minecraft:*_amethyst_bud",
     "relics:phantom_block",
     "relics:relic_experience_bottle",
@@ -170,8 +170,8 @@
     "supplementaries:hazennstuff/way_sign_wisewood",
     "vista:picture_tape",
     "crystal_chronicles:blood_bucket",
-    "crystal_chronicles:flowing_blood",
-    "crystal_chronicles:source_blood",
+    "crystal_chronicles:flowing_blood-fluid1mB",
+    "crystal_chronicles:source_blood-fluid1mB",
     "irons_spellbooks:invisibility_elixir",
     "irons_spellbooks:greater_oakskin_elixir",
     "irons_spellbooks:greater_invisibility_elixir",
@@ -223,7 +223,6 @@
     "irons_spellbooks:cinderous_vault",
     "stonkstimecore:golden_ticket",
     "create:filling-irons_spellbooks:create_compat/create_fill_*_ink",
-    "create:filling-irons_spellbooks:filling/*_ink",
     "create:filling-create:filling/redstone",
     "crafting-minecraft:honey_bottle",
     "brewinandchewin:keg_pouring-brewinandchewin:pouring/honey_bottle",
@@ -240,7 +239,11 @@
     "create:filling-irons_spellbooks:filling/arcane_essence_sugar_filling",
     "create:filling-irons_spellbooks:filling/wisewood_bookshelf",
     "farmersdelight:cutting-farmersdelight:cutting/bamboo_basket",
+    "farmersdelight:cutting-farmersdelight:cutting/wooden_basket",
     "smelting-minecraft:gold_nugget_from_smelting",
-    "smelting-minecraft:iron_nugget_from_smelting"
+    "smelting-minecraft:iron_nugget_from_smelting",
+    "blasting-minecraft:iron_nugget_from_blasting",
+    "blasting-minecraft:gold_nugget_from_blasting",
+    "create:potion-fluid1mB"
   ]
 }

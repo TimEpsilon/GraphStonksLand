@@ -515,9 +515,9 @@
     "betterarcheology:torrent_totem"
   ],
   "#create:honeys" : [
-    "create:honey",
-    "create:flowing_honey",
-    "brewinandchewin:honey"
+    "create:honey-fluid1mB",
+    "create:flowing_honey-fluid1mB",
+    "brewinandchewin:honey-fluid1mB"
   ],
   "#born_in_chaos_v1:charms" : [
     "born_in_chaos_v1:charmof_endurance",
@@ -778,5 +778,15 @@
   ],
   "#hazennstuff:netherite_battlemage_boots" : [
     "#hazentouvelib:armors/netherite_battlemage/netherite_battlemage_boots"
+  ],
+  "#farmersdelight:hanging_canvas_signs" : [
+    "#farmersdelight:hanging_canvas_signs"
+  ],
+  "#farmersdelight:canvas_signs" : [
+    "#farmersdelight:canvas_signs"
+  ],
+  "#irons_spellbooks:mithril_scrap" : [
+    "irons_spellbooks:mithril_scrap",
+    "irons_spellbooks:raw_mithril"
   ]
 }

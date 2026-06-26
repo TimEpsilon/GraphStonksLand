@@ -68,20 +68,25 @@ class GraphCreator:
         # We keep a copy of the original graph just in case
         self.originalGraph = self._generateGraph()
         self.log(f"Full graph with following info : {self.originalGraph}")
+        print(self.originalGraph.has_node("minecraft:lava-fluid1mB"))
 
         # Filter unwanted nodes
         self._filterNodes()
+        print(self.originalGraph.has_node("minecraft:lava-fluid1mB"))
 
         # Equivalency links for each tag, defined in "equivalencyTags.json"
         # This condenses the nodes into one and removes the recipes in between them
         self._makeLinks()
+        print(self.originalGraph.has_node("minecraft:lava-fluid1mB"))
 
         # Adding Custom Recipes
         # We need a custom logic for ingredients
         self._makeCustomRecipes()
+        print(self.originalGraph.has_node("minecraft:lava-fluid1mB"))
 
         # Make every atom a source node
         self._makeAtoms()
+        print(self.originalGraph.has_node("minecraft:lava-fluid1mB"))
 
         # Priority to custom recipes and then to same mod recipes
         self._recipePriority()

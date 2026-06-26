@@ -140,7 +140,6 @@ irons_spellbooks:frozen_bone,10.0,,,part-000
 born_in_chaos_v1:elixirof_ice_barrier,160.0,,,part-062
 supplementaries:antique_ink,70.0,,,part-000
 minecraft:mangrove_roots,0.25,,,part-063
-irons_spellbooks:raw_mithril,15.0,,,part-000
 minecraft:snowball,0.25,,,part-000
 minecraft:bell,80.0,,,part-064
 minecraft:chainmail_leggings,15.0,,,part-000
@@ -172,6 +171,7 @@ born_in_chaos_v1:sea_terror_stomach,60.0,,,part-080
 minecraft:pitcher_plant,5.0,,,part-000
 minecraft:ender_pearl,20.0,,,part-000
 minecraft:flow_banner_pattern,320.0,,,part-081
+minecraft:slime_ball,5.0,,,part-000
 born_in_chaos_v1:sea_terror_eye,30.0,,,part-082
 minecraft:honeycomb,20.0,,,part-000
 minecraft:dragon_head,1800.0,,,part-000
@@ -229,11 +229,11 @@ irons_spellbooks:scroll,60.0,,,part-103
 irons_spellbooks:divine_soulshard,7200.0,,,part-000
 hazennstuff:stardust,90.0,,,part-000
 somemoreblocks:polished_basalt_bricks,0.1,,,part-000
-minecraft:lava,0.005,,,part-000
-minecraft:water,0.001,,,part-000
-create_wizardry:lightning,0.04,,,part-000
-minecraft:milk,0.01,,,part-000
-sophisticatedcore:xp_still,0.12,,,part-000
+minecraft:lava-fluid1mB,0.005,,,part-000
+minecraft:water-fluid1mB,0.001,,,part-000
+create_wizardry:lightning-fluid1mB,0.04,,,part-000
+minecraft:milk-fluid1mB,0.01,,,part-000
+sophisticatedcore:xp_still-fluid1mB,0.12,,,part-000
 #logs,1.5,,,part-000
 #create:rare_packages,1250.0,,,part-107
 #minecraft:leaves,0.1,,,part-000
@@ -289,4 +289,3 @@ sophisticatedcore:xp_still,0.12,,,part-000
 #grains,1.0,,,part-000
 #farmersdelight:wild_plants,2.0,,,part-000
 #paraglider:goddess_statues,500.0,,,part-105
-cycle-101,0.0,"{'minecraft:slime_ball', 'minecraft:slime_block'}",,part-000

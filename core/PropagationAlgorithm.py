@@ -95,7 +95,7 @@ class Propagation:
         self.log("Getting outputs")
         outputs = pd.DataFrame(columns=("node","SCT"))
         for node,data in self.graph.nodes.data():
-            if data["type"] == "item":
+            if data["type"] == "item" and "-fluid1mB" not in node:
                 out = NodeSolver.selectionMethod(data["SCTMap"] if "SCTMap" in data else data["SCT"])
                 out = format(out, '.3f')
                 outputs.loc[len(outputs)] = [node, out]
