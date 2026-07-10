@@ -1,0 +1,856 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+                <link href="lib/tom-select/tom-select.css" rel="stylesheet">
+                <script src="lib/tom-select/tom-select.complete.min.js"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 80%;
+                 height: 1000;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+             #loadingBar {
+                 position:absolute;
+                 top:0px;
+                 left:0px;
+                 width: 80%;
+                 height: 1000;
+                 background-color:rgba(200,200,200,0.8);
+                 -webkit-transition: all 0.5s ease;
+                 -moz-transition: all 0.5s ease;
+                 -ms-transition: all 0.5s ease;
+                 -o-transition: all 0.5s ease;
+                 transition: all 0.5s ease;
+                 opacity:1;
+             }
+
+             #bar {
+                 position:absolute;
+                 top:0px;
+                 left:0px;
+                 width:20px;
+                 height:20px;
+                 margin:auto auto auto auto;
+                 border-radius:11px;
+                 border:2px solid rgba(30,30,30,0.05);
+                 background: rgb(0, 173, 246); /* Old browsers */
+                 box-shadow: 2px 0px 4px rgba(0,0,0,0.4);
+             }
+
+             #border {
+                 position:absolute;
+                 top:10px;
+                 left:10px;
+                 width:500px;
+                 height:23px;
+                 margin:auto auto auto auto;
+                 box-shadow: 0px 0px 4px rgba(0,0,0,0.2);
+                 border-radius:10px;
+             }
+
+             #text {
+                 position:absolute;
+                 top:8px;
+                 left:530px;
+                 width:30px;
+                 height:50px;
+                 margin:auto auto auto auto;
+                 font-size:22px;
+                 color: #000000;
+             }
+
+             div.outerBorder {
+                 position:relative;
+                 top:400px;
+                 width:600px;
+                 height:44px;
+                 margin:auto auto auto auto;
+                 border:8px solid rgba(0,0,0,0.1);
+                 background: rgb(252,252,252); /* Old browsers */
+                 background: -moz-linear-gradient(top,  rgba(252,252,252,1) 0%, rgba(237,237,237,1) 100%); /* FF3.6+ */
+                 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,252,252,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
+                 background: -webkit-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
+                 background: -o-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Opera 11.10+ */
+                 background: -ms-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* IE10+ */
+                 background: linear-gradient(to bottom,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* W3C */
+                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+                 border-radius:72px;
+                 box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+             }
+             
+
+             
+             #config {
+                 float: left;
+                 width: 400px;
+                 height: 600px;
+             }
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+                <div id="select-menu" class="card-header">
+                    <div class="row no-gutters">
+                        <div class="col-10 pb-2">
+                            <select
+                            class="form-select"
+                            aria-label="Default select example"
+                            onchange="selectNode([value]);"
+                            id="select-node"
+                            placeholder="Select node..."
+                            >
+                                <option selected>Select a Node by ID</option>
+                                
+                                    <option value="minecraft:diamond">minecraft:diamond</option>
+                                
+                                    <option value="Ingredient@4d6c73f0">Ingredient@4d6c73f0</option>
+                                
+                                    <option value="Ingredient@4049bb80">Ingredient@4049bb80</option>
+                                
+                                    <option value="crafting-minecraft:cherry_slab">crafting-minecraft:cherry_slab</option>
+                                
+                                    <option value="smelting-minecraft:gold_ingot_from_smelting_raw_gold">smelting-minecraft:gold_ingot_from_smelting_raw_gold</option>
+                                
+                                    <option value="minecraft:gold_ingot">minecraft:gold_ingot</option>
+                                
+                                    <option value="Ingredient@8b48fb96">Ingredient@8b48fb96</option>
+                                
+                                    <option value="crafting-somemoreblocks:acacia_mosaic">crafting-somemoreblocks:acacia_mosaic</option>
+                                
+                                    <option value="Ingredient@afefa4c4">Ingredient@afefa4c4</option>
+                                
+                                    <option value="crafting-somemoreblocks:crimson_mosaic">crafting-somemoreblocks:crimson_mosaic</option>
+                                
+                                    <option value="betterarcheology:rotten_planks">betterarcheology:rotten_planks</option>
+                                
+                                    <option value="Ingredient@2d47a0ee">Ingredient@2d47a0ee</option>
+                                
+                                    <option value="crafting-minecraft:mangrove_slab">crafting-minecraft:mangrove_slab</option>
+                                
+                                    <option value="minecraft:mangrove_slab">minecraft:mangrove_slab</option>
+                                
+                                    <option value="crafting-sophisticatedbackpacks:stack_upgrade_tier_3">crafting-sophisticatedbackpacks:stack_upgrade_tier_3</option>
+                                
+                                    <option value="sophisticatedbackpacks:stack_upgrade_tier_3">sophisticatedbackpacks:stack_upgrade_tier_3</option>
+                                
+                                    <option value="crafting-minecraft:warped_planks">crafting-minecraft:warped_planks</option>
+                                
+                                    <option value="minecraft:warped_planks">minecraft:warped_planks</option>
+                                
+                                    <option value="Ingredient@6524a683">Ingredient@6524a683</option>
+                                
+                                    <option value="crafting-minecraft:netherite_ingot">crafting-minecraft:netherite_ingot</option>
+                                
+                                    <option value="minecraft:cherry_slab">minecraft:cherry_slab</option>
+                                
+                                    <option value="Ingredient@e0d2edfa">Ingredient@e0d2edfa</option>
+                                
+                                    <option value="minecraft:crimson_planks">minecraft:crimson_planks</option>
+                                
+                                    <option value="Ingredient@bd86cc5e">Ingredient@bd86cc5e</option>
+                                
+                                    <option value="crafting-somemoreblocks:jungle_mosaic">crafting-somemoreblocks:jungle_mosaic</option>
+                                
+                                    <option value="somemoreblocks:jungle_mosaic">somemoreblocks:jungle_mosaic</option>
+                                
+                                    <option value="crafting-minecraft:netherite_ingot_from_netherite_block">crafting-minecraft:netherite_ingot_from_netherite_block</option>
+                                
+                                    <option value="minecraft:netherite_ingot">minecraft:netherite_ingot</option>
+                                
+                                    <option value="hazennstuff:wisewood_planks">hazennstuff:wisewood_planks</option>
+                                
+                                    <option value="minecraft:jungle_planks">minecraft:jungle_planks</option>
+                                
+                                    <option value="Ingredient@d80d8e34">Ingredient@d80d8e34</option>
+                                
+                                    <option value="Ingredient@104abe82">Ingredient@104abe82</option>
+                                
+                                    <option value="crafting-somemoreblocks:warped_mosaic">crafting-somemoreblocks:warped_mosaic</option>
+                                
+                                    <option value="Ingredient@696489a6">Ingredient@696489a6</option>
+                                
+                                    <option value="Ingredient@1b457f86">Ingredient@1b457f86</option>
+                                
+                                    <option value="Ingredient@5b56c84f">Ingredient@5b56c84f</option>
+                                
+                                    <option value="Ingredient@2794cb06">Ingredient@2794cb06</option>
+                                
+                                    <option value="crafting-minecraft:acacia_slab">crafting-minecraft:acacia_slab</option>
+                                
+                                    <option value="#born_in_chaos_v1:scorched_planks">#born_in_chaos_v1:scorched_planks</option>
+                                
+                                    <option value="minecraft:birch_slab">minecraft:birch_slab</option>
+                                
+                                    <option value="Ingredient@dce74626">Ingredient@dce74626</option>
+                                
+                                    <option value="Ingredient@39ec1ff2">Ingredient@39ec1ff2</option>
+                                
+                                    <option value="crafting-minecraft:oak_planks">crafting-minecraft:oak_planks</option>
+                                
+                                    <option value="#logs">#logs</option>
+                                
+                                    <option value="Ingredient@683bf44c">Ingredient@683bf44c</option>
+                                
+                                    <option value="Ingredient@48f61752">Ingredient@48f61752</option>
+                                
+                                    <option value="Ingredient@27bf2cf">Ingredient@27bf2cf</option>
+                                
+                                    <option value="Ingredient@2a6c687b">Ingredient@2a6c687b</option>
+                                
+                                    <option value="Ingredient@2fd7d007">Ingredient@2fd7d007</option>
+                                
+                                    <option value="Ingredient@b468dd67">Ingredient@b468dd67</option>
+                                
+                                    <option value="Ingredient@5e044f32">Ingredient@5e044f32</option>
+                                
+                                    <option value="Ingredient@d219c8a9">Ingredient@d219c8a9</option>
+                                
+                                    <option value="Ingredient@bd59669b">Ingredient@bd59669b</option>
+                                
+                                    <option value="Ingredient@dbea51ee">Ingredient@dbea51ee</option>
+                                
+                                    <option value="Ingredient@38349a8e">Ingredient@38349a8e</option>
+                                
+                                    <option value="Ingredient@5468eb8d">Ingredient@5468eb8d</option>
+                                
+                                    <option value="somemoreblocks:mangrove_mosaic">somemoreblocks:mangrove_mosaic</option>
+                                
+                                    <option value="minecraft:netherite_block">minecraft:netherite_block</option>
+                                
+                                    <option value="Ingredient@cc30a6f5">Ingredient@cc30a6f5</option>
+                                
+                                    <option value="Ingredient@e9f8d7e4">Ingredient@e9f8d7e4</option>
+                                
+                                    <option value="crafting-sophisticatedstorage:storage_stack_upgrade_tier_5_from_backpack_stack_upgrade_tier_4">crafting-sophisticatedstorage:storage_stack_upgrade_tier_5_from_backpack_stack_upgrade_tier_4</option>
+                                
+                                    <option value="sophisticatedstorage:stack_upgrade_tier_5">sophisticatedstorage:stack_upgrade_tier_5</option>
+                                
+                                    <option value="crafting-minecraft:jungle_slab">crafting-minecraft:jungle_slab</option>
+                                
+                                    <option value="minecraft:jungle_slab">minecraft:jungle_slab</option>
+                                
+                                    <option value="somemoreblocks:oak_mosaic">somemoreblocks:oak_mosaic</option>
+                                
+                                    <option value="Ingredient@1b5f0f7e">Ingredient@1b5f0f7e</option>
+                                
+                                    <option value="crafting-sophisticatedstorage:stack_upgrade_tier_5">crafting-sophisticatedstorage:stack_upgrade_tier_5</option>
+                                
+                                    <option value="crafting-minecraft:crimson_slab">crafting-minecraft:crimson_slab</option>
+                                
+                                    <option value="crafting-born_in_chaos_v1:smoldering_scorche_log_k">crafting-born_in_chaos_v1:smoldering_scorche_log_k</option>
+                                
+                                    <option value="born_in_chaos_v1:smoldering_scorched_log">born_in_chaos_v1:smoldering_scorched_log</option>
+                                
+                                    <option value="crafting-betterarcheology:rotten_planks">crafting-betterarcheology:rotten_planks</option>
+                                
+                                    <option value="born_in_chaos_v1:scorched_wood">born_in_chaos_v1:scorched_wood</option>
+                                
+                                    <option value="Ingredient@b0a1b77a">Ingredient@b0a1b77a</option>
+                                
+                                    <option value="Ingredient@396a0b71">Ingredient@396a0b71</option>
+                                
+                                    <option value="somemoreblocks:warped_mosaic">somemoreblocks:warped_mosaic</option>
+                                
+                                    <option value="minecraft:netherite_scrap">minecraft:netherite_scrap</option>
+                                
+                                    <option value="crafting-minecraft:acacia_planks">crafting-minecraft:acacia_planks</option>
+                                
+                                    <option value="minecraft:acacia_planks">minecraft:acacia_planks</option>
+                                
+                                    <option value="crafting-sophisticatedbackpacks:stack_upgrade_tier_4">crafting-sophisticatedbackpacks:stack_upgrade_tier_4</option>
+                                
+                                    <option value="sophisticatedbackpacks:stack_upgrade_tier_4">sophisticatedbackpacks:stack_upgrade_tier_4</option>
+                                
+                                    <option value="crafting-sophisticatedstorage:storage_stack_upgrade_tier_3_from_backpack_stack_upgrade_tier_2">crafting-sophisticatedstorage:storage_stack_upgrade_tier_3_from_backpack_stack_upgrade_tier_2</option>
+                                
+                                    <option value="sophisticatedstorage:stack_upgrade_tier_3">sophisticatedstorage:stack_upgrade_tier_3</option>
+                                
+                                    <option value="crafting-minecraft:jungle_planks">crafting-minecraft:jungle_planks</option>
+                                
+                                    <option value="crafting-minecraft:birch_slab">crafting-minecraft:birch_slab</option>
+                                
+                                    <option value="blasting-minecraft:netherite_scrap_from_blasting">blasting-minecraft:netherite_scrap_from_blasting</option>
+                                
+                                    <option value="crafting-minecraft:gold_ingot_from_gold_block">crafting-minecraft:gold_ingot_from_gold_block</option>
+                                
+                                    <option value="crafting-sophisticatedstorage:storage_stack_upgrade_omega_tier_from_backpack_stack_upgrade_omega_tier">crafting-sophisticatedstorage:storage_stack_upgrade_omega_tier_from_backpack_stack_upgrade_omega_tier</option>
+                                
+                                    <option value="crafting-sophisticatedstorage:storage_stack_upgrade_tier_4_from_backpack_stack_upgrade_tier_3">crafting-sophisticatedstorage:storage_stack_upgrade_tier_4_from_backpack_stack_upgrade_tier_3</option>
+                                
+                                    <option value="Ingredient@413ddb3a">Ingredient@413ddb3a</option>
+                                
+                                    <option value="crafting-minecraft:oak_slab">crafting-minecraft:oak_slab</option>
+                                
+                                    <option value="somemoreblocks:birch_mosaic">somemoreblocks:birch_mosaic</option>
+                                
+                                    <option value="somemoreblocks:crimson_mosaic">somemoreblocks:crimson_mosaic</option>
+                                
+                                    <option value="Ingredient@7b2d0e78">Ingredient@7b2d0e78</option>
+                                
+                                    <option value="crafting-somemoreblocks:cherry_mosaic">crafting-somemoreblocks:cherry_mosaic</option>
+                                
+                                    <option value="crafting-minecraft:diamond">crafting-minecraft:diamond</option>
+                                
+                                    <option value="born_in_chaos_v1:fire_dust">born_in_chaos_v1:fire_dust</option>
+                                
+                                    <option value="Ingredient@897a1ed7">Ingredient@897a1ed7</option>
+                                
+                                    <option value="Ingredient@27ed48d5">Ingredient@27ed48d5</option>
+                                
+                                    <option value="crafting-minecraft:birch_planks">crafting-minecraft:birch_planks</option>
+                                
+                                    <option value="crafting-minecraft:netherite_block">crafting-minecraft:netherite_block</option>
+                                
+                                    <option value="Ingredient@e1797ed7">Ingredient@e1797ed7</option>
+                                
+                                    <option value="crafting-born_in_chaos_v1:smoldering_scorched_wood_k">crafting-born_in_chaos_v1:smoldering_scorched_wood_k</option>
+                                
+                                    <option value="Ingredient@29ca6b1">Ingredient@29ca6b1</option>
+                                
+                                    <option value="crafting-somemoreblocks:mangrove_mosaic">crafting-somemoreblocks:mangrove_mosaic</option>
+                                
+                                    <option value="minecraft:acacia_slab">minecraft:acacia_slab</option>
+                                
+                                    <option value="crafting-born_in_chaos_v1:scorched_planks_k">crafting-born_in_chaos_v1:scorched_planks_k</option>
+                                
+                                    <option value="minecraft:spruce_slab">minecraft:spruce_slab</option>
+                                
+                                    <option value="Ingredient@47f980ae">Ingredient@47f980ae</option>
+                                
+                                    <option value="crafting-sophisticatedstorage:stack_upgrade_omega_tier">crafting-sophisticatedstorage:stack_upgrade_omega_tier</option>
+                                
+                                    <option value="sophisticatedstorage:stack_upgrade_omega_tier">sophisticatedstorage:stack_upgrade_omega_tier</option>
+                                
+                                    <option value="minecraft:spruce_planks">minecraft:spruce_planks</option>
+                                
+                                    <option value="Ingredient@6f74dfa0">Ingredient@6f74dfa0</option>
+                                
+                                    <option value="crafting-minecraft:cherry_planks">crafting-minecraft:cherry_planks</option>
+                                
+                                    <option value="crafting-minecraft:dark_oak_planks">crafting-minecraft:dark_oak_planks</option>
+                                
+                                    <option value="Ingredient@e29ebc97">Ingredient@e29ebc97</option>
+                                
+                                    <option value="crafting-sophisticatedstorage:stack_upgrade_tier_4">crafting-sophisticatedstorage:stack_upgrade_tier_4</option>
+                                
+                                    <option value="crafting-minecraft:bamboo_block">crafting-minecraft:bamboo_block</option>
+                                
+                                    <option value="#bamboo_blocks">#bamboo_blocks</option>
+                                
+                                    <option value="smelting-minecraft:netherite_scrap">smelting-minecraft:netherite_scrap</option>
+                                
+                                    <option value="minecraft:warped_slab">minecraft:warped_slab</option>
+                                
+                                    <option value="Ingredient@b9c54523">Ingredient@b9c54523</option>
+                                
+                                    <option value="somemoreblocks:dark_oak_mosaic">somemoreblocks:dark_oak_mosaic</option>
+                                
+                                    <option value="crafting-somemoreblocks:birch_mosaic">crafting-somemoreblocks:birch_mosaic</option>
+                                
+                                    <option value="crafting-minecraft:crimson_planks">crafting-minecraft:crimson_planks</option>
+                                
+                                    <option value="Ingredient@2d1e1fce">Ingredient@2d1e1fce</option>
+                                
+                                    <option value="crafting-minecraft:bamboo_planks">crafting-minecraft:bamboo_planks</option>
+                                
+                                    <option value="crafting-minecraft:warped_slab">crafting-minecraft:warped_slab</option>
+                                
+                                    <option value="blasting-minecraft:gold_ingot_from_blasting_gold_ore">blasting-minecraft:gold_ingot_from_blasting_gold_ore</option>
+                                
+                                    <option value="minecraft:dark_oak_planks">minecraft:dark_oak_planks</option>
+                                
+                                    <option value="Ingredient@32e23b8f">Ingredient@32e23b8f</option>
+                                
+                                    <option value="minecraft:cherry_planks">minecraft:cherry_planks</option>
+                                
+                                    <option value="sophisticatedstorage:stack_upgrade_tier_4">sophisticatedstorage:stack_upgrade_tier_4</option>
+                                
+                                    <option value="create:cutting-create:cutting/runtime_generated/compat/born_in_chaos_v1/scorched_log_to_stripped_scorched_log">create:cutting-create:cutting/runtime_generated/compat/born_in_chaos_v1/scorched_log_to_stripped_scorched_log</option>
+                                
+                                    <option value="born_in_chaos_v1:stripped_scorched_log">born_in_chaos_v1:stripped_scorched_log</option>
+                                
+                                    <option value="minecraft:oak_planks">minecraft:oak_planks</option>
+                                
+                                    <option value="blasting-minecraft:gold_ingot_from_blasting_deepslate_gold_ore">blasting-minecraft:gold_ingot_from_blasting_deepslate_gold_ore</option>
+                                
+                                    <option value="crafting-minecraft:diamond_block">crafting-minecraft:diamond_block</option>
+                                
+                                    <option value="minecraft:diamond_block">minecraft:diamond_block</option>
+                                
+                                    <option value="crafting-minecraft:mangrove_planks">crafting-minecraft:mangrove_planks</option>
+                                
+                                    <option value="minecraft:mangrove_planks">minecraft:mangrove_planks</option>
+                                
+                                    <option value="blasting-minecraft:diamond_from_blasting_diamond_ore">blasting-minecraft:diamond_from_blasting_diamond_ore</option>
+                                
+                                    <option value="crafting-born_in_chaos_v1:scorched_log_k">crafting-born_in_chaos_v1:scorched_log_k</option>
+                                
+                                    <option value="Ingredient@de96032a">Ingredient@de96032a</option>
+                                
+                                    <option value="crafting-minecraft:spruce_planks">crafting-minecraft:spruce_planks</option>
+                                
+                                    <option value="minecraft:birch_planks">minecraft:birch_planks</option>
+                                
+                                    <option value="Ingredient@fdd0cab6">Ingredient@fdd0cab6</option>
+                                
+                                    <option value="create:cutting-create:cutting/runtime_generated/compat/born_in_chaos_v1/scorched_wood_to_stripped_scorched_wood">create:cutting-create:cutting/runtime_generated/compat/born_in_chaos_v1/scorched_wood_to_stripped_scorched_wood</option>
+                                
+                                    <option value="born_in_chaos_v1:stripped_scorched_wood">born_in_chaos_v1:stripped_scorched_wood</option>
+                                
+                                    <option value="Ingredient@2dfafbbe">Ingredient@2dfafbbe</option>
+                                
+                                    <option value="born_in_chaos_v1:smoldering_scorched_wood">born_in_chaos_v1:smoldering_scorched_wood</option>
+                                
+                                    <option value="smelting-minecraft:diamond_from_smelting_deepslate_diamond_ore">smelting-minecraft:diamond_from_smelting_deepslate_diamond_ore</option>
+                                
+                                    <option value="crafting-minecraft:spruce_slab">crafting-minecraft:spruce_slab</option>
+                                
+                                    <option value="somemoreblocks:cherry_mosaic">somemoreblocks:cherry_mosaic</option>
+                                
+                                    <option value="minecraft:crimson_slab">minecraft:crimson_slab</option>
+                                
+                                    <option value="blasting-minecraft:gold_ingot_from_blasting_nether_gold_ore">blasting-minecraft:gold_ingot_from_blasting_nether_gold_ore</option>
+                                
+                                    <option value="somemoreblocks:acacia_mosaic">somemoreblocks:acacia_mosaic</option>
+                                
+                                    <option value="Ingredient@fbb6dbff">Ingredient@fbb6dbff</option>
+                                
+                                    <option value="crafting-born_in_chaos_v1:scorched_wood_k">crafting-born_in_chaos_v1:scorched_wood_k</option>
+                                
+                                    <option value="minecraft:pale_oak_planks">minecraft:pale_oak_planks</option>
+                                
+                                    <option value="minecraft:bamboo_planks">minecraft:bamboo_planks</option>
+                                
+                                    <option value="Ingredient@f10f122f">Ingredient@f10f122f</option>
+                                
+                                    <option value="Ingredient@c291d88c">Ingredient@c291d88c</option>
+                                
+                                    <option value="crafting-somemoreblocks:dark_oak_mosaic">crafting-somemoreblocks:dark_oak_mosaic</option>
+                                
+                                    <option value="crafting-somemoreblocks:spruce_mosaic">crafting-somemoreblocks:spruce_mosaic</option>
+                                
+                                    <option value="crafting-minecraft:pale_oak_planks">crafting-minecraft:pale_oak_planks</option>
+                                
+                                    <option value="born_in_chaos_v1:scorched_log">born_in_chaos_v1:scorched_log</option>
+                                
+                                    <option value="Ingredient@699ec6be">Ingredient@699ec6be</option>
+                                
+                                    <option value="crafting-sophisticatedstorage:stack_upgrade_tier_3">crafting-sophisticatedstorage:stack_upgrade_tier_3</option>
+                                
+                                    <option value="Ingredient@8654f2d">Ingredient@8654f2d</option>
+                                
+                                    <option value="crafting-minecraft:dark_oak_slab">crafting-minecraft:dark_oak_slab</option>
+                                
+                                    <option value="minecraft:dark_oak_slab">minecraft:dark_oak_slab</option>
+                                
+                                    <option value="blasting-minecraft:gold_ingot_from_blasting_raw_gold">blasting-minecraft:gold_ingot_from_blasting_raw_gold</option>
+                                
+                                    <option value="crafting-somemoreblocks:oak_mosaic">crafting-somemoreblocks:oak_mosaic</option>
+                                
+                                    <option value="Ingredient@1bdc6be4">Ingredient@1bdc6be4</option>
+                                
+                                    <option value="Ingredient@fba4a579">Ingredient@fba4a579</option>
+                                
+                                    <option value="smelting-minecraft:diamond_from_smelting_diamond_ore">smelting-minecraft:diamond_from_smelting_diamond_ore</option>
+                                
+                                    <option value="smelting-minecraft:gold_ingot_from_smelting_deepslate_gold_ore">smelting-minecraft:gold_ingot_from_smelting_deepslate_gold_ore</option>
+                                
+                                    <option value="smelting-minecraft:gold_ingot_from_smelting_gold_ore">smelting-minecraft:gold_ingot_from_smelting_gold_ore</option>
+                                
+                                    <option value="Ingredient@f4b6d4c5">Ingredient@f4b6d4c5</option>
+                                
+                                    <option value="crafting-sophisticatedbackpacks:stack_upgrade_omega_tier">crafting-sophisticatedbackpacks:stack_upgrade_omega_tier</option>
+                                
+                                    <option value="smelting-minecraft:gold_ingot_from_smelting_nether_gold_ore">smelting-minecraft:gold_ingot_from_smelting_nether_gold_ore</option>
+                                
+                                    <option value="crafting-hazennstuff:crafting/blocks/wisewood_planks">crafting-hazennstuff:crafting/blocks/wisewood_planks</option>
+                                
+                                    <option value="blasting-minecraft:diamond_from_blasting_deepslate_diamond_ore">blasting-minecraft:diamond_from_blasting_deepslate_diamond_ore</option>
+                                
+                                    <option value="somemoreblocks:spruce_mosaic">somemoreblocks:spruce_mosaic</option>
+                                
+                                    <option value="minecraft:oak_slab">minecraft:oak_slab</option>
+                                
+                                    <option value="sophisticatedbackpacks:stack_upgrade_omega_tier">sophisticatedbackpacks:stack_upgrade_omega_tier</option>
+                                
+                                    <option value="crafting-minecraft:gold_ingot_from_nuggets">crafting-minecraft:gold_ingot_from_nuggets</option>
+                                
+                                    <option value="minecraft:bamboo">minecraft:bamboo</option>
+                                
+                            </select>
+                        </div>
+                        <div class="col-2 pb-2">
+                            <button type="button" class="btn btn-primary btn-block" onclick="neighbourhoodHighlight({nodes: []});">Reset Selection</button>
+                        </div>
+                    </div>
+                </div>
+            
+            
+              <div id="filter-menu" class="card-header">
+                <div class="row no-gutters">
+                  <div class="col-3 pb-2">
+                    <select
+                            class="form-select"
+                            aria-label="Default select example"
+                            onchange="updateFilter(value, 'item')"
+                            id="select-item"
+                        >
+                        <option value="">Select a network item</option>
+                        <option value="edge">edge</option>
+                        <option value="node">node</option>
+                    </select>
+                  </div>
+                  <div class="col-3 pb-2">
+                    <select
+                            class="form-select"
+                            aria-label="Default select example"
+                            onchange="updateFilter(value, 'property')"
+                            id="select-property"
+                        >
+                        <option value="">Select a property...</option>
+                    </select>
+                  </div>
+                  <div class="col-3 pb-2">
+                    <select
+                            class="form-select"
+                            aria-label="Default select example"
+                            id="select-value"
+                        >
+                        <option value="">Select value(s)...</option>
+                    </select>
+                  </div>
+                  <div class="col-1 pb-2">
+                    <button type="button" class="btn btn-primary btn-block" onclick="highlightFilter(filter);">Filter</button>
+                  </div>
+                  <div class="col-2 pb-2">
+                    <button type="button" class="btn btn-primary btn-block" onclick="clearFilter(true)">Reset Selection</button>
+                  </div>
+                </div>
+              </div>
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+            <div id="loadingBar">
+              <div class="outerBorder">
+                <div id="text">0%</div>
+                <div id="border">
+                  <div id="bar"></div>
+                </div>
+              </div>
+            </div>
+        
+        
+            <div id="config"></div>
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+                  new TomSelect("#select-node",{
+                      create: false,
+                      sortField: {
+                          field: "text",
+                          direction: "asc"
+                      }
+                  });
+              
+
+              
+                  // explicitly using onItemAdd and this function as we need to save multiple values
+                  let updateValueFilter = function() {
+                      return function () {
+                      filter['value'].push(arguments[0])
+                      }
+                  }
+
+                  let valueControl = new TomSelect("#select-value",{
+                      maxItems: null,
+                      valueField: 'id',
+                      labelField: 'title',
+                      searchField: 'title',
+                      create: false,
+                      sortField: {
+                          field: "text",
+                          direction: "asc"
+                      },
+                      onItemAdd: updateValueFilter()
+                  });
+
+                  let addValues = function() {
+                      return function () {
+                          // clear the current value options and add the selected attribute values
+                          // tom-select handles duplicates
+                          let selectedProperty = arguments[0];
+                          valueControl.clear();
+                          valueControl.clearOptions();
+                          filter['value'] = []
+                          if (filter['item'] === 'node') {
+                              for (let each in allNodes) {
+                                  valueControl.addOption({
+                                      id:allNodes[each][selectedProperty],
+                                      title:allNodes[each][selectedProperty]
+                                  })
+                              }
+                          }
+                          else if (filter['item'] === 'edge') {
+                              for (let each in allEdges) {
+                                  valueControl.addOption({
+                                      id:allEdges[each][selectedProperty],
+                                      title:allEdges[each][selectedProperty]
+                                  })
+                              }
+                          }
+                      }
+                  };
+
+                  let propControl = new TomSelect("#select-property",{
+                      valueField: 'id',
+                      labelField: 'title',
+                      searchField: 'title',
+                      create: false,
+                      sortField: {
+                          field: "text",
+                          direction: "asc"
+                      },
+                      onItemAdd: addValues()
+                  });
+
+                  let addProperties = function() {
+                      return function () {
+                          // loops through the selected network item and adds the attributes to dropdown
+                          // tom-select handles duplicates
+                          clearFilter(false)
+                          if (arguments[0] === 'edge') {
+                              for (let each in allEdges) {
+                                  if (allEdges.hasOwnProperty(each)) {
+                                      for (let eachProp in allEdges[each]) {
+                                          if (allEdges[each].hasOwnProperty(eachProp)) {
+                                              propControl.addOption({id: eachProp, title: eachProp})
+                                          }
+                                      }
+                                  }
+                              }
+                          }
+                          else if (arguments[0] === 'node') {
+                              for (let each in allNodes) {
+                                  if (allNodes.hasOwnProperty(each)) {
+                                      for (let eachProp in allNodes[each]) {
+                                          if (allNodes[each].hasOwnProperty(eachProp)
+                                              && (eachProp !== 'hidden' && eachProp !== 'savedLabel'
+                                                  && eachProp !== 'hiddenLabel')) {
+                                              propControl.addOption({id: eachProp, title: eachProp})
+
+                                          }
+                                      }
+                                  }
+                              }
+                          }
+                      }
+                  };
+
+                  let itemControl = new TomSelect("#select-item",{
+                      create: false,
+                      sortField:{
+                          field: "text",
+                          direction: "asc"
+                      },
+                      onItemAdd: addProperties()
+                  });
+
+                  function clearFilter(reset) {
+                      // utility function to clear all the selected filter options
+                      // if reset is set to true, the existing filter will be removed
+                      // else, only the dropdown options are cleared
+                      propControl.clear();
+                      propControl.clearOptions();
+                      valueControl.clear();
+                      valueControl.clearOptions();
+                      filter = {
+                          item : '',
+                          property : '',
+                          value : []
+                      }
+                      if (reset) {
+                          itemControl.clear();
+                          filterHighlight({nodes: []})
+                      }
+                  }
+
+                  function updateFilter(value, key) {
+                      // key could be 'item' or 'property' and value is as selected in dropdown
+                      filter[key] = value
+                  }
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"SCT": [40.0], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "minecraft:diamond", "label": "minecraft:diamond", "shape": "dot", "size": 30, "title": [40.0], "type": "item"}, {"SCT": [40.0], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@4d6c73f0", "label": "Ingredient@4d6c73f0", "shape": "square", "size": 5, "title": [40.0], "type": "ingredient"}, {"SCT": [0.375], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@4049bb80", "label": "Ingredient@4049bb80", "shape": "square", "size": 5, "title": [0.375], "type": "ingredient"}, {"SCT": [1.125], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-minecraft:cherry_slab", "label": "crafting-minecraft:cherry_slab", "shape": "diamond", "size": 15, "title": [1.125], "type": "recipe"}, {"SCT": [9.0], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "smelting-minecraft:gold_ingot_from_smelting_raw_gold", "label": "smelting-minecraft:gold_ingot_from_smelting_raw_gold", "shape": "diamond", "size": 15, "title": [9.0], "type": "recipe"}, {"SCT": [9.0, 12.0], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "minecraft:gold_ingot", "label": "minecraft:gold_ingot", "shape": "dot", "size": 30, "title": [9.0, 12.0], "type": "item"}, {"SCT": [0.188], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@8b48fb96", "label": "Ingredient@8b48fb96", "shape": "square", "size": 5, "title": [0.188], "type": "ingredient"}, {"SCT": [0.376], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-somemoreblocks:acacia_mosaic", "label": "crafting-somemoreblocks:acacia_mosaic", "shape": "diamond", "size": 15, "title": [0.376], "type": "recipe"}, {"SCT": [0.188], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@afefa4c4", "label": "Ingredient@afefa4c4", "shape": "square", "size": 5, "title": [0.188], "type": "ingredient"}, {"SCT": [0.376], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-somemoreblocks:crimson_mosaic", "label": "crafting-somemoreblocks:crimson_mosaic", "shape": "diamond", "size": 15, "title": [0.376], "type": "recipe"}, {"SCT": [0.375], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "betterarcheology:rotten_planks", "label": "betterarcheology:rotten_planks", "shape": "dot", "size": 30, "title": [0.375], "type": "item"}, {"SCT": [0.375], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@2d47a0ee", "label": "Ingredient@2d47a0ee", "shape": "square", "size": 5, "title": [0.375], "type": "ingredient"}, {"SCT": [1.125], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-minecraft:mangrove_slab", "label": "crafting-minecraft:mangrove_slab", "shape": "diamond", "size": 15, "title": [1.125], "type": "recipe"}, {"SCT": [0.188], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "minecraft:mangrove_slab", "label": "minecraft:mangrove_slab", "shape": "dot", "size": 30, "title": [0.188], "type": "item"}, {"SCT": [3848.0], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-sophisticatedbackpacks:stack_upgrade_tier_3", "label": "crafting-sophisticatedbackpacks:stack_upgrade_tier_3", "shape": "diamond", "size": 15, "title": [3848.0], "type": "recipe"}, {"SCT": [3848.0], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "sophisticatedbackpacks:stack_upgrade_tier_3", "label": "sophisticatedbackpacks:stack_upgrade_tier_3", "shape": "dot", "size": 30, "title": [3848.0], "type": "item"}, {"SCT": [1.5], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-minecraft:warped_planks", "label": "crafting-minecraft:warped_planks", "shape": "diamond", "size": 15, "title": [1.5], "type": "recipe"}, {"SCT": [0.375], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "minecraft:warped_planks", "label": "minecraft:warped_planks", "shape": "dot", "size": 30, "title": [0.375], "type": "item"}, {"SCT": [180.0], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@6524a683", "label": "Ingredient@6524a683", "shape": "square", "size": 5, "title": [180.0], "type": "ingredient"}, {"SCT": [756.0], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-minecraft:netherite_ingot", "label": "crafting-minecraft:netherite_ingot", "shape": "diamond", "size": 15, "title": [756.0], "type": "recipe"}, {"SCT": [0.188], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "minecraft:cherry_slab", "label": "minecraft:cherry_slab", "shape": "dot", "size": 30, "title": [0.188], "type": "item"}, {"SCT": [0.188], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@e0d2edfa", "label": "Ingredient@e0d2edfa", "shape": "square", "size": 5, "title": [0.188], "type": "ingredient"}, {"SCT": [0.375], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "minecraft:crimson_planks", "label": "minecraft:crimson_planks", "shape": "dot", "size": 30, "title": [0.375], "type": "item"}, {"SCT": [0.375], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@bd86cc5e", "label": "Ingredient@bd86cc5e", "shape": "square", "size": 5, "title": [0.375], "type": "ingredient"}, {"SCT": [0.376], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-somemoreblocks:jungle_mosaic", "label": "crafting-somemoreblocks:jungle_mosaic", "shape": "diamond", "size": 15, "title": [0.376], "type": "recipe"}, {"SCT": [0.376], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "somemoreblocks:jungle_mosaic", "label": "somemoreblocks:jungle_mosaic", "shape": "dot", "size": 30, "title": [0.376], "type": "item"}, {"SCT": [6804.0], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-minecraft:netherite_ingot_from_netherite_block", "label": "crafting-minecraft:netherite_ingot_from_netherite_block", "shape": "diamond", "size": 15, "title": [6804.0], "type": "recipe"}, {"SCT": [756.0], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "minecraft:netherite_ingot", "label": "minecraft:netherite_ingot", "shape": "dot", "size": 30, "title": [756.0], "type": "item"}, {"SCT": [0.375], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "hazennstuff:wisewood_planks", "label": "hazennstuff:wisewood_planks", "shape": "dot", "size": 30, "title": [0.375], "type": "item"}, {"SCT": [0.375], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "minecraft:jungle_planks", "label": "minecraft:jungle_planks", "shape": "dot", "size": 30, "title": [0.375], "type": "item"}, {"SCT": [0.375], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@d80d8e34", "label": "Ingredient@d80d8e34", "shape": "square", "size": 5, "title": [0.375], "type": "ingredient"}, {"SCT": [0.188], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@104abe82", "label": "Ingredient@104abe82", "shape": "square", "size": 5, "title": [0.188], "type": "ingredient"}, {"SCT": [0.376], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-somemoreblocks:warped_mosaic", "label": "crafting-somemoreblocks:warped_mosaic", "shape": "diamond", "size": 15, "title": [0.376], "type": "recipe"}, {"SCT": [756.0], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@696489a6", "label": "Ingredient@696489a6", "shape": "square", "size": 5, "title": [756.0], "type": "ingredient"}, {"SCT": [756.0], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@1b457f86", "label": "Ingredient@1b457f86", "shape": "square", "size": 5, "title": [756.0], "type": "ingredient"}, {"SCT": [1.5], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@5b56c84f", "label": "Ingredient@5b56c84f", "shape": "square", "size": 5, "title": [1.5], "type": "ingredient"}, {"SCT": [0.375], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@2794cb06", "label": "Ingredient@2794cb06", "shape": "square", "size": 5, "title": [0.375], "type": "ingredient"}, {"SCT": [1.125], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-minecraft:acacia_slab", "label": "crafting-minecraft:acacia_slab", "shape": "diamond", "size": 15, "title": [1.125], "type": "recipe"}, {"SCT": [1.625], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "#born_in_chaos_v1:scorched_planks", "label": "#born_in_chaos_v1:scorched_planks", "shape": "dot", "size": 30, "title": [1.625], "type": "item"}, {"SCT": [0.188], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "minecraft:birch_slab", "label": "minecraft:birch_slab", "shape": "dot", "size": 30, "title": [0.188], "type": "item"}, {"SCT": [0.188], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@dce74626", "label": "Ingredient@dce74626", "shape": "square", "size": 5, "title": [0.188], "type": "ingredient"}, {"SCT": [1.5], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@39ec1ff2", "label": "Ingredient@39ec1ff2", "shape": "square", "size": 5, "title": [1.5], "type": "ingredient"}, {"SCT": [1.5], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-minecraft:oak_planks", "label": "crafting-minecraft:oak_planks", "shape": "diamond", "size": 15, "title": [1.5], "type": "recipe"}, {"SCT": [1.5], "color": "red", "font": {"size": 10}, "hasComputed": false, "id": "#logs", "label": "#logs", "shape": "dot", "size": 30, "title": [1.5], "type": "item"}, {"SCT": [1.5], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@683bf44c", "label": "Ingredient@683bf44c", "shape": "square", "size": 5, "title": [1.5], "type": "ingredient"}, {"SCT": [1.5], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@48f61752", "label": "Ingredient@48f61752", "shape": "square", "size": 5, "title": [1.5], "type": "ingredient"}, {"SCT": [1.5], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@27bf2cf", "label": "Ingredient@27bf2cf", "shape": "square", "size": 5, "title": [1.5], "type": "ingredient"}, {"SCT": [1.5], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@2a6c687b", "label": "Ingredient@2a6c687b", "shape": "square", "size": 5, "title": [1.5], "type": "ingredient"}, {"SCT": [1.5], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@2fd7d007", "label": "Ingredient@2fd7d007", "shape": "square", "size": 5, "title": [1.5], "type": "ingredient"}, {"SCT": [1.5], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@b468dd67", "label": "Ingredient@b468dd67", "shape": "square", "size": 5, "title": [1.5], "type": "ingredient"}, {"SCT": [1.5], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@5e044f32", "label": "Ingredient@5e044f32", "shape": "square", "size": 5, "title": [1.5], "type": "ingredient"}, {"SCT": [1.5], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@d219c8a9", "label": "Ingredient@d219c8a9", "shape": "square", "size": 5, "title": [1.5], "type": "ingredient"}, {"SCT": [1.5], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@bd59669b", "label": "Ingredient@bd59669b", "shape": "square", "size": 5, "title": [1.5], "type": "ingredient"}, {"SCT": [1.5], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@dbea51ee", "label": "Ingredient@dbea51ee", "shape": "square", "size": 5, "title": [1.5], "type": "ingredient"}, {"SCT": [1.5], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@38349a8e", "label": "Ingredient@38349a8e", "shape": "square", "size": 5, "title": [1.5], "type": "ingredient"}, {"SCT": [1.5], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@5468eb8d", "label": "Ingredient@5468eb8d", "shape": "square", "size": 5, "title": [1.5], "type": "ingredient"}, {"SCT": [0.376], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "somemoreblocks:mangrove_mosaic", "label": "somemoreblocks:mangrove_mosaic", "shape": "dot", "size": 30, "title": [0.376], "type": "item"}, {"SCT": [6804.0], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "minecraft:netherite_block", "label": "minecraft:netherite_block", "shape": "dot", "size": 30, "title": [6804.0], "type": "item"}, {"SCT": [6804.0], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@cc30a6f5", "label": "Ingredient@cc30a6f5", "shape": "square", "size": 5, "title": [6804.0], "type": "ingredient"}, {"SCT": [6804.0], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@e9f8d7e4", "label": "Ingredient@e9f8d7e4", "shape": "square", "size": 5, "title": [6804.0], "type": "ingredient"}, {"SCT": [58281.875], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-sophisticatedstorage:storage_stack_upgrade_tier_5_from_backpack_stack_upgrade_tier_4", "label": "crafting-sophisticatedstorage:storage_stack_upgrade_tier_5_from_backpack_stack_upgrade_tier_4", "shape": "diamond", "size": 15, "title": [58281.875], "type": "recipe"}, {"SCT": [19427.292], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "sophisticatedstorage:stack_upgrade_tier_5", "label": "sophisticatedstorage:stack_upgrade_tier_5", "shape": "dot", "size": 30, "title": [19427.292], "type": "item"}, {"SCT": [1.125], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-minecraft:jungle_slab", "label": "crafting-minecraft:jungle_slab", "shape": "diamond", "size": 15, "title": [1.125], "type": "recipe"}, {"SCT": [0.188], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "minecraft:jungle_slab", "label": "minecraft:jungle_slab", "shape": "dot", "size": 30, "title": [0.188], "type": "item"}, {"SCT": [0.376], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "somemoreblocks:oak_mosaic", "label": "somemoreblocks:oak_mosaic", "shape": "dot", "size": 30, "title": [0.376], "type": "item"}, {"SCT": [1283.292], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@1b5f0f7e", "label": "Ingredient@1b5f0f7e", "shape": "square", "size": 5, "title": [1283.292], "type": "ingredient"}, {"SCT": [19427.292], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-sophisticatedstorage:stack_upgrade_tier_5", "label": "crafting-sophisticatedstorage:stack_upgrade_tier_5", "shape": "diamond", "size": 15, "title": [19427.292], "type": "recipe"}, {"SCT": [1.125], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-minecraft:crimson_slab", "label": "crafting-minecraft:crimson_slab", "shape": "diamond", "size": 15, "title": [1.125], "type": "recipe"}, {"SCT": [67.0], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-born_in_chaos_v1:smoldering_scorche_log_k", "label": "crafting-born_in_chaos_v1:smoldering_scorche_log_k", "shape": "diamond", "size": 15, "title": [67.0], "type": "recipe"}, {"SCT": [8.375], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "born_in_chaos_v1:smoldering_scorched_log", "label": "born_in_chaos_v1:smoldering_scorched_log", "shape": "dot", "size": 30, "title": [8.375], "type": "item"}, {"SCT": [1.5], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-betterarcheology:rotten_planks", "label": "crafting-betterarcheology:rotten_planks", "shape": "diamond", "size": 15, "title": [1.5], "type": "recipe"}, {"SCT": [8.667], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "born_in_chaos_v1:scorched_wood", "label": "born_in_chaos_v1:scorched_wood", "shape": "dot", "size": 30, "title": [8.667], "type": "item"}, {"SCT": [8.667], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@b0a1b77a", "label": "Ingredient@b0a1b77a", "shape": "square", "size": 5, "title": [8.667], "type": "ingredient"}, {"SCT": [6.5], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@396a0b71", "label": "Ingredient@396a0b71", "shape": "square", "size": 5, "title": [6.5], "type": "ingredient"}, {"SCT": [0.376], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "somemoreblocks:warped_mosaic", "label": "somemoreblocks:warped_mosaic", "shape": "dot", "size": 30, "title": [0.376], "type": "item"}, {"SCT": [180.0], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "minecraft:netherite_scrap", "label": "minecraft:netherite_scrap", "shape": "dot", "size": 30, "title": [180.0], "type": "item"}, {"SCT": [1.5], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-minecraft:acacia_planks", "label": "crafting-minecraft:acacia_planks", "shape": "diamond", "size": 15, "title": [1.5], "type": "recipe"}, {"SCT": [0.375], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "minecraft:acacia_planks", "label": "minecraft:acacia_planks", "shape": "dot", "size": 30, "title": [0.375], "type": "item"}, {"SCT": [58280.0], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-sophisticatedbackpacks:stack_upgrade_tier_4", "label": "crafting-sophisticatedbackpacks:stack_upgrade_tier_4", "shape": "diamond", "size": 15, "title": [58280.0], "type": "recipe"}, {"SCT": [58280.0], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "sophisticatedbackpacks:stack_upgrade_tier_4", "label": "sophisticatedbackpacks:stack_upgrade_tier_4", "shape": "dot", "size": 30, "title": [58280.0], "type": "item"}, {"SCT": [969.875], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-sophisticatedstorage:storage_stack_upgrade_tier_3_from_backpack_stack_upgrade_tier_2", "label": "crafting-sophisticatedstorage:storage_stack_upgrade_tier_3_from_backpack_stack_upgrade_tier_2", "shape": "diamond", "size": 15, "title": [969.875], "type": "recipe"}, {"SCT": [323.29200000000003], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "sophisticatedstorage:stack_upgrade_tier_3", "label": "sophisticatedstorage:stack_upgrade_tier_3", "shape": "dot", "size": 30, "title": [323.29200000000003], "type": "item"}, {"SCT": [1.5], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-minecraft:jungle_planks", "label": "crafting-minecraft:jungle_planks", "shape": "diamond", "size": 15, "title": [1.5], "type": "recipe"}, {"SCT": [1.125], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-minecraft:birch_slab", "label": "crafting-minecraft:birch_slab", "shape": "diamond", "size": 15, "title": [1.125], "type": "recipe"}, {"SCT": [180.0], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "blasting-minecraft:netherite_scrap_from_blasting", "label": "blasting-minecraft:netherite_scrap_from_blasting", "shape": "diamond", "size": 15, "title": [180.0], "type": "recipe"}, {"SCT": [81.0], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-minecraft:gold_ingot_from_gold_block", "label": "crafting-minecraft:gold_ingot_from_gold_block", "shape": "diamond", "size": 15, "title": [81.0], "type": "recipe"}, {"SCT": [524521.875], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-sophisticatedstorage:storage_stack_upgrade_omega_tier_from_backpack_stack_upgrade_omega_tier", "label": "crafting-sophisticatedstorage:storage_stack_upgrade_omega_tier_from_backpack_stack_upgrade_omega_tier", "shape": "diamond", "size": 15, "title": [524521.875], "type": "recipe"}, {"SCT": [3849.875], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-sophisticatedstorage:storage_stack_upgrade_tier_4_from_backpack_stack_upgrade_tier_3", "label": "crafting-sophisticatedstorage:storage_stack_upgrade_tier_4_from_backpack_stack_upgrade_tier_3", "shape": "diamond", "size": 15, "title": [3849.875], "type": "recipe"}, {"SCT": [0.375], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@413ddb3a", "label": "Ingredient@413ddb3a", "shape": "square", "size": 5, "title": [0.375], "type": "ingredient"}, {"SCT": [1.125], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-minecraft:oak_slab", "label": "crafting-minecraft:oak_slab", "shape": "diamond", "size": 15, "title": [1.125], "type": "recipe"}, {"SCT": [0.376], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "somemoreblocks:birch_mosaic", "label": "somemoreblocks:birch_mosaic", "shape": "dot", "size": 30, "title": [0.376], "type": "item"}, {"SCT": [0.376], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "somemoreblocks:crimson_mosaic", "label": "somemoreblocks:crimson_mosaic", "shape": "dot", "size": 30, "title": [0.376], "type": "item"}, {"SCT": [0.375], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@7b2d0e78", "label": "Ingredient@7b2d0e78", "shape": "square", "size": 5, "title": [0.375], "type": "ingredient"}, {"SCT": [0.376], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-somemoreblocks:cherry_mosaic", "label": "crafting-somemoreblocks:cherry_mosaic", "shape": "diamond", "size": 15, "title": [0.376], "type": "recipe"}, {"SCT": [360.0], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-minecraft:diamond", "label": "crafting-minecraft:diamond", "shape": "diamond", "size": 15, "title": [360.0], "type": "recipe"}, {"SCT": [15.0], "color": "red", "font": {"size": 10}, "hasComputed": false, "id": "born_in_chaos_v1:fire_dust", "label": "born_in_chaos_v1:fire_dust", "shape": "dot", "size": 30, "title": [15.0], "type": "item"}, {"SCT": [15.0], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@897a1ed7", "label": "Ingredient@897a1ed7", "shape": "square", "size": 5, "title": [15.0], "type": "ingredient"}, {"SCT": [3848.0], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@27ed48d5", "label": "Ingredient@27ed48d5", "shape": "square", "size": 5, "title": [3848.0], "type": "ingredient"}, {"SCT": [1.5], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-minecraft:birch_planks", "label": "crafting-minecraft:birch_planks", "shape": "diamond", "size": 15, "title": [1.5], "type": "recipe"}, {"SCT": [6804.0], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-minecraft:netherite_block", "label": "crafting-minecraft:netherite_block", "shape": "diamond", "size": 15, "title": [6804.0], "type": "recipe"}, {"SCT": [8.375], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@e1797ed7", "label": "Ingredient@e1797ed7", "shape": "square", "size": 5, "title": [8.375], "type": "ingredient"}, {"SCT": [33.5], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-born_in_chaos_v1:smoldering_scorched_wood_k", "label": "crafting-born_in_chaos_v1:smoldering_scorched_wood_k", "shape": "diamond", "size": 15, "title": [33.5], "type": "recipe"}, {"SCT": [0.188], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@29ca6b1", "label": "Ingredient@29ca6b1", "shape": "square", "size": 5, "title": [0.188], "type": "ingredient"}, {"SCT": [0.376], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-somemoreblocks:mangrove_mosaic", "label": "crafting-somemoreblocks:mangrove_mosaic", "shape": "diamond", "size": 15, "title": [0.376], "type": "recipe"}, {"SCT": [0.188], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "minecraft:acacia_slab", "label": "minecraft:acacia_slab", "shape": "dot", "size": 30, "title": [0.188], "type": "item"}, {"SCT": [6.5], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-born_in_chaos_v1:scorched_planks_k", "label": "crafting-born_in_chaos_v1:scorched_planks_k", "shape": "diamond", "size": 15, "title": [6.5], "type": "recipe"}, {"SCT": [0.188], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "minecraft:spruce_slab", "label": "minecraft:spruce_slab", "shape": "dot", "size": 30, "title": [0.188], "type": "item"}, {"SCT": [0.188], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@47f980ae", "label": "Ingredient@47f980ae", "shape": "square", "size": 5, "title": [0.188], "type": "ingredient"}, {"SCT": [174845.628], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-sophisticatedstorage:stack_upgrade_omega_tier", "label": "crafting-sophisticatedstorage:stack_upgrade_omega_tier", "shape": "diamond", "size": 15, "title": [174845.628], "type": "recipe"}, {"SCT": [174840.625, 174845.628], "color": "purple", "font": {"size": 10}, "hasComputed": false, "id": "sophisticatedstorage:stack_upgrade_omega_tier", "label": "sophisticatedstorage:stack_upgrade_omega_tier", "shape": "dot", "size": 30, "title": [174840.625, 174845.628], "type": "item"}, {"SCT": [0.375], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "minecraft:spruce_planks", "label": "minecraft:spruce_planks", "shape": "dot", "size": 30, "title": [0.375], "type": "item"}, {"SCT": [0.375], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@6f74dfa0", "label": "Ingredient@6f74dfa0", "shape": "square", "size": 5, "title": [0.375], "type": "ingredient"}, {"SCT": [1.5], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-minecraft:cherry_planks", "label": "crafting-minecraft:cherry_planks", "shape": "diamond", "size": 15, "title": [1.5], "type": "recipe"}, {"SCT": [1.5], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-minecraft:dark_oak_planks", "label": "crafting-minecraft:dark_oak_planks", "shape": "diamond", "size": 15, "title": [1.5], "type": "recipe"}, {"SCT": [323.29200000000003], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@e29ebc97", "label": "Ingredient@e29ebc97", "shape": "square", "size": 5, "title": [323.29200000000003], "type": "ingredient"}, {"SCT": [1283.292], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-sophisticatedstorage:stack_upgrade_tier_4", "label": "crafting-sophisticatedstorage:stack_upgrade_tier_4", "shape": "diamond", "size": 15, "title": [1283.292], "type": "recipe"}, {"SCT": [0.9], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-minecraft:bamboo_block", "label": "crafting-minecraft:bamboo_block", "shape": "diamond", "size": 15, "title": [0.9], "type": "recipe"}, {"SCT": [0.9], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "#bamboo_blocks", "label": "#bamboo_blocks", "shape": "dot", "size": 30, "title": [0.9], "type": "item"}, {"SCT": [180.0], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "smelting-minecraft:netherite_scrap", "label": "smelting-minecraft:netherite_scrap", "shape": "diamond", "size": 15, "title": [180.0], "type": "recipe"}, {"SCT": [0.188], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "minecraft:warped_slab", "label": "minecraft:warped_slab", "shape": "dot", "size": 30, "title": [0.188], "type": "item"}, {"SCT": [0.375], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@b9c54523", "label": "Ingredient@b9c54523", "shape": "square", "size": 5, "title": [0.375], "type": "ingredient"}, {"SCT": [0.376], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "somemoreblocks:dark_oak_mosaic", "label": "somemoreblocks:dark_oak_mosaic", "shape": "dot", "size": 30, "title": [0.376], "type": "item"}, {"SCT": [0.376], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-somemoreblocks:birch_mosaic", "label": "crafting-somemoreblocks:birch_mosaic", "shape": "diamond", "size": 15, "title": [0.376], "type": "recipe"}, {"SCT": [1.5], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-minecraft:crimson_planks", "label": "crafting-minecraft:crimson_planks", "shape": "diamond", "size": 15, "title": [1.5], "type": "recipe"}, {"SCT": [0.9], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@2d1e1fce", "label": "Ingredient@2d1e1fce", "shape": "square", "size": 5, "title": [0.9], "type": "ingredient"}, {"SCT": [0.9], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-minecraft:bamboo_planks", "label": "crafting-minecraft:bamboo_planks", "shape": "diamond", "size": 15, "title": [0.9], "type": "recipe"}, {"SCT": [1.125], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-minecraft:warped_slab", "label": "crafting-minecraft:warped_slab", "shape": "diamond", "size": 15, "title": [1.125], "type": "recipe"}, {"SCT": [12.0], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "blasting-minecraft:gold_ingot_from_blasting_gold_ore", "label": "blasting-minecraft:gold_ingot_from_blasting_gold_ore", "shape": "diamond", "size": 15, "title": [12.0], "type": "recipe"}, {"SCT": [0.375], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "minecraft:dark_oak_planks", "label": "minecraft:dark_oak_planks", "shape": "dot", "size": 30, "title": [0.375], "type": "item"}, {"SCT": [0.375], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@32e23b8f", "label": "Ingredient@32e23b8f", "shape": "square", "size": 5, "title": [0.375], "type": "ingredient"}, {"SCT": [0.375], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "minecraft:cherry_planks", "label": "minecraft:cherry_planks", "shape": "dot", "size": 30, "title": [0.375], "type": "item"}, {"SCT": [1283.292], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "sophisticatedstorage:stack_upgrade_tier_4", "label": "sophisticatedstorage:stack_upgrade_tier_4", "shape": "dot", "size": 30, "title": [1283.292], "type": "item"}, {"SCT": [6.5], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "create:cutting-create:cutting/runtime_generated/compat/born_in_chaos_v1/scorched_log_to_stripped_scorched_log", "label": "create:cutting-create:cutting/runtime_generated/compat/born_in_chaos_v1/scorched_log_to_stripped_scorched_log", "shape": "diamond", "size": 15, "title": [6.5], "type": "recipe"}, {"SCT": [6.5], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "born_in_chaos_v1:stripped_scorched_log", "label": "born_in_chaos_v1:stripped_scorched_log", "shape": "dot", "size": 30, "title": [6.5], "type": "item"}, {"SCT": [0.375], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "minecraft:oak_planks", "label": "minecraft:oak_planks", "shape": "dot", "size": 30, "title": [0.375], "type": "item"}, {"SCT": [12.0], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "blasting-minecraft:gold_ingot_from_blasting_deepslate_gold_ore", "label": "blasting-minecraft:gold_ingot_from_blasting_deepslate_gold_ore", "shape": "diamond", "size": 15, "title": [12.0], "type": "recipe"}, {"SCT": [360.0], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-minecraft:diamond_block", "label": "crafting-minecraft:diamond_block", "shape": "diamond", "size": 15, "title": [360.0], "type": "recipe"}, {"SCT": [360.0], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "minecraft:diamond_block", "label": "minecraft:diamond_block", "shape": "dot", "size": 30, "title": [360.0], "type": "item"}, {"SCT": [1.5], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-minecraft:mangrove_planks", "label": "crafting-minecraft:mangrove_planks", "shape": "diamond", "size": 15, "title": [1.5], "type": "recipe"}, {"SCT": [0.375], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "minecraft:mangrove_planks", "label": "minecraft:mangrove_planks", "shape": "dot", "size": 30, "title": [0.375], "type": "item"}, {"SCT": [40.0], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "blasting-minecraft:diamond_from_blasting_diamond_ore", "label": "blasting-minecraft:diamond_from_blasting_diamond_ore", "shape": "diamond", "size": 15, "title": [40.0], "type": "recipe"}, {"SCT": [19.5], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-born_in_chaos_v1:scorched_log_k", "label": "crafting-born_in_chaos_v1:scorched_log_k", "shape": "diamond", "size": 15, "title": [19.5], "type": "recipe"}, {"SCT": [9.0], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@de96032a", "label": "Ingredient@de96032a", "shape": "square", "size": 5, "title": [9.0], "type": "ingredient"}, {"SCT": [1.5], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-minecraft:spruce_planks", "label": "crafting-minecraft:spruce_planks", "shape": "diamond", "size": 15, "title": [1.5], "type": "recipe"}, {"SCT": [0.375], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "minecraft:birch_planks", "label": "minecraft:birch_planks", "shape": "dot", "size": 30, "title": [0.375], "type": "item"}, {"SCT": [360.0], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@fdd0cab6", "label": "Ingredient@fdd0cab6", "shape": "square", "size": 5, "title": [360.0], "type": "ingredient"}, {"SCT": [8.667], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "create:cutting-create:cutting/runtime_generated/compat/born_in_chaos_v1/scorched_wood_to_stripped_scorched_wood", "label": "create:cutting-create:cutting/runtime_generated/compat/born_in_chaos_v1/scorched_wood_to_stripped_scorched_wood", "shape": "diamond", "size": 15, "title": [8.667], "type": "recipe"}, {"SCT": [8.667], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "born_in_chaos_v1:stripped_scorched_wood", "label": "born_in_chaos_v1:stripped_scorched_wood", "shape": "dot", "size": 30, "title": [8.667], "type": "item"}, {"SCT": [0.375], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@2dfafbbe", "label": "Ingredient@2dfafbbe", "shape": "square", "size": 5, "title": [0.375], "type": "ingredient"}, {"SCT": [11.167], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "born_in_chaos_v1:smoldering_scorched_wood", "label": "born_in_chaos_v1:smoldering_scorched_wood", "shape": "dot", "size": 30, "title": [11.167], "type": "item"}, {"SCT": [40.0], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "smelting-minecraft:diamond_from_smelting_deepslate_diamond_ore", "label": "smelting-minecraft:diamond_from_smelting_deepslate_diamond_ore", "shape": "diamond", "size": 15, "title": [40.0], "type": "recipe"}, {"SCT": [1.125], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-minecraft:spruce_slab", "label": "crafting-minecraft:spruce_slab", "shape": "diamond", "size": 15, "title": [1.125], "type": "recipe"}, {"SCT": [0.376], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "somemoreblocks:cherry_mosaic", "label": "somemoreblocks:cherry_mosaic", "shape": "dot", "size": 30, "title": [0.376], "type": "item"}, {"SCT": [0.188], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "minecraft:crimson_slab", "label": "minecraft:crimson_slab", "shape": "dot", "size": 30, "title": [0.188], "type": "item"}, {"SCT": [12.0], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "blasting-minecraft:gold_ingot_from_blasting_nether_gold_ore", "label": "blasting-minecraft:gold_ingot_from_blasting_nether_gold_ore", "shape": "diamond", "size": 15, "title": [12.0], "type": "recipe"}, {"SCT": [0.376], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "somemoreblocks:acacia_mosaic", "label": "somemoreblocks:acacia_mosaic", "shape": "dot", "size": 30, "title": [0.376], "type": "item"}, {"SCT": [6.5], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@fbb6dbff", "label": "Ingredient@fbb6dbff", "shape": "square", "size": 5, "title": [6.5], "type": "ingredient"}, {"SCT": [26.0], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-born_in_chaos_v1:scorched_wood_k", "label": "crafting-born_in_chaos_v1:scorched_wood_k", "shape": "diamond", "size": 15, "title": [26.0], "type": "recipe"}, {"SCT": [0.375], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "minecraft:pale_oak_planks", "label": "minecraft:pale_oak_planks", "shape": "dot", "size": 30, "title": [0.375], "type": "item"}, {"SCT": [0.45], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "minecraft:bamboo_planks", "label": "minecraft:bamboo_planks", "shape": "dot", "size": 30, "title": [0.45], "type": "item"}, {"SCT": [58280.0], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@f10f122f", "label": "Ingredient@f10f122f", "shape": "square", "size": 5, "title": [58280.0], "type": "ingredient"}, {"SCT": [0.188], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@c291d88c", "label": "Ingredient@c291d88c", "shape": "square", "size": 5, "title": [0.188], "type": "ingredient"}, {"SCT": [0.376], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-somemoreblocks:dark_oak_mosaic", "label": "crafting-somemoreblocks:dark_oak_mosaic", "shape": "diamond", "size": 15, "title": [0.376], "type": "recipe"}, {"SCT": [0.376], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-somemoreblocks:spruce_mosaic", "label": "crafting-somemoreblocks:spruce_mosaic", "shape": "diamond", "size": 15, "title": [0.376], "type": "recipe"}, {"SCT": [1.5], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-minecraft:pale_oak_planks", "label": "crafting-minecraft:pale_oak_planks", "shape": "diamond", "size": 15, "title": [1.5], "type": "recipe"}, {"SCT": [6.5], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "born_in_chaos_v1:scorched_log", "label": "born_in_chaos_v1:scorched_log", "shape": "dot", "size": 30, "title": [6.5], "type": "item"}, {"SCT": [524520.0], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@699ec6be", "label": "Ingredient@699ec6be", "shape": "square", "size": 5, "title": [524520.0], "type": "ingredient"}, {"SCT": [323.29200000000003], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-sophisticatedstorage:stack_upgrade_tier_3", "label": "crafting-sophisticatedstorage:stack_upgrade_tier_3", "shape": "diamond", "size": 15, "title": [323.29200000000003], "type": "recipe"}, {"SCT": [0.188], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@8654f2d", "label": "Ingredient@8654f2d", "shape": "square", "size": 5, "title": [0.188], "type": "ingredient"}, {"SCT": [1.125], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-minecraft:dark_oak_slab", "label": "crafting-minecraft:dark_oak_slab", "shape": "diamond", "size": 15, "title": [1.125], "type": "recipe"}, {"SCT": [0.188], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "minecraft:dark_oak_slab", "label": "minecraft:dark_oak_slab", "shape": "dot", "size": 30, "title": [0.188], "type": "item"}, {"SCT": [9.0], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "blasting-minecraft:gold_ingot_from_blasting_raw_gold", "label": "blasting-minecraft:gold_ingot_from_blasting_raw_gold", "shape": "diamond", "size": 15, "title": [9.0], "type": "recipe"}, {"SCT": [0.376], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-somemoreblocks:oak_mosaic", "label": "crafting-somemoreblocks:oak_mosaic", "shape": "diamond", "size": 15, "title": [0.376], "type": "recipe"}, {"SCT": [19427.292], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@1bdc6be4", "label": "Ingredient@1bdc6be4", "shape": "square", "size": 5, "title": [19427.292], "type": "ingredient"}, {"SCT": [0.1], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@fba4a579", "label": "Ingredient@fba4a579", "shape": "square", "size": 5, "title": [0.1], "type": "ingredient"}, {"SCT": [40.0], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "smelting-minecraft:diamond_from_smelting_diamond_ore", "label": "smelting-minecraft:diamond_from_smelting_diamond_ore", "shape": "diamond", "size": 15, "title": [40.0], "type": "recipe"}, {"SCT": [12.0], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "smelting-minecraft:gold_ingot_from_smelting_deepslate_gold_ore", "label": "smelting-minecraft:gold_ingot_from_smelting_deepslate_gold_ore", "shape": "diamond", "size": 15, "title": [12.0], "type": "recipe"}, {"SCT": [12.0], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "smelting-minecraft:gold_ingot_from_smelting_gold_ore", "label": "smelting-minecraft:gold_ingot_from_smelting_gold_ore", "shape": "diamond", "size": 15, "title": [12.0], "type": "recipe"}, {"SCT": [0.188], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@f4b6d4c5", "label": "Ingredient@f4b6d4c5", "shape": "square", "size": 5, "title": [0.188], "type": "ingredient"}, {"SCT": [524520.0], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-sophisticatedbackpacks:stack_upgrade_omega_tier", "label": "crafting-sophisticatedbackpacks:stack_upgrade_omega_tier", "shape": "diamond", "size": 15, "title": [524520.0], "type": "recipe"}, {"SCT": [12.0], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "smelting-minecraft:gold_ingot_from_smelting_nether_gold_ore", "label": "smelting-minecraft:gold_ingot_from_smelting_nether_gold_ore", "shape": "diamond", "size": 15, "title": [12.0], "type": "recipe"}, {"SCT": [1.5], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-hazennstuff:crafting/blocks/wisewood_planks", "label": "crafting-hazennstuff:crafting/blocks/wisewood_planks", "shape": "diamond", "size": 15, "title": [1.5], "type": "recipe"}, {"SCT": [40.0], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "blasting-minecraft:diamond_from_blasting_deepslate_diamond_ore", "label": "blasting-minecraft:diamond_from_blasting_deepslate_diamond_ore", "shape": "diamond", "size": 15, "title": [40.0], "type": "recipe"}, {"SCT": [0.376], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "somemoreblocks:spruce_mosaic", "label": "somemoreblocks:spruce_mosaic", "shape": "dot", "size": 30, "title": [0.376], "type": "item"}, {"SCT": [0.188], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "minecraft:oak_slab", "label": "minecraft:oak_slab", "shape": "dot", "size": 30, "title": [0.188], "type": "item"}, {"SCT": [524520.0], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "sophisticatedbackpacks:stack_upgrade_omega_tier", "label": "sophisticatedbackpacks:stack_upgrade_omega_tier", "shape": "dot", "size": 30, "title": [524520.0], "type": "item"}, {"SCT": [9.0], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-minecraft:gold_ingot_from_nuggets", "label": "crafting-minecraft:gold_ingot_from_nuggets", "shape": "diamond", "size": 15, "title": [9.0], "type": "recipe"}, {"SCT": [0.1], "color": "red", "font": {"size": 10}, "hasComputed": false, "id": "minecraft:bamboo", "label": "minecraft:bamboo", "shape": "dot", "size": 30, "title": [0.1], "type": "item"}]);
+                  edges = new vis.DataSet([{"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:diamond", "label": "0", "smooth": false, "to": "Ingredient@4d6c73f0", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@4049bb80", "label": "3", "smooth": false, "to": "crafting-minecraft:cherry_slab", "width": 2.204119982655925}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "smelting-minecraft:gold_ingot_from_smelting_raw_gold", "label": "1", "smooth": false, "to": "minecraft:gold_ingot", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@8b48fb96", "label": "2", "smooth": false, "to": "crafting-somemoreblocks:acacia_mosaic", "width": 1.9542425094393248}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@afefa4c4", "label": "2", "smooth": false, "to": "crafting-somemoreblocks:crimson_mosaic", "width": 1.9542425094393248}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "betterarcheology:rotten_planks", "label": "0", "smooth": false, "to": "Ingredient@2d47a0ee", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-minecraft:mangrove_slab", "label": "6", "smooth": false, "to": "minecraft:mangrove_slab", "width": 2.690196080028514}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-sophisticatedbackpacks:stack_upgrade_tier_3", "label": "1", "smooth": false, "to": "sophisticatedbackpacks:stack_upgrade_tier_3", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-minecraft:warped_planks", "label": "4", "smooth": false, "to": "minecraft:warped_planks", "width": 2.3979400086720375}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@6524a683", "label": "4", "smooth": false, "to": "crafting-minecraft:netherite_ingot", "width": 2.3979400086720375}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:cherry_slab", "label": "0", "smooth": false, "to": "Ingredient@e0d2edfa", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:crimson_planks", "label": "0", "smooth": false, "to": "Ingredient@bd86cc5e", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:crimson_planks", "label": "0", "smooth": false, "to": "Ingredient@2d47a0ee", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-somemoreblocks:jungle_mosaic", "label": "1", "smooth": false, "to": "somemoreblocks:jungle_mosaic", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-minecraft:netherite_ingot_from_netherite_block", "label": "9", "smooth": false, "to": "minecraft:netherite_ingot", "width": 3.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "hazennstuff:wisewood_planks", "label": "0", "smooth": false, "to": "Ingredient@2d47a0ee", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:jungle_planks", "label": "0", "smooth": false, "to": "Ingredient@2d47a0ee", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:jungle_planks", "label": "0", "smooth": false, "to": "Ingredient@d80d8e34", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@104abe82", "label": "2", "smooth": false, "to": "crafting-somemoreblocks:warped_mosaic", "width": 1.9542425094393248}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:netherite_ingot", "label": "0", "smooth": false, "to": "Ingredient@696489a6", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:netherite_ingot", "label": "0", "smooth": false, "to": "Ingredient@1b457f86", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@5b56c84f", "label": "1", "smooth": false, "to": "crafting-minecraft:warped_planks", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@2794cb06", "label": "3", "smooth": false, "to": "crafting-minecraft:acacia_slab", "width": 2.204119982655925}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "#born_in_chaos_v1:scorched_planks", "label": "0", "smooth": false, "to": "Ingredient@2d47a0ee", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:birch_slab", "label": "0", "smooth": false, "to": "Ingredient@dce74626", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@39ec1ff2", "label": "1", "smooth": false, "to": "crafting-minecraft:oak_planks", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "#logs", "label": "0", "smooth": false, "to": "Ingredient@683bf44c", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "#logs", "label": "0", "smooth": false, "to": "Ingredient@5b56c84f", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "#logs", "label": "0", "smooth": false, "to": "Ingredient@48f61752", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "#logs", "label": "0", "smooth": false, "to": "Ingredient@27bf2cf", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "#logs", "label": "0", "smooth": false, "to": "Ingredient@39ec1ff2", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "#logs", "label": "0", "smooth": false, "to": "Ingredient@2a6c687b", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "#logs", "label": "0", "smooth": false, "to": "Ingredient@2fd7d007", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "#logs", "label": "0", "smooth": false, "to": "Ingredient@b468dd67", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "#logs", "label": "0", "smooth": false, "to": "Ingredient@5e044f32", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "#logs", "label": "0", "smooth": false, "to": "Ingredient@d219c8a9", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "#logs", "label": "0", "smooth": false, "to": "Ingredient@bd59669b", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "#logs", "label": "0", "smooth": false, "to": "Ingredient@dbea51ee", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "#logs", "label": "0", "smooth": false, "to": "Ingredient@38349a8e", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "#logs", "label": "0", "smooth": false, "to": "Ingredient@5468eb8d", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "somemoreblocks:mangrove_mosaic", "label": "0", "smooth": false, "to": "Ingredient@2d47a0ee", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:netherite_block", "label": "0", "smooth": false, "to": "Ingredient@cc30a6f5", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:netherite_block", "label": "0", "smooth": false, "to": "Ingredient@e9f8d7e4", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-sophisticatedstorage:storage_stack_upgrade_tier_5_from_backpack_stack_upgrade_tier_4", "label": "3", "smooth": false, "to": "sophisticatedstorage:stack_upgrade_tier_5", "width": 2.204119982655925}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-minecraft:jungle_slab", "label": "6", "smooth": false, "to": "minecraft:jungle_slab", "width": 2.690196080028514}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "somemoreblocks:oak_mosaic", "label": "0", "smooth": false, "to": "Ingredient@2d47a0ee", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@1b5f0f7e", "label": "1", "smooth": false, "to": "crafting-sophisticatedstorage:stack_upgrade_tier_5", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@bd86cc5e", "label": "3", "smooth": false, "to": "crafting-minecraft:crimson_slab", "width": 2.204119982655925}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-born_in_chaos_v1:smoldering_scorche_log_k", "label": "8", "smooth": false, "to": "born_in_chaos_v1:smoldering_scorched_log", "width": 2.9084850188786495}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@5468eb8d", "label": "1", "smooth": false, "to": "crafting-betterarcheology:rotten_planks", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@d80d8e34", "label": "3", "smooth": false, "to": "crafting-minecraft:jungle_slab", "width": 2.204119982655925}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "born_in_chaos_v1:scorched_wood", "label": "0", "smooth": false, "to": "Ingredient@683bf44c", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "born_in_chaos_v1:scorched_wood", "label": "0", "smooth": false, "to": "Ingredient@b0a1b77a", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "born_in_chaos_v1:scorched_wood", "label": "0", "smooth": false, "to": "Ingredient@396a0b71", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-somemoreblocks:warped_mosaic", "label": "1", "smooth": false, "to": "somemoreblocks:warped_mosaic", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:netherite_scrap", "label": "0", "smooth": false, "to": "Ingredient@6524a683", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-minecraft:acacia_planks", "label": "4", "smooth": false, "to": "minecraft:acacia_planks", "width": 2.3979400086720375}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-sophisticatedbackpacks:stack_upgrade_tier_4", "label": "1", "smooth": false, "to": "sophisticatedbackpacks:stack_upgrade_tier_4", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-sophisticatedstorage:storage_stack_upgrade_tier_3_from_backpack_stack_upgrade_tier_2", "label": "3", "smooth": false, "to": "sophisticatedstorage:stack_upgrade_tier_3", "width": 2.204119982655925}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-minecraft:cherry_slab", "label": "6", "smooth": false, "to": "minecraft:cherry_slab", "width": 2.690196080028514}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@38349a8e", "label": "1", "smooth": false, "to": "crafting-minecraft:jungle_planks", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-minecraft:birch_slab", "label": "6", "smooth": false, "to": "minecraft:birch_slab", "width": 2.690196080028514}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "blasting-minecraft:netherite_scrap_from_blasting", "label": "1", "smooth": false, "to": "minecraft:netherite_scrap", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-minecraft:gold_ingot_from_gold_block", "label": "9", "smooth": false, "to": "minecraft:gold_ingot", "width": 3.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@2d47a0ee", "label": "5", "smooth": false, "to": "crafting-sophisticatedstorage:storage_stack_upgrade_omega_tier_from_backpack_stack_upgrade_omega_tier", "width": 2.5563025007672873}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@2d47a0ee", "label": "5", "smooth": false, "to": "crafting-sophisticatedstorage:storage_stack_upgrade_tier_5_from_backpack_stack_upgrade_tier_4", "width": 2.5563025007672873}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@2d47a0ee", "label": "5", "smooth": false, "to": "crafting-sophisticatedstorage:storage_stack_upgrade_tier_4_from_backpack_stack_upgrade_tier_3", "width": 2.5563025007672873}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@2d47a0ee", "label": "5", "smooth": false, "to": "crafting-sophisticatedstorage:storage_stack_upgrade_tier_3_from_backpack_stack_upgrade_tier_2", "width": 2.5563025007672873}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-minecraft:jungle_planks", "label": "4", "smooth": false, "to": "minecraft:jungle_planks", "width": 2.3979400086720375}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@413ddb3a", "label": "3", "smooth": false, "to": "crafting-minecraft:oak_slab", "width": 2.204119982655925}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "somemoreblocks:birch_mosaic", "label": "0", "smooth": false, "to": "Ingredient@2d47a0ee", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-somemoreblocks:crimson_mosaic", "label": "1", "smooth": false, "to": "somemoreblocks:crimson_mosaic", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:warped_planks", "label": "0", "smooth": false, "to": "Ingredient@7b2d0e78", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:warped_planks", "label": "0", "smooth": false, "to": "Ingredient@2d47a0ee", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@e0d2edfa", "label": "2", "smooth": false, "to": "crafting-somemoreblocks:cherry_mosaic", "width": 1.9542425094393248}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-minecraft:netherite_ingot", "label": "1", "smooth": false, "to": "minecraft:netherite_ingot", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-minecraft:diamond", "label": "9", "smooth": false, "to": "minecraft:diamond", "width": 3.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "born_in_chaos_v1:fire_dust", "label": "0", "smooth": false, "to": "Ingredient@897a1ed7", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@27ed48d5", "label": "1", "smooth": false, "to": "crafting-sophisticatedstorage:storage_stack_upgrade_tier_4_from_backpack_stack_upgrade_tier_3", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@27ed48d5", "label": "1", "smooth": false, "to": "crafting-sophisticatedbackpacks:stack_upgrade_tier_4", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@2a6c687b", "label": "1", "smooth": false, "to": "crafting-minecraft:birch_planks", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-minecraft:netherite_block", "label": "1", "smooth": false, "to": "minecraft:netherite_block", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@e1797ed7", "label": "4", "smooth": false, "to": "crafting-born_in_chaos_v1:smoldering_scorched_wood_k", "width": 2.3979400086720375}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@29ca6b1", "label": "2", "smooth": false, "to": "crafting-somemoreblocks:mangrove_mosaic", "width": 1.9542425094393248}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:acacia_slab", "label": "0", "smooth": false, "to": "Ingredient@8b48fb96", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-born_in_chaos_v1:scorched_planks_k", "label": "4", "smooth": false, "to": "#born_in_chaos_v1:scorched_planks", "width": 2.3979400086720375}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:spruce_slab", "label": "0", "smooth": false, "to": "Ingredient@47f980ae", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-sophisticatedstorage:stack_upgrade_omega_tier", "label": "1", "smooth": false, "to": "sophisticatedstorage:stack_upgrade_omega_tier", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:spruce_planks", "label": "0", "smooth": false, "to": "Ingredient@2d47a0ee", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:spruce_planks", "label": "0", "smooth": false, "to": "Ingredient@6f74dfa0", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@5e044f32", "label": "1", "smooth": false, "to": "crafting-minecraft:cherry_planks", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@bd59669b", "label": "1", "smooth": false, "to": "crafting-minecraft:dark_oak_planks", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@e29ebc97", "label": "1", "smooth": false, "to": "crafting-sophisticatedstorage:stack_upgrade_tier_4", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-minecraft:bamboo_block", "label": "1", "smooth": false, "to": "#bamboo_blocks", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@4d6c73f0", "label": "6", "smooth": false, "to": "crafting-sophisticatedstorage:stack_upgrade_tier_4", "width": 2.690196080028514}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "smelting-minecraft:netherite_scrap", "label": "1", "smooth": false, "to": "minecraft:netherite_scrap", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:warped_slab", "label": "0", "smooth": false, "to": "Ingredient@104abe82", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@b9c54523", "label": "3", "smooth": false, "to": "crafting-minecraft:mangrove_slab", "width": 2.204119982655925}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "somemoreblocks:dark_oak_mosaic", "label": "0", "smooth": false, "to": "Ingredient@2d47a0ee", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-somemoreblocks:birch_mosaic", "label": "1", "smooth": false, "to": "somemoreblocks:birch_mosaic", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-minecraft:crimson_planks", "label": "4", "smooth": false, "to": "minecraft:crimson_planks", "width": 2.3979400086720375}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "somemoreblocks:crimson_mosaic", "label": "0", "smooth": false, "to": "Ingredient@2d47a0ee", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@2d1e1fce", "label": "1", "smooth": false, "to": "crafting-minecraft:bamboo_planks", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@696489a6", "label": "6", "smooth": false, "to": "crafting-sophisticatedstorage:stack_upgrade_tier_5", "width": 2.690196080028514}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@7b2d0e78", "label": "3", "smooth": false, "to": "crafting-minecraft:warped_slab", "width": 2.204119982655925}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "blasting-minecraft:gold_ingot_from_blasting_gold_ore", "label": "1", "smooth": false, "to": "minecraft:gold_ingot", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:dark_oak_planks", "label": "0", "smooth": false, "to": "Ingredient@32e23b8f", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:dark_oak_planks", "label": "0", "smooth": false, "to": "Ingredient@2d47a0ee", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:cherry_planks", "label": "0", "smooth": false, "to": "Ingredient@2d47a0ee", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:cherry_planks", "label": "0", "smooth": false, "to": "Ingredient@4049bb80", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-sophisticatedstorage:storage_stack_upgrade_tier_4_from_backpack_stack_upgrade_tier_3", "label": "3", "smooth": false, "to": "sophisticatedstorage:stack_upgrade_tier_4", "width": 2.204119982655925}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "create:cutting-create:cutting/runtime_generated/compat/born_in_chaos_v1/scorched_log_to_stripped_scorched_log", "label": "1", "smooth": false, "to": "born_in_chaos_v1:stripped_scorched_log", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-minecraft:oak_planks", "label": "4", "smooth": false, "to": "minecraft:oak_planks", "width": 2.3979400086720375}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "blasting-minecraft:gold_ingot_from_blasting_deepslate_gold_ore", "label": "1", "smooth": false, "to": "minecraft:gold_ingot", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-minecraft:diamond_block", "label": "1", "smooth": false, "to": "minecraft:diamond_block", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-minecraft:mangrove_planks", "label": "4", "smooth": false, "to": "minecraft:mangrove_planks", "width": 2.3979400086720375}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-somemoreblocks:mangrove_mosaic", "label": "1", "smooth": false, "to": "somemoreblocks:mangrove_mosaic", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "blasting-minecraft:diamond_from_blasting_diamond_ore", "label": "1", "smooth": false, "to": "minecraft:diamond", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "born_in_chaos_v1:smoldering_scorched_log", "label": "0", "smooth": false, "to": "Ingredient@683bf44c", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "born_in_chaos_v1:smoldering_scorched_log", "label": "0", "smooth": false, "to": "Ingredient@396a0b71", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "born_in_chaos_v1:smoldering_scorched_log", "label": "0", "smooth": false, "to": "Ingredient@e1797ed7", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-sophisticatedstorage:stack_upgrade_tier_4", "label": "1", "smooth": false, "to": "sophisticatedstorage:stack_upgrade_tier_4", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@683bf44c", "label": "3", "smooth": false, "to": "crafting-born_in_chaos_v1:scorched_log_k", "width": 2.204119982655925}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-betterarcheology:rotten_planks", "label": "4", "smooth": false, "to": "betterarcheology:rotten_planks", "width": 2.3979400086720375}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:gold_ingot", "label": "0", "smooth": false, "to": "Ingredient@de96032a", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-minecraft:spruce_planks", "label": "4", "smooth": false, "to": "minecraft:spruce_planks", "width": 2.3979400086720375}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-minecraft:dark_oak_planks", "label": "4", "smooth": false, "to": "minecraft:dark_oak_planks", "width": 2.3979400086720375}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@e9f8d7e4", "label": "2", "smooth": false, "to": "crafting-sophisticatedstorage:stack_upgrade_tier_5", "width": 1.9542425094393248}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@e9f8d7e4", "label": "8", "smooth": false, "to": "crafting-sophisticatedbackpacks:stack_upgrade_tier_4", "width": 2.9084850188786495}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-minecraft:birch_planks", "label": "4", "smooth": false, "to": "minecraft:birch_planks", "width": 2.3979400086720375}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:diamond_block", "label": "0", "smooth": false, "to": "Ingredient@fdd0cab6", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "create:cutting-create:cutting/runtime_generated/compat/born_in_chaos_v1/scorched_wood_to_stripped_scorched_wood", "label": "1", "smooth": false, "to": "born_in_chaos_v1:stripped_scorched_wood", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@2dfafbbe", "label": "3", "smooth": false, "to": "crafting-minecraft:birch_slab", "width": 2.204119982655925}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "sophisticatedstorage:stack_upgrade_tier_4", "label": "0", "smooth": false, "to": "Ingredient@1b5f0f7e", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-born_in_chaos_v1:smoldering_scorched_wood_k", "label": "3", "smooth": false, "to": "born_in_chaos_v1:smoldering_scorched_wood", "width": 2.204119982655925}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "sophisticatedstorage:stack_upgrade_tier_3", "label": "0", "smooth": false, "to": "Ingredient@e29ebc97", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "smelting-minecraft:diamond_from_smelting_deepslate_diamond_ore", "label": "1", "smooth": false, "to": "minecraft:diamond", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@6f74dfa0", "label": "3", "smooth": false, "to": "crafting-minecraft:spruce_slab", "width": 2.204119982655925}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "somemoreblocks:cherry_mosaic", "label": "0", "smooth": false, "to": "Ingredient@2d47a0ee", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:oak_planks", "label": "0", "smooth": false, "to": "Ingredient@413ddb3a", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:oak_planks", "label": "0", "smooth": false, "to": "Ingredient@2d47a0ee", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-minecraft:crimson_slab", "label": "6", "smooth": false, "to": "minecraft:crimson_slab", "width": 2.690196080028514}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "sophisticatedbackpacks:stack_upgrade_tier_3", "label": "0", "smooth": false, "to": "Ingredient@27ed48d5", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "blasting-minecraft:gold_ingot_from_blasting_nether_gold_ore", "label": "1", "smooth": false, "to": "minecraft:gold_ingot", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@fdd0cab6", "label": "2", "smooth": false, "to": "crafting-sophisticatedstorage:stack_upgrade_tier_4", "width": 1.9542425094393248}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@fdd0cab6", "label": "8", "smooth": false, "to": "crafting-sophisticatedbackpacks:stack_upgrade_tier_3", "width": 2.9084850188786495}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@cc30a6f5", "label": "1", "smooth": false, "to": "crafting-minecraft:netherite_ingot_from_netherite_block", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-somemoreblocks:acacia_mosaic", "label": "1", "smooth": false, "to": "somemoreblocks:acacia_mosaic", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@fbb6dbff", "label": "8", "smooth": false, "to": "crafting-born_in_chaos_v1:smoldering_scorche_log_k", "width": 2.9084850188786495}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@fbb6dbff", "label": "4", "smooth": false, "to": "crafting-born_in_chaos_v1:scorched_wood_k", "width": 2.3979400086720375}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@fbb6dbff", "label": "1", "smooth": false, "to": "create:cutting-create:cutting/runtime_generated/compat/born_in_chaos_v1/scorched_log_to_stripped_scorched_log", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "born_in_chaos_v1:stripped_scorched_log", "label": "0", "smooth": false, "to": "Ingredient@683bf44c", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "born_in_chaos_v1:stripped_scorched_log", "label": "0", "smooth": false, "to": "Ingredient@396a0b71", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:pale_oak_planks", "label": "0", "smooth": false, "to": "Ingredient@2d47a0ee", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-minecraft:bamboo_planks", "label": "2", "smooth": false, "to": "minecraft:bamboo_planks", "width": 1.9542425094393248}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-somemoreblocks:cherry_mosaic", "label": "1", "smooth": false, "to": "somemoreblocks:cherry_mosaic", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "sophisticatedbackpacks:stack_upgrade_tier_4", "label": "0", "smooth": false, "to": "Ingredient@f10f122f", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@c291d88c", "label": "2", "smooth": false, "to": "crafting-somemoreblocks:dark_oak_mosaic", "width": 1.9542425094393248}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@27bf2cf", "label": "1", "smooth": false, "to": "crafting-minecraft:acacia_planks", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@47f980ae", "label": "2", "smooth": false, "to": "crafting-somemoreblocks:spruce_mosaic", "width": 1.9542425094393248}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@b468dd67", "label": "1", "smooth": false, "to": "crafting-minecraft:pale_oak_planks", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-minecraft:cherry_planks", "label": "4", "smooth": false, "to": "minecraft:cherry_planks", "width": 2.3979400086720375}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-born_in_chaos_v1:scorched_log_k", "label": "3", "smooth": false, "to": "born_in_chaos_v1:scorched_log", "width": 2.204119982655925}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@699ec6be", "label": "1", "smooth": false, "to": "crafting-sophisticatedstorage:storage_stack_upgrade_omega_tier_from_backpack_stack_upgrade_omega_tier", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:bamboo_planks", "label": "0", "smooth": false, "to": "Ingredient@2d47a0ee", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@de96032a", "label": "6", "smooth": false, "to": "crafting-sophisticatedstorage:stack_upgrade_tier_3", "width": 2.690196080028514}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@de96032a", "label": "4", "smooth": false, "to": "crafting-minecraft:netherite_ingot", "width": 2.3979400086720375}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:jungle_slab", "label": "0", "smooth": false, "to": "Ingredient@8654f2d", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-minecraft:dark_oak_slab", "label": "6", "smooth": false, "to": "minecraft:dark_oak_slab", "width": 2.690196080028514}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-minecraft:spruce_slab", "label": "6", "smooth": false, "to": "minecraft:spruce_slab", "width": 2.690196080028514}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "blasting-minecraft:gold_ingot_from_blasting_raw_gold", "label": "1", "smooth": false, "to": "minecraft:gold_ingot", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-somemoreblocks:oak_mosaic", "label": "1", "smooth": false, "to": "somemoreblocks:oak_mosaic", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "sophisticatedstorage:stack_upgrade_tier_5", "label": "0", "smooth": false, "to": "Ingredient@1bdc6be4", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-somemoreblocks:dark_oak_mosaic", "label": "1", "smooth": false, "to": "somemoreblocks:dark_oak_mosaic", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "#bamboo_blocks", "label": "0", "smooth": false, "to": "Ingredient@2d1e1fce", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@48f61752", "label": "1", "smooth": false, "to": "crafting-minecraft:mangrove_planks", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@32e23b8f", "label": "3", "smooth": false, "to": "crafting-minecraft:dark_oak_slab", "width": 2.204119982655925}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@fba4a579", "label": "9", "smooth": false, "to": "crafting-minecraft:bamboo_block", "width": 3.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:mangrove_planks", "label": "0", "smooth": false, "to": "Ingredient@b9c54523", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:mangrove_planks", "label": "0", "smooth": false, "to": "Ingredient@2d47a0ee", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "somemoreblocks:acacia_mosaic", "label": "0", "smooth": false, "to": "Ingredient@2d47a0ee", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@1bdc6be4", "label": "9", "smooth": false, "to": "crafting-sophisticatedstorage:stack_upgrade_omega_tier", "width": 3.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:acacia_planks", "label": "0", "smooth": false, "to": "Ingredient@2794cb06", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:acacia_planks", "label": "0", "smooth": false, "to": "Ingredient@2d47a0ee", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "born_in_chaos_v1:smoldering_scorched_wood", "label": "0", "smooth": false, "to": "Ingredient@683bf44c", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "born_in_chaos_v1:smoldering_scorched_wood", "label": "0", "smooth": false, "to": "Ingredient@396a0b71", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "smelting-minecraft:diamond_from_smelting_diamond_ore", "label": "1", "smooth": false, "to": "minecraft:diamond", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "smelting-minecraft:gold_ingot_from_smelting_deepslate_gold_ore", "label": "1", "smooth": false, "to": "minecraft:gold_ingot", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:birch_planks", "label": "0", "smooth": false, "to": "Ingredient@2d47a0ee", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:birch_planks", "label": "0", "smooth": false, "to": "Ingredient@2dfafbbe", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "smelting-minecraft:gold_ingot_from_smelting_gold_ore", "label": "1", "smooth": false, "to": "minecraft:gold_ingot", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "born_in_chaos_v1:scorched_log", "label": "0", "smooth": false, "to": "Ingredient@683bf44c", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "born_in_chaos_v1:scorched_log", "label": "0", "smooth": false, "to": "Ingredient@fbb6dbff", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "born_in_chaos_v1:scorched_log", "label": "0", "smooth": false, "to": "Ingredient@396a0b71", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-minecraft:acacia_slab", "label": "6", "smooth": false, "to": "minecraft:acacia_slab", "width": 2.690196080028514}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-sophisticatedstorage:stack_upgrade_tier_5", "label": "1", "smooth": false, "to": "sophisticatedstorage:stack_upgrade_tier_5", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:mangrove_slab", "label": "0", "smooth": false, "to": "Ingredient@29ca6b1", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:crimson_slab", "label": "0", "smooth": false, "to": "Ingredient@afefa4c4", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@f4b6d4c5", "label": "2", "smooth": false, "to": "crafting-somemoreblocks:oak_mosaic", "width": 1.9542425094393248}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@dce74626", "label": "2", "smooth": false, "to": "crafting-somemoreblocks:birch_mosaic", "width": 1.9542425094393248}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "somemoreblocks:jungle_mosaic", "label": "0", "smooth": false, "to": "Ingredient@2d47a0ee", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-minecraft:warped_slab", "label": "6", "smooth": false, "to": "minecraft:warped_slab", "width": 2.690196080028514}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@396a0b71", "label": "1", "smooth": false, "to": "crafting-born_in_chaos_v1:scorched_planks_k", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@f10f122f", "label": "1", "smooth": false, "to": "crafting-sophisticatedstorage:storage_stack_upgrade_tier_5_from_backpack_stack_upgrade_tier_4", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@f10f122f", "label": "9", "smooth": false, "to": "crafting-sophisticatedbackpacks:stack_upgrade_omega_tier", "width": 3.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "born_in_chaos_v1:stripped_scorched_wood", "label": "0", "smooth": false, "to": "Ingredient@683bf44c", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "born_in_chaos_v1:stripped_scorched_wood", "label": "0", "smooth": false, "to": "Ingredient@396a0b71", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "smelting-minecraft:gold_ingot_from_smelting_nether_gold_ore", "label": "1", "smooth": false, "to": "minecraft:gold_ingot", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@2fd7d007", "label": "1", "smooth": false, "to": "crafting-minecraft:crimson_planks", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-hazennstuff:crafting/blocks/wisewood_planks", "label": "4", "smooth": false, "to": "hazennstuff:wisewood_planks", "width": 2.3979400086720375}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "blasting-minecraft:diamond_from_blasting_deepslate_diamond_ore", "label": "1", "smooth": false, "to": "minecraft:diamond", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@d219c8a9", "label": "1", "smooth": false, "to": "crafting-minecraft:spruce_planks", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-sophisticatedstorage:stack_upgrade_tier_3", "label": "1", "smooth": false, "to": "sophisticatedstorage:stack_upgrade_tier_3", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@dbea51ee", "label": "1", "smooth": false, "to": "crafting-hazennstuff:crafting/blocks/wisewood_planks", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-sophisticatedstorage:storage_stack_upgrade_omega_tier_from_backpack_stack_upgrade_omega_tier", "label": "3", "smooth": false, "to": "sophisticatedstorage:stack_upgrade_omega_tier", "width": 2.204119982655925}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-born_in_chaos_v1:scorched_wood_k", "label": "3", "smooth": false, "to": "born_in_chaos_v1:scorched_wood", "width": 2.204119982655925}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-somemoreblocks:spruce_mosaic", "label": "1", "smooth": false, "to": "somemoreblocks:spruce_mosaic", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-minecraft:oak_slab", "label": "6", "smooth": false, "to": "minecraft:oak_slab", "width": 2.690196080028514}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "somemoreblocks:spruce_mosaic", "label": "0", "smooth": false, "to": "Ingredient@2d47a0ee", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-minecraft:pale_oak_planks", "label": "4", "smooth": false, "to": "minecraft:pale_oak_planks", "width": 2.3979400086720375}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "sophisticatedbackpacks:stack_upgrade_omega_tier", "label": "0", "smooth": false, "to": "Ingredient@699ec6be", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-sophisticatedbackpacks:stack_upgrade_omega_tier", "label": "1", "smooth": false, "to": "sophisticatedbackpacks:stack_upgrade_omega_tier", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:dark_oak_slab", "label": "0", "smooth": false, "to": "Ingredient@c291d88c", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "somemoreblocks:warped_mosaic", "label": "0", "smooth": false, "to": "Ingredient@2d47a0ee", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-minecraft:gold_ingot_from_nuggets", "label": "1", "smooth": false, "to": "minecraft:gold_ingot", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@897a1ed7", "label": "1", "smooth": false, "to": "crafting-born_in_chaos_v1:smoldering_scorche_log_k", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@897a1ed7", "label": "1", "smooth": false, "to": "crafting-born_in_chaos_v1:scorched_log_k", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@1b457f86", "label": "9", "smooth": false, "to": "crafting-minecraft:netherite_block", "width": 3.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:oak_slab", "label": "0", "smooth": false, "to": "Ingredient@f4b6d4c5", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@b0a1b77a", "label": "1", "smooth": false, "to": "create:cutting-create:cutting/runtime_generated/compat/born_in_chaos_v1/scorched_wood_to_stripped_scorched_wood", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:bamboo", "label": "0", "smooth": false, "to": "Ingredient@fba4a579", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@8654f2d", "label": "2", "smooth": false, "to": "crafting-somemoreblocks:jungle_mosaic", "width": 1.9542425094393248}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": true,
+        "filter": [
+            "physics",
+            "layout"
+        ]
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": false,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "layout": {
+        "hierarchical": {
+            "blockShifting": true,
+            "edgeMinimization": true,
+            "enabled": true,
+            "levelSeparation": 150,
+            "parentCentralization": true,
+            "sortMethod": "hubsize",
+            "treeSpacing": 200
+        },
+        "improvedLayout": true,
+        "randomSeed": 0
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+                  // if this network requires displaying the configure window,
+                  // put it in its div
+                  options.configure["container"] = document.getElementById("config");
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+                    network.on("selectNode", neighbourhoodHighlight);
+                  
+
+                  
+
+
+                  
+                      network.on("stabilizationProgress", function(params) {
+                          document.getElementById('loadingBar').removeAttribute("style");
+                          var maxWidth = 496;
+                          var minWidth = 20;
+                          var widthFactor = params.iterations/params.total;
+                          var width = Math.max(minWidth,maxWidth * widthFactor);
+                          document.getElementById('bar').style.width = width + 'px';
+                          document.getElementById('text').innerHTML = Math.round(widthFactor*100) + '%';
+                      });
+                      network.once("stabilizationIterationsDone", function() {
+                          document.getElementById('text').innerHTML = '100%';
+                          document.getElementById('bar').style.width = '496px';
+                          document.getElementById('loadingBar').style.opacity = 0;
+                          // really clean the dom element
+                          setTimeout(function () {document.getElementById('loadingBar').style.display = 'none';}, 500);
+                      });
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,435 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+                <link href="lib/tom-select/tom-select.css" rel="stylesheet">
+                <script src="lib/tom-select/tom-select.complete.min.js"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 80%;
+                 height: 1000;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+             #config {
+                 float: left;
+                 width: 400px;
+                 height: 600px;
+             }
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+                <div id="select-menu" class="card-header">
+                    <div class="row no-gutters">
+                        <div class="col-10 pb-2">
+                            <select
+                            class="form-select"
+                            aria-label="Default select example"
+                            onchange="selectNode([value]);"
+                            id="select-node"
+                            placeholder="Select node..."
+                            >
+                                <option selected>Select a Node by ID</option>
+                                
+                                    <option value="Ingredient@238c6e90">Ingredient@238c6e90</option>
+                                
+                                    <option value="crafting-minecraft:cake">crafting-minecraft:cake</option>
+                                
+                                    <option value="Ingredient@cc7f6b71">Ingredient@cc7f6b71</option>
+                                
+                                    <option value="minecraft:honey_bottle">minecraft:honey_bottle</option>
+                                
+                                    <option value="Ingredient@c9f072d5">Ingredient@c9f072d5</option>
+                                
+                                    <option value="minecraft:glass_bottle">minecraft:glass_bottle</option>
+                                
+                                    <option value="Ingredient@37d94c55">Ingredient@37d94c55</option>
+                                
+                                    <option value="Ingredient@33ab3ecb">Ingredient@33ab3ecb</option>
+                                
+                                    <option value="crafting-minecraft:sugar_from_honey_bottle">crafting-minecraft:sugar_from_honey_bottle</option>
+                                
+                                    <option value="Ingredient@custom-minecraft:milk_bucket-minecraft:milk-fluid1mB">Ingredient@custom-minecraft:milk_bucket-minecraft:milk-fluid1mB</option>
+                                
+                                    <option value="custom-minecraft:milk_bucket">custom-minecraft:milk_bucket</option>
+                                
+                                    <option value="#eggs">#eggs</option>
+                                
+                                    <option value="Ingredient@6838a7ab">Ingredient@6838a7ab</option>
+                                
+                                    <option value="250x net.neoforged.neoforge.fluids.crafting.TagFluidIngredient@c082d4db">250x net.neoforged.neoforge.fluids.crafting.TagFluidIngredient@c082d4db</option>
+                                
+                                    <option value="create:filling-create:filling/honey_bottle">create:filling-create:filling/honey_bottle</option>
+                                
+                                    <option value="#grains">#grains</option>
+                                
+                                    <option value="crafting-minecraft:glass_bottle">crafting-minecraft:glass_bottle</option>
+                                
+                                    <option value="#create:honeys">#create:honeys</option>
+                                
+                                    <option value="minecraft:sugar">minecraft:sugar</option>
+                                
+                                    <option value="minecraft:milk-fluid1mB">minecraft:milk-fluid1mB</option>
+                                
+                                    <option value="minecraft:cake">minecraft:cake</option>
+                                
+                                    <option value="minecraft:milk_bucket">minecraft:milk_bucket</option>
+                                
+                                    <option value="#plants">#plants</option>
+                                
+                                    <option value="Ingredient@d358782d">Ingredient@d358782d</option>
+                                
+                                    <option value="crafting-minecraft:sugar_from_sugar_cane">crafting-minecraft:sugar_from_sugar_cane</option>
+                                
+                            </select>
+                        </div>
+                        <div class="col-2 pb-2">
+                            <button type="button" class="btn btn-primary btn-block" onclick="neighbourhoodHighlight({nodes: []});">Reset Selection</button>
+                        </div>
+                    </div>
+                </div>
+            
+            
+              <div id="filter-menu" class="card-header">
+                <div class="row no-gutters">
+                  <div class="col-3 pb-2">
+                    <select
+                            class="form-select"
+                            aria-label="Default select example"
+                            onchange="updateFilter(value, 'item')"
+                            id="select-item"
+                        >
+                        <option value="">Select a network item</option>
+                        <option value="edge">edge</option>
+                        <option value="node">node</option>
+                    </select>
+                  </div>
+                  <div class="col-3 pb-2">
+                    <select
+                            class="form-select"
+                            aria-label="Default select example"
+                            onchange="updateFilter(value, 'property')"
+                            id="select-property"
+                        >
+                        <option value="">Select a property...</option>
+                    </select>
+                  </div>
+                  <div class="col-3 pb-2">
+                    <select
+                            class="form-select"
+                            aria-label="Default select example"
+                            id="select-value"
+                        >
+                        <option value="">Select value(s)...</option>
+                    </select>
+                  </div>
+                  <div class="col-1 pb-2">
+                    <button type="button" class="btn btn-primary btn-block" onclick="highlightFilter(filter);">Filter</button>
+                  </div>
+                  <div class="col-2 pb-2">
+                    <button type="button" class="btn btn-primary btn-block" onclick="clearFilter(true)">Reset Selection</button>
+                  </div>
+                </div>
+              </div>
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+            <div id="config"></div>
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+                  new TomSelect("#select-node",{
+                      create: false,
+                      sortField: {
+                          field: "text",
+                          direction: "asc"
+                      }
+                  });
+              
+
+              
+                  // explicitly using onItemAdd and this function as we need to save multiple values
+                  let updateValueFilter = function() {
+                      return function () {
+                      filter['value'].push(arguments[0])
+                      }
+                  }
+
+                  let valueControl = new TomSelect("#select-value",{
+                      maxItems: null,
+                      valueField: 'id',
+                      labelField: 'title',
+                      searchField: 'title',
+                      create: false,
+                      sortField: {
+                          field: "text",
+                          direction: "asc"
+                      },
+                      onItemAdd: updateValueFilter()
+                  });
+
+                  let addValues = function() {
+                      return function () {
+                          // clear the current value options and add the selected attribute values
+                          // tom-select handles duplicates
+                          let selectedProperty = arguments[0];
+                          valueControl.clear();
+                          valueControl.clearOptions();
+                          filter['value'] = []
+                          if (filter['item'] === 'node') {
+                              for (let each in allNodes) {
+                                  valueControl.addOption({
+                                      id:allNodes[each][selectedProperty],
+                                      title:allNodes[each][selectedProperty]
+                                  })
+                              }
+                          }
+                          else if (filter['item'] === 'edge') {
+                              for (let each in allEdges) {
+                                  valueControl.addOption({
+                                      id:allEdges[each][selectedProperty],
+                                      title:allEdges[each][selectedProperty]
+                                  })
+                              }
+                          }
+                      }
+                  };
+
+                  let propControl = new TomSelect("#select-property",{
+                      valueField: 'id',
+                      labelField: 'title',
+                      searchField: 'title',
+                      create: false,
+                      sortField: {
+                          field: "text",
+                          direction: "asc"
+                      },
+                      onItemAdd: addValues()
+                  });
+
+                  let addProperties = function() {
+                      return function () {
+                          // loops through the selected network item and adds the attributes to dropdown
+                          // tom-select handles duplicates
+                          clearFilter(false)
+                          if (arguments[0] === 'edge') {
+                              for (let each in allEdges) {
+                                  if (allEdges.hasOwnProperty(each)) {
+                                      for (let eachProp in allEdges[each]) {
+                                          if (allEdges[each].hasOwnProperty(eachProp)) {
+                                              propControl.addOption({id: eachProp, title: eachProp})
+                                          }
+                                      }
+                                  }
+                              }
+                          }
+                          else if (arguments[0] === 'node') {
+                              for (let each in allNodes) {
+                                  if (allNodes.hasOwnProperty(each)) {
+                                      for (let eachProp in allNodes[each]) {
+                                          if (allNodes[each].hasOwnProperty(eachProp)
+                                              && (eachProp !== 'hidden' && eachProp !== 'savedLabel'
+                                                  && eachProp !== 'hiddenLabel')) {
+                                              propControl.addOption({id: eachProp, title: eachProp})
+
+                                          }
+                                      }
+                                  }
+                              }
+                          }
+                      }
+                  };
+
+                  let itemControl = new TomSelect("#select-item",{
+                      create: false,
+                      sortField:{
+                          field: "text",
+                          direction: "asc"
+                      },
+                      onItemAdd: addProperties()
+                  });
+
+                  function clearFilter(reset) {
+                      // utility function to clear all the selected filter options
+                      // if reset is set to true, the existing filter will be removed
+                      // else, only the dropdown options are cleared
+                      propControl.clear();
+                      propControl.clearOptions();
+                      valueControl.clear();
+                      valueControl.clearOptions();
+                      filter = {
+                          item : '',
+                          property : '',
+                          value : []
+                      }
+                      if (reset) {
+                          itemControl.clear();
+                          filterHighlight({nodes: []})
+                      }
+                  }
+
+                  function updateFilter(value, key) {
+                      // key could be 'item' or 'property' and value is as selected in dropdown
+                      filter[key] = value
+                  }
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"SCT": [1.0], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@238c6e90", "label": "Ingredient@238c6e90", "shape": "square", "size": 5, "title": [1.0], "type": "ingredient"}, {"SCT": [34.2], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-minecraft:cake", "label": "crafting-minecraft:cake", "shape": "diamond", "size": 15, "title": [34.2], "type": "recipe"}, {"SCT": [10.0], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@cc7f6b71", "label": "Ingredient@cc7f6b71", "shape": "square", "size": 5, "title": [10.0], "type": "ingredient"}, {"SCT": [7.6000000000000005], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "minecraft:honey_bottle", "label": "minecraft:honey_bottle", "shape": "dot", "size": 30, "title": [7.6000000000000005], "type": "item"}, {"SCT": [7.6000000000000005], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@c9f072d5", "label": "Ingredient@c9f072d5", "shape": "square", "size": 5, "title": [7.6000000000000005], "type": "ingredient"}, {"SCT": [0.1], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "minecraft:glass_bottle", "label": "minecraft:glass_bottle", "shape": "dot", "size": 30, "title": [0.1], "type": "item"}, {"SCT": [0.1], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@37d94c55", "label": "Ingredient@37d94c55", "shape": "square", "size": 5, "title": [0.1], "type": "ingredient"}, {"SCT": [0.1], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@33ab3ecb", "label": "Ingredient@33ab3ecb", "shape": "square", "size": 5, "title": [0.1], "type": "ingredient"}, {"SCT": [7.6000000000000005], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-minecraft:sugar_from_honey_bottle", "label": "crafting-minecraft:sugar_from_honey_bottle", "shape": "diamond", "size": 15, "title": [7.6000000000000005], "type": "recipe"}, {"SCT": [0.01], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@custom-minecraft:milk_bucket-minecraft:milk-fluid1mB", "label": "Ingredient@custom-minecraft:milk_bucket-minecraft:milk-fluid1mB", "shape": "square", "size": 5, "title": [0.01], "type": "ingredient"}, {"SCT": [10.0], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "custom-minecraft:milk_bucket", "label": "custom-minecraft:milk_bucket", "shape": "diamond", "size": 15, "title": [10.0], "type": "recipe"}, {"SCT": [1.0], "color": "red", "font": {"size": 10}, "hasComputed": false, "id": "#eggs", "label": "#eggs", "shape": "dot", "size": 30, "title": [1.0], "type": "item"}, {"SCT": [1.0], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@6838a7ab", "label": "Ingredient@6838a7ab", "shape": "square", "size": 5, "title": [1.0], "type": "ingredient"}, {"SCT": [0.03], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "250x net.neoforged.neoforge.fluids.crafting.TagFluidIngredient@c082d4db", "label": "250x net.neoforged.neoforge.fluids.crafting.TagFluidIngredient@c082d4db", "shape": "square", "size": 5, "title": [0.03], "type": "ingredient"}, {"SCT": [7.6000000000000005], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "create:filling-create:filling/honey_bottle", "label": "create:filling-create:filling/honey_bottle", "shape": "diamond", "size": 15, "title": [7.6000000000000005], "type": "recipe"}, {"SCT": [1.0], "color": "red", "font": {"size": 10}, "hasComputed": false, "id": "#grains", "label": "#grains", "shape": "dot", "size": 30, "title": [1.0], "type": "item"}, {"SCT": [0.3], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-minecraft:glass_bottle", "label": "crafting-minecraft:glass_bottle", "shape": "diamond", "size": 15, "title": [0.3], "type": "recipe"}, {"SCT": [0.03], "color": "red", "font": {"size": 10}, "hasComputed": false, "id": "#create:honeys", "label": "#create:honeys", "shape": "dot", "size": 30, "title": [0.03], "type": "item"}, {"SCT": [0.1, 2.533], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "minecraft:sugar", "label": "minecraft:sugar", "shape": "dot", "size": 30, "title": [0.1, 2.533], "type": "item"}, {"SCT": [0.01], "color": "red", "font": {"size": 10}, "hasComputed": false, "id": "minecraft:milk-fluid1mB", "label": "minecraft:milk-fluid1mB", "shape": "dot", "size": 30, "title": [0.01], "type": "item"}, {"SCT": [34.2], "color": "purple", "font": {"size": 10}, "hasComputed": false, "id": "minecraft:cake", "label": "minecraft:cake", "shape": "dot", "size": 30, "title": [34.2], "type": "item"}, {"SCT": [10.0], "color": "#8ceef5", "font": {"size": 10}, "hasComputed": false, "id": "minecraft:milk_bucket", "label": "minecraft:milk_bucket", "shape": "dot", "size": 30, "title": [10.0], "type": "item"}, {"SCT": [0.1], "color": "red", "font": {"size": 10}, "hasComputed": false, "id": "#plants", "label": "#plants", "shape": "dot", "size": 30, "title": [0.1], "type": "item"}, {"SCT": [0.1], "color": "orange", "font": {"size": 10}, "hasComputed": false, "id": "Ingredient@d358782d", "label": "Ingredient@d358782d", "shape": "square", "size": 5, "title": [0.1], "type": "ingredient"}, {"SCT": [0.1], "color": "green", "font": {"size": 10}, "hasComputed": false, "id": "crafting-minecraft:sugar_from_sugar_cane", "label": "crafting-minecraft:sugar_from_sugar_cane", "shape": "diamond", "size": 15, "title": [0.1], "type": "recipe"}]);
+                  edges = new vis.DataSet([{"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@238c6e90", "label": "3", "smooth": false, "to": "crafting-minecraft:cake", "width": 2.204119982655925}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@cc7f6b71", "label": "3", "smooth": false, "to": "crafting-minecraft:cake", "width": 2.204119982655925}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:honey_bottle", "label": "0", "smooth": false, "to": "Ingredient@c9f072d5", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:glass_bottle", "label": "0", "smooth": false, "to": "Ingredient@37d94c55", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@33ab3ecb", "label": "2", "smooth": false, "to": "crafting-minecraft:cake", "width": 1.9542425094393248}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@c9f072d5", "label": "1", "smooth": false, "to": "crafting-minecraft:sugar_from_honey_bottle", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@custom-minecraft:milk_bucket-minecraft:milk-fluid1mB", "label": "1000", "smooth": false, "to": "custom-minecraft:milk_bucket", "width": 7.000868154958638}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "#eggs", "label": "0", "smooth": false, "to": "Ingredient@6838a7ab", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "250x net.neoforged.neoforge.fluids.crafting.TagFluidIngredient@c082d4db", "label": "250", "smooth": false, "to": "create:filling-create:filling/honey_bottle", "width": 5.799347442962076}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@6838a7ab", "label": "1", "smooth": false, "to": "crafting-minecraft:cake", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "#grains", "label": "0", "smooth": false, "to": "Ingredient@238c6e90", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-minecraft:glass_bottle", "label": "3", "smooth": false, "to": "minecraft:glass_bottle", "width": 2.204119982655925}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "#create:honeys", "label": "0", "smooth": false, "to": "250x net.neoforged.neoforge.fluids.crafting.TagFluidIngredient@c082d4db", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-minecraft:sugar_from_honey_bottle", "label": "3", "smooth": false, "to": "minecraft:sugar", "width": 2.204119982655925}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:milk-fluid1mB", "label": "0", "smooth": false, "to": "Ingredient@custom-minecraft:milk_bucket-minecraft:milk-fluid1mB", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "create:filling-create:filling/honey_bottle", "label": "1", "smooth": false, "to": "minecraft:honey_bottle", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-minecraft:cake", "label": "1", "smooth": false, "to": "minecraft:cake", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:milk_bucket", "label": "0", "smooth": false, "to": "Ingredient@cc7f6b71", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "minecraft:sugar", "label": "0", "smooth": false, "to": "Ingredient@33ab3ecb", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "#plants", "label": "0", "smooth": false, "to": "Ingredient@d358782d", "width": 1.0}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "custom-minecraft:milk_bucket", "label": "1", "smooth": false, "to": "minecraft:milk_bucket", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "crafting-minecraft:sugar_from_sugar_cane", "label": "1", "smooth": false, "to": "minecraft:sugar", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@37d94c55", "label": "1", "smooth": false, "to": "create:filling-create:filling/honey_bottle", "width": 1.6020599913279625}, {"arrowStrikethrough": false, "arrows": "to", "font": {"color": "black", "size": 15}, "from": "Ingredient@d358782d", "label": "1", "smooth": false, "to": "crafting-minecraft:sugar_from_sugar_cane", "width": 1.6020599913279625}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": true,
+        "filter": [
+            "physics",
+            "layout"
+        ]
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": false,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "layout": {
+        "hierarchical": {
+            "blockShifting": true,
+            "edgeMinimization": true,
+            "enabled": true,
+            "levelSeparation": 150,
+            "parentCentralization": true,
+            "sortMethod": "hubsize",
+            "treeSpacing": 200
+        },
+        "improvedLayout": true,
+        "randomSeed": 0
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+                  // if this network requires displaying the configure window,
+                  // put it in its div
+                  options.configure["container"] = document.getElementById("config");
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+                    network.on("selectNode", neighbourhoodHighlight);
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

@@ -327,15 +327,6 @@
         "#create:dyed_table_cloths": {
             "SCT": 2.328
         },
-        "create:honey-fluid1mB": {
-            "SCT": 0.03
-        },
-        "create:flowing_honey-fluid1mB": {
-            "SCT": 0.03
-        },
-        "brewinandchewin:honey-fluid1mB": {
-            "SCT": 0.03
-        },
         "#create:postboxes": {
             "SCT": 3.382
         },
@@ -3060,9 +3051,6 @@
         "create:cherry_window_pane": {
             "SCT": 0.23
         },
-        "create:chocolate-fluid1mB": {
-            "SCT": 0.011
-        },
         "create:chocolate_bucket": {
             "SCT": 11.0
         },
@@ -4529,9 +4517,6 @@
         },
         "create_wizardry:lightning_bucket": {
             "SCT": 40.0
-        },
-        "create_wizardry:mana-fluid1mB": {
-            "SCT": 0.026
         },
         "create_wizardry:mana_bucket": {
             "SCT": 26.0
@@ -6944,9 +6929,6 @@
         },
         "irons_spellbooks:blaze_spell_book": {
             "SCT": 192.5
-        },
-        "irons_spellbooks:blood-fluid1mB": {
-            "SCT": 0.024
         },
         "irons_spellbooks:blood_rune": {
             "SCT": 102.1

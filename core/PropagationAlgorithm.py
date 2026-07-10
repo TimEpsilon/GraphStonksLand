@@ -102,7 +102,7 @@ class Propagation:
 
             if data["type"] == "cycle":
                 for subnode, subdata in data["subgraph"].nodes.data():
-                    if subdata["type"] == "item":
+                    if subdata["type"] == "item" and "-fluid1mB" not in subnode:
                         out = np.array(list(subdata["SCT"])).min() if len(subdata["SCT"]) > 0 else 0
                         out = format(out, '.3f')
                         outputs.loc[len(outputs)] = [subnode, out]
@@ -119,6 +119,8 @@ class Propagation:
         for key in outputs:
             if "#" in key:
                 for subkey in equivalencies[key]:
+                    if "-fluid1mB" in subkey:
+                        continue
                     js[subkey] = {"SCT" : float(outputs[key][0])}
             else:
                 js[key] = {"SCT" : float(outputs[key][0])}
