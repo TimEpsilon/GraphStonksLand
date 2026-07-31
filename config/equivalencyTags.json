@@ -405,7 +405,8 @@
     "minecraft:end_stone",
     "minecraft:warped_nylium",
     "minecraft:crimson_nylium",
-    "minecraft:cinnabar"
+    "minecraft:cinnabar",
+    "supplementaries:brittlestone"
   ],
   "#seeds" : [
     "#c:seeds",
@@ -549,7 +550,8 @@
     "vista:cassette",
     "betterarcheology:music_disc_swings",
     "irons_spellbooks:music_disc_dead_king_lullaby",
-    "irons_spellbooks:music_disc_whispers_of_ice"
+    "irons_spellbooks:music_disc_whispers_of_ice",
+    "bf_blockpack:music_disc"
   ],
   "#crystal_chronicles:flesh_blocks" : [
     "crystal_chronicles:alveolus_block",
@@ -788,5 +790,37 @@
   "#irons_spellbooks:mithril_scrap" : [
     "irons_spellbooks:mithril_scrap",
     "irons_spellbooks:raw_mithril"
+  ],
+  "#dustydecorations:seaglass_fragment" : [
+    "#dustydecorations:seaglass_fragment"
+  ],
+  "#dustydecorations:embedded_fish_fossil" : [
+    "dustydecorations:deepslate_embedded_fish_fossil",
+    "dustydecorations:embedded_fish_fossil"
+  ],
+  "#dustydecorations:seaglass_embedded" : [
+    "dustydecorations:seaglass_embedded_gravel",
+    "dustydecorations:seaglass_embedded_sand"
+  ],
+  "#createdeco:placards" : [
+    "#createdeco:placards"
+  ],
+  "#createdeco:shipping_containers" : [
+    "createdeco:yellow_shipping_container",
+    "createdeco:purple_shipping_container",
+    "createdeco:brown_shipping_container",
+    "createdeco:black_shipping_container",
+    "createdeco:orange_shipping_container",
+    "createdeco:magenta_shipping_container",
+    "createdeco:blue_shipping_container",
+    "createdeco:cyan_shipping_container",
+    "createdeco:light_blue_shipping_container",
+    "createdeco:light_gray_shipping_container",
+    "createdeco:pink_shipping_container",
+    "createdeco:lime_shipping_container",
+    "createdeco:red_shipping_container",
+    "createdeco:green_shipping_container",
+    "createdeco:gray_shipping_container",
+    "createdeco:white_shipping_container"
   ]
 }

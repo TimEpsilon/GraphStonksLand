@@ -390,21 +390,14 @@
     "minecraft:tnt",
     "minecraft:magma_block"
   ],
-  "c:storage_blocks/slime": [
-    "minecraft:slime_block"
-  ],
   "supplementaries:blackboard_pink": [
     "minecraft:pink_dye"
   ],
+  "c:storage_blocks/slime": [
+    "minecraft:slime_block"
+  ],
   "create:runtime_generated/compat/bf_blockpack/acacia_stacked": [
     "bf_blockpack:acacia_stacked_logs"
-  ],
-  "irons_spellbooks:twilight_gale_crystal": [
-    "minecraft:quartz"
-  ],
-  "c:sandstone/uncolored_stairs": [
-    "minecraft:sandstone_stairs",
-    "minecraft:smooth_sandstone_stairs"
   ],
   "c:hidden_from_recipe_viewers": [
     "supplementaries:jar_boat",
@@ -421,6 +414,13 @@
     "hazennstuff:how_did_you_find_the_hazel_chestplate",
     "hazennstuff:how_did_you_find_the_mothic_witch_chestplate",
     "moonlight:placeable_item"
+  ],
+  "c:sandstone/uncolored_stairs": [
+    "minecraft:sandstone_stairs",
+    "minecraft:smooth_sandstone_stairs"
+  ],
+  "irons_spellbooks:twilight_gale_crystal": [
+    "minecraft:quartz"
   ],
   "origins:ignore_diet": [
     "brewinandchewin:beer",
@@ -573,9 +573,6 @@
     "suppsquared:gold_candle_holder_magenta",
     "suppsquared:sack_magenta"
   ],
-  "exposure:blue_filters": [
-    "minecraft:blue_stained_glass_pane"
-  ],
   "curios:head": [
     "relics:piglin_mask",
     "relics:chef_hat",
@@ -589,6 +586,9 @@
     "artifacts:whoopee_cushion",
     "artifacts:snorkel",
     "artifacts:night_vision_goggles"
+  ],
+  "exposure:blue_filters": [
+    "minecraft:blue_stained_glass_pane"
   ],
   "yggdrasil:equipement": [
     "minecraft:diamond_helmet",
@@ -882,9 +882,6 @@
     "dustydecorations:frosted_seaglass",
     "dustydecorations:liquorice_seaglass"
   ],
-  "supplementaries:blackboard_green": [
-    "minecraft:green_dye"
-  ],
   "chipped:black_concrete": [
     "bf_blockpack:black_concrete_bricks",
     "bf_blockpack:black_concrete_column",
@@ -892,9 +889,15 @@
     "bf_blockpack:black_concrete_chiseled",
     "bf_blockpack:black_concrete_shingles"
   ],
+  "supplementaries:blackboard_green": [
+    "minecraft:green_dye"
+  ],
   "genshinstrument:genshin/people_of_the_springs": [
     "genshinstrument:ukulele",
     "genshinstrument:djem_djem_drum"
+  ],
+  "c:storage_blocks/netherite": [
+    "minecraft:netherite_block"
   ],
   "irons_spellbooks:inscribed_rune": [
     "hazentouvelib:radiance_rune",
@@ -917,11 +920,11 @@
     "irons_spellbooks:protection_rune",
     "irons_spellbooks:cooldown_rune"
   ],
-  "c:storage_blocks/netherite": [
-    "minecraft:netherite_block"
-  ],
   "exposure:lenses": [
     "minecraft:spyglass"
+  ],
+  "c:cobblestones/deepslate": [
+    "minecraft:cobbled_deepslate"
   ],
   "chipped:yellow_concrete": [
     "bf_blockpack:yellow_concrete_bricks",
@@ -929,9 +932,6 @@
     "bf_blockpack:yellow_concrete_tiles",
     "bf_blockpack:yellow_concrete_chiseled",
     "bf_blockpack:yellow_concrete_shingles"
-  ],
-  "c:cobblestones/deepslate": [
-    "minecraft:cobbled_deepslate"
   ],
   "dustydecorations:coralitems": [
     "minecraft:tube_coral",
@@ -966,6 +966,10 @@
     "numismatics:red_id_card",
     "numismatics:black_id_card"
   ],
+  "c:tools/wrench": [
+    "supplementaries:wrench",
+    "create:wrench"
+  ],
   "protection_pixel:brass": [
     "protection_pixel:lancer_helmet",
     "protection_pixel:workerhornet_chestplate",
@@ -985,10 +989,6 @@
     "protection_pixel:breaker_chestplate",
     "protection_pixel:falconnest_chestplate",
     "protection_pixel:hunter_helmet"
-  ],
-  "c:tools/wrench": [
-    "supplementaries:wrench",
-    "create:wrench"
   ],
   "c:dyed/purple": [
     "minecraft:purple_banner",
@@ -1038,13 +1038,13 @@
   "c:budding_blocks": [
     "minecraft:budding_amethyst"
   ],
-  "c:nuggets/iron": [
-    "minecraft:iron_nugget"
-  ],
   "create:create_ingots": [
     "create:andesite_alloy",
     "create:zinc_ingot",
     "create:brass_ingot"
+  ],
+  "c:nuggets/iron": [
+    "minecraft:iron_nugget"
   ],
   "supplementaries:lunch_basket_blacklist": [
     "minecraft:splash_potion",
@@ -1368,14 +1368,14 @@
     "paraglider:goron_goddess_statue",
     "paraglider:rito_goddess_statue"
   ],
+  "c:buckets/water": [
+    "minecraft:water_bucket"
+  ],
   "c:cobblestones": [
     "minecraft:cobblestone",
     "minecraft:infested_cobblestone",
     "minecraft:mossy_cobblestone",
     "minecraft:cobbled_deepslate"
-  ],
-  "c:buckets/water": [
-    "minecraft:water_bucket"
   ],
   "chipped:snow_block": [
     "bf_blockpack:snow_bricks",
@@ -1383,6 +1383,9 @@
     "bf_blockpack:snow_tiles",
     "bf_blockpack:snow_chiseled",
     "bf_blockpack:snow_polished"
+  ],
+  "c:chests/trapped": [
+    "minecraft:trapped_chest"
   ],
   "c:drinks": [
     "minecraft:potion",
@@ -1396,8 +1399,10 @@
     "farmersdelight:hot_cocoa",
     "create:builders_tea"
   ],
-  "c:chests/trapped": [
-    "minecraft:trapped_chest"
+  "createaddition:plants": [
+    "farmersdelight:sandy_shrub",
+    "farmersdelight:brown_mushroom_colony",
+    "farmersdelight:red_mushroom_colony"
   ],
   "dustydecorations:leavesrecipe": [
     "minecraft:oak_leaves",
@@ -1410,11 +1415,6 @@
     "minecraft:azalea_leaves",
     "minecraft:flowering_azalea_leaves",
     "minecraft:cherry_leaves"
-  ],
-  "createaddition:plants": [
-    "farmersdelight:sandy_shrub",
-    "farmersdelight:brown_mushroom_colony",
-    "farmersdelight:red_mushroom_colony"
   ],
   "crystal_chronicles:bismuth/full_blocks/cyan": [
     "crystal_chronicles:cyan_bismuth_crystal",
@@ -1471,13 +1471,13 @@
     "bf_blockpack:quartz_tiles",
     "bf_blockpack:quartz_chiseled"
   ],
-  "bookshelf:creative_tab/minecraft/spawn_eggs": [],
   "hazentouvelib:armors/netherite_battlemage/netherite_battlemage_leggings": [
     "irons_spellbooks:netherite_mage_leggings",
     "hazennstuff:atlas_leggings",
     "hazennstuff:frieren_leggings",
     "hazennstuff:giorno_giovanna_leggings"
   ],
+  "bookshelf:creative_tab/minecraft/spawn_eggs": [],
   "bookshelf:creative_tab/minecraft/tools_and_utilities": [],
   "farmersdelight:cabinets/wooden": [
     "farmersdelight:oak_cabinet",
@@ -1492,11 +1492,11 @@
     "farmersdelight:crimson_cabinet",
     "farmersdelight:warped_cabinet"
   ],
-  "c:cobblestones/normal": [
-    "minecraft:cobblestone"
-  ],
   "hazentouvelib:misc/ender_mask": [
     "minecraft:carved_pumpkin"
+  ],
+  "c:cobblestones/normal": [
+    "minecraft:cobblestone"
   ],
   "c:stripped_woods": [
     "minecraft:stripped_acacia_wood",
@@ -1562,11 +1562,11 @@
     "create:brass_nugget",
     "create:experience_nugget"
   ],
-  "create:modded_stripped_logs": [
-    "minecraft:stripped_pale_oak_log"
-  ],
   "c:buckets/empty": [
     "minecraft:bucket"
+  ],
+  "create:modded_stripped_logs": [
+    "minecraft:stripped_pale_oak_log"
   ],
   "c:stones": [
     "minecraft:andesite",
@@ -1606,23 +1606,6 @@
   "c:sands/red": [
     "minecraft:red_sand"
   ],
-  "minecraft:sulfur_cube_archetype/slow_sliding": [
-    "minecraft:brown_mushroom_block",
-    "minecraft:red_mushroom_block",
-    "minecraft:mushroom_stem",
-    "minecraft:mycelium",
-    "minecraft:shroomlight",
-    "minecraft:nether_wart_block",
-    "minecraft:warped_wart_block"
-  ],
-  "c:ore_rates/dense": [
-    "minecraft:copper_ore",
-    "minecraft:deepslate_copper_ore",
-    "minecraft:deepslate_lapis_ore",
-    "minecraft:deepslate_redstone_ore",
-    "minecraft:lapis_ore",
-    "minecraft:redstone_ore"
-  ],
   "minecraft:terracotta": [
     "minecraft:terracotta",
     "minecraft:white_terracotta",
@@ -1642,9 +1625,29 @@
     "minecraft:red_terracotta",
     "minecraft:black_terracotta"
   ],
+  "minecraft:sulfur_cube_archetype/slow_sliding": [
+    "minecraft:brown_mushroom_block",
+    "minecraft:red_mushroom_block",
+    "minecraft:mushroom_stem",
+    "minecraft:mycelium",
+    "minecraft:shroomlight",
+    "minecraft:nether_wart_block",
+    "minecraft:warped_wart_block"
+  ],
+  "c:ore_rates/dense": [
+    "minecraft:copper_ore",
+    "minecraft:deepslate_copper_ore",
+    "minecraft:deepslate_lapis_ore",
+    "minecraft:deepslate_redstone_ore",
+    "minecraft:lapis_ore",
+    "minecraft:redstone_ore"
+  ],
   "bookshelf:creative_tab/minecraft/redstone_blocks": [],
   "c:foods/breads": [
     "minecraft:bread"
+  ],
+  "create:runtime_generated/compat/bf_blockpack/jungle_stacked": [
+    "bf_blockpack:jungle_stacked_logs"
   ],
   "irons_spellbooks:staff": [
     "crystal_chronicles:lightning_staff",
@@ -1668,9 +1671,6 @@
     "irons_spellbooks:lightning_rod",
     "irons_spellbooks:blood_staff",
     "irons_spellbooks:pyrium_staff"
-  ],
-  "create:runtime_generated/compat/bf_blockpack/jungle_stacked": [
-    "bf_blockpack:jungle_stacked_logs"
   ],
   "hazentouvelib:spellbooks/fire_spellbook": [
     "irons_spellbooks:blaze_spell_book"
@@ -1774,9 +1774,6 @@
     "create:cinder_flour",
     "create:powdered_obsidian"
   ],
-  "genshinstrument:instrument_families/brass": [
-    "genshinstrument:nightwind_horn"
-  ],
   "incendium:blackstone_blocks": [
     "minecraft:polished_blackstone_pressure_plate",
     "minecraft:polished_blackstone_wall",
@@ -1795,6 +1792,9 @@
     "minecraft:blackstone_slab",
     "minecraft:blackstone_stairs",
     "minecraft:gilded_blackstone"
+  ],
+  "genshinstrument:instrument_families/brass": [
+    "genshinstrument:nightwind_horn"
   ],
   "c:ores/netherite_scrap": [
     "minecraft:ancient_debris"
@@ -1831,17 +1831,6 @@
     "bf_blockpack:cyan_concrete_tiles",
     "bf_blockpack:cyan_concrete_chiseled",
     "bf_blockpack:cyan_concrete_shingles"
-  ],
-  "accessories:hat": [
-    "artifacts:plastic_drinking_hat",
-    "artifacts:novelty_drinking_hat",
-    "artifacts:villager_hat",
-    "artifacts:superstitious_hat",
-    "artifacts:cowboy_hat",
-    "artifacts:anglers_hat",
-    "artifacts:whoopee_cushion",
-    "artifacts:snorkel",
-    "artifacts:night_vision_goggles"
   ],
   "hazentouvelib:armors/helmets": [
     "irons_spellbooks:pyromancer_helmet",
@@ -1912,6 +1901,17 @@
     "hazennstuff:elder_guardian_helmet",
     "hazennstuff:garments_of_the_first_flamebearer_helmet"
   ],
+  "accessories:hat": [
+    "artifacts:plastic_drinking_hat",
+    "artifacts:novelty_drinking_hat",
+    "artifacts:villager_hat",
+    "artifacts:superstitious_hat",
+    "artifacts:cowboy_hat",
+    "artifacts:anglers_hat",
+    "artifacts:whoopee_cushion",
+    "artifacts:snorkel",
+    "artifacts:night_vision_goggles"
+  ],
   "chipped:iron_block": [
     "bf_blockpack:iron_bricks",
     "bf_blockpack:iron_column"
@@ -1951,9 +1951,6 @@
     "minecraft:cooked_salmon",
     "farmersdelight:cooked_salmon_slice"
   ],
-  "c:plates/zinc": [
-    "createdeco:zinc_sheet"
-  ],
   "c:dyed/brown": [
     "minecraft:brown_banner",
     "minecraft:brown_bed",
@@ -1977,6 +1974,9 @@
     "minecraft:brown_harness",
     "suppsquared:gold_candle_holder_brown",
     "suppsquared:sack_brown"
+  ],
+  "c:plates/zinc": [
+    "createdeco:zinc_sheet"
   ],
   "c:pumpkins/jack_o_lanterns": [
     "minecraft:jack_o_lantern"
@@ -2004,11 +2004,11 @@
   "lootr:trapped_chests": [
     "lootr:lootr_trapped_chest"
   ],
-  "c:ingots/zenalite": [
-    "hazennstuff:zenalite_ingot"
-  ],
   "c:cobblestones/mossy": [
     "minecraft:mossy_cobblestone"
+  ],
+  "c:ingots/zenalite": [
+    "hazennstuff:zenalite_ingot"
   ],
   "create:stone_types/andesite": [
     "create:cut_andesite",
@@ -2033,10 +2033,6 @@
     "betterarcheology:growth_totem",
     "betterarcheology:radiance_totem"
   ],
-  "c:bookshelves": [
-    "minecraft:bookshelf",
-    "irons_spellbooks:wisewood_bookshelf"
-  ],
   "lootr:containers": [
     "lootr:lootr_barrel",
     "lootr:lootr_chest",
@@ -2046,6 +2042,10 @@
     "lootr:suspicious_sand",
     "lootr:suspicious_gravel",
     "lootr:decorated_pot"
+  ],
+  "c:bookshelves": [
+    "minecraft:bookshelf",
+    "irons_spellbooks:wisewood_bookshelf"
   ],
   "minecraft:lapis_ores": [
     "minecraft:lapis_ore",
@@ -2109,12 +2109,12 @@
     "farmersdelight:netherite_knife",
     "born_in_chaos_v1:trident_hayfork"
   ],
+  "trinkets:all": [],
   "c:potions/bottle": [
     "minecraft:potion",
     "minecraft:splash_potion",
     "minecraft:lingering_potion"
   ],
-  "trinkets:all": [],
   "curios:crystal": [
     "hazennstuff:ruptured",
     "hazennstuff:refined",
@@ -2137,6 +2137,9 @@
   "minecraft:ignored_by_piglin_babies": [
     "minecraft:leather"
   ],
+  "c:fiber/flax": [
+    "supplementaries:flax"
+  ],
   "farmersdelight:hanging_canvas_signs": [
     "farmersdelight:hanging_canvas_sign",
     "farmersdelight:white_hanging_canvas_sign",
@@ -2155,9 +2158,6 @@
     "farmersdelight:green_hanging_canvas_sign",
     "farmersdelight:red_hanging_canvas_sign",
     "farmersdelight:black_hanging_canvas_sign"
-  ],
-  "c:fiber/flax": [
-    "supplementaries:flax"
   ],
   "c:potions": [
     "minecraft:potion",
@@ -3103,15 +3103,15 @@
   "protection_pixel:sock": [
     "protection_pixel:socks_boots"
   ],
-  "c:foods/golden": [
-    "minecraft:golden_apple",
-    "minecraft:enchanted_golden_apple",
-    "minecraft:golden_carrot"
-  ],
   "createoreexcavation:drills": [
     "createoreexcavation:drill",
     "createoreexcavation:diamond_drill",
     "createoreexcavation:netherite_drill"
+  ],
+  "c:foods/golden": [
+    "minecraft:golden_apple",
+    "minecraft:enchanted_golden_apple",
+    "minecraft:golden_carrot"
   ],
   "farmersdelight:cabinets": [
     "farmersdelight:oak_cabinet",
@@ -3125,6 +3125,9 @@
     "farmersdelight:bamboo_cabinet",
     "farmersdelight:crimson_cabinet",
     "farmersdelight:warped_cabinet"
+  ],
+  "lychee:item_exploding_catalysts": [
+    "minecraft:fire_charge"
   ],
   "sereneseasons:autumn_crops": [
     "minecraft:oak_sapling",
@@ -3145,8 +3148,23 @@
     "farmersdelight:onion",
     "farmersdelight:rice"
   ],
-  "lychee:item_exploding_catalysts": [
-    "minecraft:fire_charge"
+  "c:fences/wooden": [
+    "minecraft:oak_fence",
+    "minecraft:acacia_fence",
+    "minecraft:dark_oak_fence",
+    "minecraft:spruce_fence",
+    "minecraft:birch_fence",
+    "minecraft:jungle_fence",
+    "minecraft:crimson_fence",
+    "minecraft:warped_fence",
+    "minecraft:mangrove_fence",
+    "minecraft:bamboo_fence",
+    "minecraft:cherry_fence",
+    "minecraft:pale_oak_fence",
+    "born_in_chaos_v1:scorched_planks_fence",
+    "hazennstuff:wisewood_fence",
+    "hazennstuff:frostbite_birch_fence",
+    "betterarcheology:rotten_fence"
   ],
   "sophisticatedstorage:all_storage": [
     "sophisticatedstorage:barrel",
@@ -3192,30 +3210,6 @@
     "sophisticatedstorage:diamond_shulker_box",
     "sophisticatedstorage:netherite_shulker_box"
   ],
-  "c:fences/wooden": [
-    "minecraft:oak_fence",
-    "minecraft:acacia_fence",
-    "minecraft:dark_oak_fence",
-    "minecraft:spruce_fence",
-    "minecraft:birch_fence",
-    "minecraft:jungle_fence",
-    "minecraft:crimson_fence",
-    "minecraft:warped_fence",
-    "minecraft:mangrove_fence",
-    "minecraft:bamboo_fence",
-    "minecraft:cherry_fence",
-    "minecraft:pale_oak_fence",
-    "born_in_chaos_v1:scorched_planks_fence",
-    "hazennstuff:wisewood_fence",
-    "hazennstuff:frostbite_birch_fence",
-    "betterarcheology:rotten_fence"
-  ],
-  "minecraft:pale_oak_logs": [
-    "minecraft:pale_oak_log",
-    "minecraft:pale_oak_wood",
-    "minecraft:stripped_pale_oak_log",
-    "minecraft:stripped_pale_oak_wood"
-  ],
   "c:buckets/entity_water": [
     "minecraft:axolotl_bucket",
     "minecraft:cod_bucket",
@@ -3223,6 +3217,12 @@
     "minecraft:tadpole_bucket",
     "minecraft:tropical_fish_bucket",
     "minecraft:salmon_bucket"
+  ],
+  "minecraft:pale_oak_logs": [
+    "minecraft:pale_oak_log",
+    "minecraft:pale_oak_wood",
+    "minecraft:stripped_pale_oak_log",
+    "minecraft:stripped_pale_oak_wood"
   ],
   "c:ores/mithril": [
     "irons_spellbooks:mithril_ore",
@@ -3294,9 +3294,6 @@
   "supplementaries:weapon_projectile_overlay_blacklist": [
     "create:potato_cannon"
   ],
-  "c:ingots/zinc": [
-    "create:zinc_ingot"
-  ],
   "chipped:blue_concrete": [
     "bf_blockpack:blue_concrete_bricks",
     "bf_blockpack:blue_concrete_column",
@@ -3323,17 +3320,20 @@
     "farmersdelight:red_canvas_sign",
     "farmersdelight:black_canvas_sign"
   ],
+  "c:ingots/zinc": [
+    "create:zinc_ingot"
+  ],
   "minecraft:enchantable/trident": [
     "minecraft:trident"
-  ],
-  "irons_spellbooks:wizard_base_helmet": [
-    "irons_spellbooks:wizard_helmet",
-    "irons_spellbooks:wizard_hat"
   ],
   "c:ores/gold": [
     "minecraft:gold_ore",
     "minecraft:nether_gold_ore",
     "minecraft:deepslate_gold_ore"
+  ],
+  "irons_spellbooks:wizard_base_helmet": [
+    "irons_spellbooks:wizard_helmet",
+    "irons_spellbooks:wizard_hat"
   ],
   "minecraft:wooden_buttons": [
     "minecraft:oak_button",
@@ -3350,15 +3350,15 @@
     "minecraft:pale_oak_button",
     "born_in_chaos_v1:scorched_planks_button"
   ],
-  "c:foods/cooked_mutton": [
-    "minecraft:cooked_mutton",
-    "farmersdelight:cooked_mutton_chops"
-  ],
   "hazennstuff:blocks/wisewood_logs": [
     "hazennstuff:stripped_wisewood_log",
     "hazennstuff:stripped_wisewood_wood",
     "hazennstuff:wisewood_log",
     "hazennstuff:wisewood_wood"
+  ],
+  "c:foods/cooked_mutton": [
+    "minecraft:cooked_mutton",
+    "farmersdelight:cooked_mutton_chops"
   ],
   "hazennstuff:focus/melee_focus": [
     "hazennstuff:dreadstone"
@@ -3396,6 +3396,9 @@
     "better_weaponry:amethyst_shovel",
     "better_weaponry:emerald_shovel"
   ],
+  "c:buckets/chocolate": [
+    "create:chocolate_bucket"
+  ],
   "protection_pixel:alloy": [
     "protection_pixel:buoyancyas_leggings",
     "protection_pixel:hammeras_helmet",
@@ -3416,18 +3419,15 @@
     "protection_pixel:slingshotas_leggings",
     "protection_pixel:falconnestas_chestplate"
   ],
-  "c:buckets/chocolate": [
-    "create:chocolate_bucket"
-  ],
-  "c:storage_blocks/soap": [
-    "supplementaries:soap_block"
+  "minecraft:sheep_food": [
+    "minecraft:wheat",
+    "supplementaries:flax"
   ],
   "hazennstuff:items/hydro_runes": [
     "hazennstuff:hydro_rune"
   ],
-  "minecraft:sheep_food": [
-    "minecraft:wheat",
-    "supplementaries:flax"
+  "c:storage_blocks/soap": [
+    "supplementaries:soap_block"
   ],
   "irons_spellbooks:eldritch_focus": [
     "minecraft:echo_shard"
@@ -3495,9 +3495,6 @@
   "c:buckets/lumisene": [
     "supplementaries:lumisene_bucket"
   ],
-  "c:ores/quartz": [
-    "minecraft:nether_quartz_ore"
-  ],
   "minecraft:spruce_logs": [
     "minecraft:spruce_log",
     "minecraft:spruce_wood",
@@ -3505,6 +3502,9 @@
     "minecraft:stripped_spruce_wood",
     "somemoreblocks:carved_spruce_log",
     "somemoreblocks:carved_spruce_wood"
+  ],
+  "c:ores/quartz": [
+    "minecraft:nether_quartz_ore"
   ],
   "c:ingots/netherite": [
     "minecraft:netherite_ingot"
@@ -3549,13 +3549,13 @@
     "crystal_chronicles:evocation_knight_helmet",
     "crystal_chronicles:blood_knight_helmet"
   ],
-  "c:clusters": [
-    "minecraft:amethyst_cluster"
-  ],
-  "bookshelf:creative_tab/minecraft/colored_blocks": [],
   "paraglider:paragliders": [
     "paraglider:paraglider",
     "paraglider:deku_leaf"
+  ],
+  "bookshelf:creative_tab/minecraft/colored_blocks": [],
+  "c:clusters": [
+    "minecraft:amethyst_cluster"
   ],
   "c:bones": [
     "minecraft:bone",
@@ -3623,22 +3623,22 @@
     "minecraft:red_harness",
     "minecraft:black_harness"
   ],
+  "minecraft:wart_blocks": [
+    "minecraft:nether_wart_block",
+    "minecraft:warped_wart_block"
+  ],
   "irons_spellbooks:arcane_ingot_base": [
     "minecraft:iron_ingot",
     "minecraft:copper_ingot",
     "minecraft:gold_ingot"
   ],
-  "minecraft:wart_blocks": [
-    "minecraft:nether_wart_block",
-    "minecraft:warped_wart_block"
-  ],
-  "c:bricks/nether": [
-    "minecraft:nether_brick"
-  ],
   "create:sleepers": [
     "minecraft:stone_slab",
     "minecraft:smooth_stone_slab",
     "minecraft:andesite_slab"
+  ],
+  "c:bricks/nether": [
+    "minecraft:nether_brick"
   ],
   "trinkets:head/necklace": [
     "heartstone:heartstone"
@@ -3657,9 +3657,6 @@
   ],
   "c:ingots/hallowed": [
     "hazennstuff:hallowed_ingot"
-  ],
-  "minecraft:parrot_poisonous_food": [
-    "minecraft:cookie"
   ],
   "create:pressurized_air_sources": [
     "protection_pixel:pioneeras_chestplate",
@@ -3684,35 +3681,11 @@
     "create:copper_backtank",
     "create:netherite_backtank"
   ],
+  "minecraft:parrot_poisonous_food": [
+    "minecraft:cookie"
+  ],
   "c:seeds/wheat": [
     "minecraft:wheat_seeds"
-  ],
-  "c:dyed/pink": [
-    "minecraft:pink_banner",
-    "minecraft:pink_bed",
-    "minecraft:pink_candle",
-    "minecraft:pink_carpet",
-    "minecraft:pink_concrete",
-    "minecraft:pink_concrete_powder",
-    "minecraft:pink_glazed_terracotta",
-    "minecraft:pink_shulker_box",
-    "minecraft:pink_stained_glass",
-    "minecraft:pink_stained_glass_pane",
-    "minecraft:pink_terracotta",
-    "minecraft:pink_wool",
-    "supplementaries:flag_pink",
-    "supplementaries:present_pink",
-    "supplementaries:trapped_present_pink",
-    "supplementaries:candle_holder_pink",
-    "supplementaries:awning_pink",
-    "supplementaries:bunting_pink",
-    "minecraft:pink_bundle",
-    "minecraft:pink_harness",
-    "suppsquared:gold_candle_holder_pink",
-    "suppsquared:sack_pink"
-  ],
-  "create:runtime_generated/compat/bf_blockpack/mangrove_stacked": [
-    "bf_blockpack:mangrove_stacked_logs"
   ],
   "minecraft:wolf_food": [
     "minecraft:beef",
@@ -3745,6 +3718,33 @@
     "born_in_chaos_v1:smoked_monster_flesh",
     "born_in_chaos_v1:monster_flesh",
     "born_in_chaos_v1:smoked_flesh"
+  ],
+  "c:dyed/pink": [
+    "minecraft:pink_banner",
+    "minecraft:pink_bed",
+    "minecraft:pink_candle",
+    "minecraft:pink_carpet",
+    "minecraft:pink_concrete",
+    "minecraft:pink_concrete_powder",
+    "minecraft:pink_glazed_terracotta",
+    "minecraft:pink_shulker_box",
+    "minecraft:pink_stained_glass",
+    "minecraft:pink_stained_glass_pane",
+    "minecraft:pink_terracotta",
+    "minecraft:pink_wool",
+    "supplementaries:flag_pink",
+    "supplementaries:present_pink",
+    "supplementaries:trapped_present_pink",
+    "supplementaries:candle_holder_pink",
+    "supplementaries:awning_pink",
+    "supplementaries:bunting_pink",
+    "minecraft:pink_bundle",
+    "minecraft:pink_harness",
+    "suppsquared:gold_candle_holder_pink",
+    "suppsquared:sack_pink"
+  ],
+  "create:runtime_generated/compat/bf_blockpack/mangrove_stacked": [
+    "bf_blockpack:mangrove_stacked_logs"
   ],
   "minecraft:enchantable/sword": [
     "minecraft:diamond_sword",
@@ -4211,12 +4211,12 @@
   "c:dyes/yellow": [
     "minecraft:yellow_dye"
   ],
+  "c:tools/fishing_rods": [
+    "minecraft:fishing_rod"
+  ],
   "c:coal": [
     "minecraft:coal",
     "minecraft:charcoal"
-  ],
-  "c:tools/fishing_rods": [
-    "minecraft:fishing_rod"
   ],
   "protection_pixel:antidurability": [
     "protection_pixel:equipmentkit",
@@ -4230,11 +4230,11 @@
   "dummmmmmy:aquatic_mob_heads": [
     "minecraft:turtle_helmet"
   ],
-  "protection_pixel:foot": [
-    "protection_pixel:socks_boots"
-  ],
   "c:gravels": [
     "minecraft:gravel"
+  ],
+  "protection_pixel:foot": [
+    "protection_pixel:socks_boots"
   ],
   "minecraft:strider_tempt_items": [
     "minecraft:warped_fungus",
@@ -4447,6 +4447,9 @@
     "minecraft:pufferfish",
     "farmersdelight:cod_slice",
     "farmersdelight:salmon_slice"
+  ],
+  "c:crops/onion": [
+    "farmersdelight:onion"
   ],
   "c:armors": [
     "minecraft:leather_helmet",
@@ -4921,9 +4924,6 @@
     "irons_spellbooks:speed_boots",
     "irons_spellbooks:wizard_boots"
   ],
-  "c:crops/onion": [
-    "farmersdelight:onion"
-  ],
   "c:tools/igniter": [
     "minecraft:flint_and_steel"
   ],
@@ -5049,12 +5049,6 @@
     "create:granite_pillar",
     "minecraft:granite"
   ],
-  "hazennstuff:items/divine_materials": [
-    "irons_spellbooks:divine_soulshard",
-    "minecraft:heart_of_the_sea",
-    "minecraft:nether_star",
-    "minecraft:echo_shard"
-  ],
   "minecraft:birch_logs": [
     "minecraft:birch_log",
     "minecraft:birch_wood",
@@ -5062,6 +5056,12 @@
     "minecraft:stripped_birch_wood",
     "somemoreblocks:carved_birch_log",
     "somemoreblocks:carved_birch_wood"
+  ],
+  "hazennstuff:items/divine_materials": [
+    "irons_spellbooks:divine_soulshard",
+    "minecraft:heart_of_the_sea",
+    "minecraft:nether_star",
+    "minecraft:echo_shard"
   ],
   "minecraft:decorated_pot_sherds": [
     "minecraft:angler_pottery_sherd",
@@ -5182,16 +5182,16 @@
     "artifacts:everlasting_beef",
     "artifacts:eternal_steak"
   ],
+  "forge:meat": [
+    "dustydecorations:raw_bratwurst",
+    "dustydecorations:cooked_bratwurst",
+    "dustydecorations:bratwurst_dog"
+  ],
   "brewinandchewin:foods/horror_meat": [
     "minecraft:beef",
     "farmersdelight:minced_beef",
     "minecraft:chicken",
     "farmersdelight:chicken_cuts"
-  ],
-  "forge:meat": [
-    "dustydecorations:raw_bratwurst",
-    "dustydecorations:cooked_bratwurst",
-    "dustydecorations:bratwurst_dog"
   ],
   "chipped:red_nether_bricks": [
     "bf_blockpack:red_nether_brick_chiseled",
@@ -5238,7 +5238,8 @@
     "vista:music_disc_sojourn",
     "minecraft:music_disc_tears",
     "minecraft:music_disc_lava_chicken",
-    "minecraft:music_disc_bounce"
+    "minecraft:music_disc_bounce",
+    "betterarcheology:music_disc_swings"
   ],
   "exposure:photo_agers": [
     "minecraft:brown_dye",
@@ -5365,12 +5366,6 @@
     "create:zinc_ore",
     "create:deepslate_zinc_ore"
   ],
-  "hazentouvelib:armors/netherite_battlemage/netherite_battlemage_helmet": [
-    "irons_spellbooks:netherite_mage_helmet",
-    "hazennstuff:atlas_helmet",
-    "hazennstuff:frieren_helmet",
-    "hazennstuff:giorno_giovanna_helmet"
-  ],
   "createdeco:placards": [
     "create:placard",
     "createdeco:orange_placard",
@@ -5389,17 +5384,11 @@
     "createdeco:red_placard",
     "createdeco:black_placard"
   ],
-  "brewinandchewin:foods/jerky_meat": [
-    "minecraft:rotten_flesh",
-    "minecraft:beef",
-    "minecraft:porkchop",
-    "minecraft:chicken",
-    "minecraft:rabbit",
-    "minecraft:mutton",
-    "farmersdelight:chicken_cuts",
-    "farmersdelight:bacon",
-    "farmersdelight:minced_beef",
-    "farmersdelight:mutton_chops"
+  "hazentouvelib:armors/netherite_battlemage/netherite_battlemage_helmet": [
+    "irons_spellbooks:netherite_mage_helmet",
+    "hazennstuff:atlas_helmet",
+    "hazennstuff:frieren_helmet",
+    "hazennstuff:giorno_giovanna_helmet"
   ],
   "minecraft:flowers": [
     "minecraft:dandelion",
@@ -5445,6 +5434,18 @@
     "minecraft:wildflowers",
     "minecraft:cactus_flower"
   ],
+  "brewinandchewin:foods/jerky_meat": [
+    "minecraft:rotten_flesh",
+    "minecraft:beef",
+    "minecraft:porkchop",
+    "minecraft:chicken",
+    "minecraft:rabbit",
+    "minecraft:mutton",
+    "farmersdelight:chicken_cuts",
+    "farmersdelight:bacon",
+    "farmersdelight:minced_beef",
+    "farmersdelight:mutton_chops"
+  ],
   "c:ingots": [
     "createdeco:industrial_iron_ingot",
     "minecraft:copper_ingot",
@@ -5468,9 +5469,6 @@
   "c:seeds/torchflower": [
     "minecraft:torchflower_seeds"
   ],
-  "c:dyes/pink": [
-    "minecraft:pink_dye"
-  ],
   "create:valve_handles": [
     "create:copper_valve_handle",
     "create:white_valve_handle",
@@ -5489,6 +5487,9 @@
     "create:green_valve_handle",
     "create:red_valve_handle",
     "create:black_valve_handle"
+  ],
+  "c:dyes/pink": [
+    "minecraft:pink_dye"
   ],
   "minecraft:logs_that_burn": [
     "minecraft:dark_oak_log",
@@ -5590,11 +5591,11 @@
   "trinkets:legs/belt": [
     "artifacts:helium_flamingo"
   ],
-  "c:player_workstations/crafting_tables": [
-    "minecraft:crafting_table"
-  ],
   "c:storage_blocks/iron": [
     "minecraft:iron_block"
+  ],
+  "c:player_workstations/crafting_tables": [
+    "minecraft:crafting_table"
   ],
   "supplementaries:throwable_bricks": [
     "minecraft:brick",
@@ -5625,9 +5626,6 @@
     "minecraft:yellow_bundle",
     "minecraft:white_bundle"
   ],
-  "lootr:shulkers": [
-    "lootr:lootr_shulker"
-  ],
   "c:tools/mining_tools": [
     "minecraft:wooden_pickaxe",
     "minecraft:stone_pickaxe",
@@ -5635,6 +5633,17 @@
     "minecraft:iron_pickaxe",
     "minecraft:diamond_pickaxe",
     "minecraft:netherite_pickaxe"
+  ],
+  "lootr:shulkers": [
+    "lootr:lootr_shulker"
+  ],
+  "minecraft:mangrove_logs": [
+    "minecraft:mangrove_log",
+    "minecraft:mangrove_wood",
+    "minecraft:stripped_mangrove_log",
+    "minecraft:stripped_mangrove_wood",
+    "somemoreblocks:carved_mangrove_log",
+    "somemoreblocks:carved_mangrove_wood"
   ],
   "hazennstuff:armors/hns_leggings": [
     "irons_spellbooks:pyromancer_leggings",
@@ -5713,14 +5722,6 @@
     "hazennstuff:shadowwalker_enderman_leggings",
     "hazennstuff:fireblossom_gown_leggings",
     "hazennstuff:geckolib_fireblossom_gown_leggings"
-  ],
-  "minecraft:mangrove_logs": [
-    "minecraft:mangrove_log",
-    "minecraft:mangrove_wood",
-    "minecraft:stripped_mangrove_log",
-    "minecraft:stripped_mangrove_wood",
-    "somemoreblocks:carved_mangrove_log",
-    "somemoreblocks:carved_mangrove_wood"
   ],
   "crystal_chronicles:armors": [
     "crystal_chronicles:holy_knight_boots",
@@ -6023,13 +6024,6 @@
   "c:storage_blocks/dried_kelp": [
     "minecraft:dried_kelp_block"
   ],
-  "brewinandchewin:cheese_wheels/ripe": [
-    "brewinandchewin:flaxen_cheese_wheel",
-    "brewinandchewin:scarlet_cheese_wheel"
-  ],
-  "trinkets:calendar/calendarslot": [
-    "sereneseasons:calendar"
-  ],
   "minecraft:bee_food": [
     "minecraft:dandelion",
     "minecraft:poppy",
@@ -6074,18 +6068,18 @@
     "minecraft:wildflowers",
     "minecraft:cactus_flower"
   ],
+  "brewinandchewin:cheese_wheels/ripe": [
+    "brewinandchewin:flaxen_cheese_wheel",
+    "brewinandchewin:scarlet_cheese_wheel"
+  ],
+  "trinkets:calendar/calendarslot": [
+    "sereneseasons:calendar"
+  ],
   "hazennstuff:items/lightning_spellbook": [
     "hazennstuff:energized_core_spellbook"
   ],
   "c:ingots/chlorophyte": [
     "hazennstuff:chlorophyte_ingot"
-  ],
-  "minecraft:redstone_ores": [
-    "minecraft:redstone_ore",
-    "minecraft:deepslate_redstone_ore"
-  ],
-  "c:seeds/pumpkin": [
-    "minecraft:pumpkin_seeds"
   ],
   "amendments:goes_in_tripwire_hook": [
     "minecraft:spyglass",
@@ -6364,6 +6358,13 @@
     "farmersdelight:golden_knife",
     "farmersdelight:netherite_knife"
   ],
+  "c:seeds/pumpkin": [
+    "minecraft:pumpkin_seeds"
+  ],
+  "minecraft:redstone_ores": [
+    "minecraft:redstone_ore",
+    "minecraft:deepslate_redstone_ore"
+  ],
   "genshinstrument:instrument_families/percussion": [
     "genshinstrument:glorious_drum",
     "genshinstrument:djem_djem_drum"
@@ -6453,6 +6454,7 @@
     "supplementaries:ash_bricks_slab",
     "supplementaries:lapis_bricks_slab",
     "supplementaries:fine_wood_slab",
+    "supplementaries:brittlestone_bricks_slab",
     "minecraft:resin_brick_slab",
     "minecraft:cinnabar_slab",
     "minecraft:polished_cinnabar_slab",
@@ -6896,11 +6898,11 @@
   "protection_pixel:alloyrepair": [
     "minecraft:netherite_scrap"
   ],
-  "c:gems/diamond": [
-    "minecraft:diamond"
-  ],
   "c:drinks/lumisene": [
     "supplementaries:lumisene_bottle"
+  ],
+  "c:gems/diamond": [
+    "minecraft:diamond"
   ],
   "create:stone_types/scoria": [
     "create:cut_scoria",
@@ -6929,11 +6931,6 @@
   "supplementaries:blackboard_blue": [
     "minecraft:blue_dye"
   ],
-  "c:foods/cookie": [
-    "minecraft:cookie",
-    "farmersdelight:honey_cookie",
-    "farmersdelight:sweet_berry_cookie"
-  ],
   "supplementaries:awnings": [
     "supplementaries:awning",
     "supplementaries:awning_white",
@@ -6952,6 +6949,11 @@
     "supplementaries:awning_black",
     "supplementaries:awning_orange",
     "supplementaries:awning_gray"
+  ],
+  "c:foods/cookie": [
+    "minecraft:cookie",
+    "farmersdelight:honey_cookie",
+    "farmersdelight:sweet_berry_cookie"
   ],
   "c:fences/nether_brick": [
     "minecraft:nether_brick_fence"
@@ -7010,12 +7012,12 @@
     "supplementaries:cannon_boat_pale_oak",
     "supplementaries:cannon_boat_spruce"
   ],
-  "betterarcheology:rotten_logs": [
-    "betterarcheology:rotten_log"
-  ],
   "minecraft:enchantable/mace": [
     "minecraft:mace",
     "hazennstuff:skyscorcher"
+  ],
+  "betterarcheology:rotten_logs": [
+    "betterarcheology:rotten_log"
   ],
   "minecraft:piglin_loved": [
     "minecraft:gold_ore",
@@ -7215,6 +7217,15 @@
     "minecraft:carved_pumpkin",
     "minecraft:jack_o_lantern"
   ],
+  "supplementaries:timber_frames": [
+    "supplementaries:timber_frame",
+    "supplementaries:timber_brace",
+    "supplementaries:timber_cross_brace"
+  ],
+  "c:mushrooms": [
+    "minecraft:brown_mushroom",
+    "minecraft:red_mushroom"
+  ],
   "minecraft:walls": [
     "minecraft:cobblestone_wall",
     "minecraft:mossy_cobblestone_wall",
@@ -7300,6 +7311,7 @@
     "supplementaries:ash_bricks_wall",
     "supplementaries:lapis_bricks_wall",
     "supplementaries:stone_tile_wall",
+    "supplementaries:brittlestone_bricks_wall",
     "minecraft:resin_brick_wall",
     "minecraft:cinnabar_wall",
     "minecraft:polished_cinnabar_wall",
@@ -7417,15 +7429,6 @@
     "create:cut_veridium_brick_wall",
     "create:small_veridium_brick_wall"
   ],
-  "c:mushrooms": [
-    "minecraft:brown_mushroom",
-    "minecraft:red_mushroom"
-  ],
-  "supplementaries:timber_frames": [
-    "supplementaries:timber_frame",
-    "supplementaries:timber_brace",
-    "supplementaries:timber_cross_brace"
-  ],
   "minecraft:trim_materials": [
     "minecraft:iron_ingot",
     "minecraft:copper_ingot",
@@ -7525,11 +7528,11 @@
     "minecraft:mace",
     "hazennstuff:skyscorcher"
   ],
-  "c:crops/flax": [
-    "supplementaries:flax"
-  ],
   "exposure:magenta_printing_dyes": [
     "minecraft:magenta_dye"
+  ],
+  "c:crops/flax": [
+    "supplementaries:flax"
   ],
   "c:ores/emerald": [
     "minecraft:emerald_ore",
@@ -7584,11 +7587,15 @@
   "c:ore_bearing_ground/stone": [
     "minecraft:stone"
   ],
+  "c:leathers": [
+    "minecraft:leather"
+  ],
   "supplementaries:item_shelves": [
     "supplementaries:item_shelf"
   ],
-  "c:leathers": [
-    "minecraft:leather"
+  "c:foods/cabbage": [
+    "farmersdelight:cabbage",
+    "farmersdelight:cabbage_leaf"
   ],
   "protection_pixel:head": [
     "protection_pixel:hammeras_helmet",
@@ -7606,10 +7613,6 @@
     "protection_pixel:bloodprisoneras_helmet",
     "protection_pixel:tosaki_helmet",
     "protection_pixel:hunter_helmet"
-  ],
-  "c:foods/cabbage": [
-    "farmersdelight:cabbage",
-    "farmersdelight:cabbage_leaf"
   ],
   "c:dyed/cyan": [
     "minecraft:cyan_banner",
@@ -8235,6 +8238,9 @@
     "farmersdelight:onion",
     "farmersdelight:tomato"
   ],
+  "c:storage_blocks/flint": [
+    "supplementaries:flint_block"
+  ],
   "create:stone_types/tuff": [
     "create:cut_tuff",
     "create:cut_tuff_stairs",
@@ -8252,12 +8258,6 @@
     "create:tuff_pillar",
     "minecraft:tuff"
   ],
-  "c:storage_blocks/flint": [
-    "supplementaries:flint_block"
-  ],
-  "supplementaries:blackboard_lime": [
-    "minecraft:lime_dye"
-  ],
   "chipped:andesite": [
     "bf_blockpack:andesite_large_bricks",
     "bf_blockpack:andesite_large_layered_bricks",
@@ -8265,6 +8265,9 @@
     "bf_blockpack:andesite_small_layered_bricks",
     "bf_blockpack:andesite_tiles",
     "bf_blockpack:andesite_chiseled"
+  ],
+  "supplementaries:blackboard_lime": [
+    "minecraft:lime_dye"
   ],
   "protection_pixel:protection": [
     "protection_pixel:buoyancyas_leggings",
@@ -8343,10 +8346,6 @@
     "minecraft:rabbit",
     "minecraft:mutton"
   ],
-  "c:ores_in_ground/netherrack": [
-    "minecraft:nether_gold_ore",
-    "minecraft:nether_quartz_ore"
-  ],
   "curios:spellbook": [
     "aces_spell_utils:example_passive_ability_spellbook",
     "hazennstuff:golden_shower_spellbook",
@@ -8369,6 +8368,10 @@
     "irons_spellbooks:ice_spell_book",
     "gametechbcs_spellbooks:gtbcs_magical_repository"
   ],
+  "c:ores_in_ground/netherrack": [
+    "minecraft:nether_gold_ore",
+    "minecraft:nether_quartz_ore"
+  ],
   "hazentouvelib:armors/paragon/paragon_leggings": [
     "hazennstuff:garments_of_the_first_flamebearer_leggings"
   ],
@@ -8390,10 +8393,6 @@
     "hazennstuff:atlas_chestplate",
     "hazennstuff:frieren_chestplate",
     "hazennstuff:giorno_giovanna_chestplate"
-  ],
-  "supplementaries:enchantable/stasis": [
-    "supplementaries:bubble_blower",
-    "supplementaries:slingshot"
   ],
   "sophisticatedstorage:upgrade": [
     "sophisticatedstorage:pickup_upgrade",
@@ -8438,6 +8437,10 @@
     "sophisticatedstorage:filter_upgrade",
     "sophisticatedstorage:stack_downgrade_tier_1",
     "sophisticatedstorage:infinity_upgrade"
+  ],
+  "supplementaries:enchantable/stasis": [
+    "supplementaries:bubble_blower",
+    "supplementaries:slingshot"
   ],
   "chipped:dripstone_block": [
     "bf_blockpack:dripstone_large_bricks",
@@ -8490,6 +8493,28 @@
     "create:andesite_table_cloth",
     "create:brass_table_cloth",
     "create:copper_table_cloth"
+  ],
+  "minecraft:happy_ghast_tempt_items": [
+    "minecraft:snowball",
+    "minecraft:white_harness",
+    "minecraft:orange_harness",
+    "minecraft:magenta_harness",
+    "minecraft:light_blue_harness",
+    "minecraft:yellow_harness",
+    "minecraft:lime_harness",
+    "minecraft:pink_harness",
+    "minecraft:gray_harness",
+    "minecraft:light_gray_harness",
+    "minecraft:cyan_harness",
+    "minecraft:purple_harness",
+    "minecraft:blue_harness",
+    "minecraft:brown_harness",
+    "minecraft:green_harness",
+    "minecraft:red_harness",
+    "minecraft:black_harness"
+  ],
+  "c:nuggets/zinc": [
+    "create:zinc_nugget"
   ],
   "randomium:blacklist": [
     "born_in_chaos_v1:spiritual_easter_egg",
@@ -8776,28 +8801,6 @@
     "create:cardboard_package_12x12",
     "create:cardboard_package_12x10"
   ],
-  "c:nuggets/zinc": [
-    "create:zinc_nugget"
-  ],
-  "minecraft:happy_ghast_tempt_items": [
-    "minecraft:snowball",
-    "minecraft:white_harness",
-    "minecraft:orange_harness",
-    "minecraft:magenta_harness",
-    "minecraft:light_blue_harness",
-    "minecraft:yellow_harness",
-    "minecraft:lime_harness",
-    "minecraft:pink_harness",
-    "minecraft:gray_harness",
-    "minecraft:light_gray_harness",
-    "minecraft:cyan_harness",
-    "minecraft:purple_harness",
-    "minecraft:blue_harness",
-    "minecraft:brown_harness",
-    "minecraft:green_harness",
-    "minecraft:red_harness",
-    "minecraft:black_harness"
-  ],
   "minecraft:creeper_drop_music_discs": [
     "minecraft:music_disc_13",
     "minecraft:music_disc_cat",
@@ -8864,7 +8867,6 @@
     "minecraft:stripped_warped_stem",
     "minecraft:stripped_pale_oak_log"
   ],
-  "bookshelf:creative_tab/minecraft/combat": [],
   "supplementaries:shulker_blacklist": [
     "supplementaries:safe",
     "supplementaries:sack",
@@ -8885,6 +8887,7 @@
     "suppsquared:sack_purple",
     "suppsquared:sack_orange"
   ],
+  "bookshelf:creative_tab/minecraft/combat": [],
   "farmersdelight:feasts": [
     "farmersdelight:roast_chicken_block",
     "farmersdelight:stuffed_pumpkin_block",
@@ -9133,6 +9136,7 @@
     "supplementaries:lapis_bricks_stairs",
     "supplementaries:stone_tile_stairs",
     "supplementaries:fine_wood_stairs",
+    "supplementaries:brittlestone_bricks_stairs",
     "minecraft:resin_brick_stairs",
     "minecraft:cinnabar_stairs",
     "minecraft:polished_cinnabar_stairs",
@@ -9308,9 +9312,6 @@
     "minecraft:dispenser",
     "minecraft:dropper"
   ],
-  "c:end_stones": [
-    "minecraft:end_stone"
-  ],
   "paraglider:statues/goddess": [
     "paraglider:goddess_statue",
     "paraglider:kakariko_goddess_statue",
@@ -9332,6 +9333,9 @@
     "minecraft:cooked_mutton",
     "farmersdelight:cooked_mutton_chops",
     "minecraft:cooked_porkchop"
+  ],
+  "c:end_stones": [
+    "minecraft:end_stone"
   ],
   "curios:hands": [
     "artifacts:digging_claws",
@@ -9376,9 +9380,6 @@
     "minecraft:chiseled_stone_bricks",
     "hazennstuff:zenalite_bricks"
   ],
-  "create:runtime_generated/compat/bf_blockpack/warped_stacked": [
-    "bf_blockpack:warped_stacked_logs"
-  ],
   "incendium:armor": [
     "minecraft:chainmail_boots",
     "minecraft:chainmail_leggings",
@@ -9397,11 +9398,11 @@
     "minecraft:iron_chestplate",
     "minecraft:iron_helmet"
   ],
+  "create:runtime_generated/compat/bf_blockpack/warped_stacked": [
+    "bf_blockpack:warped_stacked_logs"
+  ],
   "c:glass_blocks/tinted": [
     "minecraft:tinted_glass"
-  ],
-  "c:tools/bows": [
-    "minecraft:bow"
   ],
   "supplementaries:flower_box_tall_plantable": [
     "minecraft:sunflower",
@@ -9410,7 +9411,17 @@
     "minecraft:rose_bush",
     "minecraft:pitcher_plant",
     "farmersdelight:wild_rice",
-    "minecraft:tall_grass"
+    "minecraft:tall_grass",
+    "minecraft:sweet_berries",
+    "minecraft:glow_berries",
+    "minecraft:large_fern",
+    "minecraft:sugar_cane",
+    "minecraft:twisting_vines",
+    "minecraft:vine",
+    "minecraft:weeping_vines"
+  ],
+  "c:tools/bows": [
+    "minecraft:bow"
   ],
   "supplementaries:ignite_flint_blocks": [
     "minecraft:iron_boots",
@@ -9635,6 +9646,10 @@
     "minecraft:book",
     "minecraft:enchanted_book"
   ],
+  "chipped:lapis_block": [
+    "bf_blockpack:lapis_lazuli_bricks",
+    "bf_blockpack:lapis_lazuli_column"
+  ],
   "minecraft:boats": [
     "minecraft:oak_boat",
     "minecraft:spruce_boat",
@@ -9666,10 +9681,6 @@
     "supplementaries:cannon_boat_pale_oak",
     "supplementaries:cannon_boat_spruce",
     "minecraft:pale_oak_boat"
-  ],
-  "chipped:lapis_block": [
-    "bf_blockpack:lapis_lazuli_bricks",
-    "bf_blockpack:lapis_lazuli_column"
   ],
   "incendium:brewing_ingredients": [
     "minecraft:blaze_powder",
@@ -9705,13 +9716,13 @@
     "irons_spellbooks:wizard_chestplate",
     "irons_spellbooks:infernal_sorcerer_chestplate"
   ],
-  "c:tools/brushes": [
-    "minecraft:brush"
-  ],
   "c:raw_blocks": [
     "minecraft:raw_copper_block",
     "minecraft:raw_gold_block",
     "minecraft:raw_iron_block"
+  ],
+  "c:tools/brushes": [
+    "minecraft:brush"
   ],
   "sereneseasons:year_round_crops": [
     "minecraft:oak_sapling",
@@ -10276,9 +10287,6 @@
     "bf_blockpack:sandstone_column",
     "bf_blockpack:sandstone_shingles"
   ],
-  "c:fertilizers": [
-    "minecraft:bone_meal"
-  ],
   "accessories:shoes": [
     "artifacts:aqua_dashers",
     "artifacts:bunny_hoppers",
@@ -10289,6 +10297,9 @@
     "artifacts:flippers",
     "artifacts:rooted_boots",
     "artifacts:strider_shoes"
+  ],
+  "c:fertilizers": [
+    "minecraft:bone_meal"
   ],
   "comforts:sleeping_bags": [
     "comforts:sleeping_bag_white",
@@ -10308,10 +10319,10 @@
     "comforts:sleeping_bag_red",
     "comforts:sleeping_bag_black"
   ],
+  "neoforge:leaves": [],
   "lootr:gravels": [
     "lootr:suspicious_gravel"
   ],
-  "neoforge:leaves": [],
   "hazentouvelib:spellbooks/nature_spellbook": [
     "irons_spellbooks:druidic_spell_book"
   ],
@@ -10419,12 +10430,12 @@
     "create:limestone_pillar",
     "create:limestone"
   ],
+  "c:foods/tomato": [
+    "farmersdelight:tomato"
+  ],
   "c:foods/cooked_chicken": [
     "minecraft:cooked_chicken",
     "farmersdelight:cooked_chicken_cuts"
-  ],
-  "c:foods/tomato": [
-    "farmersdelight:tomato"
   ],
   "chipped:gray_concrete": [
     "bf_blockpack:gray_concrete_bricks",
@@ -10448,6 +10459,10 @@
     "better_weaponry:emerald_pickaxe",
     "better_weaponry:copper_pickaxe"
   ],
+  "c:chests/wooden": [
+    "minecraft:chest",
+    "minecraft:trapped_chest"
+  ],
   "supplementaries:buntings": [
     "supplementaries:bunting_white",
     "supplementaries:bunting_red",
@@ -10466,10 +10481,6 @@
     "supplementaries:bunting_orange",
     "supplementaries:bunting_gray"
   ],
-  "c:chests/wooden": [
-    "minecraft:chest",
-    "minecraft:trapped_chest"
-  ],
   "chipped:diorite": [
     "bf_blockpack:diorite_large_bricks",
     "bf_blockpack:diorite_large_layered_bricks",
@@ -10484,11 +10495,11 @@
     "minecraft:bow",
     "create:potato_cannon"
   ],
+  "bookshelf:creative_tab/minecraft/natural_blocks": [],
   "brewinandchewin:cheese_wheels/unripe": [
     "brewinandchewin:unripe_flaxen_cheese_wheel",
     "brewinandchewin:unripe_scarlet_cheese_wheel"
   ],
-  "bookshelf:creative_tab/minecraft/natural_blocks": [],
   "hazentouvelib:armors/chestplates": [
     "irons_spellbooks:pyromancer_chestplate",
     "irons_spellbooks:plagued_chestplate",
@@ -10693,25 +10704,6 @@
     "minecraft:red_glazed_terracotta",
     "minecraft:black_glazed_terracotta"
   ],
-  "suppsquared:item_shelves": [
-    "supplementaries:item_shelf",
-    "suppsquared:item_shelf_spruce",
-    "suppsquared:item_shelf_birch",
-    "suppsquared:item_shelf_jungle",
-    "suppsquared:item_shelf_acacia",
-    "suppsquared:item_shelf_cherry",
-    "suppsquared:item_shelf_dark_oak",
-    "suppsquared:item_shelf_mangrove",
-    "suppsquared:item_shelf_bamboo",
-    "suppsquared:item_shelf_crimson",
-    "suppsquared:item_shelf_warped",
-    "suppsquared:item_shelf_pale_oak",
-    "suppsquared:jackpot/item_shelf_avarice",
-    "suppsquared:born_in_chaos_v1/item_shelf_scorched",
-    "suppsquared:hazennstuff/item_shelf_wisewood",
-    "suppsquared:hazennstuff/item_shelf_frostbite_birch",
-    "suppsquared:betterarcheology/item_shelf_rotten"
-  ],
   "minecraft:trim_templates": [
     "minecraft:ward_armor_trim_smithing_template",
     "minecraft:spire_armor_trim_smithing_template",
@@ -10732,6 +10724,25 @@
     "minecraft:flow_armor_trim_smithing_template",
     "minecraft:bolt_armor_trim_smithing_template",
     "supplementaries:blast_armor_trim_smithing_template"
+  ],
+  "suppsquared:item_shelves": [
+    "supplementaries:item_shelf",
+    "suppsquared:item_shelf_spruce",
+    "suppsquared:item_shelf_birch",
+    "suppsquared:item_shelf_jungle",
+    "suppsquared:item_shelf_acacia",
+    "suppsquared:item_shelf_cherry",
+    "suppsquared:item_shelf_dark_oak",
+    "suppsquared:item_shelf_mangrove",
+    "suppsquared:item_shelf_bamboo",
+    "suppsquared:item_shelf_crimson",
+    "suppsquared:item_shelf_warped",
+    "suppsquared:item_shelf_pale_oak",
+    "suppsquared:jackpot/item_shelf_avarice",
+    "suppsquared:born_in_chaos_v1/item_shelf_scorched",
+    "suppsquared:hazennstuff/item_shelf_wisewood",
+    "suppsquared:hazennstuff/item_shelf_frostbite_birch",
+    "suppsquared:betterarcheology/item_shelf_rotten"
   ],
   "artifacts:slot/necklace": [
     "artifacts:lucky_scarf",
@@ -11301,6 +11312,11 @@
   "c:stripped_wood": [
     "minecraft:stripped_pale_oak_wood"
   ],
+  "chipped:glowstone": [
+    "bf_blockpack:glowstone_column",
+    "bf_blockpack:glowstone_tiles",
+    "bf_blockpack:glowstone_polished"
+  ],
   "exposure:filters": [
     "minecraft:glass_pane",
     "minecraft:white_stained_glass_pane",
@@ -11321,11 +11337,6 @@
     "minecraft:black_stained_glass_pane",
     "exposure:interplanar_projector"
   ],
-  "chipped:glowstone": [
-    "bf_blockpack:glowstone_column",
-    "bf_blockpack:glowstone_tiles",
-    "bf_blockpack:glowstone_polished"
-  ],
   "c:ores/lapis": [
     "minecraft:lapis_ore",
     "minecraft:deepslate_lapis_ore"
@@ -11342,11 +11353,11 @@
     "minecraft:golden_axe",
     "minecraft:golden_hoe"
   ],
-  "c:drink_containing/bucket": [
-    "minecraft:milk_bucket"
-  ],
   "minecraft:camel_food": [
     "minecraft:cactus"
+  ],
+  "c:drink_containing/bucket": [
+    "minecraft:milk_bucket"
   ],
   "create:runtime_generated/compat/betterarcheology/rotten": [
     "betterarcheology:rotten_log"
@@ -11359,11 +11370,11 @@
     "farmersdelight:tomato"
   ],
   "c:drinks/juice": [],
-  "stonkstimecore:time_focus": [
-    "stonkstimecore:golden_ticket"
-  ],
   "c:rods/blaze": [
     "minecraft:blaze_rod"
+  ],
+  "stonkstimecore:time_focus": [
+    "stonkstimecore:golden_ticket"
   ],
   "farmersdelight:enchantable/knife": [
     "farmersdelight:flint_knife",
@@ -11893,13 +11904,6 @@
     "irons_spellbooks:wizard_helmet",
     "irons_spellbooks:wizard_hat"
   ],
-  "c:foods/berries": [
-    "minecraft:sweet_berries",
-    "minecraft:glow_berries"
-  ],
-  "c:crops/tomato": [
-    "farmersdelight:tomato"
-  ],
   "chipped:prismarine": [
     "bf_blockpack:prismarine_large_bricks",
     "bf_blockpack:prismarine_large_layered_bricks",
@@ -11909,6 +11913,13 @@
     "bf_blockpack:prismarine_tiles",
     "bf_blockpack:prismarine_chiseled",
     "bf_blockpack:prismarine_polished"
+  ],
+  "c:foods/berries": [
+    "minecraft:sweet_berries",
+    "minecraft:glow_berries"
+  ],
+  "c:crops/tomato": [
+    "farmersdelight:tomato"
   ],
   "c:foods/bread": [
     "minecraft:bread"
@@ -12211,12 +12222,6 @@
     "suppsquared:gold_candle_holder_light_blue",
     "suppsquared:sack_light_blue"
   ],
-  "c:tools/brush": [
-    "minecraft:brush",
-    "betterarcheology:iron_brush",
-    "betterarcheology:diamond_brush",
-    "betterarcheology:netherite_brush"
-  ],
   "hazentouvelib:armors/leggings": [
     "irons_spellbooks:pyromancer_leggings",
     "irons_spellbooks:plagued_leggings",
@@ -12282,6 +12287,12 @@
     "hazennstuff:elder_guardian_leggings",
     "hazennstuff:garments_of_the_first_flamebearer_leggings"
   ],
+  "c:tools/brush": [
+    "minecraft:brush",
+    "betterarcheology:iron_brush",
+    "betterarcheology:diamond_brush",
+    "betterarcheology:netherite_brush"
+  ],
   "protection_pixel:chest": [
     "protection_pixel:pioneeras_chestplate",
     "protection_pixel:workerhornet_chestplate",
@@ -12345,6 +12356,9 @@
   "c:raw_materials/zinc": [
     "create:raw_zinc"
   ],
+  "c:storage_blocks/beetroot": [
+    "farmersdelight:beetroot_crate"
+  ],
   "minecraft:fence_gates": [
     "minecraft:acacia_fence_gate",
     "minecraft:birch_fence_gate",
@@ -12361,9 +12375,6 @@
     "hazennstuff:wisewood_fence_gate",
     "hazennstuff:frostbite_birch_fence_gate",
     "betterarcheology:rotten_fence_gate"
-  ],
-  "c:storage_blocks/beetroot": [
-    "farmersdelight:beetroot_crate"
   ],
   "minecraft:eggs": [
     "minecraft:egg",
@@ -12451,9 +12462,6 @@
     "artifacts:strider_shoes",
     "artifacts:whoopee_cushion"
   ],
-  "trinkets:legs/quiver": [
-    "supplementaries:quiver"
-  ],
   "yggdrasil:common_equipement": [
     "minecraft:iron_helmet",
     "minecraft:iron_chestplate",
@@ -12477,6 +12485,9 @@
     "minecraft:crossbow",
     "minecraft:fishing_rod",
     "minecraft:trident"
+  ],
+  "trinkets:legs/quiver": [
+    "supplementaries:quiver"
   ],
   "bookshelf:creative_tab/minecraft/building_blocks": [],
   "chipped:netherite_block": [
@@ -12526,9 +12537,6 @@
   "lootr:convert/item_frame_blacklist": [
     "minecraft:filled_map",
     "minecraft:map"
-  ],
-  "c:buckets/milk": [
-    "minecraft:milk_bucket"
   ],
   "minecraft:enchantable/mining_loot": [
     "minecraft:diamond_axe",
@@ -12586,6 +12594,12 @@
     "farmersdelight:golden_knife",
     "farmersdelight:netherite_knife"
   ],
+  "c:buckets/milk": [
+    "minecraft:milk_bucket"
+  ],
+  "c:storage_blocks/gold": [
+    "minecraft:gold_block"
+  ],
   "minecraft:meat": [
     "minecraft:beef",
     "minecraft:chicken",
@@ -12618,8 +12632,9 @@
     "born_in_chaos_v1:monster_flesh",
     "born_in_chaos_v1:smoked_flesh"
   ],
-  "c:storage_blocks/gold": [
-    "minecraft:gold_block"
+  "minecraft:music_discs": [
+    "born_in_chaos_v1:serpumpkinhead_m",
+    "born_in_chaos_v1:anluka_doors"
   ],
   "minecraft:leg_armor": [
     "minecraft:leather_leggings",
@@ -12730,10 +12745,6 @@
     "irons_spellbooks:wandering_magician_leggings",
     "irons_spellbooks:pumpkin_leggings",
     "irons_spellbooks:wizard_leggings"
-  ],
-  "minecraft:music_discs": [
-    "born_in_chaos_v1:serpumpkinhead_m",
-    "born_in_chaos_v1:anluka_doors"
   ],
   "c:tools/shears": [
     "minecraft:shears"
@@ -12897,14 +12908,6 @@
     "hazennstuff:bounty_hunter_helmet",
     "hazennstuff:mycelium_guardian_helmet"
   ],
-  "chipped:nether_bricks": [
-    "bf_blockpack:nether_brick_large_bricks",
-    "bf_blockpack:nether_brick_large_layered_bricks",
-    "bf_blockpack:nether_brick_small_layered_bricks",
-    "bf_blockpack:nether_brick_polished",
-    "bf_blockpack:nether_brick_column",
-    "bf_blockpack:nether_brick_tiles"
-  ],
   "minecraft:jungle_logs": [
     "minecraft:jungle_log",
     "minecraft:jungle_wood",
@@ -12913,10 +12916,24 @@
     "somemoreblocks:carved_jungle_log",
     "somemoreblocks:carved_jungle_wood"
   ],
+  "chipped:nether_bricks": [
+    "bf_blockpack:nether_brick_large_bricks",
+    "bf_blockpack:nether_brick_large_layered_bricks",
+    "bf_blockpack:nether_brick_small_layered_bricks",
+    "bf_blockpack:nether_brick_polished",
+    "bf_blockpack:nether_brick_column",
+    "bf_blockpack:nether_brick_tiles"
+  ],
   "c:eggs": [
     "minecraft:egg",
     "minecraft:blue_egg",
     "minecraft:brown_egg"
+  ],
+  "c:ropes": [
+    "supplementaries:rope",
+    "dustydecorations:rope",
+    "minecraft:lead",
+    "farmersdelight:rope"
   ],
   "c:foods/edible_when_placed": [
     "minecraft:cake",
@@ -12935,12 +12952,6 @@
     "farmersdelight:honey_glazed_ham_block",
     "farmersdelight:gleaming_salad_block",
     "farmersdelight:rice_roll_medley_block"
-  ],
-  "c:ropes": [
-    "supplementaries:rope",
-    "dustydecorations:rope",
-    "minecraft:lead",
-    "farmersdelight:rope"
   ],
   "crystal_chronicles:prismatic_boots_ingredients": [
     "crystal_chronicles:holy_knight_boots",
@@ -12990,6 +13001,18 @@
   "c:foods/chocolate": [
     "create:bar_of_chocolate"
   ],
+  "minecraft:chest_boats": [
+    "minecraft:oak_chest_boat",
+    "minecraft:spruce_chest_boat",
+    "minecraft:birch_chest_boat",
+    "minecraft:jungle_chest_boat",
+    "minecraft:acacia_chest_boat",
+    "minecraft:dark_oak_chest_boat",
+    "minecraft:mangrove_chest_boat",
+    "minecraft:bamboo_chest_raft",
+    "minecraft:cherry_chest_boat",
+    "minecraft:pale_oak_chest_boat"
+  ],
   "c:fence_gates": [
     "minecraft:oak_fence_gate",
     "minecraft:spruce_fence_gate",
@@ -13003,18 +13026,6 @@
     "minecraft:bamboo_fence_gate",
     "minecraft:cherry_fence_gate",
     "farmersdelight:rope_fence_gate"
-  ],
-  "minecraft:chest_boats": [
-    "minecraft:oak_chest_boat",
-    "minecraft:spruce_chest_boat",
-    "minecraft:birch_chest_boat",
-    "minecraft:jungle_chest_boat",
-    "minecraft:acacia_chest_boat",
-    "minecraft:dark_oak_chest_boat",
-    "minecraft:mangrove_chest_boat",
-    "minecraft:bamboo_chest_raft",
-    "minecraft:cherry_chest_boat",
-    "minecraft:pale_oak_chest_boat"
   ],
   "c:sandstone/uncolored_blocks": [
     "minecraft:sandstone",
@@ -13569,11 +13580,11 @@
     "minecraft:blue_dye",
     "minecraft:white_dye"
   ],
-  "accessories:calendarslot": [
-    "sereneseasons:calendar"
-  ],
   "c:chests/ender": [
     "minecraft:ender_chest"
+  ],
+  "accessories:calendarslot": [
+    "sereneseasons:calendar"
   ],
   "accessories:necklace": [
     "artifacts:lucky_scarf",
@@ -13586,11 +13597,11 @@
     "artifacts:charm_of_sinking",
     "artifacts:charm_of_shrinking"
   ],
-  "hardcorerevival:passthrough_death_when_held": [
-    "artifacts:chorus_totem"
-  ],
   "c:raw_materials/iron": [
     "minecraft:raw_iron"
+  ],
+  "hardcorerevival:passthrough_death_when_held": [
+    "artifacts:chorus_totem"
   ],
   "c:storage_blocks/cardboard": [
     "create:cardboard_block"
@@ -13902,11 +13913,11 @@
     "minecraft:stone_button",
     "minecraft:polished_blackstone_button"
   ],
-  "c:buckets/powder_snow": [
-    "minecraft:powder_snow_bucket"
-  ],
   "hazentouvelib:enchanted_spellbook": [
     "irons_spellbooks:diamond_spell_book"
+  ],
+  "c:buckets/powder_snow": [
+    "minecraft:powder_snow_bucket"
   ],
   "gametechbcs_spellbooks:can_cast_reversal": [
     "minecraft:diamond_sword",
@@ -14204,12 +14215,12 @@
     "better_weaponry:emerald_shuriken",
     "better_weaponry:amethyst_shuriken"
   ],
-  "c:ore_bearing_ground/netherrack": [
-    "minecraft:netherrack"
-  ],
   "minecraft:coals": [
     "minecraft:coal",
     "minecraft:charcoal"
+  ],
+  "c:ore_bearing_ground/netherrack": [
+    "minecraft:netherrack"
   ],
   "minecraft:noteblock_top_instruments": [
     "minecraft:zombie_head",
@@ -14253,6 +14264,9 @@
     "farmersdelight:red_canvas_sign",
     "farmersdelight:black_canvas_sign"
   ],
+  "minecraft:llama_tempt_items": [
+    "minecraft:hay_block"
+  ],
   "stonkstimecore:sre/give_item/born_in_chaos_rareloot": [
     "born_in_chaos_v1:orbofthe_summoner",
     "born_in_chaos_v1:fel_lamp",
@@ -14270,9 +14284,6 @@
     "born_in_chaos_v1:charmof_stealth",
     "born_in_chaos_v1:charmof_endurance",
     "born_in_chaos_v1:charmof_fury"
-  ],
-  "minecraft:llama_tempt_items": [
-    "minecraft:hay_block"
   ],
   "hazentouvelib:armors/paragon/paragon_chestplate": [
     "hazennstuff:garments_of_the_first_flamebearer_chestplate"
@@ -14701,7 +14712,9 @@
     "hazennstuff:shadow_jester_chestplate",
     "hazennstuff:elder_guardian_chestplate"
   ],
-  "create:stone_types/galosphere/amethyst": [],
+  "c:raw_blocks/gold": [
+    "minecraft:raw_gold_block"
+  ],
   "minecraft:sulfur_cube_archetype/slow_bouncy": [
     "minecraft:amethyst_block",
     "minecraft:andesite",
@@ -14849,8 +14862,9 @@
     "minecraft:black_glazed_terracotta",
     "minecraft:red_glazed_terracotta"
   ],
-  "c:raw_blocks/gold": [
-    "minecraft:raw_gold_block"
+  "create:stone_types/galosphere/amethyst": [],
+  "supplementaries:statue_swords": [
+    "minecraft:wooden_sword"
   ],
   "minecraft:candles": [
     "minecraft:candle",
@@ -14871,9 +14885,7 @@
     "minecraft:red_candle",
     "minecraft:black_candle"
   ],
-  "supplementaries:statue_swords": [
-    "minecraft:wooden_sword"
-  ],
+  "supplementaries:quiver_blacklist": [],
   "nova_structures:bunker_altar_filter": [
     "minecraft:eye_armor_trim_smithing_template",
     "minecraft:iron_chestplate",
@@ -14893,7 +14905,6 @@
     "minecraft:name_tag",
     "minecraft:saddle"
   ],
-  "supplementaries:quiver_blacklist": [],
   "c:ingots/pyrium": [
     "irons_spellbooks:pyrium_ingot"
   ],
@@ -14966,6 +14977,10 @@
     "supplementaries:present_light_gray",
     "supplementaries:present_brown"
   ],
+  "exposure:color_film_rolls": [
+    "exposure:color_film",
+    "exposure:high_sensitivity_color_film"
+  ],
   "create:crushed_raw_materials": [
     "create_wizardry:crushed_mithril",
     "create:crushed_raw_iron",
@@ -14982,14 +14997,6 @@
     "create:crushed_raw_uranium",
     "create:crushed_raw_nickel"
   ],
-  "exposure:color_film_rolls": [
-    "exposure:color_film",
-    "exposure:high_sensitivity_color_film"
-  ],
-  "supplementaries:keys": [
-    "supplementaries:key",
-    "suppsquared:heavy_key"
-  ],
   "artifacts:slot/head": [
     "artifacts:plastic_drinking_hat",
     "artifacts:novelty_drinking_hat",
@@ -14998,6 +15005,10 @@
     "artifacts:cowboy_hat",
     "artifacts:anglers_hat",
     "artifacts:whoopee_cushion"
+  ],
+  "supplementaries:keys": [
+    "supplementaries:key",
+    "suppsquared:heavy_key"
   ],
   "supplementaries:blackboard_cyan": [
     "minecraft:cyan_dye"
@@ -15086,6 +15097,9 @@
     "hazennstuff:geckolib_lemon_god_leggings",
     "hazennstuff:geckolib_lemon_god_boots"
   ],
+  "minecraft:enchantable/fishing": [
+    "minecraft:fishing_rod"
+  ],
   "create:stone_types/veridium": [
     "create:cut_veridium",
     "create:cut_veridium_stairs",
@@ -15102,9 +15116,6 @@
     "create:layered_veridium",
     "create:veridium_pillar",
     "create:veridium"
-  ],
-  "minecraft:enchantable/fishing": [
-    "minecraft:fishing_rod"
   ],
   "minecraft:banners": [
     "minecraft:white_banner",
@@ -15219,13 +15230,13 @@
     "bf_blockpack:purple_terracotta_tiles",
     "bf_blockpack:purple_terracotta_shingles"
   ],
+  "c:nuggets/copper": [
+    "create:copper_nugget"
+  ],
   "supplementaries:wattle_and_daubs": [
     "supplementaries:daub_frame",
     "supplementaries:daub_cross_brace",
     "supplementaries:daub_brace"
-  ],
-  "c:nuggets/copper": [
-    "create:copper_nugget"
   ],
   "irons_spellbooks:blood_focus": [
     "irons_spellbooks:blood_vial"
@@ -15313,12 +15324,12 @@
     "bf_blockpack:mud_tiles",
     "bf_blockpack:mud_chiseled"
   ],
-  "c:seeds/flax": [
-    "supplementaries:flax_seeds"
-  ],
   "c:barrels/wooden": [
     "minecraft:barrel",
     "sophisticatedstorage:barrel"
+  ],
+  "c:seeds/flax": [
+    "supplementaries:flax_seeds"
   ],
   "irons_spellbooks:fire_focus": [
     "hazennstuff:charred_bones",
@@ -15331,10 +15342,6 @@
   "stonkstimecore:sre/give_item/paraglider_heart_container": [
     "paraglider:heart_container"
   ],
-  "minecraft:ocelot_food": [
-    "minecraft:cod",
-    "minecraft:salmon"
-  ],
   "supplementaries:jar_cookies": [
     "minecraft:cookie",
     "farmersdelight:honey_cookie",
@@ -15342,6 +15349,10 @@
     "supplementaries:candy",
     "create:honeyed_apple",
     "create:chocolate_glazed_berries"
+  ],
+  "minecraft:ocelot_food": [
+    "minecraft:cod",
+    "minecraft:salmon"
   ],
   "c:tools": [
     "minecraft:diamond_axe",
@@ -15717,12 +15728,12 @@
   "hazennstuff:focus/health_focus": [
     "hazennstuff:rose_quartz"
   ],
+  "hazentouvelib:spellbooks/blood_spellbook": [
+    "irons_spellbooks:cursed_doll_spell_book"
+  ],
   "minecraft:soul_fire_base_blocks": [
     "minecraft:soul_sand",
     "minecraft:soul_soil"
-  ],
-  "hazentouvelib:spellbooks/blood_spellbook": [
-    "irons_spellbooks:cursed_doll_spell_book"
   ],
   "minecraft:piglin_food": [
     "minecraft:porkchop",
@@ -15734,6 +15745,11 @@
   "c:foods/raw_salmon": [
     "minecraft:salmon",
     "farmersdelight:salmon_slice"
+  ],
+  "curios:wing": [
+    "hazennstuff:arbitrium_wings",
+    "hazennstuff:angel_wings",
+    "hazennstuff:fallen_angel_wings"
   ],
   "protection_pixel:equipment": [
     "protection_pixel:maneuveringwing",
@@ -15749,11 +15765,6 @@
   ],
   "c:dyes/red": [
     "minecraft:red_dye"
-  ],
-  "curios:wing": [
-    "hazennstuff:arbitrium_wings",
-    "hazennstuff:angel_wings",
-    "hazennstuff:fallen_angel_wings"
   ],
   "curios:curio": [],
   "trinkets:hand/glove": [
@@ -16231,9 +16242,6 @@
   "c:cobblestones/infested": [
     "minecraft:infested_cobblestone"
   ],
-  "supplementaries:blackboard_red": [
-    "minecraft:red_dye"
-  ],
   "hazennstuff:blocks/zenalite_ores": [
     "hazennstuff:zenalite_deepslate_ore",
     "hazennstuff:zenalite_stone_ore",
@@ -16264,20 +16272,8 @@
     "better_weaponry:copper_shovel",
     "better_weaponry:copper_axe"
   ],
-  "c:villager_job_sites": [
-    "minecraft:barrel",
-    "minecraft:blast_furnace",
-    "minecraft:brewing_stand",
-    "minecraft:cartography_table",
-    "minecraft:cauldron",
-    "minecraft:composter",
-    "minecraft:fletching_table",
-    "minecraft:grindstone",
-    "minecraft:lectern",
-    "minecraft:loom",
-    "minecraft:smithing_table",
-    "minecraft:smoker",
-    "minecraft:stonecutter"
+  "supplementaries:blackboard_red": [
+    "minecraft:red_dye"
   ],
   "hazentouvelib:armors/boots": [
     "irons_spellbooks:pyromancer_boots",
@@ -16343,6 +16339,29 @@
     "hazennstuff:abberant_predator_boots",
     "hazennstuff:garments_of_the_first_flamebearer_boots"
   ],
+  "c:villager_job_sites": [
+    "minecraft:barrel",
+    "minecraft:blast_furnace",
+    "minecraft:brewing_stand",
+    "minecraft:cartography_table",
+    "minecraft:cauldron",
+    "minecraft:composter",
+    "minecraft:fletching_table",
+    "minecraft:grindstone",
+    "minecraft:lectern",
+    "minecraft:loom",
+    "minecraft:smithing_table",
+    "minecraft:smoker",
+    "minecraft:stonecutter"
+  ],
+  "minecraft:dark_oak_logs": [
+    "minecraft:dark_oak_log",
+    "minecraft:dark_oak_wood",
+    "minecraft:stripped_dark_oak_log",
+    "minecraft:stripped_dark_oak_wood",
+    "somemoreblocks:carved_dark_oak_log",
+    "somemoreblocks:carved_dark_oak_wood"
+  ],
   "c:tools/melee_weapon": [
     "minecraft:mace",
     "minecraft:trident",
@@ -16369,19 +16388,8 @@
     "irons_spellbooks:hellrazor",
     "irons_spellbooks:decrepit_scythe"
   ],
-  "minecraft:dark_oak_logs": [
-    "minecraft:dark_oak_log",
-    "minecraft:dark_oak_wood",
-    "minecraft:stripped_dark_oak_log",
-    "minecraft:stripped_dark_oak_wood",
-    "somemoreblocks:carved_dark_oak_log",
-    "somemoreblocks:carved_dark_oak_wood"
-  ],
   "c:plates/andesite_alloy": [
     "createdeco:andesite_sheet"
-  ],
-  "c:bricks/ash": [
-    "supplementaries:ash_brick"
   ],
   "hazentouvelib:armors/pure/pure_leggings": [
     "hazennstuff:blazeborne_leggings",
@@ -16427,6 +16435,9 @@
     "hazennstuff:glassweaver_leggings",
     "hazennstuff:shadow_jester_leggings",
     "hazennstuff:elder_guardian_leggings"
+  ],
+  "c:bricks/ash": [
+    "supplementaries:ash_brick"
   ],
   "minecraft:axolotl_food": [
     "minecraft:tropical_fish_bucket"
@@ -16476,12 +16487,12 @@
     "suppsquared:gold_candle_holder_light_gray",
     "suppsquared:sack_light_gray"
   ],
+  "dummmmmmy:arthropod_heads": [
+    "minecraft:dragon_head"
+  ],
   "c:tools/spear": [
     "minecraft:trident",
     "hazennstuff:ice_pike"
-  ],
-  "dummmmmmy:arthropod_heads": [
-    "minecraft:dragon_head"
   ],
   "minecraft:stone_crafting_materials": [
     "minecraft:cobblestone",
@@ -16516,6 +16527,9 @@
     "suppsquared:gold_candle_holder_lime",
     "suppsquared:sack_lime"
   ],
+  "c:crops/cactus": [
+    "minecraft:cactus"
+  ],
   "chipped:end_stone": [
     "bf_blockpack:end_stone_large_layered_bricks",
     "bf_blockpack:end_stone_small_bricks",
@@ -16528,9 +16542,6 @@
     "bf_blockpack:pink_terracotta_bricks",
     "bf_blockpack:pink_terracotta_tiles",
     "bf_blockpack:pink_terracotta_shingles"
-  ],
-  "c:crops/cactus": [
-    "minecraft:cactus"
   ],
   "create:stone_types/calcite": [
     "create:cut_calcite",
@@ -16592,6 +16603,9 @@
   ],
   "c:dusts/redstone": [
     "minecraft:redstone"
+  ],
+  "supplementaries:blackboard_brown": [
+    "minecraft:brown_dye"
   ],
   "stonkstimecore:sre/give_item/relics": [
     "relics:leafy_mantle",
@@ -16663,9 +16677,6 @@
     "artifacts:strider_shoes",
     "artifacts:whoopee_cushion"
   ],
-  "supplementaries:blackboard_brown": [
-    "minecraft:brown_dye"
-  ],
   "c:ingots/rose_gold": [
     "hazennstuff:rose_gold_ingot"
   ],
@@ -16693,11 +16704,6 @@
     "create:honey_bucket",
     "create:chocolate_bucket"
   ],
-  "chipped:gray_terracotta": [
-    "bf_blockpack:gray_terracotta_bricks",
-    "bf_blockpack:gray_terracotta_tiles",
-    "bf_blockpack:gray_terracotta_shingles"
-  ],
   "trinkets:feet/shoes": [
     "artifacts:aqua_dashers",
     "artifacts:bunny_hoppers",
@@ -16708,6 +16714,11 @@
     "artifacts:flippers",
     "artifacts:rooted_boots",
     "artifacts:strider_shoes"
+  ],
+  "chipped:gray_terracotta": [
+    "bf_blockpack:gray_terracotta_bricks",
+    "bf_blockpack:gray_terracotta_tiles",
+    "bf_blockpack:gray_terracotta_shingles"
   ],
   "dustydecorations:sea_glass": [
     "dustydecorations:cerulean_seaglass",
@@ -16720,6 +16731,16 @@
     "dustydecorations:mocha_seaglass",
     "dustydecorations:frosted_seaglass",
     "dustydecorations:liquorice_seaglass"
+  ],
+  "minecraft:beacon_payment_items": [
+    "minecraft:netherite_ingot",
+    "minecraft:emerald",
+    "minecraft:diamond",
+    "minecraft:gold_ingot",
+    "minecraft:iron_ingot",
+    "create:andesite_alloy",
+    "create:zinc_ingot",
+    "create:brass_ingot"
   ],
   "minecraft:logs": [
     "minecraft:dark_oak_log",
@@ -16802,16 +16823,6 @@
     "born_in_chaos_v1:stripped_scorched_log",
     "born_in_chaos_v1:stripped_scorched_wood"
   ],
-  "minecraft:beacon_payment_items": [
-    "minecraft:netherite_ingot",
-    "minecraft:emerald",
-    "minecraft:diamond",
-    "minecraft:gold_ingot",
-    "minecraft:iron_ingot",
-    "create:andesite_alloy",
-    "create:zinc_ingot",
-    "create:brass_ingot"
-  ],
   "c:storage_blocks/raw_copper": [
     "minecraft:raw_copper_block"
   ],
@@ -16856,12 +16867,12 @@
   "create:runtime_generated/compat/bf_blockpack/cherry_stacked": [
     "bf_blockpack:cherry_stacked_logs"
   ],
+  "supplementaries:pedestal_downright": [
+    "minecraft:trident"
+  ],
   "minecraft:emerald_ores": [
     "minecraft:emerald_ore",
     "minecraft:deepslate_emerald_ore"
-  ],
-  "supplementaries:pedestal_downright": [
-    "minecraft:trident"
   ],
   "dummmmmmy:nether_mob_heads": [
     "minecraft:piglin_head"
@@ -16882,13 +16893,13 @@
     "supplementaries:cannon_boat_pale_oak",
     "supplementaries:cannon_boat_spruce"
   ],
-  "c:gems/amethyst": [
-    "minecraft:amethyst_shard"
-  ],
   "c:foods/berry": [
     "minecraft:sweet_berries",
     "minecraft:glow_berries",
     "create:chocolate_glazed_berries"
+  ],
+  "c:gems/amethyst": [
+    "minecraft:amethyst_shard"
   ],
   "minecraft:enchantable/fire_aspect": [
     "minecraft:diamond_sword",
@@ -17181,9 +17192,6 @@
     "farmersdelight:beef_patty",
     "farmersdelight:cooked_mutton_chops"
   ],
-  "c:raw_blocks/copper": [
-    "minecraft:raw_copper_block"
-  ],
   "c:dyed/red": [
     "minecraft:red_banner",
     "minecraft:red_bed",
@@ -17208,6 +17216,9 @@
     "suppsquared:gold_candle_holder_red",
     "suppsquared:sack_red"
   ],
+  "c:raw_blocks/copper": [
+    "minecraft:raw_copper_block"
+  ],
   "c:raw_materials/mithril": [
     "irons_spellbooks:raw_mithril"
   ],
@@ -17220,15 +17231,15 @@
     "genshinstrument:glorious_drum",
     "genshinstrument:djem_djem_drum"
   ],
+  "c:foods/raw_chicken": [
+    "minecraft:chicken",
+    "farmersdelight:chicken_cuts"
+  ],
   "genshinstrument:instrument_families/strings": [
     "genshinstrument:windsong_lyre",
     "genshinstrument:vintage_lyre",
     "genshinstrument:floral_zither",
     "genshinstrument:ukulele"
-  ],
-  "c:foods/raw_chicken": [
-    "minecraft:chicken",
-    "farmersdelight:chicken_cuts"
   ],
   "c:glass_blocks": [
     "minecraft:glass",
@@ -17290,9 +17301,6 @@
     "bf_blockpack:red_sandstone_column",
     "bf_blockpack:red_sandstone_shingles"
   ],
-  "c:slime_balls": [
-    "minecraft:slime_ball"
-  ],
   "c:chests": [
     "minecraft:ender_chest",
     "minecraft:trapped_chest",
@@ -17303,6 +17311,9 @@
     "sophisticatedstorage:gold_chest",
     "sophisticatedstorage:diamond_chest",
     "sophisticatedstorage:netherite_chest"
+  ],
+  "c:slime_balls": [
+    "minecraft:slime_ball"
   ],
   "c:foods/cooked_bacon": [
     "farmersdelight:cooked_bacon"
@@ -17456,24 +17467,6 @@
   "create:modded_stripped_wood": [
     "minecraft:stripped_pale_oak_wood"
   ],
-  "minecraft:sulfur_cube_archetype/light": [
-    "minecraft:white_wool",
-    "minecraft:orange_wool",
-    "minecraft:magenta_wool",
-    "minecraft:light_blue_wool",
-    "minecraft:yellow_wool",
-    "minecraft:lime_wool",
-    "minecraft:pink_wool",
-    "minecraft:gray_wool",
-    "minecraft:light_gray_wool",
-    "minecraft:cyan_wool",
-    "minecraft:purple_wool",
-    "minecraft:blue_wool",
-    "minecraft:brown_wool",
-    "minecraft:green_wool",
-    "minecraft:red_wool",
-    "minecraft:black_wool"
-  ],
   "born_in_chaos_v1:rareloot": [
     "born_in_chaos_v1:orbofthe_summoner",
     "born_in_chaos_v1:fel_lamp",
@@ -17491,6 +17484,24 @@
     "born_in_chaos_v1:charmof_stealth",
     "born_in_chaos_v1:charmof_endurance",
     "born_in_chaos_v1:charmof_fury"
+  ],
+  "minecraft:sulfur_cube_archetype/light": [
+    "minecraft:white_wool",
+    "minecraft:orange_wool",
+    "minecraft:magenta_wool",
+    "minecraft:light_blue_wool",
+    "minecraft:yellow_wool",
+    "minecraft:lime_wool",
+    "minecraft:pink_wool",
+    "minecraft:gray_wool",
+    "minecraft:light_gray_wool",
+    "minecraft:cyan_wool",
+    "minecraft:purple_wool",
+    "minecraft:blue_wool",
+    "minecraft:brown_wool",
+    "minecraft:green_wool",
+    "minecraft:red_wool",
+    "minecraft:black_wool"
   ],
   "minecraft:wooden_trapdoors": [
     "minecraft:acacia_trapdoor",
@@ -18654,10 +18665,6 @@
     "brewinandchewin:kombucha",
     "brewinandchewin:dread_nog"
   ],
-  "c:foods/cooked_beef": [
-    "minecraft:cooked_beef",
-    "farmersdelight:beef_patty"
-  ],
   "minecraft:enchantable/vanishing": [
     "minecraft:leather_boots",
     "minecraft:chainmail_boots",
@@ -19468,6 +19475,10 @@
     "supplementaries:spider_head",
     "supplementaries:bubble_blower"
   ],
+  "c:foods/cooked_beef": [
+    "minecraft:cooked_beef",
+    "farmersdelight:beef_patty"
+  ],
   "irons_spellbooks:armors/leggings": [
     "irons_spellbooks:wandering_magician_leggings",
     "irons_spellbooks:pumpkin_leggings",
@@ -19482,14 +19493,14 @@
     "irons_spellbooks:netherite_mage_leggings",
     "irons_spellbooks:wizard_leggings"
   ],
+  "c:nuggets/industrial_iron": [
+    "createdeco:industrial_iron_nugget"
+  ],
   "chipped:light_blue_concrete": [
     "bf_blockpack:light_blue_concrete_bricks",
     "bf_blockpack:light_blue_concrete_column",
     "bf_blockpack:light_blue_concrete_tiles",
     "bf_blockpack:light_blue_concrete_chiseled",
     "bf_blockpack:light_blue_concrete_shingles"
-  ],
-  "c:nuggets/industrial_iron": [
-    "createdeco:industrial_iron_nugget"
   ]
 }

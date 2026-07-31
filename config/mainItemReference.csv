@@ -260,7 +260,6 @@ hazennstuff:nightmare_fuel,15.0
 hazennstuff:pendant_of_harmony,1200.0
 hazennstuff:stardust,90.0
 irons_lib:player_statue,600.0
-irons_patreon_lib:player_statue,600.0
 irons_spellbooks:dead_king_phylactery_shard,600.0
 irons_spellbooks:furled_map,150.0
 irons_spellbooks:unchained_book,900.0
@@ -289,3 +288,18 @@ irons_spellbooks:icy_fang,30.0
 irons_spellbooks:ancient_knowledge_fragment,450.0
 #paraglider:goddess_statues,500.0
 minecraft:slime_ball,5.0
+jackpot:chip,10.0
+create_wizardry:mana-fluid1mB,0.02
+dustydecorations:big_megalodon_tooth,600.0
+dustydecorations:big_shark_jaws,600.0
+#dustydecorations:seaglass_fragment,30.0
+dustydecorations:cow_hide_rug,450.0
+dustydecorations:cow_skull,450.0
+#dustydecorations:embedded_fish_fossil,10.0
+dustydecorations:equine_skull,2200
+dustydecorations:fishbones,4.0
+dustydecorations:mooshroom_hide,550.0
+dustydecorations:small_shark_jaws,200.0
+dustydecorations:wolf_skull,350.0
+vista:crystalline,300.0
+#dustydecorations:seaglass_embedded,10.0
