@@ -156,7 +156,8 @@
     "#minecraft:crimson_stems",
     "#minecraft:warped_stems",
     "#hazennstuff:blocks/wisewood_logs",
-    "#hazennstuff:blocks/frostbite_birch_logs"
+    "#hazennstuff:blocks/frostbite_birch_logs",
+    "#minecraft:poplar_logs"
   ],
   "#create:rare_packages" : [
     "create:rare_creeper_package",
@@ -263,7 +264,9 @@
     "supplementaries:wild_flax",
     "crystal_chronicles:tall_villi",
     "crystal_chronicles:villi",
-    "farmersdelight:sandy_shrub"
+    "farmersdelight:sandy_shrub",
+    "minecraft:red_shrub",
+    "minecraft:shelf_mushroom"
   ],
   "#froglight" : [
     "minecraft:ochre_froglight",
@@ -406,7 +409,9 @@
     "minecraft:warped_nylium",
     "minecraft:crimson_nylium",
     "minecraft:cinnabar",
-    "supplementaries:brittlestone"
+    "supplementaries:brittlestone",
+    "dustydecorations:seastone",
+    "dustydecorations:smooth_seastone"
   ],
   "#seeds" : [
     "#c:seeds",
@@ -792,15 +797,24 @@
     "irons_spellbooks:raw_mithril"
   ],
   "#dustydecorations:seaglass_fragment" : [
-    "#dustydecorations:seaglass_fragment"
+    "dustydecorations:hazel_seaglass_fragments",
+    "dustydecorations:cream_seaglass_fragments",
+    "dustydecorations:scarlet_seaglass_fragments",
+    "dustydecorations:honey_seaglass_fragments",
+    "dustydecorations:mint_seaglass_fragments",
+    "dustydecorations:teal_seaglass_fragments",
+    "dustydecorations:liquorice_seaglass_fragments",
+    "dustydecorations:mocha_seaglass_fragments",
+    "dustydecorations:taupe_seaglass_fragments",
+    "dustydecorations:cerulean_seaglass_fragments"
   ],
   "#dustydecorations:embedded_fish_fossil" : [
-    "dustydecorations:deepslate_embedded_fish_fossil",
-    "dustydecorations:embedded_fish_fossil"
+    "dustydecorations:deepslate_marine_fossil",
+    "dustydecorations:stone_marine_fossil"
   ],
   "#dustydecorations:seaglass_embedded" : [
-    "dustydecorations:seaglass_embedded_gravel",
-    "dustydecorations:seaglass_embedded_sand"
+    "dustydecorations:seaglass_gravel",
+    "dustydecorations:seaglass_sand"
   ],
   "#createdeco:placards" : [
     "#createdeco:placards"
@@ -822,5 +836,218 @@
     "createdeco:green_shipping_container",
     "createdeco:gray_shipping_container",
     "createdeco:white_shipping_container"
+  ],
+  "#minecraft:copper_bars" : [
+    "minecraft:weathered_copper_bars",
+    "minecraft:exposed_copper_bars",
+    "minecraft:oxidized_copper_bars",
+    "minecraft:copper_bars"
+  ],
+  "#minecraft:lightning_rod" : [
+    "minecraft:oxidized_lightning_rod",
+    "minecraft:weathered_lightning_rod",
+    "minecraft:exposed_lightning_rod",
+    "minecraft:lightning_rod"
+  ],
+   "#dustydecorations:corrugated_metal_block" : [
+    "dustydecorations:corrugated_metal_block",
+    "dustydecorations:rusted_corrugated_metal_block"
+  ],
+   "#dustydecorations:corrugated_metal_button" : [
+    "dustydecorations:corrugated_metal_button",
+    "dustydecorations:rusted_corrugated_metal_button"
+  ],
+   "#dustydecorations:corrugated_metal_door" : [
+    "dustydecorations:corrugated_metal_door",
+    "dustydecorations:rusted_corrugated_metal_door"
+  ],
+   "#dustydecorations:corrugated_metal_fence" : [
+    "dustydecorations:corrugated_metal_fence",
+    "dustydecorations:rusted_corrugated_metal_fence"
+  ],
+   "#dustydecorations:corrugated_metal_fence_gate" : [
+    "dustydecorations:corrugated_metal_fence_gate",
+    "dustydecorations:rusted_corrugated_metal_fence_gate"
+  ],
+   "#dustydecorations:corrugated_metal_grate" : [
+    "dustydecorations:corrugated_metal_grate",
+    "dustydecorations:rusted_corrugated_metal_grate"
+  ],
+   "#dustydecorations:corrugated_metal_pressure_plate" : [
+    "dustydecorations:corrugated_metal_pressure_plate",
+    "dustydecorations:rusted_corrugated_metal_pressure_plate"
+  ],
+   "#dustydecorations:corrugated_metal_roofing" : [
+    "dustydecorations:corrugated_metal_roofing",
+    "dustydecorations:rusted_corrugated_metal_roofing"
+  ],
+   "#dustydecorations:corrugated_metal_slab" : [
+    "dustydecorations:corrugated_metal_slab",
+    "dustydecorations:rusted_corrugated_metal_slab"
+  ],
+   "#dustydecorations:corrugated_metal_stairs" : [
+    "dustydecorations:corrugated_metal_stairs",
+    "dustydecorations:rusted_corrugated_metal_stairs"
+  ],
+   "#dustydecorations:corrugated_metal_trapdoor" : [
+    "dustydecorations:corrugated_metal_trapdoor",
+    "dustydecorations:rusted_corrugated_metal_trapdoor"
+  ],
+  "#dustydecorations:copper_light" : [
+    "dustydecorations:copper_light",
+    "dustydecorations:shoddy_copper_light"
+  ],
+  "#minecraft:copper_golem" : [
+    "minecraft:copper_golem_statue",
+    "minecraft:exposed_copper_golem_statue",
+    "minecraft:oxidized_copper_golem_statue",
+    "minecraft:weathered_copper_golem_statue"
+  ],
+  "#minecraft:copper_chain" : [
+    "minecraft:exposed_copper_chain",
+    "minecraft:oxidized_copper_chain",
+    "minecraft:weathered_copper_chain",
+    "minecraft:copper_chain"
+  ],
+  "#minecraft:copper_chest" : [
+    "minecraft:exposed_copper_chest",
+    "minecraft:oxidized_copper_chest",
+    "minecraft:weathered_copper_chest",
+    "minecraft:copper_chest"
+  ],
+  "#minecraft:copper_lantern" : [
+    "minecraft:exposed_copper_lantern",
+    "minecraft:oxidized_copper_lantern",
+    "minecraft:weathered_copper_lantern",
+    "minecraft:copper_lantern"
+  ],
+  "#minecraft:waxed_copper_bars" : [
+    "minecraft:waxed_weathered_copper_bars",
+    "minecraft:waxed_exposed_copper_bars",
+    "minecraft:waxed_oxidized_copper_bars",
+    "minecraft:waxed_copper_bars"
+  ],
+  "#minecraft:waxed_lightning_rod" : [
+    "minecraft:waxed_oxidized_lightning_rod",
+    "minecraft:waxed_weathered_lightning_rod",
+    "minecraft:waxed_exposed_lightning_rod",
+    "minecraft:waxed_lightning_rod"
+  ],
+   "#dustydecorations:waxed_corrugated_metal_block" : [
+    "dustydecorations:waxed_corrugated_metal_block",
+    "dustydecorations:waxed_rusted_corrugated_metal_block"
+  ],
+   "#dustydecorations:waxed_corrugated_metal_button" : [
+    "dustydecorations:waxed_corrugated_metal_button",
+    "dustydecorations:waxed_rusted_corrugated_metal_button"
+  ],
+   "#dustydecorations:waxed_corrugated_metal_door" : [
+    "dustydecorations:waxed_corrugated_metal_door",
+    "dustydecorations:waxed_rusted_corrugated_metal_door"
+  ],
+   "#dustydecorations:waxed_corrugated_metal_fence" : [
+    "dustydecorations:waxed_corrugated_metal_fence",
+    "dustydecorations:waxed_rusted_corrugated_metal_fence"
+  ],
+   "#dustydecorations:waxed_corrugated_metal_fence_gate" : [
+    "dustydecorations:waxed_corrugated_metal_fence_gate",
+    "dustydecorations:waxed_rusted_corrugated_metal_fence_gate"
+  ],
+   "#dustydecorations:waxed_corrugated_metal_grate" : [
+    "dustydecorations:waxed_corrugated_metal_grate",
+    "dustydecorations:waxed_rusted_corrugated_metal_grate"
+  ],
+   "#dustydecorations:waxed_corrugated_metal_pressure_plate" : [
+    "dustydecorations:waxed_corrugated_metal_pressure_plate",
+    "dustydecorations:waxed_rusted_corrugated_metal_pressure_plate"
+  ],
+   "#dustydecorations:waxed_corrugated_metal_roofing" : [
+    "dustydecorations:waxed_corrugated_metal_roofing",
+    "dustydecorations:waxed_rusted_corrugated_metal_roofing"
+  ],
+   "#dustydecorations:waxed_corrugated_metal_slab" : [
+    "dustydecorations:waxed_corrugated_metal_slab",
+    "dustydecorations:waxed_rusted_corrugated_metal_slab"
+  ],
+   "#dustydecorations:waxed_corrugated_metal_stairs" : [
+    "dustydecorations:waxed_corrugated_metal_stairs",
+    "dustydecorations:waxed_rusted_corrugated_metal_stairs"
+  ],
+   "#dustydecorations:waxed_corrugated_metal_trapdoor" : [
+    "dustydecorations:waxed_corrugated_metal_trapdoor",
+    "dustydecorations:waxed_rusted_corrugated_metal_trapdoor"
+  ],
+  "#dustydecorations:waxed_copper_light" : [
+    "dustydecorations:waxed_copper_light",
+    "dustydecorations:waxed_shoddy_copper_light"
+  ],
+  "#minecraft:waxed_copper_golem" : [
+    "minecraft:waxed_copper_golem_statue",
+    "minecraft:waxed_exposed_copper_golem_statue",
+    "minecraft:waxed_oxidized_copper_golem_statue",
+    "minecraft:waxed_weathered_copper_golem_statue"
+  ],
+  "#minecraft:waxed_copper_chain" : [
+    "minecraft:waxed_exposed_copper_chain",
+    "minecraft:waxed_oxidized_copper_chain",
+    "minecraft:waxed_weathered_copper_chain",
+    "minecraft:waxed_copper_chain"
+  ],
+  "#minecraft:waxed_copper_chest" : [
+    "minecraft:waxed_exposed_copper_chest",
+    "minecraft:waxed_oxidized_copper_chest",
+    "minecraft:waxed_weathered_copper_chest",
+    "minecraft:waxed_copper_chest"
+  ],
+  "#minecraft:waxed_copper_lantern" : [
+    "minecraft:waxed_exposed_copper_lantern",
+    "minecraft:waxed_oxidized_copper_lantern",
+    "minecraft:waxed_weathered_copper_lantern",
+    "minecraft:waxed_copper_lantern"
+  ],
+  "#yagm:grave_tier_1" : [
+    "yagm:cold_grave_tier_1",
+    "yagm:end_grave_tier_1",
+    "yagm:grave_tier_1",
+    "yagm:hot_grave_tier_1",
+    "yagm:nether_grave_tier_1",
+    "yagm:ocean_grave_tier_1",
+    "yagm:tropics_grave_tier_1"
+  ],
+  "#yagm:grave_tier_2" : [
+    "yagm:cold_grave_tier_2",
+    "yagm:end_grave_tier_2",
+    "yagm:grave_tier_2",
+    "yagm:hot_grave_tier_2",
+    "yagm:nether_grave_tier_2",
+    "yagm:ocean_grave_tier_2",
+    "yagm:tropics_grave_tier_2"
+  ],
+  "#yagm:grave_tier_3" : [
+    "yagm:cold_grave_tier_3",
+    "yagm:end_grave_tier_3",
+    "yagm:grave_tier_3",
+    "yagm:hot_grave_tier_3",
+    "yagm:nether_grave_tier_3",
+    "yagm:ocean_grave_tier_3",
+    "yagm:tropics_grave_tier_3"
+  ],
+  "#yagm:grave_tier_4" : [
+    "yagm:cold_grave_tier_4",
+    "yagm:end_grave_tier_4",
+    "yagm:grave_tier_4",
+    "yagm:hot_grave_tier_4",
+    "yagm:nether_grave_tier_4",
+    "yagm:ocean_grave_tier_4",
+    "yagm:tropics_grave_tier_4"
+  ],
+  "#minecraft:wool_stairs" : [
+    "#minecraft:wool_stairs"
+  ],
+  "#minecraft:cushions" : [
+    "#minecraft:cushions"
+  ],
+  "#dustydecorations:cushions" : [
+    "#dustydecorations:cushions"
   ]
 }

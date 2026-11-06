@@ -714,5 +714,140 @@
     "input" : {
       "brewinandchewin:fiery_fondue_pot" : 1
     }
+  },
+  "minecraft:copper_golem" : {
+    "output" : {
+      "#minecraft:copper_golem" : 1
+    },
+    "input" : {
+      "#minecraft:pumpkins" : 1,
+      "#minecraft:coppers" : 1
+    }
+  },
+  "dustydecorations:waxed_corrugated_metal_block" : {
+    "output" : {
+      "#dustydecorations:waxed_corrugated_metal_block" : 1
+    },
+    "input" : {
+      "#dustydecorations:corrugated_metal_block" : 1,
+      "minecraft:honeycomb" : 1
+    }
+  },
+  "dustydecorations:waxed_corrugated_metal_button" : {
+    "output" : {
+      "#dustydecorations:waxed_corrugated_metal_button" : 1
+    },
+    "input" : {
+      "#dustydecorations:corrugated_metal_button" : 1,
+      "minecraft:honeycomb" : 1
+    }
+  },
+  "dustydecorations:waxed_corrugated_metal_door" : {
+    "output" : {
+      "#dustydecorations:waxed_corrugated_metal_door" : 1
+    },
+    "input" : {
+      "#dustydecorations:corrugated_metal_door" : 1,
+      "minecraft:honeycomb" : 1
+    }
+  },
+  "dustydecorations:waxed_corrugated_metal_fence" : {
+    "output" : {
+      "#dustydecorations:waxed_corrugated_metal_fence" : 1
+    },
+    "input" : {
+      "#dustydecorations:corrugated_metal_fence" : 1,
+      "minecraft:honeycomb" : 1
+    }
+  },
+  "dustydecorations:waxed_corrugated_metal_fence_gate" : {
+    "output" : {
+      "#dustydecorations:waxed_corrugated_metal_fence_gate" : 1
+    },
+    "input" : {
+      "#dustydecorations:corrugated_metal_fence_gate" : 1,
+      "minecraft:honeycomb" : 1
+    }
+  },
+  "dustydecorations:waxed_corrugated_metal_grate" : {
+    "output" : {
+      "#dustydecorations:waxed_corrugated_metal_grate" : 1
+    },
+    "input" : {
+      "#dustydecorations:corrugated_metal_grate" : 1,
+      "minecraft:honeycomb" : 1
+    }
+  },
+  "dustydecorations:waxed_corrugated_metal_pressure_plate" : {
+    "output" : {
+      "#dustydecorations:waxed_corrugated_metal_pressure_plate" : 1
+    },
+    "input" : {
+      "#dustydecorations:corrugated_metal_pressure_plate" : 1,
+      "minecraft:honeycomb" : 1
+    }
+  },
+  "dustydecorations:waxed_corrugated_metal_roofing" : {
+    "output" : {
+      "#dustydecorations:waxed_corrugated_metal_roofing" : 1
+    },
+    "input" : {
+      "#dustydecorations:corrugated_metal_roofing" : 1,
+      "minecraft:honeycomb" : 1
+    }
+  },
+  "dustydecorations:waxed_corrugated_metal_slab" : {
+    "output" : {
+      "#dustydecorations:waxed_corrugated_metal_slab" : 1
+    },
+    "input" : {
+      "#dustydecorations:corrugated_metal_slab" : 1,
+      "minecraft:honeycomb" : 1
+    }
+  },
+  "dustydecorations:waxed_corrugated_metal_stairs" : {
+    "output" : {
+      "#dustydecorations:waxed_corrugated_metal_stairs" : 1
+    },
+    "input" : {
+      "#dustydecorations:corrugated_metal_stairs" : 1,
+      "minecraft:honeycomb" : 1
+    }
+  },
+  "dustydecorations:waxed_corrugated_metal_trapdoor" : {
+    "output" : {
+      "#dustydecorations:waxed_corrugated_metal_trapdoor" : 1
+    },
+    "input" : {
+      "#dustydecorations:corrugated_metal_trapdoor" : 1,
+      "minecraft:honeycomb" : 1
+    }
+  },
+  "minecraft:waxed_copper_bars" : {
+    "output" : {
+      "#minecraft:waxed_copper_bars" : 1
+    },
+    "input" : {
+      "#minecraft:copper_bars" : 1,
+      "minecraft:honeycomb" : 1
+    }
+  },
+  "minecraft:waxed_copper_chain" : {
+    "output" : {
+      "#minecraft:waxed_copper_chain" : 1
+    },
+    "input" : {
+      "#minecraft:copper_chain" : 1,
+      "minecraft:honeycomb" : 1
+    }
+  },
+  "minecraft:waxed_copper_lantern" : {
+    "output" : {
+      "#minecraft:waxed_copper_lantern" : 1
+    },
+    "input" : {
+      "#minecraft:copper_lantern" : 1,
+      "minecraft:honeycomb" : 1
+    }
   }
 }

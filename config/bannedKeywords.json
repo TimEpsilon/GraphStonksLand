@@ -334,6 +334,27 @@
     "jackpot:life_chip",
     "jackpot:lucky_ticket",
     "jackpot:mulligan_ticket",
-    "create:filling-irons_spellbooks:filling/arcane_ingot"
+    "create:filling-irons_spellbooks:filling/arcane_ingot",
+    "bf_blockpack:*_tulip",
+    "railwaysuntold:*",
+    "bf_blockpack:allium",
+    "bf_blockpack:azure_bluet",
+    "bf_blockpack:blue_orchid",
+    "bf_blockpack:cornflower",
+    "bf_blockpack:dandelion",
+    "bf_blockpack:glass_roof",
+    "bf_blockpack:japanese_roof",
+    "bf_blockpack:japanese_roof_ridge",
+    "bf_blockpack:lily_of_the_valley",
+    "bf_blockpack:oxeye_daisy",
+    "bf_blockpack:poppy",
+    "crafting-dustydecorations:smooth_stone_quoin",
+    "dustydecorations:burlap_awning",
+    "dustydecorations:dusty_decorations_barrel",
+    "gtbcs_spell_lib:painting_spell_lib",
+    "gtbcs_spell_lib:treasure_pouch",
+    "hazentouvelib:soul_igniter",
+    "crafting-dustydecorations:cowhide_rug_from_mooshroom_cowhide_rug",
+    "dustydecorations:smooth_stone_quoin"
   ]
 }

@@ -367,7 +367,7 @@
             "SCT": 25.484
         },
         "#create:valve_handles": {
-            "SCT": 3.656
+            "SCT": 3.653
         },
         "#createdeco:placards": {
             "SCT": 8.601
@@ -579,20 +579,194 @@
         "hazennstuff:dreadstone_ore": {
             "SCT": 35.0
         },
-        "dustydecorations:deepslate_embedded_fish_fossil": {
+        "dustydecorations:copper_light": {
+            "SCT": 10.692
+        },
+        "dustydecorations:shoddy_copper_light": {
+            "SCT": 10.692
+        },
+        "dustydecorations:corrugated_metal_block": {
+            "SCT": 31.491
+        },
+        "dustydecorations:rusted_corrugated_metal_block": {
+            "SCT": 31.491
+        },
+        "dustydecorations:corrugated_metal_button": {
+            "SCT": 31.491
+        },
+        "dustydecorations:rusted_corrugated_metal_button": {
+            "SCT": 31.491
+        },
+        "dustydecorations:corrugated_metal_door": {
+            "SCT": 6.998
+        },
+        "dustydecorations:rusted_corrugated_metal_door": {
+            "SCT": 6.998
+        },
+        "dustydecorations:corrugated_metal_fence": {
+            "SCT": 22.16
+        },
+        "dustydecorations:rusted_corrugated_metal_fence": {
+            "SCT": 22.16
+        },
+        "dustydecorations:corrugated_metal_fence_gate": {
+            "SCT": 76.978
+        },
+        "dustydecorations:rusted_corrugated_metal_fence_gate": {
+            "SCT": 76.978
+        },
+        "dustydecorations:corrugated_metal_grate": {
+            "SCT": 31.491
+        },
+        "dustydecorations:rusted_corrugated_metal_grate": {
+            "SCT": 31.491
+        },
+        "dustydecorations:corrugated_metal_pressure_plate": {
+            "SCT": 6.998
+        },
+        "dustydecorations:rusted_corrugated_metal_pressure_plate": {
+            "SCT": 6.998
+        },
+        "dustydecorations:corrugated_metal_roofing": {
+            "SCT": 5.248
+        },
+        "dustydecorations:rusted_corrugated_metal_roofing": {
+            "SCT": 5.248
+        },
+        "dustydecorations:corrugated_metal_slab": {
+            "SCT": 15.746
+        },
+        "dustydecorations:rusted_corrugated_metal_slab": {
+            "SCT": 15.746
+        },
+        "dustydecorations:corrugated_metal_stairs": {
+            "SCT": 47.236
+        },
+        "dustydecorations:rusted_corrugated_metal_stairs": {
+            "SCT": 47.236
+        },
+        "dustydecorations:corrugated_metal_trapdoor": {
+            "SCT": 13.996
+        },
+        "dustydecorations:rusted_corrugated_metal_trapdoor": {
+            "SCT": 13.996
+        },
+        "#dustydecorations:cushions": {
+            "SCT": 6.583
+        },
+        "dustydecorations:deepslate_marine_fossil": {
             "SCT": 10.0
         },
-        "dustydecorations:embedded_fish_fossil": {
+        "dustydecorations:stone_marine_fossil": {
             "SCT": 10.0
         },
-        "dustydecorations:seaglass_embedded_gravel": {
-            "SCT": 10.0
+        "dustydecorations:seaglass_gravel": {
+            "SCT": 50.0
         },
-        "dustydecorations:seaglass_embedded_sand": {
-            "SCT": 10.0
+        "dustydecorations:seaglass_sand": {
+            "SCT": 50.0
         },
-        "#dustydecorations:seaglass_fragment": {
+        "dustydecorations:hazel_seaglass_fragments": {
             "SCT": 30.0
+        },
+        "dustydecorations:cream_seaglass_fragments": {
+            "SCT": 30.0
+        },
+        "dustydecorations:scarlet_seaglass_fragments": {
+            "SCT": 30.0
+        },
+        "dustydecorations:honey_seaglass_fragments": {
+            "SCT": 30.0
+        },
+        "dustydecorations:mint_seaglass_fragments": {
+            "SCT": 30.0
+        },
+        "dustydecorations:teal_seaglass_fragments": {
+            "SCT": 30.0
+        },
+        "dustydecorations:liquorice_seaglass_fragments": {
+            "SCT": 30.0
+        },
+        "dustydecorations:mocha_seaglass_fragments": {
+            "SCT": 30.0
+        },
+        "dustydecorations:taupe_seaglass_fragments": {
+            "SCT": 30.0
+        },
+        "dustydecorations:cerulean_seaglass_fragments": {
+            "SCT": 30.0
+        },
+        "dustydecorations:waxed_copper_light": {
+            "SCT": 30.692
+        },
+        "dustydecorations:waxed_shoddy_copper_light": {
+            "SCT": 30.692
+        },
+        "dustydecorations:waxed_corrugated_metal_block": {
+            "SCT": 51.491
+        },
+        "dustydecorations:waxed_rusted_corrugated_metal_block": {
+            "SCT": 51.491
+        },
+        "dustydecorations:waxed_corrugated_metal_button": {
+            "SCT": 51.491
+        },
+        "dustydecorations:waxed_rusted_corrugated_metal_button": {
+            "SCT": 51.491
+        },
+        "dustydecorations:waxed_corrugated_metal_door": {
+            "SCT": 26.998
+        },
+        "dustydecorations:waxed_rusted_corrugated_metal_door": {
+            "SCT": 26.998
+        },
+        "dustydecorations:waxed_corrugated_metal_fence": {
+            "SCT": 42.16
+        },
+        "dustydecorations:waxed_rusted_corrugated_metal_fence": {
+            "SCT": 42.16
+        },
+        "dustydecorations:waxed_corrugated_metal_fence_gate": {
+            "SCT": 96.978
+        },
+        "dustydecorations:waxed_rusted_corrugated_metal_fence_gate": {
+            "SCT": 96.978
+        },
+        "dustydecorations:waxed_corrugated_metal_grate": {
+            "SCT": 51.491
+        },
+        "dustydecorations:waxed_rusted_corrugated_metal_grate": {
+            "SCT": 51.491
+        },
+        "dustydecorations:waxed_corrugated_metal_pressure_plate": {
+            "SCT": 26.998
+        },
+        "dustydecorations:waxed_rusted_corrugated_metal_pressure_plate": {
+            "SCT": 26.998
+        },
+        "dustydecorations:waxed_corrugated_metal_roofing": {
+            "SCT": 25.248
+        },
+        "dustydecorations:waxed_rusted_corrugated_metal_roofing": {
+            "SCT": 25.248
+        },
+        "dustydecorations:waxed_corrugated_metal_slab": {
+            "SCT": 35.746
+        },
+        "dustydecorations:waxed_rusted_corrugated_metal_slab": {
+            "SCT": 35.746
+        },
+        "dustydecorations:waxed_corrugated_metal_stairs": {
+            "SCT": 67.236
+        },
+        "dustydecorations:waxed_rusted_corrugated_metal_stairs": {
+            "SCT": 67.236
+        },
+        "dustydecorations:waxed_corrugated_metal_trapdoor": {
+            "SCT": 33.996
+        },
+        "dustydecorations:waxed_rusted_corrugated_metal_trapdoor": {
+            "SCT": 33.996
         },
         "#c:eggs": {
             "SCT": 1.0
@@ -837,26 +1011,29 @@
         "#hazennstuff:blocks/wisewood_logs": {
             "SCT": 1.5
         },
+        "#minecraft:poplar_logs": {
+            "SCT": 1.5
+        },
         "minecraft:chicken": {
-            "SCT": 4.0
+            "SCT": 6.0
         },
         "minecraft:beef": {
-            "SCT": 4.0
+            "SCT": 6.0
         },
         "minecraft:mutton": {
-            "SCT": 4.0
+            "SCT": 6.0
         },
         "minecraft:porkchop": {
-            "SCT": 4.0
+            "SCT": 6.0
         },
         "minecraft:rabbit": {
-            "SCT": 4.0
+            "SCT": 6.0
         },
         "farmersdelight:ham": {
-            "SCT": 4.0
+            "SCT": 6.0
         },
         "relics:raw_meatball": {
-            "SCT": 4.0
+            "SCT": 6.0
         },
         "#minecraft:banners": {
             "SCT": 24.188
@@ -871,118 +1048,193 @@
             "SCT": 21.0
         },
         "minecraft:chiseled_copper": {
-            "SCT": 2.25
+            "SCT": 2.248
         },
         "minecraft:exposed_chiseled_copper": {
-            "SCT": 2.25
+            "SCT": 2.248
         },
         "minecraft:weathered_chiseled_copper": {
-            "SCT": 2.25
+            "SCT": 2.248
         },
         "minecraft:oxidized_chiseled_copper": {
-            "SCT": 2.25
+            "SCT": 2.248
+        },
+        "minecraft:weathered_copper_bars": {
+            "SCT": 0.375
+        },
+        "minecraft:exposed_copper_bars": {
+            "SCT": 0.375
+        },
+        "minecraft:oxidized_copper_bars": {
+            "SCT": 0.375
+        },
+        "minecraft:copper_bars": {
+            "SCT": 0.375
         },
         "minecraft:copper_bulb": {
-            "SCT": 13.0
+            "SCT": 12.993
         },
         "minecraft:exposed_copper_bulb": {
-            "SCT": 13.0
+            "SCT": 12.993
         },
         "minecraft:weathered_copper_bulb": {
-            "SCT": 13.0
+            "SCT": 12.993
         },
         "minecraft:oxidized_copper_bulb": {
-            "SCT": 13.0
+            "SCT": 12.993
+        },
+        "minecraft:exposed_copper_chain": {
+            "SCT": 1.125
+        },
+        "minecraft:oxidized_copper_chain": {
+            "SCT": 1.125
+        },
+        "minecraft:weathered_copper_chain": {
+            "SCT": 1.125
+        },
+        "minecraft:copper_chain": {
+            "SCT": 1.125
+        },
+        "minecraft:exposed_copper_chest": {
+            "SCT": 10.992
+        },
+        "minecraft:oxidized_copper_chest": {
+            "SCT": 10.992
+        },
+        "minecraft:weathered_copper_chest": {
+            "SCT": 10.992
+        },
+        "minecraft:copper_chest": {
+            "SCT": 10.992
         },
         "minecraft:copper_door": {
-            "SCT": 2.0
+            "SCT": 1.998
         },
         "minecraft:exposed_copper_door": {
-            "SCT": 2.0
+            "SCT": 1.998
         },
         "minecraft:weathered_copper_door": {
-            "SCT": 2.0
+            "SCT": 1.998
         },
         "minecraft:oxidized_copper_door": {
-            "SCT": 2.0
+            "SCT": 1.998
+        },
+        "minecraft:copper_golem_statue": {
+            "SCT": 14.991
+        },
+        "minecraft:exposed_copper_golem_statue": {
+            "SCT": 14.991
+        },
+        "minecraft:oxidized_copper_golem_statue": {
+            "SCT": 14.991
+        },
+        "minecraft:weathered_copper_golem_statue": {
+            "SCT": 14.991
         },
         "minecraft:copper_grate": {
-            "SCT": 2.25
+            "SCT": 2.248
         },
         "minecraft:exposed_copper_grate": {
-            "SCT": 2.25
+            "SCT": 2.248
         },
         "minecraft:weathered_copper_grate": {
-            "SCT": 2.25
+            "SCT": 2.248
         },
         "minecraft:oxidized_copper_grate": {
-            "SCT": 2.25
+            "SCT": 2.248
+        },
+        "minecraft:exposed_copper_lantern": {
+            "SCT": 0.754
+        },
+        "minecraft:oxidized_copper_lantern": {
+            "SCT": 0.754
+        },
+        "minecraft:weathered_copper_lantern": {
+            "SCT": 0.754
+        },
+        "minecraft:copper_lantern": {
+            "SCT": 0.754
         },
         "minecraft:copper_trapdoor": {
-            "SCT": 3.0
+            "SCT": 2.997
         },
         "minecraft:exposed_copper_trapdoor": {
-            "SCT": 3.0
+            "SCT": 2.997
         },
         "minecraft:weathered_copper_trapdoor": {
-            "SCT": 3.0
+            "SCT": 2.997
         },
         "minecraft:oxidized_copper_trapdoor": {
-            "SCT": 3.0
+            "SCT": 2.997
         },
         "minecraft:copper_block": {
-            "SCT": 9.0
+            "SCT": 8.991
         },
         "minecraft:exposed_copper": {
-            "SCT": 9.0
+            "SCT": 8.991
         },
         "minecraft:weathered_copper": {
-            "SCT": 9.0
+            "SCT": 8.991
         },
         "minecraft:oxidized_copper": {
-            "SCT": 9.0
+            "SCT": 8.991
+        },
+        "#minecraft:cushions": {
+            "SCT": 6.0
         },
         "minecraft:cut_copper_slab": {
-            "SCT": 1.125
+            "SCT": 1.124
         },
         "minecraft:exposed_cut_copper_slab": {
-            "SCT": 1.125
+            "SCT": 1.124
         },
         "minecraft:weathered_cut_copper_slab": {
-            "SCT": 1.125
+            "SCT": 1.124
         },
         "minecraft:oxidized_cut_copper_slab": {
-            "SCT": 1.125
+            "SCT": 1.124
         },
         "minecraft:cut_copper_stairs": {
-            "SCT": 2.25
+            "SCT": 2.248
         },
         "minecraft:exposed_cut_copper_stairs": {
-            "SCT": 2.25
+            "SCT": 2.248
         },
         "minecraft:weathered_cut_copper_stairs": {
-            "SCT": 2.25
+            "SCT": 2.248
         },
         "minecraft:oxidized_cut_copper_stairs": {
-            "SCT": 2.25
+            "SCT": 2.248
         },
         "minecraft:cut_copper": {
-            "SCT": 2.25
+            "SCT": 2.248
         },
         "minecraft:exposed_cut_copper": {
-            "SCT": 2.25
+            "SCT": 2.248
         },
         "minecraft:weathered_cut_copper": {
-            "SCT": 2.25
+            "SCT": 2.248
         },
         "minecraft:oxidized_cut_copper": {
-            "SCT": 2.25
+            "SCT": 2.248
         },
         "#minecraft:harnesses": {
             "SCT": 16.2
         },
         "#minecraft:leaves": {
             "SCT": 0.1
+        },
+        "minecraft:oxidized_lightning_rod": {
+            "SCT": 2.997
+        },
+        "minecraft:weathered_lightning_rod": {
+            "SCT": 2.997
+        },
+        "minecraft:exposed_lightning_rod": {
+            "SCT": 2.997
+        },
+        "minecraft:lightning_rod": {
+            "SCT": 2.997
         },
         "minecraft:carved_pumpkin": {
             "SCT": 6.0
@@ -1047,11 +1299,86 @@
         "#minecraft:terracotta": {
             "SCT": 0.4
         },
+        "minecraft:waxed_weathered_copper_bars": {
+            "SCT": 20.375
+        },
+        "minecraft:waxed_exposed_copper_bars": {
+            "SCT": 20.375
+        },
+        "minecraft:waxed_oxidized_copper_bars": {
+            "SCT": 20.375
+        },
+        "minecraft:waxed_copper_bars": {
+            "SCT": 20.375
+        },
+        "minecraft:waxed_exposed_copper_chain": {
+            "SCT": 21.125
+        },
+        "minecraft:waxed_oxidized_copper_chain": {
+            "SCT": 21.125
+        },
+        "minecraft:waxed_weathered_copper_chain": {
+            "SCT": 21.125
+        },
+        "minecraft:waxed_copper_chain": {
+            "SCT": 21.125
+        },
+        "minecraft:waxed_exposed_copper_chest": {
+            "SCT": 30.992
+        },
+        "minecraft:waxed_oxidized_copper_chest": {
+            "SCT": 30.992
+        },
+        "minecraft:waxed_weathered_copper_chest": {
+            "SCT": 30.992
+        },
+        "minecraft:waxed_copper_chest": {
+            "SCT": 30.992
+        },
+        "minecraft:waxed_copper_golem_statue": {
+            "SCT": 34.991
+        },
+        "minecraft:waxed_exposed_copper_golem_statue": {
+            "SCT": 34.991
+        },
+        "minecraft:waxed_oxidized_copper_golem_statue": {
+            "SCT": 34.991
+        },
+        "minecraft:waxed_weathered_copper_golem_statue": {
+            "SCT": 34.991
+        },
+        "minecraft:waxed_exposed_copper_lantern": {
+            "SCT": 20.754
+        },
+        "minecraft:waxed_oxidized_copper_lantern": {
+            "SCT": 20.754
+        },
+        "minecraft:waxed_weathered_copper_lantern": {
+            "SCT": 20.754
+        },
+        "minecraft:waxed_copper_lantern": {
+            "SCT": 20.754
+        },
+        "minecraft:waxed_oxidized_lightning_rod": {
+            "SCT": 22.997
+        },
+        "minecraft:waxed_weathered_lightning_rod": {
+            "SCT": 22.997
+        },
+        "minecraft:waxed_exposed_lightning_rod": {
+            "SCT": 22.997
+        },
+        "minecraft:waxed_lightning_rod": {
+            "SCT": 22.997
+        },
         "#minecraft:wool": {
             "SCT": 4.0
         },
         "#minecraft:wool_carpets": {
             "SCT": 2.667
+        },
+        "#minecraft:wool_stairs": {
+            "SCT": 6.0
         },
         "#c:ores/mithril": {
             "SCT": 20.0
@@ -1102,19 +1429,19 @@
             "SCT": 12.94
         },
         "minecraft:carrot": {
-            "SCT": 7.5
+            "SCT": 4.0
         },
         "minecraft:beetroot": {
-            "SCT": 7.5
+            "SCT": 4.0
         },
         "minecraft:potato": {
-            "SCT": 7.5
+            "SCT": 4.0
         },
         "farmersdelight:tomato": {
-            "SCT": 7.5
+            "SCT": 4.0
         },
         "farmersdelight:cabbage": {
-            "SCT": 7.5
+            "SCT": 4.0
         },
         "minecraft:spore_blossom": {
             "SCT": 0.1
@@ -1254,6 +1581,12 @@
         "farmersdelight:sandy_shrub": {
             "SCT": 0.1
         },
+        "minecraft:red_shrub": {
+            "SCT": 0.1
+        },
+        "minecraft:shelf_mushroom": {
+            "SCT": 0.1
+        },
         "#minecraft:decorated_pot_sherds": {
             "SCT": 200.0
         },
@@ -1336,52 +1669,52 @@
             "SCT": 60.0
         },
         "somemoreblocks:copper_bricks": {
-            "SCT": 2.25
+            "SCT": 2.248
         },
         "somemoreblocks:exposed_copper_bricks": {
-            "SCT": 2.25
+            "SCT": 2.248
         },
         "somemoreblocks:weathered_copper_bricks": {
-            "SCT": 2.25
+            "SCT": 2.248
         },
         "somemoreblocks:oxidized_copper_bricks": {
-            "SCT": 2.25
+            "SCT": 2.248
         },
         "somemoreblocks:copper_pillar": {
-            "SCT": 9.0
+            "SCT": 8.991
         },
         "somemoreblocks:exposed_copper_pillar": {
-            "SCT": 9.0
+            "SCT": 8.991
         },
         "somemoreblocks:weathered_copper_pillar": {
-            "SCT": 9.0
+            "SCT": 8.991
         },
         "somemoreblocks:oxidized_copper_pillar": {
-            "SCT": 9.0
+            "SCT": 8.991
         },
         "somemoreblocks:cracked_copper_bricks": {
-            "SCT": 2.25
+            "SCT": 2.248
         },
         "somemoreblocks:exposed_cracked_copper_bricks": {
-            "SCT": 2.25
+            "SCT": 2.248
         },
         "somemoreblocks:weathered_cracked_copper_bricks": {
-            "SCT": 2.25
+            "SCT": 2.248
         },
         "somemoreblocks:oxidized_cracked_copper_bricks": {
-            "SCT": 2.25
+            "SCT": 2.248
         },
         "somemoreblocks:cracked_cut_copper": {
-            "SCT": 2.25
+            "SCT": 2.248
         },
         "somemoreblocks:exposed_cracked_cut_copper": {
-            "SCT": 2.25
+            "SCT": 2.248
         },
         "somemoreblocks:weathered_cracked_cut_copper": {
-            "SCT": 2.25
+            "SCT": 2.248
         },
         "somemoreblocks:oxidized_cracked_cut_copper": {
-            "SCT": 2.25
+            "SCT": 2.248
         },
         "#minecraft:stone_tool_materials": {
             "SCT": 0.1
@@ -1444,6 +1777,12 @@
             "SCT": 0.1
         },
         "supplementaries:brittlestone": {
+            "SCT": 0.1
+        },
+        "dustydecorations:seastone": {
+            "SCT": 0.1
+        },
+        "dustydecorations:smooth_seastone": {
             "SCT": 0.1
         },
         "#supplementaries:awnings": {
@@ -1677,6 +2016,90 @@
         "born_in_chaos_v1:tombstone_the_gentleman_frog": {
             "SCT": 14400.0
         },
+        "yagm:cold_grave_tier_1": {
+            "SCT": 10.0
+        },
+        "yagm:end_grave_tier_1": {
+            "SCT": 10.0
+        },
+        "yagm:grave_tier_1": {
+            "SCT": 10.0
+        },
+        "yagm:hot_grave_tier_1": {
+            "SCT": 10.0
+        },
+        "yagm:nether_grave_tier_1": {
+            "SCT": 10.0
+        },
+        "yagm:ocean_grave_tier_1": {
+            "SCT": 10.0
+        },
+        "yagm:tropics_grave_tier_1": {
+            "SCT": 10.0
+        },
+        "yagm:cold_grave_tier_2": {
+            "SCT": 30.0
+        },
+        "yagm:end_grave_tier_2": {
+            "SCT": 30.0
+        },
+        "yagm:grave_tier_2": {
+            "SCT": 30.0
+        },
+        "yagm:hot_grave_tier_2": {
+            "SCT": 30.0
+        },
+        "yagm:nether_grave_tier_2": {
+            "SCT": 30.0
+        },
+        "yagm:ocean_grave_tier_2": {
+            "SCT": 30.0
+        },
+        "yagm:tropics_grave_tier_2": {
+            "SCT": 30.0
+        },
+        "yagm:cold_grave_tier_3": {
+            "SCT": 90.0
+        },
+        "yagm:end_grave_tier_3": {
+            "SCT": 90.0
+        },
+        "yagm:grave_tier_3": {
+            "SCT": 90.0
+        },
+        "yagm:hot_grave_tier_3": {
+            "SCT": 90.0
+        },
+        "yagm:nether_grave_tier_3": {
+            "SCT": 90.0
+        },
+        "yagm:ocean_grave_tier_3": {
+            "SCT": 90.0
+        },
+        "yagm:tropics_grave_tier_3": {
+            "SCT": 90.0
+        },
+        "yagm:cold_grave_tier_4": {
+            "SCT": 270.0
+        },
+        "yagm:end_grave_tier_4": {
+            "SCT": 270.0
+        },
+        "yagm:grave_tier_4": {
+            "SCT": 270.0
+        },
+        "yagm:hot_grave_tier_4": {
+            "SCT": 270.0
+        },
+        "yagm:nether_grave_tier_4": {
+            "SCT": 270.0
+        },
+        "yagm:ocean_grave_tier_4": {
+            "SCT": 270.0
+        },
+        "yagm:tropics_grave_tier_4": {
+            "SCT": 270.0
+        },
         "#hazennstuff:blocks/zenalite_ores": {
             "SCT": 100.0
         },
@@ -1688,6 +2111,12 @@
         },
         "amendments:dragon_charge": {
             "SCT": 61.1
+        },
+        "ancient_remnants:monolith_codex": {
+            "SCT": 18.984
+        },
+        "ancient_remnants:research_scrap": {
+            "SCT": 300.0
         },
         "better_weaponry:amethyst_armor_boots": {
             "SCT": 14.284
@@ -1765,79 +2194,79 @@
             "SCT": 7.33
         },
         "better_weaponry:copper_armor_boots": {
-            "SCT": 4.0
+            "SCT": 3.996
         },
         "better_weaponry:copper_armor_chestplate": {
-            "SCT": 8.0
+            "SCT": 7.992
         },
         "better_weaponry:copper_armor_helmet": {
-            "SCT": 5.0
+            "SCT": 4.995
         },
         "better_weaponry:copper_armor_leggings": {
-            "SCT": 7.0
+            "SCT": 6.993
         },
         "better_weaponry:copper_axe": {
-            "SCT": 3.376
+            "SCT": 3.373
         },
         "better_weaponry:copper_battleaxe": {
-            "SCT": 5.376
+            "SCT": 5.371
         },
         "better_weaponry:copper_broadsword": {
-            "SCT": 6.188
+            "SCT": 6.182
         },
         "better_weaponry:copper_chakram": {
-            "SCT": 4.188
+            "SCT": 4.184
         },
         "better_weaponry:copper_claymore": {
-            "SCT": 4.188
+            "SCT": 4.184
         },
         "better_weaponry:copper_cutlass": {
-            "SCT": 2.752
+            "SCT": 2.75
         },
         "better_weaponry:copper_dagger": {
-            "SCT": 1.188
+            "SCT": 1.187
         },
         "better_weaponry:copper_glaive": {
-            "SCT": 2.376
+            "SCT": 2.374
         },
         "better_weaponry:copper_hammer": {
-            "SCT": 6.188
+            "SCT": 6.182
         },
         "better_weaponry:copper_hoe": {
-            "SCT": 2.376
+            "SCT": 2.374
         },
         "better_weaponry:copper_katana": {
-            "SCT": 2.188
+            "SCT": 2.186
         },
         "better_weaponry:copper_pickaxe": {
-            "SCT": 3.376
+            "SCT": 3.373
         },
         "better_weaponry:copper_rapier": {
-            "SCT": 2.376
+            "SCT": 2.374
         },
         "better_weaponry:copper_sai": {
-            "SCT": 2.564
+            "SCT": 2.562
         },
         "better_weaponry:copper_scythe": {
-            "SCT": 4.376
+            "SCT": 4.372
         },
         "better_weaponry:copper_shield": {
-            "SCT": 3.25
+            "SCT": 3.249
         },
         "better_weaponry:copper_shovel": {
-            "SCT": 1.376
+            "SCT": 1.375
         },
         "better_weaponry:copper_shuriken": {
-            "SCT": 4.0
+            "SCT": 3.996
         },
         "better_weaponry:copper_sickle": {
-            "SCT": 2.188
+            "SCT": 2.186
         },
         "better_weaponry:copper_spear": {
-            "SCT": 1.376
+            "SCT": 1.375
         },
         "better_weaponry:copper_sword": {
-            "SCT": 2.188
+            "SCT": 2.186
         },
         "better_weaponry:diamond_battleaxe": {
             "SCT": 200.376
@@ -2203,7 +2632,7 @@
             "SCT": 0.751
         },
         "betterarcheology:archeology_table": {
-            "SCT": 103.688
+            "SCT": 103.687
         },
         "betterarcheology:artifact_shards": {
             "SCT": 100.0
@@ -2349,9 +2778,6 @@
         "bf_blockpack:air_conditioner": {
             "SCT": 246.0
         },
-        "bf_blockpack:allium": {
-            "SCT": 0.1
-        },
         "bf_blockpack:amethyst_bricks": {
             "SCT": 14.284
         },
@@ -2396,9 +2822,6 @@
         },
         "bf_blockpack:azalea_hanging_leaves": {
             "SCT": 0.55
-        },
-        "bf_blockpack:azure_bluet": {
-            "SCT": 0.1
         },
         "bf_blockpack:bamboo_beam": {
             "SCT": 0.225
@@ -2473,7 +2896,7 @@
             "SCT": 0.1
         },
         "bf_blockpack:beetroot_crate": {
-            "SCT": 48.0
+            "SCT": 27.0
         },
         "bf_blockpack:beetroot_seed_basket": {
             "SCT": 1.416
@@ -2672,9 +3095,6 @@
         },
         "bf_blockpack:blue_ice_tiles": {
             "SCT": 40.5
-        },
-        "bf_blockpack:blue_orchid": {
-            "SCT": 0.1
         },
         "bf_blockpack:blue_pattern_banner": {
             "SCT": 4.096
@@ -3019,7 +3439,7 @@
             "SCT": 0.4
         },
         "bf_blockpack:carrot_crate": {
-            "SCT": 48.0
+            "SCT": 27.0
         },
         "bf_blockpack:celosia": {
             "SCT": 0.1
@@ -3028,7 +3448,7 @@
             "SCT": 0.188
         },
         "bf_blockpack:cherry_board": {
-            "SCT": 0.375
+            "SCT": 0.563
         },
         "bf_blockpack:cherry_flower_pot_box": {
             "SCT": 1.8
@@ -3142,16 +3562,13 @@
             "SCT": 0.267
         },
         "bf_blockpack:copper_ladder": {
-            "SCT": 1.547
+            "SCT": 1.546
         },
         "bf_blockpack:copper_pipe": {
-            "SCT": 1.0
+            "SCT": 0.999
         },
         "bf_blockpack:corner_bricks": {
             "SCT": 0.3
-        },
-        "bf_blockpack:cornflower": {
-            "SCT": 0.1
         },
         "bf_blockpack:crimson_beam": {
             "SCT": 0.188
@@ -3299,9 +3716,6 @@
         },
         "bf_blockpack:cyan_wallpaper": {
             "SCT": 2.05
-        },
-        "bf_blockpack:dandelion": {
-            "SCT": 0.1
         },
         "bf_blockpack:dandelion_ivy_hanging_leaves": {
             "SCT": 1.3
@@ -3598,31 +4012,28 @@
             "SCT": 20.0
         },
         "bf_blockpack:exposed_copper_column": {
-            "SCT": 9.0
+            "SCT": 8.991
         },
         "bf_blockpack:exposed_copper_compressed": {
-            "SCT": 9.0
+            "SCT": 8.991
         },
         "bf_blockpack:exposed_copper_ladder": {
-            "SCT": 13.547
+            "SCT": 13.534
         },
         "bf_blockpack:exposed_copper_layered_panel": {
-            "SCT": 9.0
+            "SCT": 8.991
         },
         "bf_blockpack:exposed_copper_panel": {
-            "SCT": 9.0
+            "SCT": 8.991
         },
         "bf_blockpack:exposed_copper_pipe": {
-            "SCT": 9.0
+            "SCT": 8.991
         },
         "bf_blockpack:fallen_bricks": {
             "SCT": 0.5
         },
         "bf_blockpack:flowering_azalea_hanging_leaves": {
             "SCT": 0.6
-        },
-        "bf_blockpack:glass_roof": {
-            "SCT": 0.1
         },
         "bf_blockpack:glow_berry_crate": {
             "SCT": 7.5
@@ -3655,7 +4066,7 @@
             "SCT": 81.0
         },
         "bf_blockpack:golden_carrot_crate": {
-            "SCT": 96.0
+            "SCT": 75.0
         },
         "bf_blockpack:granite_chiseled": {
             "SCT": 0.075
@@ -3814,16 +4225,16 @@
             "SCT": 2.05
         },
         "bf_blockpack:guardrail_copper": {
-            "SCT": 11.0
+            "SCT": 10.998
         },
         "bf_blockpack:guardrail_copper_exposed": {
-            "SCT": 11.0
+            "SCT": 10.998
         },
         "bf_blockpack:guardrail_copper_oxidized": {
-            "SCT": 11.0
+            "SCT": 10.998
         },
         "bf_blockpack:guardrail_copper_weathered": {
-            "SCT": 11.0
+            "SCT": 10.998
         },
         "bf_blockpack:guardrail_iron": {
             "SCT": 21.0
@@ -3998,12 +4409,6 @@
         },
         "bf_blockpack:japanese_paper_door": {
             "SCT": 0.9
-        },
-        "bf_blockpack:japanese_roof": {
-            "SCT": 1.175
-        },
-        "bf_blockpack:japanese_roof_ridge": {
-            "SCT": 0.5
         },
         "bf_blockpack:japanese_roof_small": {
             "SCT": 1.175
@@ -4253,9 +4658,6 @@
         },
         "bf_blockpack:light_gray_wallpaper": {
             "SCT": 2.05
-        },
-        "bf_blockpack:lily_of_the_valley": {
-            "SCT": 0.1
         },
         "bf_blockpack:lime_awning": {
             "SCT": 3.75
@@ -4528,16 +4930,16 @@
             "SCT": 0.1
         },
         "bf_blockpack:normal_copper_column": {
-            "SCT": 9.0
+            "SCT": 8.991
         },
         "bf_blockpack:normal_copper_compressed": {
-            "SCT": 9.0
+            "SCT": 8.991
         },
         "bf_blockpack:normal_copper_layered_panel": {
-            "SCT": 9.0
+            "SCT": 8.991
         },
         "bf_blockpack:normal_copper_panel": {
-            "SCT": 9.0
+            "SCT": 8.991
         },
         "bf_blockpack:oak_beam": {
             "SCT": 0.188
@@ -4546,7 +4948,7 @@
             "SCT": 0.563
         },
         "bf_blockpack:oak_flower_pot_box": {
-            "SCT": 4.8
+            "SCT": 1.8
         },
         "bf_blockpack:oak_glass_door": {
             "SCT": 0.517
@@ -4659,32 +5061,26 @@
         "bf_blockpack:orange_terracotta_tiles": {
             "SCT": 0.4
         },
-        "bf_blockpack:orange_tulip": {
-            "SCT": 0.1
-        },
         "bf_blockpack:orange_wallpaper": {
             "SCT": 2.05
         },
-        "bf_blockpack:oxeye_daisy": {
-            "SCT": 0.1
-        },
         "bf_blockpack:oxidized_copper_column": {
-            "SCT": 9.0
+            "SCT": 8.991
         },
         "bf_blockpack:oxidized_copper_compressed": {
-            "SCT": 9.0
+            "SCT": 8.991
         },
         "bf_blockpack:oxidized_copper_ladder": {
-            "SCT": 13.547
+            "SCT": 13.534
         },
         "bf_blockpack:oxidized_copper_layered_panel": {
-            "SCT": 9.0
+            "SCT": 8.991
         },
         "bf_blockpack:oxidized_copper_panel": {
-            "SCT": 9.0
+            "SCT": 8.991
         },
         "bf_blockpack:oxidized_copper_pipe": {
-            "SCT": 9.0
+            "SCT": 8.991
         },
         "bf_blockpack:packed_ice_bricks": {
             "SCT": 4.5
@@ -4779,9 +5175,6 @@
         "bf_blockpack:pink_terracotta_tiles": {
             "SCT": 0.4
         },
-        "bf_blockpack:pink_tulip": {
-            "SCT": 0.1
-        },
         "bf_blockpack:pink_wallpaper": {
             "SCT": 2.05
         },
@@ -4794,14 +5187,11 @@
         "bf_blockpack:plaster_bricks": {
             "SCT": 0.5
         },
-        "bf_blockpack:poppy": {
-            "SCT": 0.1
-        },
         "bf_blockpack:poppy_ivy_hanging_leaves": {
             "SCT": 1.3
         },
         "bf_blockpack:potato_crate": {
-            "SCT": 48.0
+            "SCT": 27.0
         },
         "bf_blockpack:primrose": {
             "SCT": 0.1
@@ -5048,9 +5438,6 @@
         },
         "bf_blockpack:red_terracotta_tiles": {
             "SCT": 0.4
-        },
-        "bf_blockpack:red_tulip": {
-            "SCT": 0.1
         },
         "bf_blockpack:red_wallpaper": {
             "SCT": 2.05
@@ -5401,7 +5788,7 @@
             "SCT": 0.05
         },
         "bf_blockpack:vertical_copper_slab": {
-            "SCT": 1.125
+            "SCT": 1.124
         },
         "bf_blockpack:vertical_crimson_planks": {
             "SCT": 0.376
@@ -5410,7 +5797,7 @@
             "SCT": 0.188
         },
         "bf_blockpack:vertical_cut_copper_slab": {
-            "SCT": 1.125
+            "SCT": 1.124
         },
         "bf_blockpack:vertical_cut_red_sandstone_slab": {
             "SCT": 0.2
@@ -5446,10 +5833,10 @@
             "SCT": 0.05
         },
         "bf_blockpack:vertical_exposed_copper_slab": {
-            "SCT": 1.125
+            "SCT": 1.124
         },
         "bf_blockpack:vertical_exposed_cut_copper_slab": {
-            "SCT": 1.125
+            "SCT": 1.124
         },
         "bf_blockpack:vertical_granite_slab": {
             "SCT": 0.05
@@ -5485,10 +5872,10 @@
             "SCT": 0.188
         },
         "bf_blockpack:vertical_oxidized_copper_slab": {
-            "SCT": 1.125
+            "SCT": 1.124
         },
         "bf_blockpack:vertical_oxidized_cut_copper_slab": {
-            "SCT": 1.125
+            "SCT": 1.124
         },
         "bf_blockpack:vertical_polished_andesite_slab": {
             "SCT": 0.05
@@ -5572,31 +5959,31 @@
             "SCT": 0.188
         },
         "bf_blockpack:vertical_waxed_cut_copper_slab": {
-            "SCT": 3.625
+            "SCT": 3.624
         },
         "bf_blockpack:vertical_waxed_exposed_copper_slab": {
-            "SCT": 3.625
+            "SCT": 3.624
         },
         "bf_blockpack:vertical_waxed_exposed_cut_copper_slab": {
-            "SCT": 3.625
+            "SCT": 3.624
         },
         "bf_blockpack:vertical_waxed_oxidized_copper_slab": {
-            "SCT": 3.625
+            "SCT": 3.624
         },
         "bf_blockpack:vertical_waxed_oxidized_cut_copper_slab": {
-            "SCT": 3.625
+            "SCT": 3.624
         },
         "bf_blockpack:vertical_waxed_weathered_copper_slab": {
-            "SCT": 3.625
+            "SCT": 3.624
         },
         "bf_blockpack:vertical_waxed_weathered_cut_copper_slab": {
-            "SCT": 3.625
+            "SCT": 3.624
         },
         "bf_blockpack:vertical_weathered_copper_slab": {
-            "SCT": 1.125
+            "SCT": 1.124
         },
         "bf_blockpack:vertical_weathered_cut_copper_slab": {
-            "SCT": 1.125
+            "SCT": 1.124
         },
         "bf_blockpack:violet_ivy_hanging_leaves": {
             "SCT": 1.3
@@ -5689,22 +6076,22 @@
             "SCT": 24.0
         },
         "bf_blockpack:weathered_copper_column": {
-            "SCT": 9.0
+            "SCT": 8.991
         },
         "bf_blockpack:weathered_copper_compressed": {
-            "SCT": 9.0
+            "SCT": 8.991
         },
         "bf_blockpack:weathered_copper_ladder": {
-            "SCT": 13.547
+            "SCT": 13.534
         },
         "bf_blockpack:weathered_copper_layered_panel": {
-            "SCT": 9.0
+            "SCT": 8.991
         },
         "bf_blockpack:weathered_copper_panel": {
-            "SCT": 9.0
+            "SCT": 8.991
         },
         "bf_blockpack:weathered_copper_pipe": {
-            "SCT": 9.0
+            "SCT": 8.991
         },
         "bf_blockpack:white_awning": {
             "SCT": 3.75
@@ -5756,9 +6143,6 @@
         },
         "bf_blockpack:white_terracotta_tiles": {
             "SCT": 0.4
-        },
-        "bf_blockpack:white_tulip": {
-            "SCT": 0.1
         },
         "bf_blockpack:white_wallpaper": {
             "SCT": 2.05
@@ -5899,7 +6283,7 @@
             "SCT": 17.0
         },
         "born_in_chaos_v1:carrot_sword": {
-            "SCT": 121.355
+            "SCT": 117.855
         },
         "born_in_chaos_v1:carved_black_argillite": {
             "SCT": 2.65
@@ -6301,7 +6685,7 @@
             "SCT": 61.0
         },
         "born_in_chaos_v1:stained_black_argillite_brick": {
-            "SCT": 10.15
+            "SCT": 6.65
         },
         "born_in_chaos_v1:stimulating_bomb": {
             "SCT": 176.1
@@ -6358,7 +6742,7 @@
             "SCT": 0.802
         },
         "brewinandchewin:cheesy_pasta": {
-            "SCT": 11.575
+            "SCT": 8.075
         },
         "brewinandchewin:coaster": {
             "SCT": 2.0
@@ -6376,10 +6760,10 @@
             "SCT": 0.802
         },
         "brewinandchewin:fiery_fondue": {
-            "SCT": 12.433
+            "SCT": 9.6
         },
         "brewinandchewin:fiery_fondue_pot": {
-            "SCT": 37.3
+            "SCT": 28.8
         },
         "brewinandchewin:flaxen_cheese_wedge": {
             "SCT": 0.075
@@ -6394,25 +6778,25 @@
             "SCT": 2.35
         },
         "brewinandchewin:ham_and_cheese_sandwich": {
-            "SCT": 5.038
+            "SCT": 6.038
         },
         "brewinandchewin:heating_cask": {
             "SCT": 23.114
         },
         "brewinandchewin:horror_lasagna": {
-            "SCT": 24.875
+            "SCT": 14.375
         },
         "brewinandchewin:ice_crate": {
             "SCT": 7.564
         },
         "brewinandchewin:jerky": {
-            "SCT": 2.0
+            "SCT": 1.75
         },
         "brewinandchewin:keg": {
             "SCT": 45.5
         },
         "brewinandchewin:kimchi": {
-            "SCT": 2.925
+            "SCT": 2.05
         },
         "brewinandchewin:kippers": {
             "SCT": 3.05
@@ -6430,16 +6814,16 @@
             "SCT": 0.475
         },
         "brewinandchewin:pizza": {
-            "SCT": 18.275
+            "SCT": 11.275
         },
         "brewinandchewin:pizza_slice": {
-            "SCT": 4.569
+            "SCT": 2.819
         },
         "brewinandchewin:quiche": {
-            "SCT": 16.724
+            "SCT": 14.975
         },
         "brewinandchewin:quiche_slice": {
-            "SCT": 4.181
+            "SCT": 3.744
         },
         "brewinandchewin:red_rum": {
             "SCT": 0.802
@@ -6460,7 +6844,7 @@
             "SCT": 5.2
         },
         "brewinandchewin:scarlet_pierogi": {
-            "SCT": 18.55
+            "SCT": 13.3
         },
         "brewinandchewin:steel_toe_stout": {
             "SCT": 0.802
@@ -6481,7 +6865,7 @@
             "SCT": 5.2
         },
         "brewinandchewin:vegetable_omelet": {
-            "SCT": 11.575
+            "SCT": 8.075
         },
         "brewinandchewin:vodka": {
             "SCT": 0.802
@@ -6499,7 +6883,7 @@
             "SCT": 60.0
         },
         "chimes:copper_chimes": {
-            "SCT": 2.188
+            "SCT": 2.187
         },
         "chimes:glass_bells": {
             "SCT": 1.2
@@ -6508,7 +6892,7 @@
             "SCT": 13.522
         },
         "clavis:lock_pick": {
-            "SCT": 1.0
+            "SCT": 0.999
         },
         "comforts:rope_and_nail": {
             "SCT": 3.25
@@ -6709,22 +7093,22 @@
             "SCT": 26.735
         },
         "create:copper_backtank": {
-            "SCT": 13.421
+            "SCT": 13.409
         },
         "create:copper_bars": {
             "SCT": 0.25
         },
         "create:copper_casing": {
-            "SCT": 1.9
+            "SCT": 1.899
         },
         "create:copper_diving_boots": {
-            "SCT": 5.312
+            "SCT": 5.308
         },
         "create:copper_diving_helmet": {
-            "SCT": 5.1
+            "SCT": 5.095
         },
         "create:copper_door": {
-            "SCT": 2.65
+            "SCT": 2.649
         },
         "create:copper_ladder": {
             "SCT": 0.5
@@ -6736,7 +7120,7 @@
             "SCT": 0.5
         },
         "create:copper_sheet": {
-            "SCT": 1.0
+            "SCT": 0.999
         },
         "create:copper_table_cloth": {
             "SCT": 0.5
@@ -7141,7 +7525,7 @@
             "SCT": 48.656
         },
         "create:display_link": {
-            "SCT": 19.897
+            "SCT": 19.891
         },
         "create:dough": {
             "SCT": 1.0
@@ -7174,19 +7558,19 @@
             "SCT": 35.819
         },
         "create:factory_gauge": {
-            "SCT": 24.838
+            "SCT": 24.835
         },
         "create:filter": {
             "SCT": 5.334
         },
         "create:fluid_pipe": {
-            "SCT": 0.75
+            "SCT": 0.749
         },
         "create:fluid_tank": {
-            "SCT": 4.626
+            "SCT": 4.624
         },
         "create:fluid_valve": {
-            "SCT": 6.75
+            "SCT": 6.749
         },
         "create:flywheel": {
             "SCT": 24.085
@@ -7243,7 +7627,7 @@
             "SCT": 0.038
         },
         "create:hose_pulley": {
-            "SCT": 3.8
+            "SCT": 3.798
         },
         "create:industrial_iron_block": {
             "SCT": 3.0
@@ -7258,7 +7642,7 @@
             "SCT": 6.0
         },
         "create:item_drain": {
-            "SCT": 4.15
+            "SCT": 4.149
         },
         "create:item_hatch": {
             "SCT": 24.656
@@ -7327,7 +7711,7 @@
             "SCT": 1.937
         },
         "create:linked_controller": {
-            "SCT": 11.028
+            "SCT": 11.025
         },
         "create:mangrove_window": {
             "SCT": 0.612
@@ -7363,7 +7747,7 @@
             "SCT": 55.665
         },
         "create:mechanical_pump": {
-            "SCT": 1.234
+            "SCT": 1.233
         },
         "create:mechanical_roller": {
             "SCT": 103.604
@@ -7387,13 +7771,13 @@
             "SCT": 48.331
         },
         "create:netherite_backtank": {
-            "SCT": 1049.521
+            "SCT": 1049.509
         },
         "create:netherite_diving_boots": {
-            "SCT": 1041.412
+            "SCT": 1041.408
         },
         "create:netherite_diving_helmet": {
-            "SCT": 1041.2
+            "SCT": 1041.195
         },
         "create:nixie_tube": {
             "SCT": 48.0
@@ -7603,13 +7987,13 @@
             "SCT": 90.0
         },
         "create:portable_fluid_interface": {
-            "SCT": 6.4
+            "SCT": 6.399
         },
         "create:portable_storage_interface": {
             "SCT": 6.056
         },
         "create:potato_cannon": {
-            "SCT": 23.956
+            "SCT": 23.951
         },
         "create:powdered_obsidian": {
             "SCT": 1.0
@@ -7657,10 +8041,10 @@
             "SCT": 8.25
         },
         "create:redstone_link": {
-            "SCT": 8.778
+            "SCT": 8.775
         },
         "create:redstone_requester": {
-            "SCT": 46.626
+            "SCT": 46.62
         },
         "create:repackager": {
             "SCT": 46.6
@@ -7891,13 +8275,13 @@
             "SCT": 103.497
         },
         "create:smart_fluid_pipe": {
-            "SCT": 99.747
+            "SCT": 99.746
         },
         "create:speedometer": {
             "SCT": 35.556
         },
         "create:spout": {
-            "SCT": 2.0
+            "SCT": 1.999
         },
         "create:spruce_window": {
             "SCT": 0.612
@@ -7906,10 +8290,10 @@
             "SCT": 0.23
         },
         "create:steam_engine": {
-            "SCT": 18.656
+            "SCT": 18.647
         },
         "create:steam_whistle": {
-            "SCT": 10.0
+            "SCT": 9.999
         },
         "create:sticker": {
             "SCT": 16.512
@@ -7918,10 +8302,10 @@
             "SCT": 6.92
         },
         "create:stock_link": {
-            "SCT": 30.626
+            "SCT": 30.62
         },
         "create:stock_ticker": {
-            "SCT": 39.726
+            "SCT": 39.72
         },
         "create:stockpile_switch": {
             "SCT": 140.761
@@ -7963,7 +8347,7 @@
             "SCT": 8.522
         },
         "create:transmitter": {
-            "SCT": 16.0
+            "SCT": 15.994
         },
         "create:tree_fertilizer": {
             "SCT": 1.434
@@ -8122,7 +8506,7 @@
             "SCT": 3.856
         },
         "create_hypertube:hypertube_junction": {
-            "SCT": 34.321
+            "SCT": 34.315
         },
         "create_hypertube:redstone_detector_tube_attachment": {
             "SCT": 56.132
@@ -8131,28 +8515,28 @@
             "SCT": 158.126
         },
         "create_wizardry:arcane_block": {
-            "SCT": 452.52
+            "SCT": 452.511
         },
         "create_wizardry:arcane_casing": {
-            "SCT": 57.03
+            "SCT": 57.029
         },
         "create_wizardry:arcane_pipe": {
-            "SCT": 2.938
+            "SCT": 2.937
         },
         "create_wizardry:arcane_pump": {
-            "SCT": 3.422
+            "SCT": 3.421
         },
         "create_wizardry:arcane_sheet": {
-            "SCT": 11.0
+            "SCT": 10.999
         },
         "create_wizardry:blaze_caster": {
-            "SCT": 164.051
+            "SCT": 164.05
         },
         "create_wizardry:blood_bucket": {
-            "SCT": 42.0
+            "SCT": 39.0
         },
         "create_wizardry:channeler": {
-            "SCT": 106.1
+            "SCT": 106.089
         },
         "create_wizardry:crushed_mithril": {
             "SCT": 10.0
@@ -8164,13 +8548,13 @@
             "SCT": 20.0
         },
         "create_wizardry:mana_siphon": {
-            "SCT": 130.602
+            "SCT": 130.593
         },
         "create_wizardry:mithril_nugget": {
             "SCT": 1.111
         },
         "create_wizardry:smart_arcane_pipe": {
-            "SCT": 101.935
+            "SCT": 101.934
         },
         "createdeco:andesite_bars": {
             "SCT": 0.164
@@ -8236,7 +8620,7 @@
             "SCT": 0.225
         },
         "createdeco:blue_copper_lamp": {
-            "SCT": 1.323
+            "SCT": 1.322
         },
         "createdeco:blue_industrial_iron_lamp": {
             "SCT": 0.63
@@ -8317,25 +8701,25 @@
             "SCT": 0.252
         },
         "createdeco:copper_hull": {
-            "SCT": 6.5
+            "SCT": 6.494
         },
         "createdeco:copper_mesh_fence": {
             "SCT": 0.25
         },
         "createdeco:copper_sheet_metal": {
-            "SCT": 1.0
+            "SCT": 0.999
         },
         "createdeco:copper_support": {
-            "SCT": 1.0
+            "SCT": 0.999
         },
         "createdeco:copper_support_wedge": {
             "SCT": 0.25
         },
         "createdeco:copper_window": {
-            "SCT": 1.55
+            "SCT": 1.548
         },
         "createdeco:copper_window_pane": {
-            "SCT": 0.581
+            "SCT": 0.58
         },
         "createdeco:corner_blue_brick_slab": {
             "SCT": 0.112
@@ -8626,7 +9010,7 @@
             "SCT": 4.08
         },
         "createdeco:green_copper_lamp": {
-            "SCT": 1.813
+            "SCT": 1.812
         },
         "createdeco:green_industrial_iron_lamp": {
             "SCT": 1.12
@@ -8746,7 +9130,7 @@
             "SCT": 16.182
         },
         "createdeco:locked_copper_door": {
-            "SCT": 12.188
+            "SCT": 12.186
         },
         "createdeco:locked_industrial_iron_door": {
             "SCT": 10.854
@@ -8974,7 +9358,7 @@
             "SCT": 13.518
         },
         "createdeco:red_copper_lamp": {
-            "SCT": 11.251
+            "SCT": 11.25
         },
         "createdeco:red_industrial_iron_lamp": {
             "SCT": 10.558
@@ -9220,7 +9604,7 @@
             "SCT": 3.564
         },
         "createdeco:yellow_copper_lamp": {
-            "SCT": 1.297
+            "SCT": 1.296
         },
         "createdeco:yellow_industrial_iron_lamp": {
             "SCT": 0.604
@@ -9292,10 +9676,10 @@
             "SCT": 138.0
         },
         "createoreexcavation:drilling_machine": {
-            "SCT": 443.883
+            "SCT": 443.881
         },
         "createoreexcavation:extractor": {
-            "SCT": 396.917
+            "SCT": 396.914
         },
         "createoreexcavation:netherite_drill": {
             "SCT": 1734.1
@@ -9358,19 +9742,19 @@
             "SCT": 6.855
         },
         "crystal_chronicles:blood_knight_boots": {
-            "SCT": 2000.3
+            "SCT": 1993.55
         },
         "crystal_chronicles:blood_knight_chestplate": {
-            "SCT": 2056.3
+            "SCT": 2049.55
         },
         "crystal_chronicles:blood_knight_helmet": {
-            "SCT": 2014.3
+            "SCT": 2007.55
         },
         "crystal_chronicles:blood_knight_leggings": {
-            "SCT": 2042.3
+            "SCT": 2035.55
         },
         "crystal_chronicles:blood_scythe": {
-            "SCT": 3767.04
+            "SCT": 3765.537
         },
         "crystal_chronicles:bronchus_button": {
             "SCT": 0.375
@@ -9577,7 +9961,7 @@
             "SCT": 2168.2
         },
         "crystal_chronicles:ender_sickle": {
-            "SCT": 3818.34
+            "SCT": 3818.337
         },
         "crystal_chronicles:ender_staff": {
             "SCT": 4372.0
@@ -9595,7 +9979,7 @@
             "SCT": 2168.2
         },
         "crystal_chronicles:evocation_twinblade": {
-            "SCT": 3790.84
+            "SCT": 3790.837
         },
         "crystal_chronicles:eye": {
             "SCT": 2.0
@@ -9610,7 +9994,7 @@
             "SCT": 4.0
         },
         "crystal_chronicles:fire_chakram": {
-            "SCT": 4370.84
+            "SCT": 4370.837
         },
         "crystal_chronicles:fire_knight_boots": {
             "SCT": 2076.2
@@ -9625,10 +10009,10 @@
             "SCT": 2118.2
         },
         "crystal_chronicles:floralite_shard": {
-            "SCT": 1807.5
+            "SCT": 1804.0
         },
         "crystal_chronicles:hemalite_shard": {
-            "SCT": 1806.1
+            "SCT": 1805.35
         },
         "crystal_chronicles:holy_knight_boots": {
             "SCT": 2059.339
@@ -9670,10 +10054,10 @@
             "SCT": 3655.142
         },
         "crystal_chronicles:holy_sword": {
-            "SCT": 3795.982
+            "SCT": 3795.979
         },
         "crystal_chronicles:ice_hammer": {
-            "SCT": 3872.067
+            "SCT": 3872.062
         },
         "crystal_chronicles:ice_knight_boots": {
             "SCT": 1976.7
@@ -9691,7 +10075,7 @@
             "SCT": 1810.0
         },
         "crystal_chronicles:lightning_bident": {
-            "SCT": 4527.04
+            "SCT": 4527.037
         },
         "crystal_chronicles:lightning_knight_boots": {
             "SCT": 2036.3
@@ -9706,22 +10090,22 @@
             "SCT": 2078.3
         },
         "crystal_chronicles:lightning_staff": {
-            "SCT": 2615.1
+            "SCT": 2615.091
         },
         "crystal_chronicles:nature_knight_boots": {
-            "SCT": 2013.7
+            "SCT": 1982.2
         },
         "crystal_chronicles:nature_knight_chestplate": {
-            "SCT": 2069.7
+            "SCT": 2038.2
         },
         "crystal_chronicles:nature_knight_helmet": {
-            "SCT": 2027.7
+            "SCT": 1996.2
         },
         "crystal_chronicles:nature_knight_leggings": {
-            "SCT": 2055.7
+            "SCT": 2024.2
         },
         "crystal_chronicles:nature_spear": {
-            "SCT": 3767.028
+            "SCT": 3760.025
         },
         "crystal_chronicles:neuron": {
             "SCT": 1.0
@@ -9982,7 +10366,7 @@
             "SCT": 0.012
         },
         "darkdoppelganger:shadow_altar": {
-            "SCT": 75.8
+            "SCT": 825.8
         },
         "darkdoppelganger:shadow_orb": {
             "SCT": 3390.1
@@ -9991,271 +10375,241 @@
             "SCT": 10.178
         },
         "dustydecorations:acacia_banister": {
-            "SCT": 0.375
+            "SCT": 0.312
         },
         "dustydecorations:acacia_large_shelf": {
             "SCT": 0.495
         },
-        "dustydecorations:anchor": {
-            "SCT": 14.001
-        },
         "dustydecorations:andesite_mural": {
-            "SCT": 0.1
-        },
-        "dustydecorations:andesite_quoin": {
-            "SCT": 0.1
+            "SCT": 0.05
         },
         "dustydecorations:apple_barrel": {
-            "SCT": 11.626
+            "SCT": 26.626
         },
         "dustydecorations:apple_wicker_basket": {
-            "SCT": 8.29
+            "SCT": 9.573
         },
         "dustydecorations:bamboo_banister": {
-            "SCT": 0.112
+            "SCT": 0.842
         },
         "dustydecorations:bamboo_large_shelf": {
             "SCT": 0.57
         },
         "dustydecorations:beet_o_lantern": {
-            "SCT": 7.734
-        },
-        "dustydecorations:beet_wicker_basket": {
-            "SCT": 17.29
+            "SCT": 16.234
         },
         "dustydecorations:beetroot_barrel": {
-            "SCT": 25.126
+            "SCT": 34.626
         },
-        "dustydecorations:beetroot_scarewcrow": {
-            "SCT": 17.875
+        "dustydecorations:beetroot_scarecrow": {
+            "SCT": 29.188
         },
-        "dustydecorations:big_megalodon_tooth": {
-            "SCT": 600.0
+        "dustydecorations:beetroot_wicker_basket": {
+            "SCT": 12.573
+        },
+        "dustydecorations:big_cooking_pot": {
+            "SCT": 31.334
+        },
+        "dustydecorations:big_nautilus_lantern": {
+            "SCT": 1445.57
         },
         "dustydecorations:big_nautilus_shell": {
-            "SCT": 640.0
+            "SCT": 1440.0
         },
-        "dustydecorations:big_shark_jaws": {
-            "SCT": 600.0
+        "dustydecorations:big_shark_jaw": {
+            "SCT": 240.0
         },
         "dustydecorations:birch_banister": {
-            "SCT": 0.375
+            "SCT": 0.312
         },
         "dustydecorations:birch_large_shelf": {
             "SCT": 0.495
         },
-        "dustydecorations:black_cushion": {
-            "SCT": 2.167
-        },
         "dustydecorations:black_cushion_slab": {
-            "SCT": 1.084
+            "SCT": 3.291
         },
         "dustydecorations:black_cushion_stairs": {
-            "SCT": 2.167
+            "SCT": 9.874
         },
         "dustydecorations:black_wool_awning": {
-            "SCT": 4.063
-        },
-        "dustydecorations:blackstone_quoin": {
-            "SCT": 0.1
-        },
-        "dustydecorations:blue_cushion": {
-            "SCT": 2.054
+            "SCT": 8.189
         },
         "dustydecorations:blue_cushion_slab": {
-            "SCT": 1.027
+            "SCT": 3.291
         },
         "dustydecorations:blue_cushion_stairs": {
-            "SCT": 2.054
+            "SCT": 9.874
         },
         "dustydecorations:blue_wool_awning": {
-            "SCT": 4.063
+            "SCT": 8.189
+        },
+        "dustydecorations:book_stack": {
+            "SCT": 12.9
         },
         "dustydecorations:books": {
-            "SCT": 6.45
+            "SCT": 12.9
         },
-        "dustydecorations:bookstack": {
-            "SCT": 6.45
+        "dustydecorations:bovine_skull": {
+            "SCT": 480.0
         },
-        "dustydecorations:bratwurst_dog": {
-            "SCT": 4.517
-        },
-        "dustydecorations:brown_cushion": {
-            "SCT": 2.054
+        "dustydecorations:bratwurst_hot_dog": {
+            "SCT": 4.75
         },
         "dustydecorations:brown_cushion_slab": {
-            "SCT": 1.027
+            "SCT": 3.291
         },
         "dustydecorations:brown_cushion_stairs": {
-            "SCT": 2.054
+            "SCT": 9.874
         },
         "dustydecorations:brown_wool_awning": {
-            "SCT": 4.063
+            "SCT": 8.189
         },
         "dustydecorations:burlap": {
-            "SCT": 2.0
-        },
-        "dustydecorations:burlap_awning": {
-            "SCT": 2.063
-        },
-        "dustydecorations:burlap_block": {
-            "SCT": 8.0
-        },
-        "dustydecorations:burlap_carpet": {
             "SCT": 1.0
         },
+        "dustydecorations:burlap_block": {
+            "SCT": 9.0
+        },
+        "dustydecorations:burlap_carpet": {
+            "SCT": 6.0
+        },
         "dustydecorations:burlap_sack": {
-            "SCT": 4.667
-        },
-        "dustydecorations:burlap_slab": {
-            "SCT": 2.0
-        },
-        "dustydecorations:burlap_stairs": {
             "SCT": 3.0
         },
+        "dustydecorations:burlap_slab": {
+            "SCT": 4.5
+        },
+        "dustydecorations:burlap_stairs": {
+            "SCT": 13.5
+        },
         "dustydecorations:camera": {
-            "SCT": 39.621
+            "SCT": 20.663
+        },
+        "dustydecorations:camera_quadropod": {
+            "SCT": 5.996
+        },
+        "dustydecorations:canine_skull": {
+            "SCT": 480.0
         },
         "dustydecorations:carrot_barrel": {
-            "SCT": 25.126
+            "SCT": 34.626
         },
         "dustydecorations:carrot_wicker_basket": {
-            "SCT": 17.29
+            "SCT": 12.573
         },
-        "dustydecorations:carved_beet": {
-            "SCT": 7.5
+        "dustydecorations:carved_beetroot": {
+            "SCT": 16.0
         },
         "dustydecorations:ceramic_pot": {
-            "SCT": 0.1
+            "SCT": 0.3
         },
         "dustydecorations:cerulean_sea_window": {
-            "SCT": 120.188
+            "SCT": 30.094
         },
         "dustydecorations:cerulean_sea_window_pane": {
-            "SCT": 60.094
+            "SCT": 11.285
         },
         "dustydecorations:cerulean_seaglass": {
             "SCT": 120.0
         },
         "dustydecorations:cerulean_seaglass_lamp": {
-            "SCT": 121.586
+            "SCT": 401.199
         },
         "dustydecorations:cerulean_seaglass_pane": {
-            "SCT": 60.0
+            "SCT": 45.0
         },
         "dustydecorations:cherry_banister": {
-            "SCT": 0.375
+            "SCT": 0.312
         },
         "dustydecorations:cherry_large_shelf": {
             "SCT": 0.495
         },
         "dustydecorations:chicken_jockey_paper_lantern": {
-            "SCT": 130.37
+            "SCT": 7.034
         },
-        "dustydecorations:chiseled_seastone": {
+        "dustydecorations:chiseled_seastone_bricks": {
             "SCT": 0.1
         },
-        "dustydecorations:cluttered_shelf": {
-            "SCT": 0.204
+        "dustydecorations:cluttered_small_shelf": {
+            "SCT": 0.486
         },
         "dustydecorations:cod_barrel": {
-            "SCT": 20.626
+            "SCT": 50.626
         },
         "dustydecorations:cod_wicker_basket": {
-            "SCT": 14.29
+            "SCT": 18.573
         },
-        "dustydecorations:cooked_bratwurst": {
-            "SCT": 1.517
+        "dustydecorations:coiled_rope": {
+            "SCT": 4.0
         },
-        "dustydecorations:cooking_pot": {
-            "SCT": 23.25
+        "dustydecorations:cold_nautilus_wind_chime": {
+            "SCT": 250.5
         },
         "dustydecorations:copper_frying_pan": {
-            "SCT": 2.125
+            "SCT": 3.06
         },
-        "dustydecorations:copper_light": {
-            "SCT": 1.398
-        },
-        "dustydecorations:copper_lion_door_knocker": {
-            "SCT": 1.889
+        "dustydecorations:copper_nugget": {
+            "SCT": 0.111
         },
         "dustydecorations:copper_wallpaper": {
-            "SCT": 0.344
+            "SCT": 0.65
+        },
+        "dustydecorations:coral_embedded_seastone_brick_slab": {
+            "SCT": 0.175
+        },
+        "dustydecorations:coral_embedded_seastone_brick_stairs": {
+            "SCT": 0.525
+        },
+        "dustydecorations:coral_embedded_seastone_brick_wall": {
+            "SCT": 0.35
         },
         "dustydecorations:coral_embedded_seastone_bricks": {
             "SCT": 0.35
         },
-        "dustydecorations:coral_embedded_seastone_slab": {
-            "SCT": 0.175
+        "dustydecorations:corrugated_metal_sheet": {
+            "SCT": 3.499
         },
-        "dustydecorations:coral_embedded_seastone_stairs": {
-            "SCT": 0.35
+        "dustydecorations:cowhide_rug": {
+            "SCT": 28.0
         },
-        "dustydecorations:corrugated_metal": {
-            "SCT": 3.5
+        "dustydecorations:cream_sea_window": {
+            "SCT": 30.094
         },
-        "dustydecorations:corrugated_metal_button": {
-            "SCT": 3.5
+        "dustydecorations:cream_sea_window_pane": {
+            "SCT": 11.285
         },
-        "dustydecorations:corrugated_metal_door": {
-            "SCT": 10.5
+        "dustydecorations:cream_seaglass": {
+            "SCT": 120.0
         },
-        "dustydecorations:corrugated_metal_fence": {
-            "SCT": 2.0
+        "dustydecorations:cream_seaglass_lamp": {
+            "SCT": 401.199
         },
-        "dustydecorations:corrugated_metal_fence_gate": {
-            "SCT": 2.75
-        },
-        "dustydecorations:corrugated_metal_grate": {
-            "SCT": 3.5
-        },
-        "dustydecorations:corrugated_metal_pressure_plate": {
-            "SCT": 3.5
-        },
-        "dustydecorations:corrugated_metal_roofing": {
-            "SCT": 3.5
-        },
-        "dustydecorations:corrugated_metal_slab": {
-            "SCT": 1.75
-        },
-        "dustydecorations:corrugated_metal_stairs": {
-            "SCT": 3.5
-        },
-        "dustydecorations:corrugated_metal_trapdoor": {
-            "SCT": 5.25
-        },
-        "dustydecorations:cow_hide_rug": {
-            "SCT": 450.0
-        },
-        "dustydecorations:cow_skull": {
-            "SCT": 450.0
+        "dustydecorations:cream_seaglass_pane": {
+            "SCT": 45.0
         },
         "dustydecorations:creeper_paper_lantern": {
-            "SCT": 6.47
+            "SCT": 1.134
         },
         "dustydecorations:crimson_banister": {
-            "SCT": 0.375
+            "SCT": 0.312
         },
         "dustydecorations:crimson_large_shelf": {
             "SCT": 0.495
         },
-        "dustydecorations:cuttingboard": {
-            "SCT": 3.75
-        },
-        "dustydecorations:cyan_cushion": {
-            "SCT": 2.054
+        "dustydecorations:cutting_board": {
+            "SCT": 3.188
         },
         "dustydecorations:cyan_cushion_slab": {
-            "SCT": 1.027
+            "SCT": 3.291
         },
         "dustydecorations:cyan_cushion_stairs": {
-            "SCT": 2.054
+            "SCT": 9.874
         },
         "dustydecorations:cyan_wool_awning": {
-            "SCT": 4.063
+            "SCT": 8.189
         },
         "dustydecorations:dark_oak_banister": {
-            "SCT": 0.375
+            "SCT": 0.312
         },
         "dustydecorations:dark_oak_large_shelf": {
             "SCT": 0.495
@@ -10264,541 +10618,454 @@
             "SCT": 0.281
         },
         "dustydecorations:diorite_mural": {
-            "SCT": 0.1
-        },
-        "dustydecorations:diorite_quoin": {
-            "SCT": 0.1
+            "SCT": 0.05
         },
         "dustydecorations:displayed_oars": {
-            "SCT": 2.628
+            "SCT": 3.066
         },
         "dustydecorations:dry_bamboo_banister": {
-            "SCT": 0.425
+            "SCT": 0.363
         },
         "dustydecorations:empty_barrel": {
             "SCT": 2.626
         },
-        "dustydecorations:equine_skull": {
-            "SCT": 2200.0
+        "dustydecorations:empty_small_shelf": {
+            "SCT": 0.361
         },
-        "dustydecorations:fairylights": {
-            "SCT": 1.456
+        "dustydecorations:equine_skull": {
+            "SCT": 480.0
+        },
+        "dustydecorations:fairy_lights": {
+            "SCT": 0.094
         },
         "dustydecorations:fall_garland": {
-            "SCT": 0.111
+            "SCT": 0.125
         },
-        "dustydecorations:festive_forest_wallpaper": {
-            "SCT": 0.294
-        },
-        "dustydecorations:festive_striped_wallpaper": {
-            "SCT": 0.288
-        },
-        "dustydecorations:fishbones": {
-            "SCT": 4.0
+        "dustydecorations:fish_bones": {
+            "SCT": 40.0
         },
         "dustydecorations:fishing_lures": {
-            "SCT": 3.058
+            "SCT": 2.237
         },
-        "dustydecorations:frosted_seaglass": {
-            "SCT": 120.0
-        },
-        "dustydecorations:frosted_seaglass_lamp": {
-            "SCT": 121.774
-        },
-        "dustydecorations:frosted_seaglass_pane": {
-            "SCT": 60.0
-        },
-        "dustydecorations:frosted_seawindow": {
-            "SCT": 120.188
-        },
-        "dustydecorations:frosted_seawindow_pane": {
-            "SCT": 60.094
-        },
-        "dustydecorations:frying_pan": {
-            "SCT": 7.125
+        "dustydecorations:forest_festive_wallpaper": {
+            "SCT": 0.55
         },
         "dustydecorations:giant_anchor": {
-            "SCT": 32.167
+            "SCT": 82.5
         },
-        "dustydecorations:giant_chains": {
-            "SCT": 2.5
+        "dustydecorations:giant_chain": {
+            "SCT": 20.001
         },
         "dustydecorations:glass_buoy": {
-            "SCT": 1.0
+            "SCT": 7.692
         },
         "dustydecorations:glazed_ceramic_pot": {
-            "SCT": 0.112
+            "SCT": 0.3
         },
-        "dustydecorations:glowberries_barrel": {
-            "SCT": 4.876
+        "dustydecorations:globe": {
+            "SCT": 6.798
         },
-        "dustydecorations:glowberries_wicker_basket": {
-            "SCT": 3.79
+        "dustydecorations:glow_berries_barrel": {
+            "SCT": 8.626
+        },
+        "dustydecorations:glow_berries_wicker_basket": {
+            "SCT": 2.823
         },
         "dustydecorations:gold_coins": {
-            "SCT": 9.834
+            "SCT": 0.0
         },
         "dustydecorations:gourd": {
-            "SCT": 4.0
+            "SCT": 1.5
         },
         "dustydecorations:granite_mural": {
-            "SCT": 0.1
-        },
-        "dustydecorations:granite_quoin": {
-            "SCT": 0.1
-        },
-        "dustydecorations:gray_cushion": {
-            "SCT": 2.054
+            "SCT": 0.05
         },
         "dustydecorations:gray_cushion_slab": {
-            "SCT": 1.027
+            "SCT": 3.291
         },
         "dustydecorations:gray_cushion_stairs": {
-            "SCT": 2.054
+            "SCT": 9.874
         },
         "dustydecorations:gray_wool_awning": {
-            "SCT": 4.063
-        },
-        "dustydecorations:green_cushion": {
-            "SCT": 2.054
+            "SCT": 8.189
         },
         "dustydecorations:green_cushion_slab": {
-            "SCT": 1.027
+            "SCT": 3.291
         },
         "dustydecorations:green_cushion_stairs": {
-            "SCT": 2.054
+            "SCT": 9.874
         },
         "dustydecorations:green_wool_awning": {
-            "SCT": 4.063
+            "SCT": 8.189
         },
         "dustydecorations:hanging_cod": {
-            "SCT": 20.25
+            "SCT": 19.5
         },
         "dustydecorations:hanging_gourds": {
-            "SCT": 6.375
+            "SCT": 6.0
         },
         "dustydecorations:hanging_knives": {
-            "SCT": 7.355
-        },
-        "dustydecorations:hanging_sailor_flag": {
-            "SCT": 1.833
+            "SCT": 21.982
         },
         "dustydecorations:hanging_salmon": {
-            "SCT": 20.25
+            "SCT": 19.5
         },
         "dustydecorations:hanging_sausages": {
-            "SCT": 2.062
+            "SCT": 6.75
         },
         "dustydecorations:hazel_sea_window": {
-            "SCT": 120.188
+            "SCT": 30.094
         },
         "dustydecorations:hazel_sea_window_pane": {
-            "SCT": 60.094
+            "SCT": 11.285
         },
         "dustydecorations:hazel_seaglass": {
             "SCT": 120.0
         },
         "dustydecorations:hazel_seaglass_lamp": {
-            "SCT": 121.586
+            "SCT": 401.199
         },
         "dustydecorations:hazel_seaglass_pane": {
-            "SCT": 60.0
+            "SCT": 45.0
         },
         "dustydecorations:holiday_ornaments": {
-            "SCT": 1.316
+            "SCT": 0.6
         },
         "dustydecorations:honey_jar": {
             "SCT": 7.6
         },
         "dustydecorations:honey_sea_window": {
-            "SCT": 120.188
+            "SCT": 30.094
         },
         "dustydecorations:honey_sea_window_pane": {
-            "SCT": 60.094
+            "SCT": 11.285
         },
         "dustydecorations:honey_seaglass": {
             "SCT": 120.0
         },
         "dustydecorations:honey_seaglass_lamp": {
-            "SCT": 121.586
+            "SCT": 401.199
         },
         "dustydecorations:honey_seaglass_pane": {
-            "SCT": 60.0
+            "SCT": 45.0
         },
-        "dustydecorations:ink_n_quill": {
-            "SCT": 3.1
+        "dustydecorations:ink_and_quill": {
+            "SCT": 2.163
         },
-        "dustydecorations:iron_door_knocker": {
-            "SCT": 5.222
+        "dustydecorations:iron_frying_pan": {
+            "SCT": 18.667
         },
         "dustydecorations:jars": {
-            "SCT": 0.25
+            "SCT": 0.125
         },
         "dustydecorations:jungle_banister": {
-            "SCT": 0.375
+            "SCT": 0.312
         },
         "dustydecorations:jungle_large_shelf": {
             "SCT": 0.495
         },
         "dustydecorations:knife_and_cutting_board": {
-            "SCT": 11.105
+            "SCT": 10.043
         },
         "dustydecorations:life_preserver": {
-            "SCT": 20.5
-        },
-        "dustydecorations:light_blue_cushion": {
-            "SCT": 2.054
+            "SCT": 18.0
         },
         "dustydecorations:light_blue_cushion_slab": {
-            "SCT": 1.027
+            "SCT": 3.291
         },
         "dustydecorations:light_blue_cushion_stairs": {
-            "SCT": 2.054
+            "SCT": 9.874
         },
         "dustydecorations:light_blue_wool_awning": {
-            "SCT": 4.063
-        },
-        "dustydecorations:light_gray_cushion": {
-            "SCT": 2.054
+            "SCT": 8.189
         },
         "dustydecorations:light_gray_cushion_slab": {
-            "SCT": 1.027
+            "SCT": 3.291
         },
         "dustydecorations:light_gray_cushion_stairs": {
-            "SCT": 2.054
+            "SCT": 9.874
         },
         "dustydecorations:light_gray_wool_awning": {
-            "SCT": 4.063
+            "SCT": 8.189
         },
         "dustydecorations:lilac_wicker_basket": {
-            "SCT": 2.49
-        },
-        "dustydecorations:lime_cushion": {
-            "SCT": 2.054
+            "SCT": 1.173
         },
         "dustydecorations:lime_cushion_slab": {
-            "SCT": 1.027
+            "SCT": 3.291
         },
         "dustydecorations:lime_cushion_stairs": {
-            "SCT": 2.054
+            "SCT": 9.874
         },
         "dustydecorations:lime_wool_awning": {
-            "SCT": 4.063
+            "SCT": 8.189
         },
         "dustydecorations:liquorice_sea_window": {
-            "SCT": 120.188
+            "SCT": 30.094
         },
         "dustydecorations:liquorice_sea_window_pane": {
-            "SCT": 60.094
+            "SCT": 11.285
         },
         "dustydecorations:liquorice_seaglass": {
             "SCT": 120.0
         },
         "dustydecorations:liquorice_seaglass_lamp": {
-            "SCT": 121.774
+            "SCT": 401.199
         },
         "dustydecorations:liquorice_seaglass_pane": {
-            "SCT": 60.0
-        },
-        "dustydecorations:magenta_cushion": {
-            "SCT": 2.054
+            "SCT": 45.0
         },
         "dustydecorations:magenta_cushion_slab": {
-            "SCT": 1.027
+            "SCT": 3.291
         },
         "dustydecorations:magenta_cushion_stairs": {
-            "SCT": 2.054
+            "SCT": 9.874
         },
         "dustydecorations:magenta_wool_awning": {
-            "SCT": 4.063
+            "SCT": 8.189
         },
         "dustydecorations:mangrove_banister": {
-            "SCT": 0.375
+            "SCT": 0.312
         },
         "dustydecorations:mangrove_large_shelf": {
             "SCT": 0.495
         },
+        "dustydecorations:megalodon_tooth": {
+            "SCT": 240.0
+        },
         "dustydecorations:mini_snowman": {
-            "SCT": 23.917
+            "SCT": 3.917
         },
         "dustydecorations:mint_sea_window": {
-            "SCT": 120.188
+            "SCT": 30.094
         },
         "dustydecorations:mint_sea_window_pane": {
-            "SCT": 60.094
+            "SCT": 11.285
         },
         "dustydecorations:mint_seaglass": {
             "SCT": 120.0
         },
         "dustydecorations:mint_seaglass_lamp": {
-            "SCT": 121.586
+            "SCT": 401.199
         },
         "dustydecorations:mint_seaglass_pane": {
-            "SCT": 60.0
+            "SCT": 45.0
         },
         "dustydecorations:mocha_sea_window": {
-            "SCT": 120.188
+            "SCT": 30.094
         },
         "dustydecorations:mocha_sea_window_pane": {
-            "SCT": 60.094
+            "SCT": 11.285
         },
         "dustydecorations:mocha_seaglass": {
             "SCT": 120.0
         },
         "dustydecorations:mocha_seaglass_lamp": {
-            "SCT": 121.586
+            "SCT": 401.199
         },
         "dustydecorations:mocha_seaglass_pane": {
-            "SCT": 60.0
+            "SCT": 45.0
         },
         "dustydecorations:monster_wallpaper": {
-            "SCT": 0.494
+            "SCT": 0.838
         },
-        "dustydecorations:mooshroom_hide": {
-            "SCT": 550.0
+        "dustydecorations:mooshroom_cowhide_rug": {
+            "SCT": 28.1
         },
         "dustydecorations:movie_camera": {
-            "SCT": 41.119
-        },
-        "dustydecorations:mud_brick_quoin": {
-            "SCT": 1.1
-        },
-        "dustydecorations:nautilus_lantern": {
-            "SCT": 645.57
-        },
-        "dustydecorations:nautilus_wind_chime": {
-            "SCT": 280.5
+            "SCT": 30.563
         },
         "dustydecorations:nutcracker": {
             "SCT": 5.039
         },
         "dustydecorations:oak_banister": {
-            "SCT": 0.375
+            "SCT": 0.312
         },
         "dustydecorations:oak_large_shelf": {
             "SCT": 0.495
         },
-        "dustydecorations:open_book": {
-            "SCT": 2.25
-        },
-        "dustydecorations:orange_cushion": {
-            "SCT": 2.054
-        },
         "dustydecorations:orange_cushion_slab": {
-            "SCT": 1.027
+            "SCT": 3.291
         },
         "dustydecorations:orange_cushion_stairs": {
-            "SCT": 2.054
+            "SCT": 9.874
         },
         "dustydecorations:orange_wool_awning": {
-            "SCT": 4.063
+            "SCT": 8.189
         },
         "dustydecorations:orchid_paper_lantern": {
-            "SCT": 6.47
+            "SCT": 1.134
+        },
+        "dustydecorations:packed_mud_quoin": {
+            "SCT": 1.1
         },
         "dustydecorations:panda_paper_lantern": {
-            "SCT": 6.47
+            "SCT": 1.134
         },
         "dustydecorations:paper_lantern": {
-            "SCT": 6.37
+            "SCT": 1.034
+        },
+        "dustydecorations:paper_stack": {
+            "SCT": 0.9
         },
         "dustydecorations:peony_wicker_basket": {
-            "SCT": 2.49
-        },
-        "dustydecorations:pickle_wicker_basket": {
-            "SCT": 2.49
+            "SCT": 1.173
         },
         "dustydecorations:pillager_paper_lantern": {
-            "SCT": 6.57
-        },
-        "dustydecorations:pink_cushion": {
-            "SCT": 2.054
+            "SCT": 1.356
         },
         "dustydecorations:pink_cushion_slab": {
-            "SCT": 1.027
+            "SCT": 3.291
         },
         "dustydecorations:pink_cushion_stairs": {
-            "SCT": 2.054
+            "SCT": 9.874
         },
-        "dustydecorations:pink_petal_wicker_basket": {
-            "SCT": 2.69
+        "dustydecorations:pink_petals_wicker_basket": {
+            "SCT": 0.873
         },
         "dustydecorations:pink_wool_awning": {
-            "SCT": 4.063
-        },
-        "dustydecorations:plain_cushion": {
-            "SCT": 2.042
+            "SCT": 8.189
         },
         "dustydecorations:plain_cushion_slab": {
-            "SCT": 1.021
+            "SCT": 3.291
         },
         "dustydecorations:plain_cushion_stairs": {
-            "SCT": 2.042
+            "SCT": 9.874
         },
-        "dustydecorations:plushy": {
-            "SCT": 15.334
+        "dustydecorations:plushie": {
+            "SCT": 8.667
         },
-        "dustydecorations:portable_camera": {
-            "SCT": 37.121
+        "dustydecorations:polished_andesite_quoin": {
+            "SCT": 0.1
+        },
+        "dustydecorations:polished_blackstone_quoin": {
+            "SCT": 0.1
+        },
+        "dustydecorations:polished_diorite_quoin": {
+            "SCT": 0.1
+        },
+        "dustydecorations:polished_granite_quoin": {
+            "SCT": 0.1
+        },
+        "dustydecorations:polished_tuff_quoin": {
+            "SCT": 0.1
+        },
+        "dustydecorations:posters": {
+            "SCT": 0.1
         },
         "dustydecorations:potato_barrel": {
-            "SCT": 25.126
+            "SCT": 34.626
         },
         "dustydecorations:potato_wicker_basket": {
-            "SCT": 17.29
+            "SCT": 12.573
         },
         "dustydecorations:pots_and_pans": {
-            "SCT": 5.417
+            "SCT": 13.265
         },
         "dustydecorations:pumpkin_scarecrow": {
-            "SCT": 16.375
+            "SCT": 19.188
         },
         "dustydecorations:pumpkin_wallpaper": {
-            "SCT": 0.288
-        },
-        "dustydecorations:purple_cushion": {
-            "SCT": 2.054
+            "SCT": 0.538
         },
         "dustydecorations:purple_cushion_slab": {
-            "SCT": 1.027
+            "SCT": 3.291
         },
         "dustydecorations:purple_cushion_stairs": {
-            "SCT": 2.054
+            "SCT": 9.874
         },
         "dustydecorations:purple_wool_awning": {
-            "SCT": 4.063
+            "SCT": 8.189
         },
-        "dustydecorations:raw_bratwurst": {
-            "SCT": 1.517
-        },
-        "dustydecorations:red_cushion": {
-            "SCT": 2.054
+        "dustydecorations:raw_bratwurst_sausage": {
+            "SCT": 1.75
         },
         "dustydecorations:red_cushion_slab": {
-            "SCT": 1.027
+            "SCT": 3.291
         },
         "dustydecorations:red_cushion_stairs": {
-            "SCT": 2.054
+            "SCT": 9.874
         },
         "dustydecorations:red_sandstone_quoin": {
             "SCT": 0.4
         },
         "dustydecorations:red_wool_awning": {
-            "SCT": 4.063
+            "SCT": 8.189
         },
         "dustydecorations:regal_wallpaper": {
-            "SCT": 0.344
+            "SCT": 0.65
         },
         "dustydecorations:rope": {
-            "SCT": 0.75
+            "SCT": 0.562
         },
-        "dustydecorations:rope_coil": {
-            "SCT": 2.0
+        "dustydecorations:rose_bush_wicker_basket": {
+            "SCT": 1.173
         },
-        "dustydecorations:rose_wicker_basket": {
-            "SCT": 2.49
-        },
-        "dustydecorations:rusty_corrugated_button": {
-            "SCT": 3.667
-        },
-        "dustydecorations:rusty_corrugated_metal_block": {
-            "SCT": 3.667
-        },
-        "dustydecorations:rusty_corrugated_metal_door": {
-            "SCT": 11.001
-        },
-        "dustydecorations:rusty_corrugated_metal_fence": {
-            "SCT": 2.084
-        },
-        "dustydecorations:rusty_corrugated_metal_fence_gate": {
-            "SCT": 2.834
-        },
-        "dustydecorations:rusty_corrugated_metal_grate": {
-            "SCT": 3.667
-        },
-        "dustydecorations:rusty_corrugated_metal_roofing": {
-            "SCT": 3.667
-        },
-        "dustydecorations:rusty_corrugated_metal_slab": {
-            "SCT": 1.833
-        },
-        "dustydecorations:rusty_corrugated_metal_stairs": {
-            "SCT": 3.667
-        },
-        "dustydecorations:rusty_corrugated_metal_trapdoor": {
-            "SCT": 5.5
-        },
-        "dustydecorations:rusty_corrugated_pressure_plate": {
-            "SCT": 3.667
+        "dustydecorations:rusted_anchor": {
+            "SCT": 21.33
         },
         "dustydecorations:sailor_flag": {
-            "SCT": 2.375
+            "SCT": 5.5
+        },
+        "dustydecorations:sailor_pennon": {
+            "SCT": 4.5
         },
         "dustydecorations:sailor_wallpaper": {
-            "SCT": 0.379
+            "SCT": 0.608
         },
         "dustydecorations:sakura_paper_lantern": {
-            "SCT": 6.57
+            "SCT": 1.234
         },
         "dustydecorations:salmon_barrel": {
-            "SCT": 20.626
+            "SCT": 50.626
         },
         "dustydecorations:salmon_wicker_basket": {
-            "SCT": 14.29
-        },
-        "dustydecorations:sandstone_mosaic_tile": {
-            "SCT": 0.4
+            "SCT": 18.573
         },
         "dustydecorations:sandstone_quoin": {
             "SCT": 0.4
         },
-        "dustydecorations:sandstone_tile": {
-            "SCT": 0.4
-        },
-        "dustydecorations:sandstone_tile_slab": {
-            "SCT": 0.2
-        },
-        "dustydecorations:sandstone_tile_stairs": {
-            "SCT": 0.4
-        },
-        "dustydecorations:scarlet_sea_glass_lamp": {
-            "SCT": 121.586
-        },
         "dustydecorations:scarlet_sea_window": {
-            "SCT": 120.188
+            "SCT": 30.094
         },
         "dustydecorations:scarlet_sea_window_pane": {
-            "SCT": 60.094
+            "SCT": 11.285
         },
-        "dustydecorations:scarlett_seaglass": {
+        "dustydecorations:scarlet_seaglass": {
             "SCT": 120.0
         },
-        "dustydecorations:scarlett_seaglass_pane": {
-            "SCT": 60.0
+        "dustydecorations:scarlet_seaglass_lamp": {
+            "SCT": 401.199
+        },
+        "dustydecorations:scarlet_seaglass_pane": {
+            "SCT": 45.0
         },
         "dustydecorations:scattered_gold_coins": {
-            "SCT": 3.278
+            "SCT": 0.0
         },
-        "dustydecorations:scattered_paper_base": {
-            "SCT": 0.1
+        "dustydecorations:scattered_papers": {
+            "SCT": 0.15
         },
         "dustydecorations:sea_pickle_barrel": {
-            "SCT": 2.926
+            "SCT": 3.426
+        },
+        "dustydecorations:sea_pickle_wicker_basket": {
+            "SCT": 0.873
         },
         "dustydecorations:seastone_brick_slab": {
             "SCT": 0.05
         },
         "dustydecorations:seastone_brick_stairs": {
-            "SCT": 0.1
+            "SCT": 0.15
         },
         "dustydecorations:seastone_brick_wall": {
-            "SCT": 0.075
+            "SCT": 0.1
         },
         "dustydecorations:seastone_bricks": {
             "SCT": 0.1
         },
         "dustydecorations:seastone_mural": {
-            "SCT": 0.1
+            "SCT": 0.05
         },
         "dustydecorations:seastone_quoin": {
             "SCT": 0.1
@@ -10807,172 +11074,157 @@
             "SCT": 0.05
         },
         "dustydecorations:seastone_stairs": {
+            "SCT": 0.15
+        },
+        "dustydecorations:seastone_wall": {
             "SCT": 0.1
         },
-        "dustydecorations:shoddy_copper_light": {
-            "SCT": 1.375
-        },
         "dustydecorations:small_bookshelf": {
-            "SCT": 1.554
+            "SCT": 4.661
         },
         "dustydecorations:small_glass_buoys": {
-            "SCT": 3.0
-        },
-        "dustydecorations:small_globe": {
-            "SCT": 6.0
+            "SCT": 7.692
         },
         "dustydecorations:small_nautilus_shell": {
             "SCT": 160.0
         },
-        "dustydecorations:small_shark_jaws": {
-            "SCT": 200.0
+        "dustydecorations:small_shark_jaw": {
+            "SCT": 120.0
         },
-        "dustydecorations:small_shelf_block": {
-            "SCT": 0.361
+        "dustydecorations:smoked_bratwurst_sausage": {
+            "SCT": 1.75
         },
         "dustydecorations:smooth_seastone_slab": {
             "SCT": 0.05
         },
         "dustydecorations:smooth_seastone_stairs": {
-            "SCT": 0.1
+            "SCT": 0.15
         },
         "dustydecorations:smooth_seastone_wall": {
-            "SCT": 0.075
-        },
-        "dustydecorations:smooth_stone_brick": {
-            "SCT": 0.075
+            "SCT": 0.1
         },
         "dustydecorations:smooth_stone_brick_slab": {
-            "SCT": 0.038
-        },
-        "dustydecorations:smooth_stone_brick_stairs": {
-            "SCT": 0.1
-        },
-        "dustydecorations:smooth_stone_brick_wall": {
-            "SCT": 0.075
-        },
-        "dustydecorations:smooth_stone_quoin": {
-            "SCT": 0.1
-        },
-        "dustydecorations:snowflake_wallpaper": {
-            "SCT": 0.306
-        },
-        "dustydecorations:snowmen_wallpaper": {
-            "SCT": 0.666
-        },
-        "dustydecorations:snowy_cobblestone_slab": {
             "SCT": 0.05
         },
-        "dustydecorations:snowy_cobblestone_stairs": {
+        "dustydecorations:smooth_stone_brick_stairs": {
+            "SCT": 0.15
+        },
+        "dustydecorations:smooth_stone_brick_wall": {
             "SCT": 0.1
         },
-        "dustydecorations:snowy_cobblestone_wall": {
+        "dustydecorations:smooth_stone_bricks": {
             "SCT": 0.1
+        },
+        "dustydecorations:smooth_stone_mural": {
+            "SCT": 0.05
+        },
+        "dustydecorations:snowflake_wallpaper": {
+            "SCT": 0.556
+        },
+        "dustydecorations:snowmen_wallpaper": {
+            "SCT": 1.275
+        },
+        "dustydecorations:snowy_cobblestone": {
+            "SCT": 0.131
+        },
+        "dustydecorations:snowy_cobblestone_slab": {
+            "SCT": 0.066
+        },
+        "dustydecorations:snowy_cobblestone_stairs": {
+            "SCT": 0.196
+        },
+        "dustydecorations:snowy_cobblestone_wall": {
+            "SCT": 0.131
+        },
+        "dustydecorations:snowy_stone_brick_slab": {
+            "SCT": 0.066
+        },
+        "dustydecorations:snowy_stone_brick_stairs": {
+            "SCT": 0.196
+        },
+        "dustydecorations:snowy_stone_brick_wall": {
+            "SCT": 0.131
         },
         "dustydecorations:snowy_stone_bricks": {
             "SCT": 0.131
         },
-        "dustydecorations:snowy_stone_bricks_slab": {
-            "SCT": 0.066
-        },
-        "dustydecorations:snowy_stone_bricks_stairs": {
-            "SCT": 0.131
-        },
-        "dustydecorations:snowy_stone_bricks_wall": {
-            "SCT": 0.131
-        },
         "dustydecorations:soul_wallpaper": {
-            "SCT": 0.288
+            "SCT": 0.538
         },
         "dustydecorations:spruce_banister": {
-            "SCT": 0.375
+            "SCT": 0.312
         },
         "dustydecorations:spruce_large_shelf": {
             "SCT": 0.495
         },
-        "dustydecorations:stacked_paper": {
-            "SCT": 0.3
-        },
         "dustydecorations:stellar_wallpaper": {
-            "SCT": 0.281
+            "SCT": 0.531
         },
-        "dustydecorations:stone_mural": {
-            "SCT": 0.1
-        },
-        "dustydecorations:sundial": {
-            "SCT": 2.1
+        "dustydecorations:striped_festive_wallpaper": {
+            "SCT": 0.538
         },
         "dustydecorations:sunflower_wallpaper": {
-            "SCT": 0.35
+            "SCT": 0.55
         },
         "dustydecorations:sweet_berries_barrel": {
-            "SCT": 4.876
+            "SCT": 8.626
         },
         "dustydecorations:sweet_berries_wicker_basket": {
-            "SCT": 3.79
-        },
-        "dustydecorations:sweet_berry_pie": {
-            "SCT": 21.85
+            "SCT": 2.823
         },
         "dustydecorations:taiga_paper_lantern": {
-            "SCT": 6.57
+            "SCT": 1.234
         },
         "dustydecorations:taupe_sea_window": {
-            "SCT": 120.188
+            "SCT": 30.094
         },
         "dustydecorations:taupe_sea_window_pane": {
-            "SCT": 60.094
+            "SCT": 11.285
         },
         "dustydecorations:taupe_seaglass": {
             "SCT": 120.0
         },
         "dustydecorations:taupe_seaglass_lamp": {
-            "SCT": 121.586
+            "SCT": 401.199
         },
         "dustydecorations:taupe_seaglass_pane": {
-            "SCT": 60.0
-        },
-        "dustydecorations:tea_kettle": {
-            "SCT": 12.334
+            "SCT": 45.0
         },
         "dustydecorations:teal_sea_window": {
-            "SCT": 120.188
+            "SCT": 30.094
         },
         "dustydecorations:teal_sea_window_pane": {
-            "SCT": 60.094
+            "SCT": 11.285
         },
         "dustydecorations:teal_seaglass": {
             "SCT": 120.0
         },
         "dustydecorations:teal_seaglass_lamp": {
-            "SCT": 121.586
+            "SCT": 401.199
         },
         "dustydecorations:teal_seaglass_pane": {
-            "SCT": 60.0
+            "SCT": 45.0
         },
         "dustydecorations:treasure_map": {
-            "SCT": 0.1
-        },
-        "dustydecorations:tuff_quoin": {
-            "SCT": 0.1
+            "SCT": 0.9
         },
         "dustydecorations:villager_paper_lantern": {
-            "SCT": 26.37
+            "SCT": 21.034
         },
         "dustydecorations:vine_wallpaper": {
-            "SCT": 0.328
+            "SCT": 0.538
         },
         "dustydecorations:vintage_cash_register": {
-            "SCT": 61.699
+            "SCT": 24.997
         },
         "dustydecorations:vintage_globe": {
-            "SCT": 22.0
+            "SCT": 22.8
         },
         "dustydecorations:warden_paper_lantern": {
-            "SCT": 306.37
+            "SCT": 301.034
         },
         "dustydecorations:warped_banister": {
-            "SCT": 0.375
+            "SCT": 0.312
         },
         "dustydecorations:warped_large_shelf": {
             "SCT": 0.495
@@ -10983,59 +11235,50 @@
         "dustydecorations:wedged_knife": {
             "SCT": 6.855
         },
-        "dustydecorations:white_cushion": {
-            "SCT": 2.054
-        },
         "dustydecorations:white_cushion_slab": {
-            "SCT": 1.027
+            "SCT": 3.291
         },
         "dustydecorations:white_cushion_stairs": {
-            "SCT": 2.054
+            "SCT": 9.874
         },
         "dustydecorations:white_wool_awning": {
-            "SCT": 4.063
+            "SCT": 8.189
         },
         "dustydecorations:wicker": {
-            "SCT": 0.917
+            "SCT": 0.344
         },
         "dustydecorations:wicker_basket": {
-            "SCT": 2.29
+            "SCT": 0.573
         },
         "dustydecorations:wicker_slab": {
-            "SCT": 0.458
+            "SCT": 0.172
         },
         "dustydecorations:wicker_stairs": {
-            "SCT": 0.917
+            "SCT": 0.516
         },
         "dustydecorations:winter_garland": {
-            "SCT": 0.256
+            "SCT": 0.288
         },
-        "dustydecorations:winter_reef": {
-            "SCT": 1.024
+        "dustydecorations:winter_wreath": {
+            "SCT": 1.252
         },
-        "dustydecorations:wolf_skull": {
-            "SCT": 350.0
-        },
-        "dustydecorations:wooden_buoy": {
-            "SCT": 0.562
+        "dustydecorations:wooden_buoys": {
+            "SCT": 0.75
         },
         "dustydecorations:wrapped_meat": {
-            "SCT": 1.1
-        },
-        "dustydecorations:yellow_cushion": {
-            "SCT": 2.054
+            "SCT": 0.538
         },
         "dustydecorations:yellow_cushion_slab": {
-            "SCT": 1.027
+            "SCT": 3.291
         },
         "dustydecorations:yellow_cushion_stairs": {
-            "SCT": 2.054
+            "SCT": 9.874
         },
         "dustydecorations:yellow_wool_awning": {
-            "SCT": 4.063
+            "SCT": 8.189
         },
         "exposure:aged_photograph": {
-            "SCT": 2.288
+            "SCT": 2.287
         },
         "exposure:album": {
             "SCT": 16.3
@@ -11107,16 +11350,16 @@
             "SCT": 4.425
         },
         "farmersdelight:bacon": {
-            "SCT": 2.0
+            "SCT": 3.0
         },
         "farmersdelight:bacon_and_eggs": {
-            "SCT": 6.281
+            "SCT": 8.281
         },
         "farmersdelight:bacon_sandwich": {
-            "SCT": 16.25
+            "SCT": 12.0
         },
         "farmersdelight:baked_cod_stew": {
-            "SCT": 19.0
+            "SCT": 12.0
         },
         "farmersdelight:bamboo_basket": {
             "SCT": 12.4
@@ -11125,16 +11368,16 @@
             "SCT": 4.05
         },
         "farmersdelight:barbecue_stick": {
-            "SCT": 11.688
+            "SCT": 7.938
         },
         "farmersdelight:beef_patty": {
-            "SCT": 2.0
+            "SCT": 3.0
         },
         "farmersdelight:beef_stew": {
-            "SCT": 17.0
+            "SCT": 11.0
         },
         "farmersdelight:beetroot_crate": {
-            "SCT": 67.5
+            "SCT": 36.0
         },
         "farmersdelight:birch_cabinet": {
             "SCT": 3.378
@@ -11143,13 +11386,13 @@
             "SCT": 2.1
         },
         "farmersdelight:cabbage_crate": {
-            "SCT": 67.5
+            "SCT": 36.0
         },
         "farmersdelight:cabbage_leaf": {
-            "SCT": 3.75
+            "SCT": 2.0
         },
         "farmersdelight:cabbage_rolls": {
-            "SCT": 3.85
+            "SCT": 2.1
         },
         "farmersdelight:cake_slice": {
             "SCT": 4.886
@@ -11161,19 +11404,19 @@
             "SCT": 2.0
         },
         "farmersdelight:carrot_crate": {
-            "SCT": 67.5
+            "SCT": 36.0
         },
         "farmersdelight:cherry_cabinet": {
             "SCT": 3.378
         },
         "farmersdelight:chicken_cuts": {
-            "SCT": 2.0
+            "SCT": 3.0
         },
         "farmersdelight:chicken_sandwich": {
-            "SCT": 16.25
+            "SCT": 12.0
         },
         "farmersdelight:chicken_soup": {
-            "SCT": 15.25
+            "SCT": 11.0
         },
         "farmersdelight:chocolate_pie": {
             "SCT": 11.0
@@ -11188,16 +11431,16 @@
             "SCT": 3.0
         },
         "farmersdelight:cooked_bacon": {
-            "SCT": 2.0
+            "SCT": 3.0
         },
         "farmersdelight:cooked_chicken_cuts": {
-            "SCT": 2.0
+            "SCT": 3.0
         },
         "farmersdelight:cooked_cod_slice": {
             "SCT": 3.0
         },
         "farmersdelight:cooked_mutton_chops": {
-            "SCT": 2.0
+            "SCT": 3.0
         },
         "farmersdelight:cooked_rice": {
             "SCT": 0.1
@@ -11221,16 +11464,16 @@
             "SCT": 40.188
         },
         "farmersdelight:dog_food": {
-            "SCT": 5.267
+            "SCT": 5.017
         },
         "farmersdelight:dumplings": {
-            "SCT": 3.425
+            "SCT": 2.55
         },
         "farmersdelight:egg_sandwich": {
             "SCT": 5.0
         },
         "farmersdelight:fish_stew": {
-            "SCT": 20.0
+            "SCT": 13.0
         },
         "farmersdelight:flint_knife": {
             "SCT": 0.288
@@ -11239,7 +11482,7 @@
             "SCT": 1.0
         },
         "farmersdelight:fried_rice": {
-            "SCT": 10.6
+            "SCT": 7.1
         },
         "farmersdelight:fruit_salad": {
             "SCT": 7.681
@@ -11248,10 +11491,10 @@
             "SCT": 2.5
         },
         "farmersdelight:gleaming_salad": {
-            "SCT": 13.72
+            "SCT": 9.345
         },
         "farmersdelight:gleaming_salad_block": {
-            "SCT": 54.881
+            "SCT": 37.381
         },
         "farmersdelight:glow_berry_custard": {
             "SCT": 4.45
@@ -11260,25 +11503,25 @@
             "SCT": 9.188
         },
         "farmersdelight:grilled_salmon": {
-            "SCT": 9.781
+            "SCT": 8.031
         },
         "farmersdelight:half_tatami_mat": {
             "SCT": 1.25
         },
         "farmersdelight:hamburger": {
-            "SCT": 18.25
+            "SCT": 14.0
         },
         "farmersdelight:honey_cookie": {
             "SCT": 1.2
         },
         "farmersdelight:honey_glazed_ham": {
-            "SCT": 3.77
+            "SCT": 4.27
         },
         "farmersdelight:honey_glazed_ham_block": {
-            "SCT": 15.081
+            "SCT": 17.081
         },
         "farmersdelight:horse_feed": {
-            "SCT": 30.5
+            "SCT": 27.0
         },
         "farmersdelight:hot_cocoa": {
             "SCT": 2.9
@@ -11308,19 +11551,19 @@
             "SCT": 2.6
         },
         "farmersdelight:minced_beef": {
-            "SCT": 2.0
+            "SCT": 3.0
         },
         "farmersdelight:mixed_salad": {
-            "SCT": 19.031
+            "SCT": 10.281
         },
         "farmersdelight:mushroom_rice": {
-            "SCT": 7.8
+            "SCT": 4.3
         },
         "farmersdelight:mutton_chops": {
-            "SCT": 2.0
+            "SCT": 3.0
         },
         "farmersdelight:mutton_wrap": {
-            "SCT": 10.75
+            "SCT": 10.0
         },
         "farmersdelight:nether_salad": {
             "SCT": 0.481
@@ -11329,7 +11572,7 @@
             "SCT": 1076.288
         },
         "farmersdelight:noodle_soup": {
-            "SCT": 4.1
+            "SCT": 5.1
         },
         "farmersdelight:oak_cabinet": {
             "SCT": 3.378
@@ -11347,16 +11590,16 @@
             "SCT": 5.434
         },
         "farmersdelight:pasta_with_meatballs": {
-            "SCT": 18.0
+            "SCT": 12.0
         },
         "farmersdelight:pasta_with_mutton_chop": {
-            "SCT": 18.0
+            "SCT": 12.0
         },
         "farmersdelight:pie_crust": {
             "SCT": 5.5
         },
         "farmersdelight:potato_crate": {
-            "SCT": 67.5
+            "SCT": 36.0
         },
         "farmersdelight:pumpkin_pie_slice": {
             "SCT": 1.775
@@ -11365,10 +11608,10 @@
             "SCT": 1.5
         },
         "farmersdelight:pumpkin_soup": {
-            "SCT": 9.85
+            "SCT": 9.1
         },
         "farmersdelight:ratatouille": {
-            "SCT": 19.0
+            "SCT": 12.0
         },
         "farmersdelight:raw_pasta": {
             "SCT": 1.0
@@ -11386,13 +11629,13 @@
             "SCT": 5.434
         },
         "farmersdelight:roast_chicken": {
-            "SCT": 10.07
+            "SCT": 7.07
         },
         "farmersdelight:roast_chicken_block": {
-            "SCT": 40.281
+            "SCT": 28.281
         },
         "farmersdelight:roasted_mutton_chops": {
-            "SCT": 17.381
+            "SCT": 11.381
         },
         "farmersdelight:rope": {
             "SCT": 0.5
@@ -11404,7 +11647,7 @@
             "SCT": 1.752
         },
         "farmersdelight:rotten_tomato": {
-            "SCT": 7.5
+            "SCT": 4.0
         },
         "farmersdelight:safety_net": {
             "SCT": 2.0
@@ -11416,25 +11659,25 @@
             "SCT": 3.0
         },
         "farmersdelight:shepherds_pie": {
-            "SCT": 6.97
+            "SCT": 5.97
         },
         "farmersdelight:shepherds_pie_block": {
-            "SCT": 27.881
+            "SCT": 23.881
         },
         "farmersdelight:skillet": {
             "SCT": 24.1
         },
         "farmersdelight:smoked_ham": {
-            "SCT": 4.0
+            "SCT": 6.0
         },
         "farmersdelight:spruce_cabinet": {
             "SCT": 3.378
         },
         "farmersdelight:squid_ink_pasta": {
-            "SCT": 12.5
+            "SCT": 9.0
         },
         "farmersdelight:steak_and_potatoes": {
-            "SCT": 13.881
+            "SCT": 12.381
         },
         "farmersdelight:stove": {
             "SCT": 25.414
@@ -11443,13 +11686,13 @@
             "SCT": 9.0
         },
         "farmersdelight:stuffed_potato": {
-            "SCT": 12.1
+            "SCT": 9.6
         },
         "farmersdelight:stuffed_pumpkin": {
-            "SCT": 3.112
+            "SCT": 2.238
         },
         "farmersdelight:stuffed_pumpkin_block": {
-            "SCT": 12.45
+            "SCT": 8.95
         },
         "farmersdelight:sweet_berry_cheesecake": {
             "SCT": 15.2
@@ -11464,19 +11707,19 @@
             "SCT": 5.0
         },
         "farmersdelight:tomato_crate": {
-            "SCT": 67.5
+            "SCT": 36.0
         },
         "farmersdelight:tomato_sauce": {
-            "SCT": 15.0
+            "SCT": 8.0
         },
         "farmersdelight:tree_bark": {
             "SCT": 0.5
         },
         "farmersdelight:vegetable_noodles": {
-            "SCT": 14.35
+            "SCT": 9.1
         },
         "farmersdelight:vegetable_soup": {
-            "SCT": 26.25
+            "SCT": 14.0
         },
         "farmersdelight:warped_cabinet": {
             "SCT": 3.378
@@ -11548,7 +11791,7 @@
             "SCT": 360.0
         },
         "gametechbcs_spellbooks:gtbcs_magical_repository": {
-            "SCT": 1798.484
+            "SCT": 1784.484
         },
         "genshinstrument:djem_djem_drum": {
             "SCT": 7.5
@@ -11629,7 +11872,7 @@
             "SCT": 340.0
         },
         "hazennstuff:arcane_steel_block": {
-            "SCT": 452.52
+            "SCT": 452.511
         },
         "hazennstuff:archery_rune": {
             "SCT": 47.188
@@ -11650,13 +11893,13 @@
             "SCT": 4835.62
         },
         "hazennstuff:astralite_cleaver": {
-            "SCT": 6728.54
+            "SCT": 6728.537
         },
         "hazennstuff:beongae": {
             "SCT": 2779.451
         },
         "hazennstuff:blade_of_grass": {
-            "SCT": 311.14
+            "SCT": 283.137
         },
         "hazennstuff:blade_of_the_legate": {
             "SCT": 500.0
@@ -11674,7 +11917,7 @@
             "SCT": 2849.46
         },
         "hazennstuff:blossom_of_the_enchantress": {
-            "SCT": 159.167
+            "SCT": 131.167
         },
         "hazennstuff:bountiful_harvest": {
             "SCT": 6147.875
@@ -11743,16 +11986,16 @@
             "SCT": 869.26
         },
         "hazennstuff:creaking_boots": {
-            "SCT": 1642.46
+            "SCT": 1600.46
         },
         "hazennstuff:creaking_chestplate": {
-            "SCT": 3310.96
+            "SCT": 3268.96
         },
         "hazennstuff:creaking_helmet": {
-            "SCT": 2193.96
+            "SCT": 2151.96
         },
         "hazennstuff:creaking_leggings": {
-            "SCT": 2759.46
+            "SCT": 2717.46
         },
         "hazennstuff:crude_metal": {
             "SCT": 27.75
@@ -11794,7 +12037,7 @@
             "SCT": 305.638
         },
         "hazennstuff:dawnmaker": {
-            "SCT": 2394.649
+            "SCT": 2394.646
         },
         "hazennstuff:demonite_ingot": {
             "SCT": 275.0
@@ -11803,10 +12046,10 @@
             "SCT": 3600.0
         },
         "hazennstuff:divine_greatsword": {
-            "SCT": 1279.699
+            "SCT": 1279.696
         },
         "hazennstuff:divine_lemon": {
-            "SCT": 3608.0
+            "SCT": 3604.5
         },
         "hazennstuff:divine_mold": {
             "SCT": 286.16
@@ -11872,13 +12115,13 @@
             "SCT": 3890.646
         },
         "hazennstuff:energized_core_spellbook": {
-            "SCT": 755.106
+            "SCT": 755.097
         },
         "hazennstuff:excalibur": {
-            "SCT": 1645.317
+            "SCT": 1645.314
         },
         "hazennstuff:excalibur_divine_gold": {
-            "SCT": 1666.888
+            "SCT": 1666.885
         },
         "hazennstuff:excalibur_fragment": {
             "SCT": 2000.0
@@ -11917,16 +12160,16 @@
             "SCT": 110.552
         },
         "hazennstuff:flesh_mass_boots": {
-            "SCT": 1624.46
+            "SCT": 1615.46
         },
         "hazennstuff:flesh_mass_chestplate": {
-            "SCT": 3292.96
+            "SCT": 3283.96
         },
         "hazennstuff:flesh_mass_helmet": {
-            "SCT": 2175.96
+            "SCT": 2166.96
         },
         "hazennstuff:flesh_mass_leggings": {
-            "SCT": 2741.46
+            "SCT": 2732.46
         },
         "hazennstuff:fried_ice_spider_egg": {
             "SCT": 42.0
@@ -11977,7 +12220,7 @@
             "SCT": 4725.472
         },
         "hazennstuff:frostburn_dagger": {
-            "SCT": 186.472
+            "SCT": 186.47
         },
         "hazennstuff:gabriel_ultrakill_boots": {
             "SCT": 1921.08
@@ -11992,7 +12235,7 @@
             "SCT": 3056.08
         },
         "hazennstuff:galvanized_sheath": {
-            "SCT": 1094.136
+            "SCT": 1094.127
         },
         "hazennstuff:garments_of_the_first_flamebearer_boots": {
             "SCT": 4453.212
@@ -12028,16 +12271,16 @@
             "SCT": 1316.698
         },
         "hazennstuff:grimoire_staff": {
-            "SCT": 268.047
+            "SCT": 268.046
         },
         "hazennstuff:hallowed_ingot": {
             "SCT": 108.031
         },
         "hazennstuff:hammer_of_justice": {
-            "SCT": 1215.848
+            "SCT": 1215.845
         },
         "hazennstuff:hammush": {
-            "SCT": 737.79
+            "SCT": 737.787
         },
         "hazennstuff:hazel_boots": {
             "SCT": 2022.62
@@ -12052,7 +12295,7 @@
             "SCT": 3139.62
         },
         "hazennstuff:hazens_excalibur": {
-            "SCT": 1024.928
+            "SCT": 1024.925
         },
         "hazennstuff:health_rune": {
             "SCT": 135.388
@@ -12082,7 +12325,7 @@
             "SCT": 2765.1
         },
         "hazennstuff:ice_pike": {
-            "SCT": 2406.184
+            "SCT": 2406.182
         },
         "hazennstuff:infestation_boots": {
             "SCT": 6310.46
@@ -12139,25 +12382,25 @@
             "SCT": 600.0
         },
         "hazennstuff:lemon": {
-            "SCT": 8.0
+            "SCT": 4.5
         },
         "hazennstuff:lemon_god_boots": {
-            "SCT": 4074.86
+            "SCT": 4071.36
         },
         "hazennstuff:lemon_god_chestplate": {
-            "SCT": 4130.86
+            "SCT": 4127.36
         },
         "hazennstuff:lemon_god_helmet": {
-            "SCT": 4088.86
+            "SCT": 4085.36
         },
         "hazennstuff:lemon_god_leggings": {
-            "SCT": 4116.86
+            "SCT": 4113.36
         },
         "hazennstuff:lights_bane": {
-            "SCT": 700.84
+            "SCT": 700.837
         },
         "hazennstuff:mage_bane": {
-            "SCT": 370.775
+            "SCT": 370.772
         },
         "hazennstuff:magehunter_boots": {
             "SCT": 146.0
@@ -12292,7 +12535,7 @@
             "SCT": 15.0
         },
         "hazennstuff:nights_edge": {
-            "SCT": 10349.7
+            "SCT": 10321.685
         },
         "hazennstuff:obsidian_claymore": {
             "SCT": 400.0
@@ -12361,7 +12604,7 @@
             "SCT": 33.333
         },
         "hazennstuff:radiance": {
-            "SCT": 7545.394
+            "SCT": 7545.39
         },
         "hazennstuff:radiant_crystal_boots": {
             "SCT": 109.86
@@ -12382,10 +12625,10 @@
             "SCT": 75.0
         },
         "hazennstuff:refined": {
-            "SCT": 1004.251
+            "SCT": 1004.247
         },
         "hazennstuff:reinforced": {
-            "SCT": 3659.234
+            "SCT": 3659.23
         },
         "hazennstuff:ring_of_efficiency": {
             "SCT": 79.682
@@ -12394,7 +12637,7 @@
             "SCT": 2000.0
         },
         "hazennstuff:rose_gold_ingot": {
-            "SCT": 46.144
+            "SCT": 46.143
         },
         "hazennstuff:rose_quartz": {
             "SCT": 11.286
@@ -12406,7 +12649,7 @@
             "SCT": 69.831
         },
         "hazennstuff:sacred": {
-            "SCT": 2686.654
+            "SCT": 2686.652
         },
         "hazennstuff:sacred_robes_boots": {
             "SCT": 472.498
@@ -12421,7 +12664,7 @@
             "SCT": 514.498
         },
         "hazennstuff:scroll_sheath": {
-            "SCT": 8414.716
+            "SCT": 8414.715
         },
         "hazennstuff:seraph_boots": {
             "SCT": 1703.312
@@ -12472,10 +12715,10 @@
             "SCT": 30.0
         },
         "hazennstuff:singularity": {
-            "SCT": 10166.563
+            "SCT": 10166.561
         },
         "hazennstuff:skyscorcher": {
-            "SCT": 7868.651
+            "SCT": 7868.642
         },
         "hazennstuff:slc_cat_boots": {
             "SCT": 1804.856
@@ -12505,7 +12748,7 @@
             "SCT": 1839.926
         },
         "hazennstuff:soul_reaper": {
-            "SCT": 4106.04
+            "SCT": 4106.037
         },
         "hazennstuff:soulcalling_scepter": {
             "SCT": 3006.291
@@ -12526,7 +12769,7 @@
             "SCT": 357.2
         },
         "hazennstuff:spectrum": {
-            "SCT": 1322.34
+            "SCT": 1322.337
         },
         "hazennstuff:spider_fang": {
             "SCT": 25.0
@@ -12550,13 +12793,13 @@
             "SCT": 95.468
         },
         "hazennstuff:strengthened": {
-            "SCT": 6280.403
+            "SCT": 6280.401
         },
         "hazennstuff:terraprisma": {
-            "SCT": 9447.34
+            "SCT": 9447.337
         },
         "hazennstuff:the_devourer": {
-            "SCT": 4317.968
+            "SCT": 4317.962
         },
         "hazennstuff:the_prefects_ring": {
             "SCT": 500.0
@@ -12565,16 +12808,16 @@
             "SCT": 500.0
         },
         "hazennstuff:the_wither_boots": {
-            "SCT": 2240.46
+            "SCT": 2229.96
         },
         "hazennstuff:the_wither_chestplate": {
-            "SCT": 3908.96
+            "SCT": 3898.46
         },
         "hazennstuff:the_wither_helmet": {
-            "SCT": 2791.96
+            "SCT": 2781.46
         },
         "hazennstuff:the_wither_leggings": {
-            "SCT": 3357.46
+            "SCT": 3346.96
         },
         "hazennstuff:thunder_prowler_boots": {
             "SCT": 1672.46
@@ -12589,16 +12832,16 @@
             "SCT": 2789.46
         },
         "hazennstuff:tidal_wave": {
-            "SCT": 7721.04
+            "SCT": 7721.037
         },
         "hazennstuff:tyros_loot_bag": {
             "SCT": 13278.666
         },
         "hazennstuff:vampire_knives": {
-            "SCT": 1995.38
+            "SCT": 1988.627
         },
         "hazennstuff:volcano": {
-            "SCT": 436.04
+            "SCT": 436.037
         },
         "hazennstuff:volt_core": {
             "SCT": 115.8
@@ -12607,7 +12850,7 @@
             "SCT": 1562.5
         },
         "hazennstuff:white_lily_staff": {
-            "SCT": 235.967
+            "SCT": 207.967
         },
         "hazennstuff:wisewood_button": {
             "SCT": 0.375
@@ -12663,6 +12906,12 @@
         "hazentouvelib:cosmic_upgrade_orb": {
             "SCT": 6232.05
         },
+        "hazentouvelib:crude_metal": {
+            "SCT": 19.5
+        },
+        "hazentouvelib:crude_metal_block": {
+            "SCT": 175.5
+        },
         "hazentouvelib:radiance_rune": {
             "SCT": 47.7
         },
@@ -12674,6 +12923,15 @@
         },
         "hazentouvelib:shadow_upgrade_orb": {
             "SCT": 1432.05
+        },
+        "hazentouvelib:steel_block": {
+            "SCT": 175.5
+        },
+        "hazentouvelib:steel_ingot": {
+            "SCT": 19.5
+        },
+        "hazentouvelib:steel_nugget": {
+            "SCT": 2.167
         },
         "heartstone:heart_banner_pattern": {
             "SCT": 1207.242
@@ -12709,7 +12967,7 @@
             "SCT": 6.16
         },
         "irons_spellbooks:arcane_ingot": {
-            "SCT": 50.28
+            "SCT": 50.279
         },
         "irons_spellbooks:arcane_rune": {
             "SCT": 60.1
@@ -12739,16 +12997,16 @@
             "SCT": 192.5
         },
         "irons_spellbooks:blood_rune": {
-            "SCT": 69.1
+            "SCT": 66.1
         },
         "irons_spellbooks:blood_upgrade_orb": {
-            "SCT": 387.65
+            "SCT": 375.65
         },
         "irons_spellbooks:blood_vial": {
-            "SCT": 6.1
+            "SCT": 5.35
         },
         "irons_spellbooks:bloody_vellum": {
-            "SCT": 16.0
+            "SCT": 14.5
         },
         "irons_spellbooks:bone_key": {
             "SCT": 800.0
@@ -12772,7 +13030,7 @@
             "SCT": 600.0
         },
         "irons_spellbooks:chronicle": {
-            "SCT": 63.58
+            "SCT": 63.579
         },
         "irons_spellbooks:cinder_essence": {
             "SCT": 25.625
@@ -12791,6 +13049,9 @@
         },
         "irons_spellbooks:conjurers_talisman": {
             "SCT": 2.111
+        },
+        "irons_spellbooks:cooked_ice_spider_egg": {
+            "SCT": 51.381
         },
         "irons_spellbooks:cooldown_ring": {
             "SCT": 1.111
@@ -12817,19 +13078,19 @@
             "SCT": 153.35
         },
         "irons_spellbooks:cultist_boots": {
-            "SCT": 125.1
+            "SCT": 122.1
         },
         "irons_spellbooks:cultist_chestplate": {
-            "SCT": 181.1
+            "SCT": 178.1
         },
         "irons_spellbooks:cultist_helmet": {
-            "SCT": 139.1
+            "SCT": 136.1
         },
         "irons_spellbooks:cultist_leggings": {
-            "SCT": 167.1
+            "SCT": 164.1
         },
         "irons_spellbooks:cursed_doll_spell_book": {
-            "SCT": 82.28
+            "SCT": 79.279
         },
         "irons_spellbooks:dead_king_phylactery": {
             "SCT": 4805.596
@@ -12886,7 +13147,7 @@
             "SCT": 611.65
         },
         "irons_spellbooks:energized_core": {
-            "SCT": 49.0
+            "SCT": 48.991
         },
         "irons_spellbooks:epic_ink": {
             "SCT": 140.35
@@ -12919,7 +13180,7 @@
             "SCT": 26.736
         },
         "irons_spellbooks:frosted_helve": {
-            "SCT": 100.56
+            "SCT": 100.558
         },
         "irons_spellbooks:frostward_ring": {
             "SCT": 245.611
@@ -12946,7 +13207,7 @@
             "SCT": 5.667
         },
         "irons_spellbooks:greater_conjurers_talisman": {
-            "SCT": 76.1
+            "SCT": 74.6
         },
         "irons_spellbooks:heavy_chain_necklace": {
             "SCT": 1.111
@@ -12976,7 +13237,7 @@
             "SCT": 42.0
         },
         "irons_spellbooks:ice_staff": {
-            "SCT": 345.06
+            "SCT": 345.058
         },
         "irons_spellbooks:ice_upgrade_orb": {
             "SCT": 332.65
@@ -13015,7 +13276,7 @@
             "SCT": 10.1
         },
         "irons_spellbooks:lightning_rod": {
-            "SCT": 52.0
+            "SCT": 51.988
         },
         "irons_spellbooks:lightning_rune": {
             "SCT": 85.1
@@ -13045,16 +13306,16 @@
             "SCT": 1020.0
         },
         "irons_spellbooks:nature_rune": {
-            "SCT": 75.1
+            "SCT": 61.1
         },
         "irons_spellbooks:nature_upgrade_orb": {
-            "SCT": 411.65
+            "SCT": 355.65
         },
         "irons_spellbooks:nether_brick_pillar": {
             "SCT": 0.4
         },
         "irons_spellbooks:netherite_spell_book": {
-            "SCT": 792.0
+            "SCT": 790.5
         },
         "irons_spellbooks:netherward_tincture": {
             "SCT": 18.6
@@ -13069,22 +13330,25 @@
             "SCT": 244.5
         },
         "irons_spellbooks:plagued_boots": {
-            "SCT": 131.1
+            "SCT": 117.1
         },
         "irons_spellbooks:plagued_chestplate": {
-            "SCT": 187.1
-        },
-        "irons_spellbooks:plagued_helmet": {
-            "SCT": 145.1
-        },
-        "irons_spellbooks:plagued_leggings": {
             "SCT": 173.1
         },
+        "irons_spellbooks:plagued_helmet": {
+            "SCT": 131.1
+        },
+        "irons_spellbooks:plagued_leggings": {
+            "SCT": 159.1
+        },
         "irons_spellbooks:poisonward_ring": {
-            "SCT": 76.211
+            "SCT": 62.211
         },
         "irons_spellbooks:portal_frame": {
             "SCT": 37.5
+        },
+        "irons_spellbooks:prepared_ice_spider_egg": {
+            "SCT": 51.381
         },
         "irons_spellbooks:priest_boots": {
             "SCT": 151.384
@@ -13204,7 +13468,7 @@
             "SCT": 622.713
         },
         "irons_spellbooks:visibility_ring": {
-            "SCT": 6.682
+            "SCT": 6.68
         },
         "irons_spellbooks:wandering_magician_boots": {
             "SCT": 21.0
@@ -13222,7 +13486,7 @@
             "SCT": 20.596
         },
         "irons_spellbooks:weapon_parts": {
-            "SCT": 150.84
+            "SCT": 150.837
         },
         "irons_spellbooks:wicked_bone_ring": {
             "SCT": 180.0
@@ -13288,13 +13552,13 @@
             "SCT": 1.25
         },
         "jackpot:blue_casino_block": {
-            "SCT": 1.125
+            "SCT": 1.124
         },
         "jackpot:blue_casino_bricks": {
-            "SCT": 1.125
+            "SCT": 1.124
         },
         "jackpot:blue_casino_cabochon_pillar": {
-            "SCT": 4.75
+            "SCT": 4.749
         },
         "jackpot:blue_casino_door": {
             "SCT": 2.5
@@ -13333,13 +13597,13 @@
             "SCT": 232.0
         },
         "jackpot:green_casino_block": {
-            "SCT": 1.125
+            "SCT": 1.124
         },
         "jackpot:green_casino_bricks": {
-            "SCT": 1.125
+            "SCT": 1.124
         },
         "jackpot:green_casino_cabochon_pillar": {
-            "SCT": 4.75
+            "SCT": 4.749
         },
         "jackpot:green_casino_door": {
             "SCT": 2.5
@@ -13375,13 +13639,13 @@
             "SCT": 32.7
         },
         "jackpot:red_casino_block": {
-            "SCT": 1.125
+            "SCT": 1.124
         },
         "jackpot:red_casino_bricks": {
-            "SCT": 1.125
+            "SCT": 1.124
         },
         "jackpot:red_casino_cabochon_pillar": {
-            "SCT": 4.75
+            "SCT": 4.749
         },
         "jackpot:red_casino_door": {
             "SCT": 2.5
@@ -13411,13 +13675,13 @@
             "SCT": 217.5
         },
         "jackpot:yellow_casino_block": {
-            "SCT": 1.125
+            "SCT": 1.124
         },
         "jackpot:yellow_casino_bricks": {
-            "SCT": 1.125
+            "SCT": 1.124
         },
         "jackpot:yellow_casino_cabochon_pillar": {
-            "SCT": 4.75
+            "SCT": 4.749
         },
         "jackpot:yellow_casino_door": {
             "SCT": 2.5
@@ -13466,6 +13730,9 @@
         },
         "minecraft:acacia_pressure_plate": {
             "SCT": 0.75
+        },
+        "minecraft:acacia_shelf": {
+            "SCT": 1.5
         },
         "minecraft:acacia_sign": {
             "SCT": 0.813
@@ -13522,7 +13789,7 @@
             "SCT": 1.333
         },
         "minecraft:baked_potato": {
-            "SCT": 7.5
+            "SCT": 4.0
         },
         "minecraft:bamboo": {
             "SCT": 0.1
@@ -13563,6 +13830,9 @@
         "minecraft:bamboo_raft": {
             "SCT": 2.25
         },
+        "minecraft:bamboo_shelf": {
+            "SCT": 0.9
+        },
         "minecraft:bamboo_sign": {
             "SCT": 0.963
         },
@@ -13588,7 +13858,7 @@
             "SCT": 62.25
         },
         "minecraft:beetroot_soup": {
-            "SCT": 45.281
+            "SCT": 24.281
         },
         "minecraft:bell": {
             "SCT": 80.0
@@ -13620,6 +13890,9 @@
         "minecraft:birch_pressure_plate": {
             "SCT": 0.75
         },
+        "minecraft:birch_shelf": {
+            "SCT": 1.5
+        },
         "minecraft:birch_sign": {
             "SCT": 0.813
         },
@@ -13632,8 +13905,17 @@
         "minecraft:birch_trapdoor": {
             "SCT": 1.125
         },
+        "minecraft:black_concrete_slab": {
+            "SCT": 0.056
+        },
+        "minecraft:black_concrete_stairs": {
+            "SCT": 0.112
+        },
         "minecraft:black_dye": {
             "SCT": 1.0
+        },
+        "minecraft:black_wool_slab": {
+            "SCT": 2.0
         },
         "minecraft:blackstone_slab": {
             "SCT": 0.05
@@ -13653,14 +13935,23 @@
         "minecraft:blaze_rod": {
             "SCT": 15.0
         },
+        "minecraft:blue_concrete_slab": {
+            "SCT": 0.056
+        },
+        "minecraft:blue_concrete_stairs": {
+            "SCT": 0.112
+        },
         "minecraft:blue_dye": {
             "SCT": 0.1
         },
         "minecraft:blue_ice": {
             "SCT": 40.5
         },
+        "minecraft:blue_wool_slab": {
+            "SCT": 2.0
+        },
         "minecraft:bolt_armor_trim_smithing_template": {
-            "SCT": 289.0
+            "SCT": 288.99
         },
         "minecraft:bone": {
             "SCT": 2.0
@@ -13707,11 +13998,20 @@
         "minecraft:bricks": {
             "SCT": 0.4
         },
+        "minecraft:brown_concrete_slab": {
+            "SCT": 0.056
+        },
+        "minecraft:brown_concrete_stairs": {
+            "SCT": 0.112
+        },
         "minecraft:brown_dye": {
             "SCT": 0.1
         },
+        "minecraft:brown_wool_slab": {
+            "SCT": 2.0
+        },
         "minecraft:brush": {
-            "SCT": 2.188
+            "SCT": 2.187
         },
         "minecraft:bucket": {
             "SCT": 18.0
@@ -13726,7 +14026,7 @@
             "SCT": 5.814
         },
         "minecraft:carrot_on_a_stick": {
-            "SCT": 10.064
+            "SCT": 6.564
         },
         "minecraft:cartography_table": {
             "SCT": 1.7
@@ -13779,6 +14079,9 @@
         "minecraft:cherry_pressure_plate": {
             "SCT": 0.75
         },
+        "minecraft:cherry_shelf": {
+            "SCT": 1.5
+        },
         "minecraft:cherry_sign": {
             "SCT": 0.813
         },
@@ -13828,7 +14131,7 @@
             "SCT": 0.1
         },
         "minecraft:chiseled_sulfur": {
-            "SCT": 0.2
+            "SCT": 0.8
         },
         "minecraft:chiseled_tuff": {
             "SCT": 0.1
@@ -13918,22 +14221,22 @@
             "SCT": 3680.0
         },
         "minecraft:cooked_beef": {
-            "SCT": 4.0
+            "SCT": 6.0
         },
         "minecraft:cooked_chicken": {
-            "SCT": 4.0
+            "SCT": 6.0
         },
         "minecraft:cooked_cod": {
             "SCT": 6.0
         },
         "minecraft:cooked_mutton": {
-            "SCT": 4.0
+            "SCT": 6.0
         },
         "minecraft:cooked_porkchop": {
-            "SCT": 4.0
+            "SCT": 6.0
         },
         "minecraft:cooked_rabbit": {
-            "SCT": 4.0
+            "SCT": 6.0
         },
         "minecraft:cooked_salmon": {
             "SCT": 6.0
@@ -13941,8 +14244,50 @@
         "minecraft:cookie": {
             "SCT": 0.262
         },
+        "minecraft:copper_axe": {
+            "SCT": 3.373
+        },
+        "minecraft:copper_boots": {
+            "SCT": 3.996
+        },
+        "minecraft:copper_chestplate": {
+            "SCT": 7.992
+        },
+        "minecraft:copper_helmet": {
+            "SCT": 4.995
+        },
+        "minecraft:copper_hoe": {
+            "SCT": 2.374
+        },
+        "minecraft:copper_horse_armor": {
+            "SCT": 45.0
+        },
         "minecraft:copper_ingot": {
-            "SCT": 1.0
+            "SCT": 0.999
+        },
+        "minecraft:copper_leggings": {
+            "SCT": 6.993
+        },
+        "minecraft:copper_nautilus_armor": {
+            "SCT": 90.0
+        },
+        "minecraft:copper_nugget": {
+            "SCT": 0.111
+        },
+        "minecraft:copper_pickaxe": {
+            "SCT": 3.373
+        },
+        "minecraft:copper_shovel": {
+            "SCT": 1.375
+        },
+        "minecraft:copper_spear": {
+            "SCT": 1.375
+        },
+        "minecraft:copper_sword": {
+            "SCT": 2.186
+        },
+        "minecraft:copper_torch": {
+            "SCT": 0.25
         },
         "minecraft:cracked_deepslate_bricks": {
             "SCT": 0.1
@@ -13995,6 +14340,9 @@
         "minecraft:crimson_pressure_plate": {
             "SCT": 0.75
         },
+        "minecraft:crimson_shelf": {
+            "SCT": 1.5
+        },
         "minecraft:crimson_sign": {
             "SCT": 0.813
         },
@@ -14025,8 +14373,17 @@
         "minecraft:cut_sandstone_slab": {
             "SCT": 0.2
         },
+        "minecraft:cyan_concrete_slab": {
+            "SCT": 0.056
+        },
+        "minecraft:cyan_concrete_stairs": {
+            "SCT": 0.112
+        },
         "minecraft:cyan_dye": {
             "SCT": 0.1
+        },
+        "minecraft:cyan_wool_slab": {
+            "SCT": 2.0
         },
         "minecraft:dark_oak_boat": {
             "SCT": 1.875
@@ -14054,6 +14411,9 @@
         },
         "minecraft:dark_oak_pressure_plate": {
             "SCT": 0.75
+        },
+        "minecraft:dark_oak_shelf": {
+            "SCT": 1.5
         },
         "minecraft:dark_oak_sign": {
             "SCT": 0.813
@@ -14136,10 +14496,16 @@
         "minecraft:diamond_leggings": {
             "SCT": 280.0
         },
+        "minecraft:diamond_nautilus_armor": {
+            "SCT": 460.0
+        },
         "minecraft:diamond_pickaxe": {
             "SCT": 120.376
         },
         "minecraft:diamond_shovel": {
+            "SCT": 40.376
+        },
+        "minecraft:diamond_spear": {
             "SCT": 40.376
         },
         "minecraft:diamond_sword": {
@@ -14338,7 +14704,7 @@
             "SCT": 36.0
         },
         "minecraft:golden_carrot": {
-            "SCT": 15.5
+            "SCT": 12.0
         },
         "minecraft:golden_chestplate": {
             "SCT": 72.0
@@ -14355,10 +14721,16 @@
         "minecraft:golden_leggings": {
             "SCT": 63.0
         },
+        "minecraft:golden_nautilus_armor": {
+            "SCT": 260.0
+        },
         "minecraft:golden_pickaxe": {
             "SCT": 27.376
         },
         "minecraft:golden_shovel": {
+            "SCT": 9.376
+        },
+        "minecraft:golden_spear": {
             "SCT": 9.376
         },
         "minecraft:golden_sword": {
@@ -14373,11 +14745,29 @@
         "minecraft:granite_wall": {
             "SCT": 0.1
         },
+        "minecraft:gray_concrete_slab": {
+            "SCT": 0.056
+        },
+        "minecraft:gray_concrete_stairs": {
+            "SCT": 0.112
+        },
         "minecraft:gray_dye": {
             "SCT": 0.1
         },
+        "minecraft:gray_wool_slab": {
+            "SCT": 2.0
+        },
+        "minecraft:green_concrete_slab": {
+            "SCT": 0.056
+        },
+        "minecraft:green_concrete_stairs": {
+            "SCT": 0.112
+        },
         "minecraft:green_dye": {
             "SCT": 0.1
+        },
+        "minecraft:green_wool_slab": {
+            "SCT": 2.0
         },
         "minecraft:grindstone": {
             "SCT": 1.176
@@ -14460,6 +14850,9 @@
         "minecraft:iron_leggings": {
             "SCT": 42.0
         },
+        "minecraft:iron_nautilus_armor": {
+            "SCT": 180.0
+        },
         "minecraft:iron_nugget": {
             "SCT": 0.667
         },
@@ -14467,6 +14860,9 @@
             "SCT": 18.376
         },
         "minecraft:iron_shovel": {
+            "SCT": 6.376
+        },
+        "minecraft:iron_spear": {
             "SCT": 6.376
         },
         "minecraft:iron_sword": {
@@ -14511,6 +14907,9 @@
         "minecraft:jungle_pressure_plate": {
             "SCT": 0.75
         },
+        "minecraft:jungle_shelf": {
+            "SCT": 1.5
+        },
         "minecraft:jungle_sign": {
             "SCT": 0.813
         },
@@ -14542,7 +14941,7 @@
             "SCT": 5.0
         },
         "minecraft:lead": {
-            "SCT": 2.5
+            "SCT": 4.5
         },
         "minecraft:leather": {
             "SCT": 4.0
@@ -14568,23 +14967,47 @@
         "minecraft:lever": {
             "SCT": 0.288
         },
+        "minecraft:light_blue_concrete_slab": {
+            "SCT": 0.056
+        },
+        "minecraft:light_blue_concrete_stairs": {
+            "SCT": 0.112
+        },
         "minecraft:light_blue_dye": {
             "SCT": 0.1
+        },
+        "minecraft:light_blue_wool_slab": {
+            "SCT": 2.0
+        },
+        "minecraft:light_gray_concrete_slab": {
+            "SCT": 0.056
+        },
+        "minecraft:light_gray_concrete_stairs": {
+            "SCT": 0.112
         },
         "minecraft:light_gray_dye": {
             "SCT": 0.1
         },
+        "minecraft:light_gray_wool_slab": {
+            "SCT": 2.0
+        },
         "minecraft:light_weighted_pressure_plate": {
             "SCT": 18.0
         },
-        "minecraft:lightning_rod": {
-            "SCT": 3.0
+        "minecraft:lime_concrete_slab": {
+            "SCT": 0.056
+        },
+        "minecraft:lime_concrete_stairs": {
+            "SCT": 0.112
         },
         "minecraft:lime_dye": {
             "SCT": 0.1
         },
+        "minecraft:lime_wool_slab": {
+            "SCT": 2.0
+        },
         "minecraft:lodestone": {
-            "SCT": 6.8
+            "SCT": 756.8
         },
         "minecraft:loom": {
             "SCT": 2.75
@@ -14592,8 +15015,17 @@
         "minecraft:mace": {
             "SCT": 3020.0
         },
+        "minecraft:magenta_concrete_slab": {
+            "SCT": 0.056
+        },
+        "minecraft:magenta_concrete_stairs": {
+            "SCT": 0.112
+        },
         "minecraft:magenta_dye": {
             "SCT": 0.1
+        },
+        "minecraft:magenta_wool_slab": {
+            "SCT": 2.0
         },
         "minecraft:magma_block": {
             "SCT": 0.8
@@ -14630,6 +15062,9 @@
         },
         "minecraft:mangrove_roots": {
             "SCT": 0.25
+        },
+        "minecraft:mangrove_shelf": {
+            "SCT": 1.5
         },
         "minecraft:mangrove_sign": {
             "SCT": 0.813
@@ -14754,11 +15189,17 @@
         "minecraft:netherite_hoe": {
             "SCT": 1116.476
         },
+        "minecraft:netherite_horse_armor": {
+            "SCT": 1266.1
+        },
         "minecraft:netherite_ingot": {
             "SCT": 756.0
         },
         "minecraft:netherite_leggings": {
             "SCT": 1316.1
+        },
+        "minecraft:netherite_nautilus_armor": {
+            "SCT": 1496.1
         },
         "minecraft:netherite_pickaxe": {
             "SCT": 1156.476
@@ -14767,6 +15208,9 @@
             "SCT": 180.0
         },
         "minecraft:netherite_shovel": {
+            "SCT": 1076.476
+        },
+        "minecraft:netherite_spear": {
             "SCT": 1076.476
         },
         "minecraft:netherite_sword": {
@@ -14808,6 +15252,9 @@
         "minecraft:oak_pressure_plate": {
             "SCT": 0.75
         },
+        "minecraft:oak_shelf": {
+            "SCT": 1.5
+        },
         "minecraft:oak_sign": {
             "SCT": 0.813
         },
@@ -14832,8 +15279,17 @@
         "minecraft:ominous_trial_key": {
             "SCT": 900.0
         },
+        "minecraft:orange_concrete_slab": {
+            "SCT": 0.056
+        },
+        "minecraft:orange_concrete_stairs": {
+            "SCT": 0.112
+        },
         "minecraft:orange_dye": {
             "SCT": 0.1
+        },
+        "minecraft:orange_wool_slab": {
+            "SCT": 2.0
         },
         "minecraft:packed_ice": {
             "SCT": 4.5
@@ -14874,6 +15330,9 @@
         "minecraft:pale_oak_pressure_plate": {
             "SCT": 0.75
         },
+        "minecraft:pale_oak_shelf": {
+            "SCT": 1.5
+        },
         "minecraft:pale_oak_sign": {
             "SCT": 0.813
         },
@@ -14895,8 +15354,17 @@
         "minecraft:piglin_banner_pattern": {
             "SCT": 320.0
         },
+        "minecraft:pink_concrete_slab": {
+            "SCT": 0.056
+        },
+        "minecraft:pink_concrete_stairs": {
+            "SCT": 0.112
+        },
         "minecraft:pink_dye": {
             "SCT": 0.1
+        },
+        "minecraft:pink_wool_slab": {
+            "SCT": 2.0
         },
         "minecraft:piston": {
             "SCT": 17.525
@@ -14914,7 +15382,7 @@
             "SCT": 0.1
         },
         "minecraft:poisonous_potato": {
-            "SCT": 7.5
+            "SCT": 4.0
         },
         "minecraft:polished_andesite": {
             "SCT": 0.1
@@ -15001,16 +15469,16 @@
             "SCT": 0.1
         },
         "minecraft:polished_sulfur": {
-            "SCT": 0.2
+            "SCT": 0.8
         },
         "minecraft:polished_sulfur_slab": {
-            "SCT": 0.1
+            "SCT": 0.4
         },
         "minecraft:polished_sulfur_stairs": {
-            "SCT": 0.2
+            "SCT": 0.8
         },
         "minecraft:polished_sulfur_wall": {
-            "SCT": 0.2
+            "SCT": 0.8
         },
         "minecraft:polished_tuff": {
             "SCT": 0.1
@@ -15024,11 +15492,53 @@
         "minecraft:polished_tuff_wall": {
             "SCT": 0.1
         },
+        "minecraft:poplar_boat": {
+            "SCT": 1.875
+        },
+        "minecraft:poplar_button": {
+            "SCT": 0.375
+        },
+        "minecraft:poplar_chest_boat": {
+            "SCT": 4.875
+        },
+        "minecraft:poplar_door": {
+            "SCT": 0.75
+        },
+        "minecraft:poplar_fence": {
+            "SCT": 0.625
+        },
+        "minecraft:poplar_fence_gate": {
+            "SCT": 1.502
+        },
+        "minecraft:poplar_hanging_sign": {
+            "SCT": 3.945
+        },
+        "minecraft:poplar_planks": {
+            "SCT": 0.375
+        },
+        "minecraft:poplar_pressure_plate": {
+            "SCT": 0.75
+        },
+        "minecraft:poplar_shelf": {
+            "SCT": 1.5
+        },
+        "minecraft:poplar_sign": {
+            "SCT": 0.813
+        },
+        "minecraft:poplar_slab": {
+            "SCT": 0.188
+        },
+        "minecraft:poplar_stairs": {
+            "SCT": 0.562
+        },
+        "minecraft:poplar_trapdoor": {
+            "SCT": 1.125
+        },
         "minecraft:popped_chorus_fruit": {
             "SCT": 0.5
         },
         "minecraft:potent_sulfur": {
-            "SCT": 1.8
+            "SCT": 7.2
         },
         "minecraft:powder_snow_bucket": {
             "SCT": 24.0
@@ -15069,8 +15579,17 @@
         "minecraft:pumpkin_pie": {
             "SCT": 7.1
         },
+        "minecraft:purple_concrete_slab": {
+            "SCT": 0.056
+        },
+        "minecraft:purple_concrete_stairs": {
+            "SCT": 0.112
+        },
         "minecraft:purple_dye": {
             "SCT": 0.1
+        },
+        "minecraft:purple_wool_slab": {
+            "SCT": 2.0
         },
         "minecraft:purpur_block": {
             "SCT": 0.5
@@ -15109,7 +15628,7 @@
             "SCT": 6.0
         },
         "minecraft:rabbit_stew": {
-            "SCT": 19.381
+            "SCT": 14.381
         },
         "minecraft:rail": {
             "SCT": 2.262
@@ -15138,6 +15657,12 @@
         "minecraft:recovery_compass": {
             "SCT": 2434.0
         },
+        "minecraft:red_concrete_slab": {
+            "SCT": 0.056
+        },
+        "minecraft:red_concrete_stairs": {
+            "SCT": 0.112
+        },
         "minecraft:red_dye": {
             "SCT": 0.1
         },
@@ -15164,6 +15689,9 @@
         },
         "minecraft:red_sandstone_wall": {
             "SCT": 0.4
+        },
+        "minecraft:red_wool_slab": {
+            "SCT": 2.0
         },
         "minecraft:redstone": {
             "SCT": 10.0
@@ -15393,6 +15921,9 @@
         "minecraft:spruce_pressure_plate": {
             "SCT": 0.75
         },
+        "minecraft:spruce_shelf": {
+            "SCT": 1.5
+        },
         "minecraft:spruce_sign": {
             "SCT": 0.813
         },
@@ -15406,7 +15937,7 @@
             "SCT": 1.125
         },
         "minecraft:spyglass": {
-            "SCT": 5.571
+            "SCT": 5.569
         },
         "minecraft:stick": {
             "SCT": 0.188
@@ -15450,6 +15981,9 @@
         "minecraft:stone_slab": {
             "SCT": 0.05
         },
+        "minecraft:stone_spear": {
+            "SCT": 0.476
+        },
         "minecraft:stone_stairs": {
             "SCT": 0.1
         },
@@ -15459,6 +15993,9 @@
         "minecraft:stonecutter": {
             "SCT": 6.3
         },
+        "minecraft:straw_bed": {
+            "SCT": 6.75
+        },
         "minecraft:string": {
             "SCT": 1.0
         },
@@ -15466,34 +16003,34 @@
             "SCT": 0.1
         },
         "minecraft:sulfur": {
-            "SCT": 0.2
+            "SCT": 0.8
         },
         "minecraft:sulfur_brick_slab": {
-            "SCT": 0.1
+            "SCT": 0.4
         },
         "minecraft:sulfur_brick_stairs": {
-            "SCT": 0.2
+            "SCT": 0.8
         },
         "minecraft:sulfur_brick_wall": {
-            "SCT": 0.2
+            "SCT": 0.8
         },
         "minecraft:sulfur_bricks": {
-            "SCT": 0.2
+            "SCT": 0.8
         },
         "minecraft:sulfur_cube_bucket": {
             "SCT": 24.0
         },
         "minecraft:sulfur_slab": {
-            "SCT": 0.1
+            "SCT": 0.4
         },
         "minecraft:sulfur_spike": {
             "SCT": 0.2
         },
         "minecraft:sulfur_stairs": {
-            "SCT": 0.2
+            "SCT": 0.8
         },
         "minecraft:sulfur_wall": {
-            "SCT": 0.2
+            "SCT": 0.8
         },
         "minecraft:sweet_berries": {
             "SCT": 0.75
@@ -15603,6 +16140,9 @@
         "minecraft:warped_pressure_plate": {
             "SCT": 0.75
         },
+        "minecraft:warped_shelf": {
+            "SCT": 1.5
+        },
         "minecraft:warped_sign": {
             "SCT": 0.813
         },
@@ -15622,112 +16162,112 @@
             "SCT": 1.0
         },
         "minecraft:waxed_chiseled_copper": {
-            "SCT": 7.25
+            "SCT": 7.248
         },
         "minecraft:waxed_copper_block": {
-            "SCT": 29.0
+            "SCT": 28.991
         },
         "minecraft:waxed_copper_bulb": {
-            "SCT": 28.0
+            "SCT": 27.993
         },
         "minecraft:waxed_copper_door": {
-            "SCT": 22.0
+            "SCT": 21.998
         },
         "minecraft:waxed_copper_grate": {
-            "SCT": 7.25
+            "SCT": 7.248
         },
         "minecraft:waxed_copper_trapdoor": {
-            "SCT": 23.0
+            "SCT": 22.997
         },
         "minecraft:waxed_cut_copper": {
-            "SCT": 7.25
+            "SCT": 7.248
         },
         "minecraft:waxed_cut_copper_slab": {
-            "SCT": 3.625
+            "SCT": 3.624
         },
         "minecraft:waxed_cut_copper_stairs": {
-            "SCT": 7.25
+            "SCT": 7.248
         },
         "minecraft:waxed_exposed_chiseled_copper": {
-            "SCT": 7.25
+            "SCT": 7.248
         },
         "minecraft:waxed_exposed_copper": {
-            "SCT": 29.0
+            "SCT": 28.991
         },
         "minecraft:waxed_exposed_copper_bulb": {
-            "SCT": 28.0
+            "SCT": 27.993
         },
         "minecraft:waxed_exposed_copper_door": {
-            "SCT": 22.0
+            "SCT": 21.998
         },
         "minecraft:waxed_exposed_copper_grate": {
-            "SCT": 7.25
+            "SCT": 7.248
         },
         "minecraft:waxed_exposed_copper_trapdoor": {
-            "SCT": 23.0
+            "SCT": 22.997
         },
         "minecraft:waxed_exposed_cut_copper": {
-            "SCT": 7.25
+            "SCT": 7.248
         },
         "minecraft:waxed_exposed_cut_copper_slab": {
-            "SCT": 3.625
+            "SCT": 3.624
         },
         "minecraft:waxed_exposed_cut_copper_stairs": {
-            "SCT": 7.25
+            "SCT": 7.248
         },
         "minecraft:waxed_oxidized_chiseled_copper": {
-            "SCT": 7.25
+            "SCT": 7.248
         },
         "minecraft:waxed_oxidized_copper": {
-            "SCT": 29.0
+            "SCT": 28.991
         },
         "minecraft:waxed_oxidized_copper_bulb": {
-            "SCT": 28.0
+            "SCT": 27.993
         },
         "minecraft:waxed_oxidized_copper_door": {
-            "SCT": 22.0
+            "SCT": 21.998
         },
         "minecraft:waxed_oxidized_copper_grate": {
-            "SCT": 7.25
+            "SCT": 7.248
         },
         "minecraft:waxed_oxidized_copper_trapdoor": {
-            "SCT": 23.0
+            "SCT": 22.997
         },
         "minecraft:waxed_oxidized_cut_copper": {
-            "SCT": 7.25
+            "SCT": 7.248
         },
         "minecraft:waxed_oxidized_cut_copper_slab": {
-            "SCT": 3.625
+            "SCT": 3.624
         },
         "minecraft:waxed_oxidized_cut_copper_stairs": {
-            "SCT": 7.25
+            "SCT": 7.248
         },
         "minecraft:waxed_weathered_chiseled_copper": {
-            "SCT": 7.25
+            "SCT": 7.248
         },
         "minecraft:waxed_weathered_copper": {
-            "SCT": 29.0
+            "SCT": 28.991
         },
         "minecraft:waxed_weathered_copper_bulb": {
-            "SCT": 28.0
+            "SCT": 27.993
         },
         "minecraft:waxed_weathered_copper_door": {
-            "SCT": 22.0
+            "SCT": 21.998
         },
         "minecraft:waxed_weathered_copper_grate": {
-            "SCT": 7.25
+            "SCT": 7.248
         },
         "minecraft:waxed_weathered_copper_trapdoor": {
-            "SCT": 23.0
+            "SCT": 22.997
         },
         "minecraft:waxed_weathered_cut_copper": {
-            "SCT": 7.25
+            "SCT": 7.248
         },
         "minecraft:waxed_weathered_cut_copper_slab": {
-            "SCT": 3.625
+            "SCT": 3.624
         },
         "minecraft:waxed_weathered_cut_copper_stairs": {
-            "SCT": 7.25
+            "SCT": 7.248
         },
         "minecraft:wayfinder_armor_trim_smithing_template": {
             "SCT": 280.4
@@ -15735,8 +16275,17 @@
         "minecraft:wet_sponge": {
             "SCT": 20.0
         },
+        "minecraft:white_concrete_slab": {
+            "SCT": 0.056
+        },
+        "minecraft:white_concrete_stairs": {
+            "SCT": 0.112
+        },
         "minecraft:white_dye": {
             "SCT": 0.1
+        },
+        "minecraft:white_wool_slab": {
+            "SCT": 2.0
         },
         "minecraft:wild_armor_trim_smithing_template": {
             "SCT": 280.2
@@ -15765,14 +16314,26 @@
         "minecraft:wooden_shovel": {
             "SCT": 0.751
         },
+        "minecraft:wooden_spear": {
+            "SCT": 0.751
+        },
         "minecraft:wooden_sword": {
             "SCT": 0.938
         },
         "minecraft:writable_book": {
             "SCT": 6.3
         },
+        "minecraft:yellow_concrete_slab": {
+            "SCT": 0.056
+        },
+        "minecraft:yellow_concrete_stairs": {
+            "SCT": 0.112
+        },
         "minecraft:yellow_dye": {
             "SCT": 0.1
+        },
+        "minecraft:yellow_wool_slab": {
+            "SCT": 2.0
         },
         "naturescompass:naturescompass": {
             "SCT": 40.8
@@ -15789,17 +16350,62 @@
         "numismatics:bevel": {
             "SCT": 8.0
         },
+        "numismatics:black_authorized_card": {
+            "SCT": 29.05
+        },
         "numismatics:blaze_banker": {
             "SCT": 91.7
         },
+        "numismatics:blue_authorized_card": {
+            "SCT": 28.15
+        },
         "numismatics:brass_depositor": {
             "SCT": 103.397
+        },
+        "numismatics:brown_authorized_card": {
+            "SCT": 28.15
         },
         "numismatics:cog": {
             "SCT": 64.0
         },
         "numismatics:crown": {
             "SCT": 512.0
+        },
+        "numismatics:cyan_authorized_card": {
+            "SCT": 28.15
+        },
+        "numismatics:gray_authorized_card": {
+            "SCT": 28.15
+        },
+        "numismatics:green_authorized_card": {
+            "SCT": 28.15
+        },
+        "numismatics:light_blue_authorized_card": {
+            "SCT": 28.15
+        },
+        "numismatics:light_gray_authorized_card": {
+            "SCT": 28.15
+        },
+        "numismatics:lime_authorized_card": {
+            "SCT": 28.15
+        },
+        "numismatics:magenta_authorized_card": {
+            "SCT": 28.15
+        },
+        "numismatics:orange_authorized_card": {
+            "SCT": 28.15
+        },
+        "numismatics:pink_authorized_card": {
+            "SCT": 28.15
+        },
+        "numismatics:purple_authorized_card": {
+            "SCT": 28.15
+        },
+        "numismatics:red_authorized_card": {
+            "SCT": 28.15
+        },
+        "numismatics:salepoint": {
+            "SCT": 319.648
         },
         "numismatics:sprocket": {
             "SCT": 16.0
@@ -15813,11 +16419,17 @@
         "numismatics:vendor": {
             "SCT": 99.997
         },
+        "numismatics:white_authorized_card": {
+            "SCT": 28.15
+        },
+        "numismatics:yellow_authorized_card": {
+            "SCT": 28.15
+        },
         "paraglider:enduring_mixture": {
-            "SCT": 15.5
+            "SCT": 12.0
         },
         "paraglider:energizing_mixture": {
-            "SCT": 7.5
+            "SCT": 4.0
         },
         "paraglider:heart_container": {
             "SCT": 1800.0
@@ -15841,7 +16453,7 @@
             "SCT": 120.14
         },
         "protection_pixel:anchorpointas_leggings": {
-            "SCT": 1771.44
+            "SCT": 1771.426
         },
         "protection_pixel:armorhanger": {
             "SCT": 18.001
@@ -15853,13 +16465,13 @@
             "SCT": 63.894
         },
         "protection_pixel:blooddialysisdevice": {
-            "SCT": 479.334
+            "SCT": 479.324
         },
         "protection_pixel:bloodprisoner_helmet": {
-            "SCT": 74.288
+            "SCT": 74.285
         },
         "protection_pixel:bloodprisoneras_helmet": {
-            "SCT": 899.938
+            "SCT": 899.928
         },
         "protection_pixel:brassarmorplate": {
             "SCT": 14.994
@@ -15868,16 +16480,16 @@
             "SCT": 129.98
         },
         "protection_pixel:breakeras_chestplate": {
-            "SCT": 1781.28
+            "SCT": 1781.266
         },
         "protection_pixel:buoyancy_leggings": {
-            "SCT": 168.672
+            "SCT": 168.67
         },
         "protection_pixel:buoyancyas_leggings": {
-            "SCT": 1819.972
+            "SCT": 1819.956
         },
         "protection_pixel:cannonarm": {
-            "SCT": 77.918
+            "SCT": 77.908
         },
         "protection_pixel:chestplatelining": {
             "SCT": 87.884
@@ -15886,49 +16498,49 @@
             "SCT": 63.181
         },
         "protection_pixel:closedas_helmet": {
-            "SCT": 888.831
+            "SCT": 888.824
         },
         "protection_pixel:emptywatertank": {
-            "SCT": 2.038
+            "SCT": 2.036
         },
         "protection_pixel:equipmentkit": {
             "SCT": 77.544
         },
         "protection_pixel:evasionwing": {
-            "SCT": 110.38
+            "SCT": 110.374
         },
         "protection_pixel:falconnest_chestplate": {
-            "SCT": 311.143
+            "SCT": 311.131
         },
         "protection_pixel:falconnestas_chestplate": {
-            "SCT": 1962.443
+            "SCT": 1962.417
         },
         "protection_pixel:flarerod": {
             "SCT": 16.312
         },
         "protection_pixel:floatshield_chestplate": {
-            "SCT": 2903.714
+            "SCT": 2903.704
         },
         "protection_pixel:hammer_helmet": {
             "SCT": 104.052
         },
         "protection_pixel:hammeras_helmet": {
-            "SCT": 929.702
+            "SCT": 929.695
         },
         "protection_pixel:heatoverlockingmechanism": {
-            "SCT": 423.85
+            "SCT": 423.843
         },
         "protection_pixel:heatpulsethruster": {
-            "SCT": 58.112
+            "SCT": 58.108
         },
         "protection_pixel:heatresistantceramicsheet": {
             "SCT": 29.2
         },
         "protection_pixel:hellsnake_chestplate": {
-            "SCT": 125.105
+            "SCT": 125.099
         },
         "protection_pixel:hellsnakeas_chestplate": {
-            "SCT": 1776.405
+            "SCT": 1776.385
         },
         "protection_pixel:hookcannon": {
             "SCT": 126.218
@@ -15940,7 +16552,7 @@
             "SCT": 166.121
         },
         "protection_pixel:hunteras_helmet": {
-            "SCT": 991.771
+            "SCT": 991.764
         },
         "protection_pixel:ironarmorplate": {
             "SCT": 7.312
@@ -15949,7 +16561,7 @@
             "SCT": 63.545
         },
         "protection_pixel:lanceras_helmet": {
-            "SCT": 889.195
+            "SCT": 889.188
         },
         "protection_pixel:leggingslining": {
             "SCT": 81.884
@@ -15958,7 +16570,7 @@
             "SCT": 37.312
         },
         "protection_pixel:linkplate_chestplate": {
-            "SCT": 43.248
+            "SCT": 43.246
         },
         "protection_pixel:linkplate_helmet": {
             "SCT": 39.936
@@ -15970,7 +16582,7 @@
             "SCT": 612.35
         },
         "protection_pixel:magneticstormas_chestplate": {
-            "SCT": 2263.65
+            "SCT": 2263.636
         },
         "protection_pixel:maneuveringwing": {
             "SCT": 1904.56
@@ -15979,28 +16591,28 @@
             "SCT": 179.067
         },
         "protection_pixel:nightdemonas_helmet": {
-            "SCT": 1004.717
+            "SCT": 1004.71
         },
         "protection_pixel:pioneer_chestplate": {
             "SCT": 255.895
         },
         "protection_pixel:pioneeras_chestplate": {
-            "SCT": 1907.195
+            "SCT": 1907.181
         },
         "protection_pixel:plague_helmet": {
-            "SCT": 103.713
+            "SCT": 103.711
         },
         "protection_pixel:plagueas_helmet": {
-            "SCT": 929.363
+            "SCT": 929.354
         },
         "protection_pixel:pneumaticgrenade": {
             "SCT": 13.876
         },
         "protection_pixel:pneumaticgrenadelauncharm": {
-            "SCT": 70.918
+            "SCT": 70.908
         },
         "protection_pixel:powerengine": {
-            "SCT": 33.223
+            "SCT": 33.219
         },
         "protection_pixel:reinforcedfiber": {
             "SCT": 12.15
@@ -16009,7 +16621,7 @@
             "SCT": 133.796
         },
         "protection_pixel:slingshotas_leggings": {
-            "SCT": 1785.096
+            "SCT": 1785.082
         },
         "protection_pixel:smallnetheritesheet": {
             "SCT": 378.0
@@ -16021,19 +16633,19 @@
             "SCT": 102.986
         },
         "protection_pixel:steamectoskeleton": {
-            "SCT": 92.248
+            "SCT": 92.221
         },
         "protection_pixel:steelcorecannonshell": {
             "SCT": 4.412
         },
         "protection_pixel:suspjetpack": {
-            "SCT": 156.22
+            "SCT": 156.219
         },
         "protection_pixel:tacticaloxygensupplydevice": {
-            "SCT": 64.772
+            "SCT": 64.761
         },
         "protection_pixel:tosaki_chestplate": {
-            "SCT": 1089.554
+            "SCT": 1089.55
         },
         "protection_pixel:tosaki_helmet": {
             "SCT": 726.242
@@ -16042,31 +16654,31 @@
             "SCT": 1084.452
         },
         "protection_pixel:typhoon_chestplate": {
-            "SCT": 228.266
+            "SCT": 228.262
         },
         "protection_pixel:typhoonas_chestplate": {
-            "SCT": 1879.566
+            "SCT": 1879.548
         },
         "protection_pixel:watertank": {
-            "SCT": 3.038
+            "SCT": 3.036
         },
         "protection_pixel:wingsofprism_chestplate": {
             "SCT": 224.859
         },
         "protection_pixel:wingsofprismas_chestplate": {
-            "SCT": 1876.159
+            "SCT": 1876.145
         },
         "protection_pixel:workerhornet_chestplate": {
-            "SCT": 155.516
+            "SCT": 155.512
         },
         "protection_pixel:workerhornetas_chestplate": {
-            "SCT": 1806.816
+            "SCT": 1806.798
         },
         "randomium:randomium": {
             "SCT": -1.0
         },
         "relics:cooked_meatball": {
-            "SCT": 4.0
+            "SCT": 6.0
         },
         "relics:golden_tooth": {
             "SCT": 30.0
@@ -17713,52 +18325,52 @@
             "SCT": 0.564
         },
         "somemoreblocks:waxed_copper_bricks": {
-            "SCT": 22.25
+            "SCT": 22.248
         },
         "somemoreblocks:waxed_copper_pillar": {
-            "SCT": 29.0
+            "SCT": 28.991
         },
         "somemoreblocks:waxed_cracked_copper_bricks": {
-            "SCT": 22.25
+            "SCT": 22.248
         },
         "somemoreblocks:waxed_cracked_cut_copper": {
-            "SCT": 7.25
+            "SCT": 7.248
         },
         "somemoreblocks:waxed_exposed_copper_bricks": {
-            "SCT": 22.25
+            "SCT": 22.248
         },
         "somemoreblocks:waxed_exposed_copper_pillar": {
-            "SCT": 29.0
+            "SCT": 28.991
         },
         "somemoreblocks:waxed_exposed_cracked_copper_bricks": {
-            "SCT": 22.25
+            "SCT": 22.248
         },
         "somemoreblocks:waxed_exposed_cracked_cut_copper": {
-            "SCT": 7.25
+            "SCT": 7.248
         },
         "somemoreblocks:waxed_oxidized_copper_bricks": {
-            "SCT": 22.25
+            "SCT": 22.248
         },
         "somemoreblocks:waxed_oxidized_copper_pillar": {
-            "SCT": 29.0
+            "SCT": 28.991
         },
         "somemoreblocks:waxed_oxidized_cracked_copper_bricks": {
-            "SCT": 22.25
+            "SCT": 22.248
         },
         "somemoreblocks:waxed_oxidized_cracked_cut_copper": {
-            "SCT": 7.25
+            "SCT": 7.248
         },
         "somemoreblocks:waxed_weathered_copper_bricks": {
-            "SCT": 22.25
+            "SCT": 22.248
         },
         "somemoreblocks:waxed_weathered_copper_pillar": {
-            "SCT": 29.0
+            "SCT": 28.991
         },
         "somemoreblocks:waxed_weathered_cracked_copper_bricks": {
-            "SCT": 22.25
+            "SCT": 22.248
         },
         "somemoreblocks:waxed_weathered_cracked_cut_copper": {
-            "SCT": 7.25
+            "SCT": 7.248
         },
         "somemoreblocks:white_checkered_tiles": {
             "SCT": 20.056
@@ -17824,7 +18436,7 @@
             "SCT": 172.525
         },
         "sophisticatedbackpacks:advanced_feeding_upgrade": {
-            "SCT": 239.2
+            "SCT": 235.7
         },
         "sophisticatedbackpacks:advanced_filter_upgrade": {
             "SCT": 124.0
@@ -17836,7 +18448,7 @@
             "SCT": 243.275
         },
         "sophisticatedbackpacks:advanced_mob_catcher_upgrade": {
-            "SCT": 754.8
+            "SCT": 758.8
         },
         "sophisticatedbackpacks:advanced_pickup_upgrade": {
             "SCT": 174.525
@@ -17884,7 +18496,7 @@
             "SCT": 134.1
         },
         "sophisticatedbackpacks:copper_backpack": {
-            "SCT": 31.0
+            "SCT": 30.992
         },
         "sophisticatedbackpacks:crafting_upgrade": {
             "SCT": 48.5
@@ -17893,25 +18505,25 @@
             "SCT": 84.525
         },
         "sophisticatedbackpacks:diamond_backpack": {
-            "SCT": 447.0
+            "SCT": 446.992
         },
         "sophisticatedbackpacks:everlasting_upgrade": {
             "SCT": 12264.8
         },
         "sophisticatedbackpacks:feeding_upgrade": {
-            "SCT": 151.2
+            "SCT": 147.7
         },
         "sophisticatedbackpacks:filter_upgrade": {
             "SCT": 76.0
         },
         "sophisticatedbackpacks:gold_backpack": {
-            "SCT": 127.0
+            "SCT": 126.992
         },
         "sophisticatedbackpacks:inception_upgrade": {
             "SCT": 3262.0
         },
         "sophisticatedbackpacks:iron_backpack": {
-            "SCT": 55.0
+            "SCT": 54.992
         },
         "sophisticatedbackpacks:jukebox_upgrade": {
             "SCT": 97.0
@@ -17920,10 +18532,10 @@
             "SCT": 155.275
         },
         "sophisticatedbackpacks:mob_catcher_upgrade": {
-            "SCT": 69.0
+            "SCT": 73.0
         },
         "sophisticatedbackpacks:netherite_backpack": {
-            "SCT": 1483.1
+            "SCT": 1483.092
         },
         "sophisticatedbackpacks:pickup_upgrade": {
             "SCT": 86.525
@@ -17956,22 +18568,52 @@
             "SCT": 33.064
         },
         "sophisticatedbackpacks:stack_upgrade_omega_tier": {
-            "SCT": 524520.0
+            "SCT": 524519.352
         },
         "sophisticatedbackpacks:stack_upgrade_starter_tier": {
-            "SCT": 104.0
+            "SCT": 103.928
+        },
+        "sophisticatedbackpacks:stack_upgrade_starter_tier_to_tier_1_conversion": {
+            "SCT": 220.0
+        },
+        "sophisticatedbackpacks:stack_upgrade_starter_tier_to_tier_2_conversion": {
+            "SCT": 868.0
+        },
+        "sophisticatedbackpacks:stack_upgrade_starter_tier_to_tier_3_conversion": {
+            "SCT": 3748.0
+        },
+        "sophisticatedbackpacks:stack_upgrade_starter_tier_to_tier_4_conversion": {
+            "SCT": 58180.0
         },
         "sophisticatedbackpacks:stack_upgrade_tier_1": {
-            "SCT": 320.0
+            "SCT": 319.928
+        },
+        "sophisticatedbackpacks:stack_upgrade_tier_1_to_tier_2_conversion": {
+            "SCT": 652.0
+        },
+        "sophisticatedbackpacks:stack_upgrade_tier_1_to_tier_3_conversion": {
+            "SCT": 3532.0
+        },
+        "sophisticatedbackpacks:stack_upgrade_tier_1_to_tier_4_conversion": {
+            "SCT": 57964.0
         },
         "sophisticatedbackpacks:stack_upgrade_tier_2": {
-            "SCT": 968.0
+            "SCT": 967.928
+        },
+        "sophisticatedbackpacks:stack_upgrade_tier_2_to_tier_3_conversion": {
+            "SCT": 2884.0
+        },
+        "sophisticatedbackpacks:stack_upgrade_tier_2_to_tier_4_conversion": {
+            "SCT": 57316.0
         },
         "sophisticatedbackpacks:stack_upgrade_tier_3": {
-            "SCT": 3848.0
+            "SCT": 3847.928
+        },
+        "sophisticatedbackpacks:stack_upgrade_tier_3_to_tier_4_conversion": {
+            "SCT": 54436.0
         },
         "sophisticatedbackpacks:stack_upgrade_tier_4": {
-            "SCT": 58280.0
+            "SCT": 58279.928
         },
         "sophisticatedbackpacks:stonecutter_upgrade": {
             "SCT": 60.3
@@ -17991,6 +18633,9 @@
         "sophisticatedbackpacks:xp_pump_upgrade": {
             "SCT": 525.714
         },
+        "sophisticatedcore:ender_linker": {
+            "SCT": 75.0
+        },
         "sophisticatedcore:xp_bucket": {
             "SCT": 120.0
         },
@@ -18004,7 +18649,7 @@
             "SCT": 215.975
         },
         "sophisticatedstorage:advanced_feeding_upgrade": {
-            "SCT": 233.075
+            "SCT": 229.575
         },
         "sophisticatedstorage:advanced_filter_upgrade": {
             "SCT": 117.875
@@ -18046,19 +18691,19 @@
             "SCT": 1.04
         },
         "sophisticatedstorage:basic_to_copper_tier_upgrade": {
-            "SCT": 8.288
+            "SCT": 8.28
         },
         "sophisticatedstorage:basic_to_diamond_tier_upgrade": {
-            "SCT": 424.288
+            "SCT": 424.28
         },
         "sophisticatedstorage:basic_to_gold_tier_upgrade": {
-            "SCT": 104.288
+            "SCT": 104.28
         },
         "sophisticatedstorage:basic_to_iron_tier_upgrade": {
-            "SCT": 32.288
+            "SCT": 32.28
         },
         "sophisticatedstorage:basic_to_netherite_tier_upgrade": {
-            "SCT": 1180.288
+            "SCT": 1180.28
         },
         "sophisticatedstorage:birch_storage_connector": {
             "SCT": 0.61
@@ -18079,16 +18724,16 @@
             "SCT": 92.925
         },
         "sophisticatedstorage:controller": {
-            "SCT": 167.384
+            "SCT": 170.298
         },
         "sophisticatedstorage:copper_barrel": {
-            "SCT": 10.914
+            "SCT": 10.906
         },
         "sophisticatedstorage:copper_chest": {
-            "SCT": 11.288
+            "SCT": 11.28
         },
         "sophisticatedstorage:copper_shulker_box": {
-            "SCT": 71.288
+            "SCT": 71.28
         },
         "sophisticatedstorage:copper_to_diamond_tier_upgrade": {
             "SCT": 416.288
@@ -18115,31 +18760,31 @@
             "SCT": 31.875
         },
         "sophisticatedstorage:diamond_barrel": {
-            "SCT": 426.914
+            "SCT": 426.906
         },
         "sophisticatedstorage:diamond_chest": {
-            "SCT": 427.288
+            "SCT": 427.28
         },
         "sophisticatedstorage:diamond_shulker_box": {
-            "SCT": 487.288
+            "SCT": 487.28
         },
         "sophisticatedstorage:diamond_to_netherite_tier_upgrade": {
             "SCT": 756.288
         },
         "sophisticatedstorage:feeding_upgrade": {
-            "SCT": 145.075
+            "SCT": 141.575
         },
         "sophisticatedstorage:filter_upgrade": {
             "SCT": 69.875
         },
         "sophisticatedstorage:gold_barrel": {
-            "SCT": 106.914
+            "SCT": 106.906
         },
         "sophisticatedstorage:gold_chest": {
-            "SCT": 107.288
+            "SCT": 107.28
         },
         "sophisticatedstorage:gold_shulker_box": {
-            "SCT": 167.288
+            "SCT": 167.28
         },
         "sophisticatedstorage:gold_to_diamond_tier_upgrade": {
             "SCT": 320.288
@@ -18151,13 +18796,13 @@
             "SCT": 100.875
         },
         "sophisticatedstorage:iron_barrel": {
-            "SCT": 34.914
+            "SCT": 34.906
         },
         "sophisticatedstorage:iron_chest": {
-            "SCT": 35.288
+            "SCT": 35.28
         },
         "sophisticatedstorage:iron_shulker_box": {
-            "SCT": 95.288
+            "SCT": 95.28
         },
         "sophisticatedstorage:iron_to_diamond_tier_upgrade": {
             "SCT": 392.288
@@ -18187,64 +18832,64 @@
             "SCT": 2.54
         },
         "sophisticatedstorage:limited_copper_barrel_1": {
-            "SCT": 11.101
+            "SCT": 11.093
         },
         "sophisticatedstorage:limited_copper_barrel_2": {
-            "SCT": 10.914
+            "SCT": 10.906
         },
         "sophisticatedstorage:limited_copper_barrel_3": {
-            "SCT": 10.727
+            "SCT": 10.719
         },
         "sophisticatedstorage:limited_copper_barrel_4": {
-            "SCT": 10.54
+            "SCT": 10.532
         },
         "sophisticatedstorage:limited_diamond_barrel_1": {
-            "SCT": 427.101
+            "SCT": 427.093
         },
         "sophisticatedstorage:limited_diamond_barrel_2": {
-            "SCT": 426.914
+            "SCT": 426.906
         },
         "sophisticatedstorage:limited_diamond_barrel_3": {
-            "SCT": 426.727
+            "SCT": 426.719
         },
         "sophisticatedstorage:limited_diamond_barrel_4": {
-            "SCT": 426.54
+            "SCT": 426.532
         },
         "sophisticatedstorage:limited_gold_barrel_1": {
-            "SCT": 107.101
+            "SCT": 107.093
         },
         "sophisticatedstorage:limited_gold_barrel_2": {
-            "SCT": 106.914
+            "SCT": 106.906
         },
         "sophisticatedstorage:limited_gold_barrel_3": {
-            "SCT": 106.727
+            "SCT": 106.719
         },
         "sophisticatedstorage:limited_gold_barrel_4": {
-            "SCT": 106.54
+            "SCT": 106.532
         },
         "sophisticatedstorage:limited_iron_barrel_1": {
-            "SCT": 35.101
+            "SCT": 35.093
         },
         "sophisticatedstorage:limited_iron_barrel_2": {
-            "SCT": 34.914
+            "SCT": 34.906
         },
         "sophisticatedstorage:limited_iron_barrel_3": {
-            "SCT": 34.727
+            "SCT": 34.719
         },
         "sophisticatedstorage:limited_iron_barrel_4": {
-            "SCT": 34.54
+            "SCT": 34.532
         },
         "sophisticatedstorage:limited_netherite_barrel_1": {
-            "SCT": 1183.101
+            "SCT": 1183.093
         },
         "sophisticatedstorage:limited_netherite_barrel_2": {
-            "SCT": 1182.914
+            "SCT": 1182.906
         },
         "sophisticatedstorage:limited_netherite_barrel_3": {
-            "SCT": 1182.727
+            "SCT": 1182.719
         },
         "sophisticatedstorage:limited_netherite_barrel_4": {
-            "SCT": 1182.54
+            "SCT": 1182.532
         },
         "sophisticatedstorage:magnet_upgrade": {
             "SCT": 147.9
@@ -18253,13 +18898,13 @@
             "SCT": 0.61
         },
         "sophisticatedstorage:netherite_barrel": {
-            "SCT": 1182.914
+            "SCT": 1182.906
         },
         "sophisticatedstorage:netherite_chest": {
-            "SCT": 1183.288
+            "SCT": 1183.28
         },
         "sophisticatedstorage:netherite_shulker_box": {
-            "SCT": 1243.288
+            "SCT": 1243.28
         },
         "sophisticatedstorage:oak_storage_connector": {
             "SCT": 0.61
@@ -18295,40 +18940,85 @@
             "SCT": 26.939
         },
         "sophisticatedstorage:stack_upgrade_omega_tier": {
-            "SCT": 174840.625
+            "SCT": 174840.409
         },
         "sophisticatedstorage:stack_upgrade_tier_1": {
             "SCT": 37.875
         },
         "sophisticatedstorage:stack_upgrade_tier_1_plus": {
-            "SCT": 35.292
+            "SCT": 35.268
+        },
+        "sophisticatedstorage:stack_upgrade_tier_1_plus_to_tier_2_conversion": {
+            "SCT": 72.375
+        },
+        "sophisticatedstorage:stack_upgrade_tier_1_plus_to_tier_3_conversion": {
+            "SCT": 288.375
+        },
+        "sophisticatedstorage:stack_upgrade_tier_1_plus_to_tier_4_conversion": {
+            "SCT": 1248.375
+        },
+        "sophisticatedstorage:stack_upgrade_tier_1_plus_to_tier_5_conversion": {
+            "SCT": 19392.375
+        },
+        "sophisticatedstorage:stack_upgrade_tier_1_to_tier_1_plus_conversion": {
+            "SCT": 24.351
+        },
+        "sophisticatedstorage:stack_upgrade_tier_1_to_tier_2_conversion": {
+            "SCT": 168.351
+        },
+        "sophisticatedstorage:stack_upgrade_tier_1_to_tier_3_conversion": {
+            "SCT": 384.351
+        },
+        "sophisticatedstorage:stack_upgrade_tier_1_to_tier_4_conversion": {
+            "SCT": 1344.351
+        },
+        "sophisticatedstorage:stack_upgrade_tier_1_to_tier_5_conversion": {
+            "SCT": 19488.351
         },
         "sophisticatedstorage:stack_upgrade_tier_2": {
-            "SCT": 107.292
+            "SCT": 107.268
+        },
+        "sophisticatedstorage:stack_upgrade_tier_2_to_tier_3_conversion": {
+            "SCT": 216.375
+        },
+        "sophisticatedstorage:stack_upgrade_tier_2_to_tier_4_conversion": {
+            "SCT": 1176.375
+        },
+        "sophisticatedstorage:stack_upgrade_tier_2_to_tier_5_conversion": {
+            "SCT": 19320.375
         },
         "sophisticatedstorage:stack_upgrade_tier_3": {
-            "SCT": 323.292
+            "SCT": 323.268
+        },
+        "sophisticatedstorage:stack_upgrade_tier_3_to_tier_4_conversion": {
+            "SCT": 960.375
+        },
+        "sophisticatedstorage:stack_upgrade_tier_3_to_tier_5_conversion": {
+            "SCT": 19104.375
         },
         "sophisticatedstorage:stack_upgrade_tier_4": {
-            "SCT": 1283.292
+            "SCT": 1283.268
+        },
+        "sophisticatedstorage:stack_upgrade_tier_4_to_tier_5_conversion": {
+            "SCT": 18144.375
         },
         "sophisticatedstorage:stack_upgrade_tier_5": {
-            "SCT": 19427.292
+            "SCT": 19427.268
         },
         "sophisticatedstorage:stonecutter_upgrade": {
             "SCT": 54.175
         },
         "sophisticatedstorage:storage_input": {
-            "SCT": 125.332
+            "SCT": 128.246
         },
         "sophisticatedstorage:storage_io": {
-            "SCT": 125.332
+            "SCT": 128.246
         },
         "sophisticatedstorage:storage_link": {
             "SCT": 51.151
         },
         "sophisticatedstorage:storage_output": {
-            "SCT": 125.332
+            "SCT": 128.246
         },
         "sophisticatedstorage:storage_tool": {
             "SCT": 36.564
@@ -18349,7 +19039,7 @@
             "SCT": 21754.12
         },
         "stonkstimecore:stonks_temporal_chronoscope": {
-            "SCT": 33481.866
+            "SCT": 33481.857
         },
         "stonkstimecore:time_gear": {
             "SCT": 21600.0
@@ -18358,7 +19048,7 @@
             "SCT": 10.128
         },
         "supplementaries:altimeter": {
-            "SCT": 14.0
+            "SCT": 13.996
         },
         "supplementaries:antique_ink": {
             "SCT": 70.0
@@ -18411,18 +19101,6 @@
         "supplementaries:bomb_blue": {
             "SCT": 300.0
         },
-        "supplementaries:brittlestone_bricks": {
-            "SCT": 0.1
-        },
-        "supplementaries:brittlestone_bricks_slab": {
-            "SCT": 0.05
-        },
-        "supplementaries:brittlestone_bricks_stairs": {
-            "SCT": 0.1
-        },
-        "supplementaries:brittlestone_bricks_wall": {
-            "SCT": 0.1
-        },
         "supplementaries:bubble_blower": {
             "SCT": 8.668
         },
@@ -18459,6 +19137,9 @@
         "supplementaries:cannon_boat_pale_oak": {
             "SCT": 47.264
         },
+        "supplementaries:cannon_boat_poplar": {
+            "SCT": 47.264
+        },
         "supplementaries:cannon_boat_spruce": {
             "SCT": 47.264
         },
@@ -18478,10 +19159,10 @@
             "SCT": 49.0
         },
         "supplementaries:cog_block": {
-            "SCT": 16.333
+            "SCT": 16.332
         },
         "supplementaries:confetti_popper": {
-            "SCT": 0.35
+            "SCT": 0.233
         },
         "supplementaries:crank": {
             "SCT": 0.488
@@ -18532,7 +19213,7 @@
             "SCT": 4.125
         },
         "supplementaries:fire_pit": {
-            "SCT": 6.6
+            "SCT": 6.595
         },
         "supplementaries:flax": {
             "SCT": 1.0
@@ -18572,6 +19253,9 @@
         },
         "supplementaries:gravel_bricks": {
             "SCT": 0.1
+        },
+        "supplementaries:grouper": {
+            "SCT": 21.8
         },
         "supplementaries:hat_stand": {
             "SCT": 0.425
@@ -18636,6 +19320,9 @@
         "supplementaries:pedestal": {
             "SCT": 0.2
         },
+        "supplementaries:pignata": {
+            "SCT": 1.864
+        },
         "supplementaries:planter": {
             "SCT": 6.801
         },
@@ -18670,7 +19357,7 @@
             "SCT": 2.235
         },
         "supplementaries:slice_map": {
-            "SCT": 14.8
+            "SCT": 14.796
         },
         "supplementaries:slidy_block": {
             "SCT": 3.168
@@ -18679,10 +19366,10 @@
             "SCT": 13.564
         },
         "supplementaries:soap": {
-            "SCT": 0.9
+            "SCT": 1.233
         },
         "supplementaries:soap_block": {
-            "SCT": 8.1
+            "SCT": 11.097
         },
         "supplementaries:speaker_block": {
             "SCT": 23.0
@@ -18721,7 +19408,7 @@
             "SCT": 0.752
         },
         "supplementaries:turn_table": {
-            "SCT": 12.525
+            "SCT": 12.524
         },
         "supplementaries:urn": {
             "SCT": 15.0
@@ -18756,6 +19443,9 @@
         "supplementaries:way_sign_pale_oak": {
             "SCT": 0.406
         },
+        "supplementaries:way_sign_poplar": {
+            "SCT": 0.406
+        },
         "supplementaries:way_sign_spruce": {
             "SCT": 0.406
         },
@@ -18769,7 +19459,7 @@
             "SCT": 30.25
         },
         "supplementaries:wrench": {
-            "SCT": 4.0
+            "SCT": 3.996
         },
         "suppsquared:betterarcheology/item_shelf_rotten": {
             "SCT": 0.282
@@ -18781,10 +19471,10 @@
             "SCT": 6.747
         },
         "suppsquared:copper_lantern": {
-            "SCT": 4.75
+            "SCT": 4.749
         },
         "suppsquared:copper_plaque": {
-            "SCT": 1.0
+            "SCT": 0.999
         },
         "suppsquared:crimson_lantern": {
             "SCT": 10.3
@@ -18837,6 +19527,9 @@
         "suppsquared:item_shelf_pale_oak": {
             "SCT": 0.282
         },
+        "suppsquared:item_shelf_poplar": {
+            "SCT": 0.282
+        },
         "suppsquared:item_shelf_spruce": {
             "SCT": 0.282
         },
@@ -18856,10 +19549,10 @@
             "SCT": 2.668
         },
         "tiab:time_in_a_bottle": {
-            "SCT": 27840.94
+            "SCT": 27840.937
         },
         "travelerscompass:travelerscompass": {
-            "SCT": 24084.0
+            "SCT": 24083.996
         },
         "vista:crystalline": {
             "SCT": 300.0
@@ -18874,25 +19567,31 @@
             "SCT": 73.076
         },
         "vista:viewfinder": {
-            "SCT": 36.696
+            "SCT": 36.694
         },
         "waterframes:big_tv": {
-            "SCT": 140.492
+            "SCT": 140.483
         },
         "waterframes:frame": {
-            "SCT": 86.692
+            "SCT": 86.683
         },
         "waterframes:projector": {
-            "SCT": 270.213
+            "SCT": 270.204
         },
         "waterframes:remote": {
-            "SCT": 43.3
+            "SCT": 43.291
         },
         "waterframes:tv": {
-            "SCT": 92.492
+            "SCT": 92.483
         },
         "waterframes:tv_box": {
-            "SCT": 99.692
+            "SCT": 99.683
+        },
+        "yagm:ghost_pearl": {
+            "SCT": 60.0
+        },
+        "yagm:restore_key": {
+            "SCT": 81.0
         }
     }
 }
